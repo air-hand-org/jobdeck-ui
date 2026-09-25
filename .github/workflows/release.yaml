@@ -9,5 +9,5 @@ permissions: {}
 
 jobs:
   release:
-    uses: air-hand-org/jobdeck-actions/.github/workflows/reusable-release.yaml@v1.3.0
+    uses: air-hand-org/jobdeck-actions/.github/workflows/reusable-release.yaml@v1.4.1
     secrets: inherit
