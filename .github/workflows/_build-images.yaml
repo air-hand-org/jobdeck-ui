@@ -4,10 +4,15 @@ on:
   workflow_call:
     inputs:
       push:
-        description: Push images to Artifact Registry instead of only building them.
+        description: Publish images to Artifact Registry and GHCR instead of only building them.
         required: false
         type: boolean
         default: false
+      image-tag:
+        description: Immutable image tag. Required when push is true.
+        required: false
+        type: string
+        default: ""
       environment:
         description: GitHub environment containing GCP deployment variables.
         required: false
@@ -16,8 +21,8 @@ on:
 
 concurrency:
   # CI build-only runs are disposable and share a group per ref. Publishing is
-  # keyed by release ref and must never be cancelled mid-push.
-  group: build-images-${{ inputs.push }}-${{ github.ref }}
+  # keyed by immutable release tag and must never be cancelled mid-push.
+  group: build-images-${{ inputs.push && inputs.image-tag || github.ref }}
   cancel-in-progress: ${{ inputs.push == false }}
 
 permissions: {}
@@ -35,30 +40,20 @@ jobs:
       - uses: actions/checkout@v7
         with:
           persist-credentials: false
-      - name: create GitHub App token for read GOPRIVATE
-        id: app-token
-        uses: actions/create-github-app-token@v3
-        with:
-          client-id: ${{ vars.GH_APP_RELEASE_CLIENT_ID }}
-          private-key: ${{ secrets.GH_APP_RELEASE_PRIVATE_KEY }}
-          permission-contents: read
-          owner: ${{ github.repository_owner }}
-          repositories: |
-            api-contracts
       - uses: docker/setup-buildx-action@v4
-      # Keep pairs small enough for the hosted runner while sharing its Docker
-      # layer and BuildKit cache with every following build.
-      - parallel:
-          - name: Build ui image
-            uses: docker/build-push-action@v7
-            with:
-              context: .
-              file: containers/ui/Dockerfile
-              push: false
-              build-args: |
-                GITHUB_ACTOR=${{ github.actor }}
-              secrets: |
-                github_packages_token=${{ secrets.GITHUB_TOKEN }}
+      - uses: docker/build-push-action@v7
+        with:
+          context: .
+          platforms: linux/amd64
+          load: true
+          push: false
+          tags: jobdeck-ui:test
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          build-args: |
+            GITHUB_ACTOR=${{ github.actor }}
+          secrets: |
+            github_packages_token=${{ secrets.GITHUB_TOKEN }}
 
   publish:
     if: ${{ inputs.push == true }}
@@ -66,32 +61,25 @@ jobs:
     environment: ${{ inputs.environment || 'production' }}
     permissions:
       contents: read
-      packages: read
+      packages: write
       id-token: write
+    env:
+      ARTIFACT_REGISTRY_HOST: asia-northeast1-docker.pkg.dev
+      IMAGE_TAG: ${{ inputs.image-tag }}
     steps:
+      - name: setup IMAGE envs
+        run: |
+          echo "AR_IMAGE=${AR_IMAGE}" >> "$GITHUB_ENV"
+          echo "GHCR_IMAGE=${GHCR_IMAGE}" >> "$GITHUB_ENV"
+        env:
+          AR_IMAGE: ${{ env.ARTIFACT_REGISTRY_HOST }}/${{ vars.GCP_PROJECT_ID }}/jobdeck-ui/ui:${{ env.IMAGE_TAG }}
+          GHCR_IMAGE: ghcr.io/${{ github.repository_owner }}/jobdeck-ui:${{ env.IMAGE_TAG }}
       - uses: actions/checkout@v7
         with:
           persist-credentials: false
-      - uses: ./.github/actions/setup-tools
-      - name: Read production image versions
-        id: images
-        run: |
-          registry="$(yq -r '.registry' environments/production.yaml)"
-          versions="$(yq -o=json -I=0 '.images' environments/production.yaml)"
-          echo "registry=$registry" >> "$GITHUB_OUTPUT"
-          echo "host=${registry%%/*}" >> "$GITHUB_OUTPUT"
-          echo "versions=$versions" >> "$GITHUB_OUTPUT"
-      - name: create GitHub App token for read GOPRIVATE
-        id: app-token
-        uses: actions/create-github-app-token@v3
-        with:
-          client-id: ${{ vars.GH_APP_RELEASE_CLIENT_ID }}
-          private-key: ${{ secrets.GH_APP_RELEASE_PRIVATE_KEY }}
-          permission-contents: read
-          owner: ${{ github.repository_owner }}
-          repositories: |
-            api-contracts
       - uses: docker/setup-buildx-action@v4
+      - name: Validate image tag
+        run: test -n "$IMAGE_TAG"
       - id: google-auth
         uses: google-github-actions/auth@v3
         with:
@@ -105,18 +93,37 @@ jobs:
       - name: Log in to Artifact Registry
         uses: docker/login-action@v4
         with:
-          registry: ${{ steps.images.outputs.host }}
+          registry: ${{ env.ARTIFACT_REGISTRY_HOST }}
           username: oauth2accesstoken
           password: ${{ steps.google-auth.outputs.access_token }}
-      - parallel:
-          - name: Build and push ui image
-            uses: docker/build-push-action@v7
-            with:
-              context: .
-              file: containers/ui/Dockerfile
-              push: true
-              tags: ${{ steps.images.outputs.registry }}/jobdeck-ui/ui:v${{ fromJSON(steps.images.outputs.versions).ui.version }}
-              build-args: |
-                GITHUB_ACTOR=${{ github.actor }}
-              secrets: |
-                github_packages_token=${{ secrets.GITHUB_TOKEN }}
+      - name: Login to GHCR
+        uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check whether image already exists
+        id: image
+        uses: air-hand-org/jobdeck-actions/actions/image-exists@v1.4.1
+        with:
+          image: ${{ env.AR_IMAGE }}
+      - name: Build and push image
+        if: ${{ steps.image.outputs.exists != 'true' }}
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          platforms: linux/amd64
+          push: true
+          tags: ${{ env.AR_IMAGE }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          build-args: |
+            GITHUB_ACTOR=${{ github.actor }}
+          secrets: |
+            github_packages_token=${{ secrets.GITHUB_TOKEN }}
+      # Always check GHCR, including when a previous attempt already pushed to AR.
+      - name: Copy image to GHCR if missing
+        uses: air-hand-org/jobdeck-actions/actions/copy-image@v1.4.1
+        with:
+          src: ${{ env.AR_IMAGE }}
+          dest: ${{ env.GHCR_IMAGE }}

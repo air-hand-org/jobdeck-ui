@@ -5,42 +5,30 @@ on:
     types:
       - published
 
-permissions:
-  contents: read
-  id-token: write
-  issues: write
-  pull-requests: write
+permissions: {}
 
 concurrency:
-  group: deploy-production
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
   images:
     if: ${{ github.event.release.prerelease == false }}
-    uses: ./.github/workflows/_build-images.yaml
+    uses: $/.github/workflows/_build-images.yaml
     with:
       push: true
+      image-tag: ${{ github.event.release.tag_name }}
       environment: production
     secrets: inherit
     permissions:
       contents: read
-      packages: read
+      packages: write
       id-token: write
 
-  app:
-    # Keep the image push and revision apply in one release chain: app resources
-    # must never refer to an Artifact Registry tag that has not been pushed.
+  release-dispatch:
     if: ${{ github.event.release.prerelease == false }}
     needs: images
-    uses: ./.github/workflows/_tofu.yaml
+    uses: air-hand-org/jobdeck-actions/.github/workflows/reusable-release-dispatch.yaml@v1.3.0
     with:
-      root: app
-      command: apply
-      environment: production
+      service-names: ui
     secrets: inherit
-    permissions:
-      contents: read
-      id-token: write
-      issues: write
-      pull-requests: write

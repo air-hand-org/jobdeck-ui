@@ -12,12 +12,8 @@ cs-build: cs-restore
 	@cd $(CS_MK_DIR)../ && \
 	    dotnet build $(CS_SLN) --no-restore
 
-.PHONY: cs-test-prepare
-cs-test-prepare:
-	@bash $(CS_MK_DIR)../tests/prepare-e2e.sh
-
 .PHONY: cs-test
-cs-test: cs-build cs-test-prepare
+cs-test: cs-build
 	@cd $(CS_MK_DIR)../ && \
 	    dotnet test $(CS_SLN) --no-build --no-restore
 

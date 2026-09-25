@@ -7,14 +7,13 @@ ARG GITHUB_ACTOR
 WORKDIR /src
 
 # Restore first so NuGet packages remain cached when only application code changes.
-COPY NuGet.Config ./
-COPY services/ui/ui.csproj services/ui/
+COPY NuGet.Config src/ui.csproj ./
 RUN --mount=type=secret,id=github_packages_token \
     NuGetPackageSourceCredentials_github="Username=${GITHUB_ACTOR};Password=$(cat /run/secrets/github_packages_token)" \
-    dotnet restore services/ui/ui.csproj
+    dotnet restore
 
-COPY services/ui/ services/ui/
-RUN dotnet publish services/ui/ui.csproj --no-restore --configuration Release --output /app/publish
+COPY src/ ./
+RUN dotnet publish ui.csproj --no-restore --configuration Release --output /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0
 WORKDIR /app
