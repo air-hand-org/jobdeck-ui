@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.3](https://github.com/air-hand-org/jobdeck-ui/compare/v1.3.2...v1.3.3) (2026-10-14)
+
+
+### Bug Fixes
+
+* **deps:** update Jobdeck contract packages ([9ed4eb6](https://github.com/air-hand-org/jobdeck-ui/commit/9ed4eb6ee5246ca64af8cefcccd2aa890e17b5c2))
+
 ## [1.3.2](https://github.com/air-hand-org/jobdeck-ui/compare/v1.3.1...v1.3.2) (2026-09-25)
 
 
