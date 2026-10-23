@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/air-hand-org/jobdeck-ui/compare/v1.3.3...v1.4.0) (2026-10-23)
+
+
+### Features
+
+* show component repositories on home page ([#7](https://github.com/air-hand-org/jobdeck-ui/issues/7)) ([92d2006](https://github.com/air-hand-org/jobdeck-ui/commit/92d2006c6d541fa25c854cb3c98036047835d0ff))
+
 ## [1.3.3](https://github.com/air-hand-org/jobdeck-ui/compare/v1.3.2...v1.3.3) (2026-10-14)
 
 
