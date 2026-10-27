@@ -15,7 +15,7 @@ RUN --mount=type=secret,id=github_packages_token \
 COPY src/ ./
 RUN dotnet publish ui.csproj --no-restore --configuration Release --output /app/publish
 
-FROM mcr.microsoft.com/dotnet/aspnet:10.0
+FROM mcr.microsoft.com/dotnet/aspnet:10.0.14
 WORKDIR /app
 COPY --from=build /app/publish .
 ENV ASPNETCORE_URLS=http://+:8080 \
