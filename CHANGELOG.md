@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/air-hand-org/jobdeck-ui/compare/v1.4.0...v1.4.1) (2026-10-27)
+
+
+### Bug Fixes
+
+* pin ASP.NET runtime image to 10.0.14 ([#10](https://github.com/air-hand-org/jobdeck-ui/issues/10)) ([fa5d0ab](https://github.com/air-hand-org/jobdeck-ui/commit/fa5d0ab33ddf7b3b006ce66af3caa9a6b8b78014))
+
 ## [1.4.0](https://github.com/air-hand-org/jobdeck-ui/compare/v1.3.3...v1.4.0) (2026-10-23)
 
 
