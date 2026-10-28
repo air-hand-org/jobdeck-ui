@@ -1,0 +1,215 @@
+[
+  {
+    "PackageId": "Google.Protobuf",
+    "PackageVersion": "3.35.1",
+    "PackageProjectUrl": "https://github.com/protocolbuffers/protobuf",
+    "Copyright": "Copyright 2015, Google Inc.",
+    "Authors": "Google Inc.",
+    "Description": "C# runtime library for Protocol Buffers - Google\u0027s data interchange format.",
+    "License": "BSD-3-Clause",
+    "LicenseUrl": "https://licenses.nuget.org/BSD-3-Clause",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "Grpc.AspNetCore.Server",
+    "PackageVersion": "2.80.0",
+    "PackageProjectUrl": "https://github.com/grpc/grpc-dotnet",
+    "Copyright": "Copyright 2019 The gRPC Authors",
+    "Authors": "The gRPC Authors",
+    "Description": "gRPC support for ASP.NET Core",
+    "License": "Apache-2.0",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "Grpc.AspNetCore.Server.ClientFactory",
+    "PackageVersion": "2.80.0",
+    "PackageProjectUrl": "https://github.com/grpc/grpc-dotnet",
+    "Copyright": "Copyright 2019 The gRPC Authors",
+    "Authors": "The gRPC Authors",
+    "Description": "HttpClientFactory integration the for gRPC .NET client when running in ASP.NET Core",
+    "License": "Apache-2.0",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "Grpc.Core.Api",
+    "PackageVersion": "2.83.0",
+    "PackageProjectUrl": "https://github.com/grpc/grpc-dotnet",
+    "Copyright": "Copyright 2019 The gRPC Authors",
+    "Authors": "The gRPC Authors",
+    "Description": "gRPC C# Surface API",
+    "License": "Apache-2.0",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "Grpc.HealthCheck",
+    "PackageVersion": "2.83.0",
+    "PackageProjectUrl": "https://github.com/grpc/grpc-dotnet",
+    "Copyright": "Copyright 2019 The gRPC Authors",
+    "Authors": "The gRPC Authors",
+    "Description": "gRPC C# Health Checking",
+    "License": "Apache-2.0",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "Grpc.Net.Client",
+    "PackageVersion": "2.80.0",
+    "PackageProjectUrl": "https://github.com/grpc/grpc-dotnet",
+    "Copyright": "Copyright 2019 The gRPC Authors",
+    "Authors": "The gRPC Authors",
+    "Description": ".NET client for gRPC",
+    "License": "Apache-2.0",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "Grpc.Net.ClientFactory",
+    "PackageVersion": "2.80.0",
+    "PackageProjectUrl": "https://github.com/grpc/grpc-dotnet",
+    "Copyright": "Copyright 2019 The gRPC Authors",
+    "Authors": "The gRPC Authors",
+    "Description": "HttpClientFactory integration the for gRPC .NET client",
+    "License": "Apache-2.0",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "Grpc.Net.Common",
+    "PackageVersion": "2.80.0",
+    "PackageProjectUrl": "https://github.com/grpc/grpc-dotnet",
+    "Copyright": "Copyright 2019 The gRPC Authors",
+    "Authors": "The gRPC Authors",
+    "Description": "Infrastructure for common functionality in gRPC",
+    "License": "Apache-2.0",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "Jobdeck.Auth.Contracts",
+    "PackageVersion": "1.3.1",
+    "Authors": "Jobdeck.Auth.Contracts",
+    "Description": "Package Description",
+    "ValidationErrors": [
+      {
+        "Error": "No license information found",
+        "Context": "/home/runner/work/jobdeck-ui/jobdeck-ui/src/ui.csproj"
+      }
+    ],
+    "LicenseInformationOrigin": 2
+  },
+  {
+    "PackageId": "Jobdeck.Job.Contracts",
+    "PackageVersion": "1.2.1",
+    "Authors": "Jobdeck.Job.Contracts",
+    "Description": "Package Description",
+    "ValidationErrors": [
+      {
+        "Error": "No license information found",
+        "Context": "/home/runner/work/jobdeck-ui/jobdeck-ui/src/ui.csproj"
+      }
+    ],
+    "LicenseInformationOrigin": 2
+  },
+  {
+    "PackageId": "Microsoft.AspNetCore.App.Internal.Assets",
+    "PackageVersion": "10.0.13",
+    "PackageProjectUrl": "https://asp.net/",
+    "Copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+    "Authors": "Microsoft",
+    "Description": "ASP.NET Core static framework assets\n\nThis package was built from the source code at https://github.com/dotnet/dotnet/tree/4099f83977f4d29604a9aeb971fb0a7bc1d5f699",
+    "License": "MIT",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "Microsoft.AspNetCore.Components.QuickGrid",
+    "PackageVersion": "10.0.9",
+    "PackageProjectUrl": "https://asp.net/",
+    "Copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+    "Authors": "Microsoft",
+    "Description": "Provides a simple and convenient data grid component for common grid rendering scenarios and serves as a reference architecture and performance baseline for building data grid components.\n      If you\u0027re using Entity Framework Core for your grid IQueryables, consider using the \u003Ca href=\u0022https://www.nuget.org/packages/Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter\u0022\u003EMicrosoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter\u003C/a\u003E package.\n    \n\nThis package was built from the source code at https://github.com/dotnet/dotnet/tree/901ca941248413c79832d2fdbd709da0c4386353",
+    "License": "MIT",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "OpenTelemetry",
+    "PackageVersion": "1.17.0",
+    "PackageProjectUrl": "https://opentelemetry.io/",
+    "Copyright": "Copyright The OpenTelemetry Authors",
+    "Authors": "OpenTelemetry Authors",
+    "Description": "OpenTelemetry .NET SDK",
+    "License": "Apache-2.0",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "OpenTelemetry.Api",
+    "PackageVersion": "1.17.0",
+    "PackageProjectUrl": "https://opentelemetry.io/",
+    "Copyright": "Copyright The OpenTelemetry Authors",
+    "Authors": "OpenTelemetry Authors",
+    "Description": "OpenTelemetry .NET API",
+    "License": "Apache-2.0",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "OpenTelemetry.Api.ProviderBuilderExtensions",
+    "PackageVersion": "1.17.0",
+    "PackageProjectUrl": "https://opentelemetry.io/",
+    "Copyright": "Copyright The OpenTelemetry Authors",
+    "Authors": "OpenTelemetry Authors",
+    "Description": "Contains extensions to register OpenTelemetry in applications using Microsoft.Extensions.DependencyInjection",
+    "License": "Apache-2.0",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "OpenTelemetry.Exporter.OpenTelemetryProtocol",
+    "PackageVersion": "1.17.0",
+    "PackageProjectUrl": "https://opentelemetry.io/",
+    "Copyright": "Copyright The OpenTelemetry Authors",
+    "Authors": "OpenTelemetry Authors",
+    "Description": "OpenTelemetry protocol exporter for OpenTelemetry .NET",
+    "License": "Apache-2.0",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "OpenTelemetry.Extensions.Hosting",
+    "PackageVersion": "1.17.0",
+    "PackageProjectUrl": "https://opentelemetry.io/",
+    "Copyright": "Copyright The OpenTelemetry Authors",
+    "Authors": "OpenTelemetry Authors",
+    "Description": "Contains extensions to start OpenTelemetry in applications using Microsoft.Extensions.Hosting",
+    "License": "Apache-2.0",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "OpenTelemetry.Instrumentation.AspNetCore",
+    "PackageVersion": "1.16.0",
+    "PackageProjectUrl": "https://opentelemetry.io/",
+    "Copyright": "Copyright The OpenTelemetry Authors",
+    "Authors": "OpenTelemetry Authors",
+    "Description": "ASP.NET Core instrumentation for OpenTelemetry .NET",
+    "License": "Apache-2.0",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseInformationOrigin": 0
+  },
+  {
+    "PackageId": "OpenTelemetry.Instrumentation.GrpcNetClient",
+    "PackageVersion": "1.16.0-beta.1",
+    "PackageProjectUrl": "https://opentelemetry.io/",
+    "Copyright": "Copyright The OpenTelemetry Authors",
+    "Authors": "OpenTelemetry Authors",
+    "Description": "gRPC for .NET client instrumentation for OpenTelemetry .NET.",
+    "License": "Apache-2.0",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseInformationOrigin": 0
+  }
+]
