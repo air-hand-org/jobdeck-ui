@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.2](https://github.com/air-hand-org/jobdeck-ui/compare/v1.4.1...v1.4.2) (2026-10-28)
+
+
+### Bug Fixes
+
+* **build:** generate and package original NuGet license documents ([#13](https://github.com/air-hand-org/jobdeck-ui/issues/13)) ([9d89663](https://github.com/air-hand-org/jobdeck-ui/commit/9d896639678d7451cfb689bdccf150d75cf8d128))
+
 ## [1.4.1](https://github.com/air-hand-org/jobdeck-ui/compare/v1.4.0...v1.4.1) (2026-10-27)
 
 
