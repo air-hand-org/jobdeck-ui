@@ -17,11 +17,14 @@ jobs:
       packages: read
     runs-on: ubuntu-slim
     env:
+      # Temporary opt-in for this same-repository draft trial only.
+      ARTIFACT_ELIGIBLE: ${{ github.event_name == 'pull_request' && github.event.pull_request.draft && github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'ci/nuget-license-trial' }}
       NuGetPackageSourceCredentials_github: "Username=${{ github.actor }};Password=${{ secrets.GITHUB_TOKEN }}"
     steps:
       - uses: actions/checkout@v7
         with:
           persist-credentials: false
+          ref: ${{ case(env.ARTIFACT_ELIGIBLE == 'true', github.event.pull_request.head.sha, github.sha) }}
       - uses: air-hand-org/jobdeck-actions/actions/setup-tools@v1.4.1
       - name: Restore Nuget cache
         uses: actions/cache@v5
@@ -32,6 +35,19 @@ jobs:
             nuget-${{ runner.os }}-
       - name: build
         run: make build
+      - name: collect current NuGet license output
+        run: make nuget-license-trial
+      - name: update trial license output
+        uses: air-hand-org/jobdeck-actions/actions/auto-commit@1d9ce1953c373273f28cac191bcf5ff0fc58100d # v1.7.0
+        with:
+          eligible: ${{ env.ARTIFACT_ELIGIBLE }}
+          paths: |
+            third_party/nuget-license-trial
+          expected-head: ${{ github.event.pull_request.head.sha }}
+          head-branch: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.repository.name }}
+          app-client-id: ${{ vars.GH_APP_RELEASE_CLIENT_ID }}
+          app-private-key: ${{ secrets.GH_APP_RELEASE_PRIVATE_KEY }}
       - name: lint
         run: make lint
       - name: check clean
