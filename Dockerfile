@@ -18,6 +18,8 @@ RUN dotnet publish ui.csproj --no-restore --configuration Release --output /app/
 FROM mcr.microsoft.com/dotnet/aspnet:10.0.14
 WORKDIR /app
 COPY --from=build /app/publish .
+COPY LICENSE /usr/share/licenses/jobdeck-ui/LICENSE
+COPY third_party/licenses/nuget/ /usr/share/licenses/jobdeck-ui/third_party/nuget/
 ENV ASPNETCORE_URLS=http://+:8080 \
     ASPNETCORE_FORWARDEDHEADERS_ENABLED=true \
     DOTNET_RUNNING_IN_CONTAINER=true
