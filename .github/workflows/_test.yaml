@@ -17,8 +17,7 @@ jobs:
       packages: read
     runs-on: ubuntu-slim
     env:
-      # Temporary opt-in for this same-repository draft trial only.
-      ARTIFACT_ELIGIBLE: ${{ github.event_name == 'pull_request' && github.event.pull_request.draft && github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'ci/nuget-license-trial' }}
+      ARTIFACT_ELIGIBLE: ${{ github.event_name == 'pull_request' && github.event.pull_request.user.login == 'renovate[bot]' && github.event.pull_request.head.repo.full_name == github.repository }}
       NuGetPackageSourceCredentials_github: "Username=${{ github.actor }};Password=${{ secrets.GITHUB_TOKEN }}"
     steps:
       - uses: actions/checkout@v7
@@ -35,25 +34,14 @@ jobs:
             nuget-${{ runner.os }}-
       - name: build
         run: make build
-      - name: collect current NuGet license output
-        id: collection
-        shell: bash
-        run: |
-          set +e
-          make nuget-license-trial
-          status=$?
-          set -e
-          echo "exit-status=$status" >> "$GITHUB_OUTPUT"
-          # Draft review retains generated errors; the final gate still fails.
-          if [[ "$status" != 0 && ( "$ARTIFACT_ELIGIBLE" != true || "$status" != 2 ) ]]; then
-            exit "$status"
-          fi
-      - name: update trial license output
+      - name: generate NuGet licenses
+        run: make licenses
+      - name: update generated licenses
         uses: air-hand-org/jobdeck-actions/actions/auto-commit@1d9ce1953c373273f28cac191bcf5ff0fc58100d # v1.7.0
         with:
           eligible: ${{ env.ARTIFACT_ELIGIBLE }}
           paths: |
-            third_party/nuget-license-trial
+            third_party/licenses/nuget
           expected-head: ${{ github.event.pull_request.head.sha }}
           head-branch: ${{ github.event.pull_request.head.ref }}
           repository: ${{ github.event.repository.name }}
@@ -65,8 +53,3 @@ jobs:
         run: make check-clean
       - name: test
         run: make test
-      - name: require resolved original licenses
-        if: ${{ !cancelled() && steps.collection.outputs.exit-status != '' }}
-        env:
-          COLLECTION_STATUS: ${{ steps.collection.outputs.exit-status }}
-        run: exit "$COLLECTION_STATUS"

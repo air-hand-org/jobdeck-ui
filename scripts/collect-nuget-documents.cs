@@ -5,26 +5,26 @@ using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
-// Trial only: original documents from restored nupkg files, never SPDX templates.
+// Preserve original documents from restored nupkg files, never SPDX templates.
 var inventory = JsonDocument.Parse(File.ReadAllText(args[0]));
 var cache = Path.GetFullPath(args[1]);
 var output = Path.GetFullPath(args[2]);
 var packages = new SortedDictionary<string, (string Id, string Version)>(StringComparer.Ordinal);
 foreach (var project in inventory.RootElement.GetProperty("projects").EnumerateArray())
-foreach (var framework in project.GetProperty("frameworks").EnumerateArray())
-foreach (var group in new[] { "topLevelPackages", "transitivePackages" })
-{
-    if (!framework.TryGetProperty(group, out var rows)) continue;
-    foreach (var row in rows.EnumerateArray())
-    {
-        var id = row.GetProperty("id").GetString()!;
-        var version = row.GetProperty("resolvedVersion").GetString()!;
-        if (!Regex.IsMatch(id, @"\A[A-Za-z0-9][A-Za-z0-9_.-]*\z") ||
-            !Regex.IsMatch(version, @"\A[0-9][A-Za-z0-9.+-]*\z"))
-            throw new InvalidDataException("Invalid package identity");
-        packages[id.ToLowerInvariant() + "/" + version.ToLowerInvariant()] = (id, version);
-    }
-}
+    foreach (var framework in project.GetProperty("frameworks").EnumerateArray())
+        foreach (var group in new[] { "topLevelPackages", "transitivePackages" })
+        {
+            if (!framework.TryGetProperty(group, out var rows)) continue;
+            foreach (var row in rows.EnumerateArray())
+            {
+                var id = row.GetProperty("id").GetString()!;
+                var version = row.GetProperty("resolvedVersion").GetString()!;
+                if (!Regex.IsMatch(id, @"\A[A-Za-z0-9][A-Za-z0-9_.-]*\z") ||
+                    !Regex.IsMatch(version, @"\A[0-9][A-Za-z0-9.+-]*\z"))
+                    throw new InvalidDataException("Invalid package identity");
+                packages[id.ToLowerInvariant() + "/" + version.ToLowerInvariant()] = (id, version);
+            }
+        }
 if (packages.Count == 0) throw new InvalidDataException("Empty package inventory");
 // Validate all inputs before replacing the scoped generated output.
 var archives = packages.Select(p => (p.Key, p.Value, Path: Path.Combine(cache, p.Key,
@@ -99,43 +99,62 @@ foreach (var archive in archives)
         else
         {
             foreach (var stem in new[] { "LICENSE", "LICENCE", "COPYING", "NOTICE", "THIRD-PARTY-NOTICES" })
-            foreach (var name in new[] { stem, stem + ".txt", stem + ".md", stem + ".TXT", stem.ToLowerInvariant(), stem.ToLowerInvariant() + ".txt", stem.ToLowerInvariant() + ".md" })
-            {
-                var sourceUrl = $"https://raw.githubusercontent.com/{match.Groups[1].Value}/{match.Groups[2].Value}/{revision}/{name}";
-                if (!downloads.TryGetValue(sourceUrl, out var result))
+                foreach (var name in new[] { stem, stem + ".txt", stem + ".md", stem + ".TXT", stem.ToLowerInvariant(), stem.ToLowerInvariant() + ".txt", stem.ToLowerInvariant() + ".md" })
                 {
-                    result = await Download(http, sourceUrl);
-                    downloads.Add(sourceUrl, result);
+                    var sourceUrl = $"https://raw.githubusercontent.com/{match.Groups[1].Value}/{match.Groups[2].Value}/{revision}/{name}";
+                    if (!downloads.TryGetValue(sourceUrl, out var result))
+                    {
+                        result = await Download(http, sourceUrl);
+                        downloads.Add(sourceUrl, result);
+                    }
+                    sourceAttempts.Add(new
+                    {
+                        url = sourceUrl,
+                        revision,
+                        httpStatus = result.Status,
+                        status = result.Status == 404 ? "document-absent" : result.Error ?? "collected"
+                    });
+                    if (result.Error != null)
+                        errors.Add(new { code = result.Error, url = sourceUrl, httpStatus = result.Status });
+                    if (result.Bytes == null) continue;
+                    var destination = Path.Combine(output, "source", archive.Key, name);
+                    Directory.CreateDirectory(Path.GetDirectoryName(destination)!);
+                    File.WriteAllBytes(destination, result.Bytes);
+                    sourceDocuments.Add(new
+                    {
+                        path = name,
+                        url = sourceUrl,
+                        revision,
+                        sha256 = Convert.ToHexStringLower(SHA256.HashData(result.Bytes)),
+                        bytes = result.Bytes.Length
+                    });
+                    if (IsLicense(name)) hasLicense = true;
                 }
-                sourceAttempts.Add(new { url = sourceUrl, revision, httpStatus = result.Status,
-                    status = result.Status == 404 ? "document-absent" : result.Error ?? "collected" });
-                if (result.Error != null)
-                    errors.Add(new { code = result.Error, url = sourceUrl, httpStatus = result.Status });
-                if (result.Bytes == null) continue;
-                var destination = Path.Combine(output, "source", archive.Key, name);
-                Directory.CreateDirectory(Path.GetDirectoryName(destination)!);
-                File.WriteAllBytes(destination, result.Bytes);
-                sourceDocuments.Add(new { path = name, url = sourceUrl, revision,
-                    sha256 = Convert.ToHexStringLower(SHA256.HashData(result.Bytes)), bytes = result.Bytes.Length });
-                if (IsLicense(name)) hasLicense = true;
-            }
         }
     }
     if (!hasLicense) errors.Add(new { code = "unresolved-original-license" });
     var declaredLicenseFileMissing = licenseFile != null && !zip.Entries.Any(e => e.FullName == licenseFile);
     if (declaredLicenseFileMissing) errors.Add(new { code = "declared-license-file-missing" });
     if (errors.Count > 0) unresolved++;
-    manifest.Add(new {
-        id = archive.Value.Id, version = archive.Value.Version,
-        source = "restored-nupkg", packagePath = archive.Key + "/" + Path.GetFileName(archive.Path),
+    manifest.Add(new
+    {
+        id = archive.Value.Id,
+        version = archive.Value.Version,
+        source = "restored-nupkg",
+        packagePath = archive.Key + "/" + Path.GetFileName(archive.Path),
         nupkgSha256 = Convert.ToHexStringLower(SHA256.HashData(File.ReadAllBytes(archive.Path))),
         nuspecPath = nuspec.FullName,
-        licenseType = license?.Attribute("type")?.Value, license = license?.Value,
+        licenseType = license?.Attribute("type")?.Value,
+        license = license?.Value,
         licenseUrl = Field("licenseUrl")?.Value,
         repository = Field("repository")?.Attributes().ToDictionary(a => a.Name.LocalName, a => a.Value),
         status = errors.Count > 0 ? "error" : "original-license-collected",
         declaredLicenseFileMissing,
-        sourceRetrieval, documents, sourceDocuments, sourceAttempts, errors,
+        sourceRetrieval,
+        documents,
+        sourceDocuments,
+        sourceAttempts,
+        errors,
         attributionScope = "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
     });
 }
