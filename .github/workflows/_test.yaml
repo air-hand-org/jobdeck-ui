@@ -36,7 +36,18 @@ jobs:
       - name: build
         run: make build
       - name: collect current NuGet license output
-        run: make nuget-license-trial
+        id: collection
+        shell: bash
+        run: |
+          set +e
+          make nuget-license-trial
+          status=$?
+          set -e
+          echo "exit-status=$status" >> "$GITHUB_OUTPUT"
+          # Draft review retains generated errors; the final gate still fails.
+          if [[ "$status" != 0 && ( "$ARTIFACT_ELIGIBLE" != true || "$status" != 2 ) ]]; then
+            exit "$status"
+          fi
       - name: update trial license output
         uses: air-hand-org/jobdeck-actions/actions/auto-commit@1d9ce1953c373273f28cac191bcf5ff0fc58100d # v1.7.0
         with:
@@ -54,3 +65,8 @@ jobs:
         run: make check-clean
       - name: test
         run: make test
+      - name: require resolved original licenses
+        if: ${{ !cancelled() && steps.collection.outputs.exit-status != '' }}
+        env:
+          COLLECTION_STATUS: ${{ steps.collection.outputs.exit-status }}
+        run: exit "$COLLECTION_STATUS"

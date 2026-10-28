@@ -43,6 +43,9 @@ foreach (var archive in archives)
 if (Directory.Exists(output)) Directory.Delete(output, true);
 Directory.CreateDirectory(output);
 var manifest = new List<object>();
+var unresolved = 0;
+using var http = new HttpClient(new HttpClientHandler { AllowAutoRedirect = false }) { Timeout = TimeSpan.FromSeconds(15) };
+var downloads = new Dictionary<string, (byte[]? Bytes, int? Status, string? Error)>();
 foreach (var archive in archives)
 {
     using var zip = ZipFile.OpenRead(archive.Path);
@@ -76,6 +79,52 @@ foreach (var archive in archives)
         File.WriteAllBytes(destination, content);
         documents.Add(new { path, sha256 = Convert.ToHexStringLower(SHA256.HashData(content)), bytes = content.Length });
     }
+    var errors = new List<object>();
+    var sourceDocuments = new List<object>();
+    var sourceAttempts = new List<object>();
+    var hasLicense = zip.Entries.Any(e => !e.FullName.EndsWith('/') &&
+        (e.FullName == licenseFile || IsLicense(Path.GetFileName(e.FullName))));
+    var sourceRetrieval = "not-needed-package-license-present";
+    if (!hasLicense)
+    {
+        sourceRetrieval = "exact-commit-root-candidates";
+        var repository = Field("repository");
+        var url = repository?.Attribute("url")?.Value;
+        var revision = repository?.Attribute("commit")?.Value;
+        var match = Regex.Match(url ?? "", @"\Ahttps://github\.com/([A-Za-z0-9_-][A-Za-z0-9_.-]*)/([A-Za-z0-9_-][A-Za-z0-9_.-]*?)(?:\.git)?/?\z");
+        if (string.IsNullOrEmpty(url)) errors.Add(new { code = "missing-repository" });
+        else if (!match.Success) errors.Add(new { code = "unsafe-or-unsupported-repository" });
+        else if (string.IsNullOrEmpty(revision)) errors.Add(new { code = "missing-commit" });
+        else if (!Regex.IsMatch(revision, @"\A[0-9a-fA-F]{40}\z")) errors.Add(new { code = "invalid-exact-commit" });
+        else
+        {
+            foreach (var stem in new[] { "LICENSE", "LICENCE", "COPYING", "NOTICE", "THIRD-PARTY-NOTICES" })
+            foreach (var name in new[] { stem, stem + ".txt", stem + ".md", stem + ".TXT", stem.ToLowerInvariant(), stem.ToLowerInvariant() + ".txt", stem.ToLowerInvariant() + ".md" })
+            {
+                var sourceUrl = $"https://raw.githubusercontent.com/{match.Groups[1].Value}/{match.Groups[2].Value}/{revision}/{name}";
+                if (!downloads.TryGetValue(sourceUrl, out var result))
+                {
+                    result = await Download(http, sourceUrl);
+                    downloads.Add(sourceUrl, result);
+                }
+                sourceAttempts.Add(new { url = sourceUrl, revision, httpStatus = result.Status,
+                    status = result.Status == 404 ? "document-absent" : result.Error ?? "collected" });
+                if (result.Error != null)
+                    errors.Add(new { code = result.Error, url = sourceUrl, httpStatus = result.Status });
+                if (result.Bytes == null) continue;
+                var destination = Path.Combine(output, "source", archive.Key, name);
+                Directory.CreateDirectory(Path.GetDirectoryName(destination)!);
+                File.WriteAllBytes(destination, result.Bytes);
+                sourceDocuments.Add(new { path = name, url = sourceUrl, revision,
+                    sha256 = Convert.ToHexStringLower(SHA256.HashData(result.Bytes)), bytes = result.Bytes.Length });
+                if (IsLicense(name)) hasLicense = true;
+            }
+        }
+    }
+    if (!hasLicense) errors.Add(new { code = "unresolved-original-license" });
+    var declaredLicenseFileMissing = licenseFile != null && !zip.Entries.Any(e => e.FullName == licenseFile);
+    if (declaredLicenseFileMissing) errors.Add(new { code = "declared-license-file-missing" });
+    if (errors.Count > 0) unresolved++;
     manifest.Add(new {
         id = archive.Value.Id, version = archive.Value.Version,
         source = "restored-nupkg", packagePath = archive.Key + "/" + Path.GetFileName(archive.Path),
@@ -84,14 +133,63 @@ foreach (var archive in archives)
         licenseType = license?.Attribute("type")?.Value, license = license?.Value,
         licenseUrl = Field("licenseUrl")?.Value,
         repository = Field("repository")?.Attributes().ToDictionary(a => a.Name.LocalName, a => a.Value),
-        status = documents.Count > 0 ? "documents-collected" : license != null || Field("licenseUrl") != null ? "metadata-only" : "missing",
-        declaredLicenseFileMissing = licenseFile != null && !zip.Entries.Any(e => e.FullName == licenseFile),
-        sourceRetrieval = "not-attempted", documents
+        status = errors.Count > 0 ? "error" : "original-license-collected",
+        declaredLicenseFileMissing,
+        sourceRetrieval, documents, sourceDocuments, sourceAttempts, errors,
+        attributionScope = "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
     });
 }
 File.WriteAllText(Path.Combine(output, "manifest.json"), JsonSerializer.Serialize(manifest,
     new JsonSerializerOptions { WriteIndented = true }) + "\n");
-Console.WriteLine($"Collected original package documents for {packages.Count} resolved packages; inspect manifest statuses and source-retrieval gaps.");
+Console.WriteLine($"Collected {packages.Count} packages; {unresolved} packages have unresolved collection errors (manifest.json).");
+Environment.ExitCode = unresolved == 0 ? 0 : 2;
+
+static bool IsLicense(string name) => Regex.IsMatch(name, @"\A(?:licen[cs]e|copying)(?:[._-].*)?\z", RegexOptions.IgnoreCase);
+
+static async Task<(byte[]? Bytes, int? Status, string? Error)> Download(HttpClient http, string url)
+{
+    const int limit = 1024 * 1024;
+    for (var attempt = 0; attempt < 3; attempt++)
+    {
+        try
+        {
+            using var timeout = new CancellationTokenSource(TimeSpan.FromSeconds(15));
+            using var response = await http.GetAsync(url, HttpCompletionOption.ResponseHeadersRead, timeout.Token);
+            var status = (int)response.StatusCode;
+            if (status == 404) return (null, status, null);
+            if ((status == 429 || status >= 500) && attempt < 2)
+            {
+                await Task.Delay(250 * (attempt + 1));
+                continue;
+            }
+            if (status != 200) return (null, status, status is 401 or 403 ? "source-auth-error" : "source-http-error");
+            if (response.Content.Headers.ContentLength > limit) return (null, status, "source-too-large");
+            var media = response.Content.Headers.ContentType?.MediaType;
+            if (media is "text/html" or "application/xhtml+xml") return (null, status, "source-html-rejected");
+            using var input = await response.Content.ReadAsStreamAsync(timeout.Token);
+            using var bytes = new MemoryStream();
+            var buffer = new byte[8192];
+            int read;
+            while ((read = await input.ReadAsync(buffer, timeout.Token)) > 0)
+            {
+                if (bytes.Length + read > limit) return (null, status, "source-too-large");
+                bytes.Write(buffer, 0, read);
+            }
+            var content = bytes.ToArray();
+            if (content.Length == 0) return (null, status, "source-empty-document");
+            var prefix = System.Text.Encoding.UTF8.GetString(content.AsSpan(0, Math.Min(512, content.Length))).TrimStart('\uFEFF', ' ', '\r', '\n', '\t');
+            if (prefix.StartsWith("<!DOCTYPE html", StringComparison.OrdinalIgnoreCase) || prefix.StartsWith("<html", StringComparison.OrdinalIgnoreCase))
+                return (null, status, "source-html-rejected");
+            return (content, status, null);
+        }
+        catch (Exception ex) when (ex is HttpRequestException or OperationCanceledException or IOException)
+        {
+            if (attempt == 2) return (null, null, ex is OperationCanceledException ? "source-timeout" : "source-transport-error");
+            await Task.Delay(250 * (attempt + 1));
+        }
+    }
+    throw new InvalidOperationException("Unreachable download state");
+}
 
 static void SafePath(string path)
 {
