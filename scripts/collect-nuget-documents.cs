@@ -76,10 +76,6 @@ foreach (var archive in archives)
         File.WriteAllBytes(destination, content);
         documents.Add(new { path, sha256 = Convert.ToHexStringLower(SHA256.HashData(content)), bytes = content.Length });
     }
-    var metadataPath = Path.Combine(output, "packages", archive.Key, nuspec.FullName);
-    Directory.CreateDirectory(Path.GetDirectoryName(metadataPath)!);
-    using (var input = nuspec.Open())
-    using (var target = File.Create(metadataPath)) input.CopyTo(target);
     manifest.Add(new {
         id = archive.Value.Id, version = archive.Value.Version,
         source = "restored-nupkg", packagePath = archive.Key + "/" + Path.GetFileName(archive.Path),
