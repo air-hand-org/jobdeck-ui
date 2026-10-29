@@ -1,9 +1,10 @@
 name: Renovate Jobdeck NuGet
 
 on:
-  push:
-    branches:
-      - main
+  workflow_call:
+    secrets:
+      GH_APP_RELEASE_PRIVATE_KEY:
+        required: true
 
 permissions: {}
 
@@ -13,7 +14,13 @@ concurrency:
 
 jobs:
   renovate:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    # Temporary live acceptance is restricted to the explicitly authorized draft.
+    # Generated updater PRs and forks cannot enter this privileged job.
+    if: >-
+      (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
+      (github.event_name == 'pull_request' && github.event.pull_request.number == 29 &&
+       github.event.pull_request.head.repo.full_name == github.repository &&
+       github.event.pull_request.head.ref == 'ci/scoped-jobdeck-renovate')
     runs-on: ubuntu-latest
     timeout-minutes: 45
     permissions:
@@ -41,6 +48,9 @@ jobs:
           renovate-version: 44.193.1
           token: ${{ steps.app-token.outputs.token }}
         env:
+          LOG_LEVEL: debug
+          # Live acceptance may create PRs, but is not authorized to merge them.
+          RENOVATE_FORCE: ${{ case(github.event_name == 'pull_request', '{"automerge":false}', '{}') }}
           # Registry credentials are deliberately separate from the Git/PR App token.
           RENOVATE_HOST_RULES: >-
             [{"hostType":"nuget","matchHost":"https://nuget.pkg.github.com/air-hand-org/","username":"${{ github.actor }}","password":"${{ secrets.GITHUB_TOKEN }}"}]
