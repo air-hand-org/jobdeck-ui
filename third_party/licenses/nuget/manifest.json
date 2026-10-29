@@ -244,10 +244,10 @@
   },
   {
     "id": "Grpc.AspNetCore.Server.ClientFactory",
-    "version": "2.80.0",
+    "version": "2.84.0",
     "source": "restored-nupkg",
-    "packagePath": "grpc.aspnetcore.server.clientfactory/2.80.0/grpc.aspnetcore.server.clientfactory.2.80.0.nupkg",
-    "nupkgSha256": "2e66a98b67cefbf15b4959017b5dc26d0939422130358b508d7355e083d6182f",
+    "packagePath": "grpc.aspnetcore.server.clientfactory/2.84.0/grpc.aspnetcore.server.clientfactory.2.84.0.nupkg",
+    "nupkgSha256": "8b00dba82ea5313b3d1e1d983e744d09a44d74ceb9bd07c15bf2bfd8b6b9dc8a",
     "nuspecPath": "Grpc.AspNetCore.Server.ClientFactory.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -255,7 +255,7 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/grpc/grpc-dotnet.git",
-      "commit": "f22747c72676120b2bc69a1ba7c8bed995e29b1b"
+      "commit": "4c6997a214601422dd66c5c74c1969db749479e9"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
@@ -264,220 +264,220 @@
     "sourceDocuments": [
       {
         "path": "LICENSE",
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/license",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/license",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/license.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/license.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/license.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/license.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENCE",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENCE.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENCE.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENCE.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/licence",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/licence",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/licence.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/licence.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/licence.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/licence.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/COPYING",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/COPYING.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/COPYING.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/COPYING.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/copying",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/copying",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/copying.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/copying.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/copying.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/copying.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/NOTICE",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/NOTICE.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/NOTICE.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/NOTICE.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/notice",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/notice",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/notice.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/notice.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/notice.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/notice.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/THIRD-PARTY-NOTICES",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/THIRD-PARTY-NOTICES.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/THIRD-PARTY-NOTICES.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/THIRD-PARTY-NOTICES.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/third-party-notices",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/third-party-notices",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/third-party-notices.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/third-party-notices.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/third-party-notices.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/third-party-notices.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       }
@@ -487,10 +487,10 @@
   },
   {
     "id": "Grpc.AspNetCore.Server",
-    "version": "2.80.0",
+    "version": "2.84.0",
     "source": "restored-nupkg",
-    "packagePath": "grpc.aspnetcore.server/2.80.0/grpc.aspnetcore.server.2.80.0.nupkg",
-    "nupkgSha256": "db68f9a945b89dead37d9915627b5e3bad6c598f65fd9f0a5b28665fc90825e1",
+    "packagePath": "grpc.aspnetcore.server/2.84.0/grpc.aspnetcore.server.2.84.0.nupkg",
+    "nupkgSha256": "4bb726b52d9ebdf92801c42f1f3105ef8969004d1a18aef09854b53f1b726f71",
     "nuspecPath": "Grpc.AspNetCore.Server.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -498,7 +498,7 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/grpc/grpc-dotnet.git",
-      "commit": "f22747c72676120b2bc69a1ba7c8bed995e29b1b"
+      "commit": "4c6997a214601422dd66c5c74c1969db749479e9"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
@@ -507,220 +507,220 @@
     "sourceDocuments": [
       {
         "path": "LICENSE",
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/license",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/license",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/license.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/license.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/license.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/license.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENCE",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENCE.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENCE.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENCE.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/licence",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/licence",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/licence.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/licence.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/licence.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/licence.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/COPYING",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/COPYING.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/COPYING.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/COPYING.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/copying",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/copying",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/copying.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/copying.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/copying.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/copying.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/NOTICE",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/NOTICE.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/NOTICE.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/NOTICE.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/notice",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/notice",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/notice.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/notice.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/notice.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/notice.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/THIRD-PARTY-NOTICES",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/THIRD-PARTY-NOTICES.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/THIRD-PARTY-NOTICES.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/THIRD-PARTY-NOTICES.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/third-party-notices",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/third-party-notices",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/third-party-notices.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/third-party-notices.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/third-party-notices.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/third-party-notices.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       }
@@ -730,10 +730,10 @@
   },
   {
     "id": "Grpc.Core.Api",
-    "version": "2.83.0",
+    "version": "2.84.0",
     "source": "restored-nupkg",
-    "packagePath": "grpc.core.api/2.83.0/grpc.core.api.2.83.0.nupkg",
-    "nupkgSha256": "af36bafbf54efacb53abde2ff38efebec4e845eaa4bdc5aca1e9a71122788b3c",
+    "packagePath": "grpc.core.api/2.84.0/grpc.core.api.2.84.0.nupkg",
+    "nupkgSha256": "a6eedd9e6832fffe46848452d73274862fb319b8e6c141ec7ad39815af155063",
     "nuspecPath": "Grpc.Core.Api.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -741,7 +741,7 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/grpc/grpc-dotnet.git",
-      "commit": "4301104498e53898a452e8fb2fea6c0b1492b755"
+      "commit": "4c6997a214601422dd66c5c74c1969db749479e9"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
@@ -750,220 +750,220 @@
     "sourceDocuments": [
       {
         "path": "LICENSE",
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/LICENSE",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/LICENSE",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/LICENSE.txt",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/LICENSE.md",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/LICENSE.TXT",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/license",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/license",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/license.txt",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/license.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/license.md",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/license.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/LICENCE",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/LICENCE.txt",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/LICENCE.md",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/LICENCE.TXT",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/licence",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/licence",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/licence.txt",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/licence.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/licence.md",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/licence.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/COPYING",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/COPYING.txt",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/COPYING.md",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/COPYING.TXT",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/copying",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/copying",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/copying.txt",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/copying.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/copying.md",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/copying.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/NOTICE",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/NOTICE.txt",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/NOTICE.md",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/NOTICE.TXT",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/notice",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/notice",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/notice.txt",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/notice.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/notice.md",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/notice.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/THIRD-PARTY-NOTICES",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/THIRD-PARTY-NOTICES.txt",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/THIRD-PARTY-NOTICES.md",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/THIRD-PARTY-NOTICES.TXT",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/third-party-notices",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/third-party-notices",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/third-party-notices.txt",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/third-party-notices.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/third-party-notices.md",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/third-party-notices.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       }
@@ -973,10 +973,10 @@
   },
   {
     "id": "Grpc.HealthCheck",
-    "version": "2.83.0",
+    "version": "2.84.0",
     "source": "restored-nupkg",
-    "packagePath": "grpc.healthcheck/2.83.0/grpc.healthcheck.2.83.0.nupkg",
-    "nupkgSha256": "b1cd718d45b4126beca078f2b673c80829bc571af83ff6a9518a8979062000f8",
+    "packagePath": "grpc.healthcheck/2.84.0/grpc.healthcheck.2.84.0.nupkg",
+    "nupkgSha256": "6e25b2b9a8c54dd3c30176713a2d3ccdcc864c00abb98583e2f5e141c593f224",
     "nuspecPath": "Grpc.HealthCheck.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -984,7 +984,7 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/grpc/grpc-dotnet.git",
-      "commit": "4301104498e53898a452e8fb2fea6c0b1492b755"
+      "commit": "4c6997a214601422dd66c5c74c1969db749479e9"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
@@ -993,220 +993,220 @@
     "sourceDocuments": [
       {
         "path": "LICENSE",
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/LICENSE",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/LICENSE",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/LICENSE.txt",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/LICENSE.md",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/LICENSE.TXT",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/license",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/license",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/license.txt",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/license.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/license.md",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/license.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/LICENCE",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/LICENCE.txt",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/LICENCE.md",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/LICENCE.TXT",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/licence",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/licence",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/licence.txt",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/licence.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/licence.md",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/licence.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/COPYING",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/COPYING.txt",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/COPYING.md",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/COPYING.TXT",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/copying",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/copying",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/copying.txt",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/copying.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/copying.md",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/copying.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/NOTICE",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/NOTICE.txt",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/NOTICE.md",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/NOTICE.TXT",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/notice",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/notice",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/notice.txt",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/notice.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/notice.md",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/notice.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/THIRD-PARTY-NOTICES",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/THIRD-PARTY-NOTICES.txt",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/THIRD-PARTY-NOTICES.md",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/THIRD-PARTY-NOTICES.TXT",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/third-party-notices",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/third-party-notices",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/third-party-notices.txt",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/third-party-notices.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4301104498e53898a452e8fb2fea6c0b1492b755/third-party-notices.md",
-        "revision": "4301104498e53898a452e8fb2fea6c0b1492b755",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/third-party-notices.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       }
@@ -1216,10 +1216,10 @@
   },
   {
     "id": "Grpc.Net.Client",
-    "version": "2.80.0",
+    "version": "2.84.0",
     "source": "restored-nupkg",
-    "packagePath": "grpc.net.client/2.80.0/grpc.net.client.2.80.0.nupkg",
-    "nupkgSha256": "caf3d1b77678011adeeb93ca205300b7c2757cca7f1bb3a2839e5dbd93d14072",
+    "packagePath": "grpc.net.client/2.84.0/grpc.net.client.2.84.0.nupkg",
+    "nupkgSha256": "e0151e4dd1118d9cce28e12a0b0b781ab19826f30f3c838f9e53c6298997e03e",
     "nuspecPath": "Grpc.Net.Client.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -1227,7 +1227,7 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/grpc/grpc-dotnet.git",
-      "commit": "f22747c72676120b2bc69a1ba7c8bed995e29b1b"
+      "commit": "4c6997a214601422dd66c5c74c1969db749479e9"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
@@ -1236,220 +1236,220 @@
     "sourceDocuments": [
       {
         "path": "LICENSE",
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/license",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/license",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/license.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/license.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/license.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/license.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENCE",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENCE.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENCE.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENCE.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/licence",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/licence",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/licence.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/licence.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/licence.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/licence.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/COPYING",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/COPYING.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/COPYING.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/COPYING.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/copying",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/copying",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/copying.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/copying.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/copying.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/copying.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/NOTICE",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/NOTICE.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/NOTICE.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/NOTICE.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/notice",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/notice",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/notice.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/notice.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/notice.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/notice.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/THIRD-PARTY-NOTICES",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/THIRD-PARTY-NOTICES.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/THIRD-PARTY-NOTICES.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/THIRD-PARTY-NOTICES.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/third-party-notices",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/third-party-notices",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/third-party-notices.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/third-party-notices.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/third-party-notices.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/third-party-notices.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       }
@@ -1459,10 +1459,10 @@
   },
   {
     "id": "Grpc.Net.ClientFactory",
-    "version": "2.80.0",
+    "version": "2.84.0",
     "source": "restored-nupkg",
-    "packagePath": "grpc.net.clientfactory/2.80.0/grpc.net.clientfactory.2.80.0.nupkg",
-    "nupkgSha256": "d8f8c9b9bf5dd8a6f1bec89e50ba5d4f7e73ed90cc5edb6f8ae646a3eeac68c4",
+    "packagePath": "grpc.net.clientfactory/2.84.0/grpc.net.clientfactory.2.84.0.nupkg",
+    "nupkgSha256": "121c17234c030b83a57e9c1ae932685f0969b577e693719b2b9ffbaa3f379665",
     "nuspecPath": "Grpc.Net.ClientFactory.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -1470,7 +1470,7 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/grpc/grpc-dotnet.git",
-      "commit": "f22747c72676120b2bc69a1ba7c8bed995e29b1b"
+      "commit": "4c6997a214601422dd66c5c74c1969db749479e9"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
@@ -1479,220 +1479,220 @@
     "sourceDocuments": [
       {
         "path": "LICENSE",
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/license",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/license",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/license.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/license.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/license.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/license.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENCE",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENCE.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENCE.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENCE.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/licence",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/licence",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/licence.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/licence.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/licence.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/licence.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/COPYING",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/COPYING.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/COPYING.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/COPYING.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/copying",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/copying",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/copying.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/copying.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/copying.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/copying.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/NOTICE",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/NOTICE.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/NOTICE.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/NOTICE.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/notice",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/notice",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/notice.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/notice.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/notice.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/notice.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/THIRD-PARTY-NOTICES",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/THIRD-PARTY-NOTICES.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/THIRD-PARTY-NOTICES.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/THIRD-PARTY-NOTICES.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/third-party-notices",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/third-party-notices",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/third-party-notices.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/third-party-notices.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/third-party-notices.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/third-party-notices.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       }
@@ -1702,10 +1702,10 @@
   },
   {
     "id": "Grpc.Net.Common",
-    "version": "2.80.0",
+    "version": "2.84.0",
     "source": "restored-nupkg",
-    "packagePath": "grpc.net.common/2.80.0/grpc.net.common.2.80.0.nupkg",
-    "nupkgSha256": "4f8e633d2ca5ee9b0eb9f18626fd68e99c9ec2f9462b6645452f1b8733408741",
+    "packagePath": "grpc.net.common/2.84.0/grpc.net.common.2.84.0.nupkg",
+    "nupkgSha256": "f0282aaead3e80702320d74b2412bb76cb99bdb3987d1ae7ae2ed10b482cacde",
     "nuspecPath": "Grpc.Net.Common.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -1713,7 +1713,7 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/grpc/grpc-dotnet.git",
-      "commit": "f22747c72676120b2bc69a1ba7c8bed995e29b1b"
+      "commit": "4c6997a214601422dd66c5c74c1969db749479e9"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
@@ -1722,220 +1722,220 @@
     "sourceDocuments": [
       {
         "path": "LICENSE",
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENSE.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENSE.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/license",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/license",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/license.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/license.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/license.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/license.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENCE",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENCE.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENCE.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/LICENCE.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/LICENCE.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/licence",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/licence",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/licence.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/licence.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/licence.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/licence.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/COPYING",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/COPYING.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/COPYING.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/COPYING.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/COPYING.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/copying",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/copying",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/copying.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/copying.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/copying.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/copying.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/NOTICE",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/NOTICE.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/NOTICE.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/NOTICE.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/NOTICE.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/notice",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/notice",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/notice.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/notice.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/notice.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/notice.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/THIRD-PARTY-NOTICES",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/THIRD-PARTY-NOTICES.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/THIRD-PARTY-NOTICES.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/THIRD-PARTY-NOTICES.TXT",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/THIRD-PARTY-NOTICES.TXT",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/third-party-notices",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/third-party-notices",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/third-party-notices.txt",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/third-party-notices.txt",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/f22747c72676120b2bc69a1ba7c8bed995e29b1b/third-party-notices.md",
-        "revision": "f22747c72676120b2bc69a1ba7c8bed995e29b1b",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/4c6997a214601422dd66c5c74c1969db749479e9/third-party-notices.md",
+        "revision": "4c6997a214601422dd66c5c74c1969db749479e9",
         "httpStatus": 404,
         "status": "document-absent"
       }
