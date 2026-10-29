@@ -4,6 +4,15 @@ on:
 permissions: {}
 
 jobs:
+  renovate-jobdeck:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    uses: $/.github/workflows/renovate-jobdeck.yaml
+    permissions:
+      contents: read
+      packages: read
+    secrets:
+      GH_APP_RELEASE_PRIVATE_KEY: ${{ secrets.GH_APP_RELEASE_PRIVATE_KEY }}
+
   # This nested reusable workflow owns test-only concurrency, so cancelling a
   # superseded test run never cancels this workflow's infrastructure plan.
   test:
