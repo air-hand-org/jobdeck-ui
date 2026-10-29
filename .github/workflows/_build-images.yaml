@@ -104,7 +104,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Check whether image already exists
         id: image
-        uses: air-hand-org/jobdeck-actions/actions/image-exists@287f4026cd3c9245ccb7755f427ce5c8ebe75482 # v1.4.1
+        uses: air-hand-org/jobdeck-actions/actions/image-exists@1d9ce1953c373273f28cac191bcf5ff0fc58100d # v1.7.0
         with:
           image: ${{ env.AR_IMAGE }}
       - name: Build and push image
@@ -123,7 +123,7 @@ jobs:
             github_packages_token=${{ secrets.GITHUB_TOKEN }}
       # Always check GHCR, including when a previous attempt already pushed to AR.
       - name: Copy image to GHCR if missing
-        uses: air-hand-org/jobdeck-actions/actions/copy-image@287f4026cd3c9245ccb7755f427ce5c8ebe75482 # v1.4.1
+        uses: air-hand-org/jobdeck-actions/actions/copy-image@1d9ce1953c373273f28cac191bcf5ff0fc58100d # v1.7.0
         with:
           src: ${{ env.AR_IMAGE }}
           dest: ${{ env.GHCR_IMAGE }}
