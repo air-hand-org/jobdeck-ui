@@ -1,0 +1,164 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>aquaproj/aqua-renovate-config#2.14.0",
+    "helpers:pinGitHubActionDigestsToSemver",
+    "config:recommended",
+    ":semanticCommits"
+  ],
+  "prConcurrentLimit": 10,
+  "enabledManagers": [
+    "custom.regex",
+    "mise",
+    "github-actions",
+    "nuget",
+    "dockerfile"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "minimumReleaseAge": "3 days",
+  "automerge": false,
+  "automergeType": "pr",
+  "automergeStrategy": "squash",
+  "platformAutomerge": true,
+  "rebaseWhen": "auto",
+  "gitIgnoredAuthors": [
+    "air-hand-release-app[bot]@users.noreply.github.com"
+  ],
+  "vulnerabilityAlerts": {
+    "automerge": false
+  },
+  "lockFileMaintenance": {
+    "automerge": false
+  },
+  "packageRules": [
+    {
+      "description": "Consume internally controlled contract packages without an additional delay",
+      "matchManagers": [
+        "nuget"
+      ],
+      "matchPackageNames": [
+        "Jobdeck.Auth.Contracts",
+        "Jobdeck.Job.Contracts"
+      ],
+      "minimumReleaseAge": "0 days"
+    },
+    {
+      "description": "Consume internally controlled jobdeck-actions releases without an additional delay",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchPackageNames": [
+        "air-hand-org/jobdeck-actions"
+      ],
+      "minimumReleaseAge": "0 days"
+    },
+    {
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "addLabels": [
+        "major"
+      ],
+      "automerge": false
+    },
+    {
+      "matchUpdateTypes": [
+        "minor"
+      ],
+      "addLabels": [
+        "minor"
+      ],
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "addLabels": [
+        "patch"
+      ],
+      "automerge": true
+    },
+    {
+      "matchManagers": [
+        "custom.regex"
+      ],
+      "matchDatasources": [
+        "dotnet-version"
+      ],
+      "matchPackageNames": [
+        "dotnet-sdk"
+      ],
+      "description": "Coordinate compatible .NET SDK, runtime image and framework package updates",
+      "groupName": ".NET",
+      "groupSlug": "dotnet",
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "semanticCommitType": "fix",
+      "semanticCommitScope": "deps"
+    },
+    {
+      "matchManagers": [
+        "dockerfile"
+      ],
+      "matchPackageNames": [
+        "mcr.microsoft.com/dotnet/sdk",
+        "mcr.microsoft.com/dotnet/aspnet",
+        "mcr.microsoft.com/dotnet/runtime",
+        "mcr.microsoft.com/dotnet/runtime-deps"
+      ],
+      "description": "Coordinate compatible .NET SDK, runtime image and framework package updates",
+      "groupName": ".NET",
+      "groupSlug": "dotnet",
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "semanticCommitType": "fix",
+      "semanticCommitScope": "deps"
+    },
+    {
+      "matchManagers": [
+        "nuget"
+      ],
+      "matchPackageNames": [
+        "/^Microsoft\\.(?:AspNetCore|NETCore|Extensions)\\./"
+      ],
+      "description": "Coordinate compatible .NET SDK, runtime image and framework package updates",
+      "groupName": ".NET",
+      "groupSlug": "dotnet",
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "semanticCommitType": "fix",
+      "semanticCommitScope": "deps"
+    }
+  ],
+  "mise": {
+    "managerFilePatterns": [
+      "(^|/)\\.?mise\\.toml$",
+      "(^|/)\\.?mise/config\\.toml$",
+      "(^|/)\\.?mise/config.*\\.toml$"
+    ]
+  },
+  "assigneesFromCodeOwners": true,
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/^mise\\.toml$/"
+      ],
+      "matchStrings": [
+        "(?:^|\\n)dotnet\\s*=\\s*[\"'](?<currentValue>\\d+\\.\\d+(?:\\.\\d+)?)[\"']"
+      ],
+      "depNameTemplate": "dotnet-sdk",
+      "datasourceTemplate": "dotnet-version",
+      "versioningTemplate": "dotnet"
+    }
+  ]
+}
