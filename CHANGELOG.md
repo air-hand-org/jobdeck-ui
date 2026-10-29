@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.4.3](https://github.com/air-hand-org/jobdeck-ui/compare/v1.4.2...v1.4.3) (2026-10-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency jobdeck.auth.contracts to 1.6.0 ([#34](https://github.com/air-hand-org/jobdeck-ui/issues/34)) ([d48cc30](https://github.com/air-hand-org/jobdeck-ui/commit/d48cc3050651866aa7084040dbaaff317878ab26))
+* **deps:** update dependency jobdeck.job.contracts to 1.3.0 ([#35](https://github.com/air-hand-org/jobdeck-ui/issues/35)) ([16ef0ec](https://github.com/air-hand-org/jobdeck-ui/commit/16ef0ec7741444c4ad95d35df8b6a5a77b58229d))
+* **deps:** update dependency microsoft.aspnetcore.components.quickgrid to 10.0.14 ([#20](https://github.com/air-hand-org/jobdeck-ui/issues/20)) ([a287463](https://github.com/air-hand-org/jobdeck-ui/commit/a2874634421fadcdd65d343fb364038919c6f8f5))
+* **deps:** update grpc-dotnet monorepo to 2.84.0 ([#33](https://github.com/air-hand-org/jobdeck-ui/issues/33)) ([9d2c73f](https://github.com/air-hand-org/jobdeck-ui/commit/9d2c73fbd2c186823034ec01c0d947839aeb935d))
+* **deps:** update opentelemetry-dotnet monorepo to 1.20.1 ([#37](https://github.com/air-hand-org/jobdeck-ui/issues/37)) ([cc72bf1](https://github.com/air-hand-org/jobdeck-ui/commit/cc72bf18d58ae7b8defa06be94327fabe4c9ba0b))
+* **deps:** use fix commits for all .NET dependency updates ([#25](https://github.com/air-hand-org/jobdeck-ui/issues/25)) ([a9bc29c](https://github.com/air-hand-org/jobdeck-ui/commit/a9bc29c2aed2398ed5cf05ac7fc205a2326f789c))
+
 ## [1.4.2](https://github.com/air-hand-org/jobdeck-ui/compare/v1.4.1...v1.4.2) (2026-10-28)
 
 
