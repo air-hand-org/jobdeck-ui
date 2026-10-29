@@ -5,6 +5,7 @@ permissions: {}
 
 jobs:
   renovate-jobdeck:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     uses: $/.github/workflows/renovate-jobdeck.yaml
     permissions:
       contents: read
