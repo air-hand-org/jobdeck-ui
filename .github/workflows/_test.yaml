@@ -26,7 +26,7 @@ jobs:
           ref: ${{ case(env.ARTIFACT_ELIGIBLE == 'true', github.event.pull_request.head.sha, github.sha) }}
       - uses: air-hand-org/jobdeck-actions/actions/setup-tools@1d9ce1953c373273f28cac191bcf5ff0fc58100d # v1.7.0
       - name: Restore Nuget cache
-        uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5.1.0
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: ~/.nuget/packages
           key: nuget-${{ runner.os }}-${{ hashFiles('**/*.csproj') }}
