@@ -1,0 +1,51 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-global-schema.json",
+  "platform": "github",
+  "repositories": ["air-hand-org/jobdeck-ui"],
+  "autodiscover": false,
+  "onboarding": false,
+  "requireConfig": "ignored",
+  "inheritConfig": false,
+  "globalExtends": ["config:recommended", ":semanticCommits"],
+  "baseBranchPatterns": ["main"],
+  "branchPrefix": "renovate-jobdeck/",
+  "dependencyDashboard": false,
+  "enabledManagers": ["nuget"],
+  "includePaths": ["src/ui.csproj", "NuGet.Config"],
+  "prConcurrentLimit": 10,
+  "labels": ["dependencies"],
+  "minimumReleaseAge": "3 days",
+  "automerge": false,
+  "automergeType": "pr",
+  "automergeStrategy": "squash",
+  "platformAutomerge": true,
+  "rebaseWhen": "auto",
+  "assigneesFromCodeOwners": true,
+  "gitIgnoredAuthors": ["air-hand-release-app[bot]@users.noreply.github.com"],
+  "vulnerabilityAlerts": {"automerge": false},
+  "lockFileMaintenance": {"enabled": false, "automerge": false},
+  "packageRules": [
+    {
+      "description": "Disable every package unless explicitly enabled below",
+      "matchPackageNames": ["*"],
+      "enabled": false
+    },
+    {
+      "description": "Only manage Jobdeck NuGet packages from GitHub Packages",
+      "matchManagers": ["nuget"],
+      "matchPackageNames": ["/^Jobdeck\\./i"],
+      "enabled": true,
+      "registryUrls": ["https://nuget.pkg.github.com/air-hand-org/index.json"],
+      "semanticCommitType": "fix",
+      "rangeStrategy": "bump"
+    },
+    {
+      "description": "Consume internally controlled contract packages without an additional delay",
+      "matchPackageNames": ["Jobdeck.Auth.Contracts", "Jobdeck.Job.Contracts"],
+      "minimumReleaseAge": "0 days"
+    },
+    {"matchUpdateTypes": ["major"], "addLabels": ["major"], "automerge": false},
+    {"matchUpdateTypes": ["minor"], "addLabels": ["minor"], "automerge": true},
+    {"matchUpdateTypes": ["patch"], "addLabels": ["patch"], "automerge": true}
+  ]
+}
