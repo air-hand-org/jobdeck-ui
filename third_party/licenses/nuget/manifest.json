@@ -2525,10 +2525,10 @@
   },
   {
     "id": "OpenTelemetry.Api.ProviderBuilderExtensions",
-    "version": "1.17.0",
+    "version": "1.20.1",
     "source": "restored-nupkg",
-    "packagePath": "opentelemetry.api.providerbuilderextensions/1.17.0/opentelemetry.api.providerbuilderextensions.1.17.0.nupkg",
-    "nupkgSha256": "740cc4167bd41acd018d0d03a7197a8ab775f3293dbabddd8c0155657264b463",
+    "packagePath": "opentelemetry.api.providerbuilderextensions/1.20.1/opentelemetry.api.providerbuilderextensions.1.20.1.nupkg",
+    "nupkgSha256": "ccd63762c4688c8e68ec459a4dc55b24b0564e0904b254e950df99282713faa5",
     "nuspecPath": "OpenTelemetry.Api.ProviderBuilderExtensions.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -2536,7 +2536,7 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/open-telemetry/opentelemetry-dotnet",
-      "commit": "e432cd549a81dabfc8b1c7c346c03cdf933013f1"
+      "commit": "0bfd4c350f670dbc819b39bd57fac4c3ad5ba238"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
@@ -2560,10 +2560,10 @@
   },
   {
     "id": "OpenTelemetry.Api",
-    "version": "1.17.0",
+    "version": "1.20.1",
     "source": "restored-nupkg",
-    "packagePath": "opentelemetry.api/1.17.0/opentelemetry.api.1.17.0.nupkg",
-    "nupkgSha256": "aff3a9ffd3908662f71fe5e792e983f0149d6fa5b06b3a25ada5570960ef7dd0",
+    "packagePath": "opentelemetry.api/1.20.1/opentelemetry.api.1.20.1.nupkg",
+    "nupkgSha256": "0bb52964b123c2bdd943115c91ca9a2be0102464d6961f0141216c8c6fdca2ee",
     "nuspecPath": "OpenTelemetry.Api.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -2571,7 +2571,7 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/open-telemetry/opentelemetry-dotnet",
-      "commit": "e432cd549a81dabfc8b1c7c346c03cdf933013f1"
+      "commit": "0bfd4c350f670dbc819b39bd57fac4c3ad5ba238"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
@@ -2665,10 +2665,10 @@
   },
   {
     "id": "OpenTelemetry.Instrumentation.AspNetCore",
-    "version": "1.16.0",
+    "version": "1.20.1",
     "source": "restored-nupkg",
-    "packagePath": "opentelemetry.instrumentation.aspnetcore/1.16.0/opentelemetry.instrumentation.aspnetcore.1.16.0.nupkg",
-    "nupkgSha256": "f3d9d6909634d9847020b99fb0ebaf6610726bd40d8f051397c0685a1a67aefd",
+    "packagePath": "opentelemetry.instrumentation.aspnetcore/1.20.1/opentelemetry.instrumentation.aspnetcore.1.20.1.nupkg",
+    "nupkgSha256": "7755b8ca2dfc77c62ab291417372e8c52304e48b10ffa693bbc19611130d6e78",
     "nuspecPath": "OpenTelemetry.Instrumentation.AspNetCore.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -2676,7 +2676,7 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/open-telemetry/opentelemetry-dotnet-contrib",
-      "commit": "61fd68a15de747c9accdd07273041b28ef454f99"
+      "commit": "d27a61ee6c1916e8c84a97eb5ba3dc04a5dab735"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
