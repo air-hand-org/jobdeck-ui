@@ -1,10 +1,10 @@
 [
   {
     "id": "Google.Protobuf",
-    "version": "3.35.1",
+    "version": "3.36.2",
     "source": "restored-nupkg",
-    "packagePath": "google.protobuf/3.35.1/google.protobuf.3.35.1.nupkg",
-    "nupkgSha256": "6ba51589915e3640e1ffdd384863dd0d73f0ca6a8aac591ec81c42c6a3ee55ce",
+    "packagePath": "google.protobuf/3.36.2/google.protobuf.3.36.2.nupkg",
+    "nupkgSha256": "1182590db175f9057707857a1df48b217226d0732716cd353fa4aa4683d38dcb",
     "nuspecPath": "Google.Protobuf.nuspec",
     "licenseType": "expression",
     "license": "BSD-3-Clause",
@@ -12,7 +12,7 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/protocolbuffers/protobuf.git",
-      "commit": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03"
+      "commit": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
@@ -21,220 +21,220 @@
     "sourceDocuments": [
       {
         "path": "LICENSE",
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/LICENSE",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/LICENSE",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "sha256": "6e5e117324afd944dcf67f36cf329843bc1a92229a8cd9bb573d7a83130fea7d",
         "bytes": 1732
       }
     ],
     "sourceAttempts": [
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/LICENSE",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/LICENSE",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/LICENSE.txt",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/LICENSE.txt",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/LICENSE.md",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/LICENSE.md",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/LICENSE.TXT",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/LICENSE.TXT",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/license",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/license",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/license.txt",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/license.txt",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/license.md",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/license.md",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/LICENCE",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/LICENCE",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/LICENCE.txt",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/LICENCE.txt",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/LICENCE.md",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/LICENCE.md",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/LICENCE.TXT",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/LICENCE.TXT",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/licence",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/licence",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/licence.txt",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/licence.txt",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/licence.md",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/licence.md",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/COPYING",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/COPYING",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/COPYING.txt",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/COPYING.txt",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/COPYING.md",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/COPYING.md",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/COPYING.TXT",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/COPYING.TXT",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/copying",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/copying",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/copying.txt",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/copying.txt",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/copying.md",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/copying.md",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/NOTICE",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/NOTICE",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/NOTICE.txt",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/NOTICE.txt",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/NOTICE.md",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/NOTICE.md",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/NOTICE.TXT",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/NOTICE.TXT",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/notice",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/notice",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/notice.txt",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/notice.txt",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/notice.md",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/notice.md",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/THIRD-PARTY-NOTICES",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/THIRD-PARTY-NOTICES",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/THIRD-PARTY-NOTICES.txt",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/THIRD-PARTY-NOTICES.txt",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/THIRD-PARTY-NOTICES.md",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/THIRD-PARTY-NOTICES.md",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/THIRD-PARTY-NOTICES.TXT",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/THIRD-PARTY-NOTICES.TXT",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/third-party-notices",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/third-party-notices",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/third-party-notices.txt",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/third-party-notices.txt",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03/third-party-notices.md",
-        "revision": "35cd01f9fe9afbeea38cc7b979a3b6bfcde82c03",
+        "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/2c74169b34066ceb8ddb6b882fcb3fb32d737a55/third-party-notices.md",
+        "revision": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
         "httpStatus": 404,
         "status": "document-absent"
       }
@@ -1945,17 +1945,17 @@
   },
   {
     "id": "Jobdeck.Auth.Contracts",
-    "version": "1.3.2",
+    "version": "1.6.0",
     "source": "restored-nupkg",
-    "packagePath": "jobdeck.auth.contracts/1.3.2/jobdeck.auth.contracts.1.3.2.nupkg",
-    "nupkgSha256": "7b8be9b189876c0e62c26c0eb4ccf6b688454861ac2ef305d9d6ff8a0e2af5d6",
+    "packagePath": "jobdeck.auth.contracts/1.6.0/jobdeck.auth.contracts.1.6.0.nupkg",
+    "nupkgSha256": "6b196dbf82a779b59c9b53c63beb389f2212a3df8a194d3bbcb99f214db54f36",
     "nuspecPath": "Jobdeck.Auth.Contracts.nuspec",
     "licenseType": "expression",
     "license": "MIT AND Apache-2.0",
     "licenseUrl": "https://licenses.nuget.org/MIT%20AND%20Apache-2.0",
     "repository": {
       "type": "git",
-      "commit": "ec2def91c0caeebb6c594c80f27f4ceb5027a88e"
+      "commit": "7a03a55544840155a49184291f1a7a2516ab64da"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
