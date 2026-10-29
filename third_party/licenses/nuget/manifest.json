@@ -2269,10 +2269,10 @@
   },
   {
     "id": "Microsoft.AspNetCore.Components.QuickGrid",
-    "version": "10.0.9",
+    "version": "10.0.14",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.aspnetcore.components.quickgrid/10.0.9/microsoft.aspnetcore.components.quickgrid.10.0.9.nupkg",
-    "nupkgSha256": "2dc6f13b7d86accc5d8de94448585fdd448065e3b6586b783f8bf408da922a6b",
+    "packagePath": "microsoft.aspnetcore.components.quickgrid/10.0.14/microsoft.aspnetcore.components.quickgrid.10.0.14.nupkg",
+    "nupkgSha256": "de974c51adea79539cc64c10ec5c0ba26de89c1cff2647cd2a0af20971d5f52e",
     "nuspecPath": "Microsoft.AspNetCore.Components.QuickGrid.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -2280,7 +2280,7 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "901ca941248413c79832d2fdbd709da0c4386353"
+      "commit": "0427b9abbead3fa64c6655eb4290c537397131fa"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
@@ -2295,227 +2295,227 @@
     "sourceDocuments": [
       {
         "path": "LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/LICENSE.TXT",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
         "path": "THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/THIRD-PARTY-NOTICES.txt",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
-        "sha256": "4bef6a7e7b359869d751c9ff70274a80a0f626927afa5a0681583c1b1861267b",
-        "bytes": 265585
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
+        "bytes": 265586
       }
     ],
     "sourceAttempts": [
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/LICENSE",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/LICENSE.txt",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.txt",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/LICENSE.md",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.md",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/LICENSE.TXT",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/license",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/license",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/license.txt",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/license.txt",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/license.md",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/license.md",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/LICENCE",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENCE",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/LICENCE.txt",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENCE.txt",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/LICENCE.md",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENCE.md",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/LICENCE.TXT",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENCE.TXT",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/licence",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/licence",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/licence.txt",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/licence.txt",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/licence.md",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/licence.md",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/COPYING",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/COPYING",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/COPYING.txt",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/COPYING.txt",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/COPYING.md",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/COPYING.md",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/COPYING.TXT",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/COPYING.TXT",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/copying",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/copying",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/copying.txt",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/copying.txt",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/copying.md",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/copying.md",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/NOTICE",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/NOTICE",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/NOTICE.txt",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/NOTICE.txt",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/NOTICE.md",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/NOTICE.md",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/NOTICE.TXT",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/NOTICE.TXT",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/notice",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/notice",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/notice.txt",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/notice.txt",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/notice.md",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/notice.md",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/THIRD-PARTY-NOTICES",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/THIRD-PARTY-NOTICES.txt",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/THIRD-PARTY-NOTICES.md",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.md",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/THIRD-PARTY-NOTICES.TXT",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.TXT",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/third-party-notices",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/third-party-notices",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/third-party-notices.txt",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/third-party-notices.txt",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/third-party-notices.md",
-        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/third-party-notices.md",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 404,
         "status": "document-absent"
       }
