@@ -34,6 +34,29 @@
   },
   "packageRules": [
     {
+      "description": "Use fix commits for all NuGet dependency updates",
+      "matchManagers": ["nuget"],
+      "semanticCommitType": "fix"
+    },
+    {
+      "description": "Use fix commits for all .NET SDK updates",
+      "matchManagers": ["custom.regex"],
+      "matchDatasources": ["dotnet-version"],
+      "matchPackageNames": ["dotnet-sdk"],
+      "semanticCommitType": "fix"
+    },
+    {
+      "description": "Use fix commits for all .NET container image updates",
+      "matchManagers": ["dockerfile"],
+      "matchPackageNames": [
+        "mcr.microsoft.com/dotnet/sdk",
+        "mcr.microsoft.com/dotnet/aspnet",
+        "mcr.microsoft.com/dotnet/runtime",
+        "mcr.microsoft.com/dotnet/runtime-deps"
+      ],
+      "semanticCommitType": "fix"
+    },
+    {
       "description": "Consume internally controlled contract packages without an additional delay",
       "matchManagers": [
         "nuget"
