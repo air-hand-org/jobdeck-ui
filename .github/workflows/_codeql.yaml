@@ -1,0 +1,43 @@
+name: CodeQL
+
+on:
+  workflow_call:
+
+permissions: {}
+
+jobs:
+  analyze:
+    name: Analyze (${{ matrix.language }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      packages: read
+      security-events: write
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [csharp, actions]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: air-hand-org/jobdeck-actions/actions/setup-tools@1d9ce1953c373273f28cac191bcf5ff0fc58100d # v1.7.0
+        if: matrix.language == 'csharp'
+        env:
+          MISE_NO_ENV: '1'
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@9b3254085494b55a0f7c4c2b3d2d52cc712ce370 # v4.39.1
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: ${{ matrix.language == 'csharp' && 'manual' || 'none' }}
+      # Compile Blazor's generated component code as well as handwritten C#.
+      - name: Build C#
+        if: matrix.language == 'csharp'
+        env:
+          NuGetPackageSourceCredentials_github: "Username=${{ github.actor }};Password=${{ github.token }}"
+        run: dotnet build src/ui.csproj --configuration Release --no-incremental /p:UseSharedCompilation=false
+      - name: Analyze
+        uses: github/codeql-action/analyze@9b3254085494b55a0f7c4c2b3d2d52cc712ce370 # v4.39.1
+        with:
+          category: /language:${{ matrix.language }}
