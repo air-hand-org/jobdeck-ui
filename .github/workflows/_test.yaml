@@ -17,7 +17,7 @@ jobs:
       packages: read
     runs-on: ubuntu-slim
     env:
-      ARTIFACT_ELIGIBLE: ${{ github.event_name == 'pull_request' && github.event.pull_request.user.login == 'renovate[bot]' && github.event.pull_request.head.repo.full_name == github.repository }}
+      ARTIFACT_ELIGIBLE: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && (github.event.pull_request.user.login == 'renovate[bot]' || (github.event.pull_request.user.login == 'air-hand-release-app[bot]' && startsWith(github.event.pull_request.head.ref, 'renovate-jobdeck/'))) }}
       NuGetPackageSourceCredentials_github: "Username=${{ github.actor }};Password=${{ secrets.GITHUB_TOKEN }}"
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1

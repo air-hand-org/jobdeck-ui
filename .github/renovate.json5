@@ -34,6 +34,12 @@
   },
   "packageRules": [
     {
+      "description": "Jobdeck NuGet updates belong to the isolated main-push CI instance",
+      "matchManagers": ["nuget"],
+      "matchPackageNames": ["/^Jobdeck\\./i"],
+      "enabled": false
+    },
+    {
       "description": "Use fix commits for all NuGet dependency updates",
       "matchManagers": ["nuget"],
       "semanticCommitType": "fix"
