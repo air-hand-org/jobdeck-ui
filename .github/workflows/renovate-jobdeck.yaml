@@ -37,6 +37,7 @@ jobs:
           client-id: ${{ vars.GH_APP_RELEASE_CLIENT_ID }}
           private-key: ${{ secrets.GH_APP_RELEASE_PRIVATE_KEY }}
           permission-contents: write
+          permission-issues: write
           permission-pull-requests: write
       - name: Check Jobdeck NuGet updates
         uses: renovatebot/github-action@2804199d260ad00c1fae0e9e842888369391c776 # v46.3.10
