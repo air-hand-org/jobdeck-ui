@@ -7,6 +7,7 @@
   "requireConfig": "ignored",
   "inheritConfig": false,
   "extends": ["config:recommended", ":semanticCommits"],
+  "semanticCommitType": "fix",
   "baseBranchPatterns": ["main"],
   "branchPrefix": "renovate-jobdeck/",
   "dependencyDashboard": false,
