@@ -1,10 +1,13 @@
 namespace ui.Session;
 
+public sealed record UIUserProfile(string Name);
+
 public sealed record UISession(
     Guid SessionId,
     string AccessToken,
-    // TODO
-    // string ActorId,
-    // string DisplayName,
-    DateTimeOffset AccessTokenExpiresAt
-);
+    DateTimeOffset AccessTokenExpiresAt,
+    UIUserProfile Profile
+)
+{
+    public bool IsExpired() => AccessTokenExpiresAt <= DateTimeOffset.UtcNow;
+}

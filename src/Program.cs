@@ -1,16 +1,22 @@
 using ui.Auth;
 using ui.Components;
 using ui.Client;
+using ui.Profile;
 using ui.Session;
 using ui.Telemetry;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
+using MongoDB.Driver;
 using Jobdeck.Auth.V1;
 using Jobdeck.Job.V1;
 using Grpc.Health.V1;
+using OpenIddict.MongoDb;
+using OpenIddict.MongoDb.Models;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
+using ui.Endpoints;
+using ui.DB;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -72,6 +78,10 @@ builder.Services.AddGrpcClient<Health.HealthClient>(
         options.Address = new Uri(address);
     }
 );
+
+// TODO: check MONGODB_URI, MONGODB_DATABASE
+builder.Services.AddSingleton(new MongoClient(builder.Configuration["MONGODB_URI"]).GetDatabase(builder.Configuration["MONGODB_DATABASE"]));
+
 builder.Services.AddHealthChecks()
     .AddTypeActivatedCheck<HealthCheckClient>(
         "job-api",
@@ -85,6 +95,52 @@ builder.Services.AddHealthChecks()
         tags: ["ready"],
         args: ["auth-health"]
     )
+    // TODO: mongodb healthcheck
+    ;
+
+
+builder.Services.AddOpenIddict()
+    .AddCore(options =>
+    {
+        // TODO https://documentation.openiddict.com/integrations/mongodb#basic-configuration
+        options.UseMongoDb();
+    })
+    .AddClient(options =>
+    {
+        /*
+        TODO:
+        - IUISessionStore を MongoDB 実装に切り替え、セッションに TTL インデックスを設定。
+        - TTL の削除待ち中も利用されないよう、取得時の期限チェックを維持。
+        - OpenIddict の公式 MongoDB ストアを導入し、期限切れ state の削除を設定。
+        - Data Protection のキーリングを専用コレクションに保存し、アプリ名を固定。ここには TTL を付けない。
+        - MongoDB の接続先を設定で切り替え可能にし、ローカル用のコンテナー起動手順を追加。
+        - ビルドと、MongoDB を使った保存・取得・期限切れ・削除の検証を実施。
+        */
+
+        options.AddDevelopmentEncryptionCertificate()
+            .AddDevelopmentSigningCertificate();
+
+        options.AllowAuthorizationCodeFlow();
+
+        options.UseAspNetCore()
+            .EnableRedirectionEndpointPassthrough()
+            .EnablePostLogoutRedirectionEndpointPassthrough()
+            ;
+
+        options.UseSystemNetHttp();
+
+        options.UseWebProviders()
+            .AddGitHub(options =>
+            {
+                var clientID = builder.Configuration["GITHUB_OAUTH_CLIENT_ID"] ?? throw new InvalidOperationException("GITHUB_OAUTH_CLIENT_ID is required");
+                var clientSecret = builder.Configuration["GITHUB_OAUTH_CLIENT_SECRET"] ?? throw new InvalidOperationException("GITHUB_OAUTH_CLIENT_SECRET is required");
+                options.SetClientId(clientID)
+                    .SetClientSecret(clientSecret)
+                    .SetRedirectUri("account/github/callback/login")
+                    ;
+            })
+        ;
+    })
     ;
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -103,12 +159,21 @@ builder.Services.AddAuthorization();
 builder.Services.AddCascadingAuthenticationState();
 
 builder.Services.AddMemoryCache();
-builder.Services.AddSingleton<IUISessionStore, MemoryUISessionStore>();
+builder.Services.AddSingleton<IUISessionStore, MongoDBUISessionStore>();
 builder.Services.AddScoped<AccessTokenAccessor>();
 builder.Services.AddScoped<UIAuthenticationService>();
+builder.Services.AddScoped<UIUserProfileService>();
+
+builder.Services.AddSingleton<MongoDBCollections>();
+builder.Services.AddSingleton<MongoDBInitializer>();
 
 
 var app = builder.Build();
+
+await app.Services
+    .GetRequiredService<MongoDBInitializer>()
+    .InitializeAsync()
+    ;
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -141,5 +206,6 @@ app.MapHealthChecks(
 app.MapStaticAssets();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
+app.MapGitHubAuthenticationEndpoints();
 
 app.Run();
