@@ -1,5 +1,6 @@
 #:property PublishAot=false
 using System.IO.Compression;
+using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Text.Json;
 using System.Text.RegularExpressions;
@@ -71,7 +72,7 @@ Directory.CreateDirectory(output);
 var manifest = new List<object>();
 var unresolved = 0;
 using var http = new HttpClient(new HttpClientHandler { AllowAutoRedirect = false }) { Timeout = TimeSpan.FromSeconds(15) };
-var downloads = new Dictionary<string, (byte[]? Bytes, int? Status, string? Error)>();
+var resolver = new SourceResolver(SourceResolver.GitHubApi, url => Download(http, url));
 using (var progress = new ConsoleProgress())
 {
     foreach (var archive in archives)
@@ -127,75 +128,40 @@ using (var progress = new ConsoleProgress())
         var sourceAttempts = new List<object>();
         var hasLicense = zip.Entries.Any(e => !e.FullName.EndsWith('/') &&
             (e.FullName == licenseFile || IsLicense(Path.GetFileName(e.FullName))));
+        SourceResolver.Result? resolution = null;
         var sourceRetrieval = "not-needed-package-license-present";
         if (!hasLicense)
         {
-            sourceRetrieval = "exact-commit-root-candidates";
+            sourceRetrieval = "nuspec-commit-then-exact-version-tags";
             var repository = Field("repository");
             var url = repository?.Attribute("url")?.Value;
-            var revision = repository?.Attribute("commit")?.Value;
             var match = Regex.Match(url ?? "", @"\Ahttps://github\.com/([A-Za-z0-9_-][A-Za-z0-9_.-]*)/([A-Za-z0-9_-][A-Za-z0-9_.-]*?)(?:\.git)?/?\z");
-            if (string.IsNullOrEmpty(url))
+            if (!match.Success)
             {
-                errors.Add(new { code = "missing-repository" });
-            }
-            else if (!match.Success)
-            {
-                errors.Add(new { code = "unsafe-or-unsupported-repository" });
-            }
-            else if (string.IsNullOrEmpty(revision))
-            {
-                errors.Add(new { code = "missing-commit" });
-            }
-            else if (!Regex.IsMatch(revision, @"\A[0-9a-fA-F]{40}\z"))
-            {
-                errors.Add(new { code = "invalid-exact-commit" });
+                errors.Add(new { code = string.IsNullOrEmpty(url) ? "missing-repository" : "unsafe-or-unsupported-repository" });
             }
             else
             {
-                foreach (var stem in new[] { "LICENSE", "LICENCE", "COPYING", "NOTICE", "THIRD-PARTY-NOTICES" })
+                resolution = await resolver.Resolve($"{match.Groups[1].Value}/{match.Groups[2].Value}", archive.Value.Version, repository?.Attribute("commit")?.Value);
+                sourceAttempts.AddRange(resolution.Attempts);
+                errors.AddRange(resolution.Errors);
+                if (resolution.Error != null)
+                    errors.Add(new { code = resolution.Error });
+                foreach (var document in resolution.Documents)
                 {
-                    foreach (var name in new[] { stem, stem + ".txt", stem + ".md", stem + ".TXT", stem.ToLowerInvariant(), stem.ToLowerInvariant() + ".txt", stem.ToLowerInvariant() + ".md" })
+                    var path = document.Revision + "/" + document.Name;
+                    var destination = Path.Combine(output, "source", archive.Key, path);
+                    Directory.CreateDirectory(Path.GetDirectoryName(destination)!);
+                    File.WriteAllBytes(destination, document.Bytes);
+                    sourceDocuments.Add(new
                     {
-                        var sourceUrl = $"https://raw.githubusercontent.com/{match.Groups[1].Value}/{match.Groups[2].Value}/{revision}/{name}";
-                        if (!downloads.TryGetValue(sourceUrl, out var result))
-                        {
-                            result = await Download(http, sourceUrl);
-                            downloads.Add(sourceUrl, result);
-                        }
-                        sourceAttempts.Add(new
-                        {
-                            url = sourceUrl,
-                            revision,
-                            httpStatus = result.Status,
-                            status = result.Status == 404 ? "document-absent" : result.Error ?? "collected"
-                        });
-                        if (result.Error != null)
-                        {
-                            errors.Add(new { code = result.Error, url = sourceUrl, httpStatus = result.Status });
-                        }
-
-                        if (result.Bytes == null)
-                        {
-                            continue;
-                        }
-
-                        var destination = Path.Combine(output, "source", archive.Key, name);
-                        Directory.CreateDirectory(Path.GetDirectoryName(destination)!);
-                        File.WriteAllBytes(destination, result.Bytes);
-                        sourceDocuments.Add(new
-                        {
-                            path = name,
-                            url = sourceUrl,
-                            revision,
-                            sha256 = Convert.ToHexStringLower(SHA256.HashData(result.Bytes)),
-                            bytes = result.Bytes.Length
-                        });
-                        if (IsLicense(name))
-                        {
-                            hasLicense = true;
-                        }
-                    }
+                        path,
+                        url = document.Url,
+                        revision = document.Revision,
+                        sha256 = Convert.ToHexStringLower(SHA256.HashData(document.Bytes)),
+                        bytes = document.Bytes.Length
+                    });
+                    if (IsLicense(document.Name)) hasLicense = true;
                 }
             }
         }
@@ -230,6 +196,17 @@ using (var progress = new ConsoleProgress())
             status = errors.Count > 0 ? "error" : "original-license-collected",
             declaredLicenseFileMissing,
             sourceRetrieval,
+            sourceResolution = resolution == null ? null : new
+            {
+                nuspecCommit = Field("repository")?.Attribute("commit")?.Value,
+                tag = resolution.Tag,
+                resolvedSha = resolution.ResolvedSha,
+                provenance = resolution.Provenance,
+                fallbackReason = resolution.FallbackReason,
+                nuspecCommitMismatch = resolution.ResolvedSha == null || string.IsNullOrEmpty(Field("repository")?.Attribute("commit")?.Value)
+                    ? (bool?)null : !string.Equals(resolution.ResolvedSha, Field("repository")?.Attribute("commit")?.Value, StringComparison.OrdinalIgnoreCase),
+                tagCandidates = resolution.Tags.Select(t => new { tag = t.Tag, resolvedSha = t.Sha, error = t.Error })
+            },
             documents,
             sourceDocuments,
             sourceAttempts,
@@ -255,6 +232,8 @@ static bool IsLicense(string name) => Regex.IsMatch(name, @"\A(?:licen[cs]e|copy
 static async Task<(byte[]? Bytes, int? Status, string? Error)> Download(HttpClient http, string url)
 {
     const int limit = 1024 * 1024;
+    // HTML is a legitimate original NOTICE format, but only on our pinned raw URLs.
+    var htmlNotice = Regex.IsMatch(url, @"\Ahttps://raw\.githubusercontent\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+/[0-9a-fA-F]{40}/(?:NOTICE|notice)\.html\z");
     for (var attempt = 0; attempt < 3; attempt++)
     {
         try
@@ -283,7 +262,7 @@ static async Task<(byte[]? Bytes, int? Status, string? Error)> Download(HttpClie
             }
 
             var media = response.Content.Headers.ContentType?.MediaType;
-            if (media is "text/html" or "application/xhtml+xml")
+            if (!htmlNotice && media is ("text/html" or "application/xhtml+xml"))
             {
                 return (null, status, "source-html-rejected");
             }
@@ -308,7 +287,7 @@ static async Task<(byte[]? Bytes, int? Status, string? Error)> Download(HttpClie
             }
 
             var prefix = System.Text.Encoding.UTF8.GetString(content.AsSpan(0, Math.Min(512, content.Length))).TrimStart('\uFEFF', ' ', '\r', '\n', '\t');
-            if (prefix.StartsWith("<!DOCTYPE html", StringComparison.OrdinalIgnoreCase) || prefix.StartsWith("<html", StringComparison.OrdinalIgnoreCase))
+            if (!htmlNotice && (prefix.StartsWith("<!DOCTYPE html", StringComparison.OrdinalIgnoreCase) || prefix.StartsWith("<html", StringComparison.OrdinalIgnoreCase)))
             {
                 return (null, status, "source-html-rejected");
             }
@@ -362,5 +341,161 @@ class ConsoleProgress : IDisposable
         string message = $"Progress: {current}/{total} ({current * 100 / total}%)";
         Console.Write($"\r{message.PadRight(_previousLength)}");
         _previousLength = message.Length;
+    }
+}
+
+class SourceResolver
+{
+    public record Document(string Name, string Url, string Revision, byte[] Bytes);
+    public record Candidate(string Tag, string? Sha, string? Error);
+    public class Result
+    {
+        public string? Error { get; set; }
+        public string? Tag { get; set; }
+        public string? ResolvedSha { get; set; }
+        public string? Provenance { get; set; }
+        public string? FallbackReason { get; set; }
+        public List<Candidate> Tags { get; } = [];
+        public List<Document> Documents { get; } = [];
+        public List<object> Attempts { get; } = [];
+        public List<object> Errors { get; } = [];
+    }
+
+    private readonly Func<string, Task<(string? Json, int Status)>> api;
+    private readonly Func<string, Task<(byte[]? Bytes, int? Status, string? Error)>> download;
+    private readonly Dictionary<string, (byte[]? Bytes, int? Status, string? Error)> downloads = new();
+    private readonly Dictionary<string, (string? Json, int Status)> apiCache = new();
+
+    public SourceResolver(Func<string, Task<(string? Json, int Status)>> api,
+        Func<string, Task<(byte[]? Bytes, int? Status, string? Error)>> download)
+    {
+        this.api = api;
+        this.download = download;
+    }
+
+    public async Task<Result> Resolve(string repository, string version, string? commit)
+    {
+        var result = new Result();
+        if (Regex.IsMatch(commit ?? "", @"\A[0-9a-fA-F]{40}\z"))
+        {
+            result.ResolvedSha = commit;
+            result.Provenance = "nuspec-commit";
+            await Collect(repository, commit!, result);
+            if (result.Errors.Count > 0 || result.Documents.Any(d => IsLicense(d.Name))) return result;
+            result.FallbackReason = "nuspec-commit-license-absent";
+        }
+        else result.FallbackReason = string.IsNullOrEmpty(commit) ? "missing-nuspec-commit" : "invalid-nuspec-commit";
+        // Neither an arbitrary branch nor the unverified nuspec revision is a tag fallback.
+        result.ResolvedSha = null;
+        result.Provenance = null;
+        foreach (var tag in new[] { version, "v" + version })
+            result.Tags.Add(await ResolveTag(repository, tag));
+        if (result.Tags.Any(t => t.Error != null && t.Error != "tag-absent"))
+        {
+            result.Error = "tag-resolution-error";
+            return result;
+        }
+        var found = result.Tags.Where(t => t.Sha != null).ToArray();
+        if (found.Length == 0) result.Error = "missing-version-tag";
+        else if (found.Select(t => t.Sha).Distinct(StringComparer.OrdinalIgnoreCase).Count() != 1)
+            result.Error = "ambiguous-version-tags";
+        else
+        {
+            result.Tag = found[0].Tag;
+            result.ResolvedSha = found[0].Sha;
+            result.Provenance = "exact-version-tag";
+            await Collect(repository, result.ResolvedSha!, result);
+        }
+        return result;
+    }
+
+    private static bool IsLicense(string name) => Regex.IsMatch(name, @"\A(?:licen[cs]e|copying)(?:[._-].*)?\z", RegexOptions.IgnoreCase);
+
+    private async Task Collect(string repository, string sha, Result result)
+    {
+        foreach (var stem in new[] { "LICENSE", "LICENCE", "COPYING", "NOTICE", "THIRD-PARTY-NOTICES" })
+        foreach (var name in new[] { stem, stem + ".txt", stem + ".md", stem + ".TXT", stem.ToLowerInvariant(), stem.ToLowerInvariant() + ".txt", stem.ToLowerInvariant() + ".md" }
+            .Concat(stem == "NOTICE" ? new[] { "NOTICE.html", "notice.html" } : Array.Empty<string>()))
+        {
+            var url = $"https://raw.githubusercontent.com/{repository}/{sha}/{name}";
+            if (!downloads.TryGetValue(url, out var response))
+            {
+                response = await download(url);
+                downloads.Add(url, response);
+            }
+            result.Attempts.Add(new { url, revision = sha, httpStatus = response.Status,
+                status = response.Status == 404 ? "document-absent" : response.Error ?? "collected" });
+            if (response.Error != null) result.Errors.Add(new { code = response.Error, url, httpStatus = response.Status });
+            if (response.Bytes != null) result.Documents.Add(new Document(name, url, sha, response.Bytes));
+        }
+    }
+
+    private async Task<Candidate> ResolveTag(string repository, string tag)
+    {
+        async Task<(string? Json, int Status)> Get(string path)
+        {
+            if (!apiCache.TryGetValue(path, out var response))
+            {
+                response = await api(path);
+                apiCache.Add(path, response);
+            }
+            return response;
+        }
+        try
+        {
+            var response = await Get($"repos/{repository}/git/ref/tags/{Uri.EscapeDataString(tag)}");
+            if (response.Status == 404) return new(tag, null, "tag-absent");
+            if (response.Status != 200) return new(tag, null, "tag-api-error");
+            using var reference = JsonDocument.Parse(response.Json!);
+            if (reference.RootElement.GetProperty("ref").GetString() != "refs/tags/" + tag)
+                return new(tag, null, "non-exact-tag-ref");
+            var obj = reference.RootElement.GetProperty("object").Clone();
+            var visited = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            for (var depth = 0; depth < 16; depth++)
+            {
+                var sha = obj.GetProperty("sha").GetString();
+                var type = obj.GetProperty("type").GetString();
+                if (!Regex.IsMatch(sha ?? "", @"\A[0-9a-fA-F]{40}\z")) return new(tag, null, "invalid-tag-sha");
+                if (type == "commit") return new(tag, sha!.ToLowerInvariant(), null);
+                if (type != "tag" || !visited.Add(sha!)) return new(tag, null, "invalid-tag-object");
+                response = await Get($"repos/{repository}/git/tags/{sha}");
+                if (response.Status != 200) return new(tag, null, "tag-object-api-error");
+                using var annotated = JsonDocument.Parse(response.Json!);
+                obj = annotated.RootElement.GetProperty("object").Clone();
+            }
+            return new(tag, null, "tag-depth-exceeded");
+        }
+        catch (Exception ex) when (ex is JsonException or KeyNotFoundException or InvalidOperationException or ArgumentException)
+        {
+            return new(tag, null, "invalid-tag-response");
+        }
+    }
+
+    public static async Task<(string? Json, int Status)> GitHubApi(string path)
+    {
+        try
+        {
+            var start = new ProcessStartInfo("gh-app") { RedirectStandardOutput = true, RedirectStandardError = true, UseShellExecute = false };
+            foreach (var argument in new[] { "--owner", "air-hand-org", "--", "api", "--include", path })
+                start.ArgumentList.Add(argument);
+            using var process = Process.Start(start)!;
+            var stdout = process.StandardOutput.ReadToEndAsync();
+            var stderr = process.StandardError.ReadToEndAsync();
+            using var timeout = new CancellationTokenSource(TimeSpan.FromSeconds(45));
+            try { await process.WaitForExitAsync(timeout.Token); }
+            catch (OperationCanceledException) { process.Kill(entireProcessTree: true); await process.WaitForExitAsync(); return (null, 0); }
+            var text = (await stdout).Replace("\r\n", "\n");
+            await stderr; // Never emit authentication diagnostics or credentials into the manifest.
+            var separator = text.IndexOf("\n\n", StringComparison.Ordinal);
+            var statusMatch = Regex.Match(text, @"\AHTTP/\S+ ([0-9]{3})");
+            if (!statusMatch.Success || separator < 0) return (null, 0);
+            var status = int.Parse(statusMatch.Groups[1].Value);
+            if (process.ExitCode != 0 && status == 200) return (null, 0);
+            return (text[(separator + 2)..], status);
+        }
+        catch (Exception ex) when (ex is IOException or System.ComponentModel.Win32Exception or InvalidOperationException)
+        {
+            return (null, 0);
+        }
     }
 }
