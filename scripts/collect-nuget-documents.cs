@@ -72,172 +72,182 @@ var manifest = new List<object>();
 var unresolved = 0;
 using var http = new HttpClient(new HttpClientHandler { AllowAutoRedirect = false }) { Timeout = TimeSpan.FromSeconds(15) };
 var downloads = new Dictionary<string, (byte[]? Bytes, int? Status, string? Error)>();
-foreach (var archive in archives)
+using (var progress = new ConsoleProgress())
 {
-    using var zip = ZipFile.OpenRead(archive.Path);
-    var nuspec = zip.Entries.Single(e => !e.FullName.Contains('/') && e.FullName.EndsWith(".nuspec", StringComparison.OrdinalIgnoreCase));
-    using var stream = nuspec.Open();
-    var xml = XDocument.Load(stream);
-    var metadata = xml.Root!.Elements().Single(e => e.Name.LocalName == "metadata");
-    XElement? Field(string name) => metadata.Elements().SingleOrDefault(e => e.Name.LocalName == name);
-    if (!string.Equals(Field("id")?.Value, archive.Value.Id, StringComparison.OrdinalIgnoreCase) ||
-        !string.Equals(Field("version")?.Value, archive.Value.Version, StringComparison.OrdinalIgnoreCase))
+    foreach (var archive in archives)
     {
-        throw new InvalidDataException("Nuspec identity mismatch");
-    }
-
-    var license = Field("license");
-    var licenseFile = license?.Attribute("type")?.Value == "file" ? license.Value : null;
-    if (licenseFile != null)
-    {
-        SafePath(licenseFile);
-    }
-
-    var documents = new List<object>();
-    foreach (var entry in zip.Entries.OrderBy(e => e.FullName, StringComparer.Ordinal))
-    {
-        var path = entry.FullName;
-        if (path.EndsWith('/'))
+        using var zip = ZipFile.OpenRead(archive.Path);
+        var nuspec = zip.Entries.Single(e => !e.FullName.Contains('/') && e.FullName.EndsWith(".nuspec", StringComparison.OrdinalIgnoreCase));
+        using var stream = nuspec.Open();
+        var xml = XDocument.Load(stream);
+        var metadata = xml.Root!.Elements().Single(e => e.Name.LocalName == "metadata");
+        XElement? Field(string name) => metadata.Elements().SingleOrDefault(e => e.Name.LocalName == name);
+        if (!string.Equals(Field("id")?.Value, archive.Value.Id, StringComparison.OrdinalIgnoreCase) ||
+            !string.Equals(Field("version")?.Value, archive.Value.Version, StringComparison.OrdinalIgnoreCase))
         {
-            continue;
+            throw new InvalidDataException("Nuspec identity mismatch");
         }
 
-        var name = Path.GetFileName(path);
-        var isDocument = path == licenseFile || Regex.IsMatch(name,
-            @"\A(?:licen[cs]e|notice|third[-_]party[-_]notices|copying|copyright)(?:[._-].*)?\z", RegexOptions.IgnoreCase);
-        // Retain bundled attribution trees as shipped, including README/provenance.
-        if (!isDocument && !path.Split('/').Any(p => p.Equals("third_party", StringComparison.OrdinalIgnoreCase)))
+        var license = Field("license");
+        var licenseFile = license?.Attribute("type")?.Value == "file" ? license.Value : null;
+        if (licenseFile != null)
         {
-            continue;
+            SafePath(licenseFile);
         }
 
-        using var input = entry.Open();
-        using var bytes = new MemoryStream();
-        input.CopyTo(bytes);
-        var content = bytes.ToArray();
-        var destination = Path.Combine(output, "packages", archive.Key, path);
-        Directory.CreateDirectory(Path.GetDirectoryName(destination)!);
-        File.WriteAllBytes(destination, content);
-        documents.Add(new { path, sha256 = Convert.ToHexStringLower(SHA256.HashData(content)), bytes = content.Length });
-    }
-    var errors = new List<object>();
-    var sourceDocuments = new List<object>();
-    var sourceAttempts = new List<object>();
-    var hasLicense = zip.Entries.Any(e => !e.FullName.EndsWith('/') &&
-        (e.FullName == licenseFile || IsLicense(Path.GetFileName(e.FullName))));
-    var sourceRetrieval = "not-needed-package-license-present";
-    if (!hasLicense)
-    {
-        sourceRetrieval = "exact-commit-root-candidates";
-        var repository = Field("repository");
-        var url = repository?.Attribute("url")?.Value;
-        var revision = repository?.Attribute("commit")?.Value;
-        var match = Regex.Match(url ?? "", @"\Ahttps://github\.com/([A-Za-z0-9_-][A-Za-z0-9_.-]*)/([A-Za-z0-9_-][A-Za-z0-9_.-]*?)(?:\.git)?/?\z");
-        if (string.IsNullOrEmpty(url))
+        var documents = new List<object>();
+        foreach (var entry in zip.Entries.OrderBy(e => e.FullName, StringComparer.Ordinal))
         {
-            errors.Add(new { code = "missing-repository" });
-        }
-        else if (!match.Success)
-        {
-            errors.Add(new { code = "unsafe-or-unsupported-repository" });
-        }
-        else if (string.IsNullOrEmpty(revision))
-        {
-            errors.Add(new { code = "missing-commit" });
-        }
-        else if (!Regex.IsMatch(revision, @"\A[0-9a-fA-F]{40}\z"))
-        {
-            errors.Add(new { code = "invalid-exact-commit" });
-        }
-        else
-        {
-            foreach (var stem in new[] { "LICENSE", "LICENCE", "COPYING", "NOTICE", "THIRD-PARTY-NOTICES" })
+            var path = entry.FullName;
+            if (path.EndsWith('/'))
             {
-                foreach (var name in new[] { stem, stem + ".txt", stem + ".md", stem + ".TXT", stem.ToLowerInvariant(), stem.ToLowerInvariant() + ".txt", stem.ToLowerInvariant() + ".md" })
+                continue;
+            }
+
+            var name = Path.GetFileName(path);
+            var isDocument = path == licenseFile || Regex.IsMatch(name,
+                @"\A(?:licen[cs]e|notice|third[-_]party[-_]notices|copying|copyright)(?:[._-].*)?\z", RegexOptions.IgnoreCase);
+            // Retain bundled attribution trees as shipped, including README/provenance.
+            if (!isDocument && !path.Split('/').Any(p => p.Equals("third_party", StringComparison.OrdinalIgnoreCase)))
+            {
+                continue;
+            }
+
+            using var input = entry.Open();
+            using var bytes = new MemoryStream();
+            input.CopyTo(bytes);
+            var content = bytes.ToArray();
+            var destination = Path.Combine(output, "packages", archive.Key, path);
+            Directory.CreateDirectory(Path.GetDirectoryName(destination)!);
+            File.WriteAllBytes(destination, content);
+            documents.Add(new { path, sha256 = Convert.ToHexStringLower(SHA256.HashData(content)), bytes = content.Length });
+        }
+        var errors = new List<object>();
+        var sourceDocuments = new List<object>();
+        var sourceAttempts = new List<object>();
+        var hasLicense = zip.Entries.Any(e => !e.FullName.EndsWith('/') &&
+            (e.FullName == licenseFile || IsLicense(Path.GetFileName(e.FullName))));
+        var sourceRetrieval = "not-needed-package-license-present";
+        if (!hasLicense)
+        {
+            sourceRetrieval = "exact-commit-root-candidates";
+            var repository = Field("repository");
+            var url = repository?.Attribute("url")?.Value;
+            var revision = repository?.Attribute("commit")?.Value;
+            var match = Regex.Match(url ?? "", @"\Ahttps://github\.com/([A-Za-z0-9_-][A-Za-z0-9_.-]*)/([A-Za-z0-9_-][A-Za-z0-9_.-]*?)(?:\.git)?/?\z");
+            if (string.IsNullOrEmpty(url))
+            {
+                errors.Add(new { code = "missing-repository" });
+            }
+            else if (!match.Success)
+            {
+                errors.Add(new { code = "unsafe-or-unsupported-repository" });
+            }
+            else if (string.IsNullOrEmpty(revision))
+            {
+                errors.Add(new { code = "missing-commit" });
+            }
+            else if (!Regex.IsMatch(revision, @"\A[0-9a-fA-F]{40}\z"))
+            {
+                errors.Add(new { code = "invalid-exact-commit" });
+            }
+            else
+            {
+                foreach (var stem in new[] { "LICENSE", "LICENCE", "COPYING", "NOTICE", "THIRD-PARTY-NOTICES" })
                 {
-                    var sourceUrl = $"https://raw.githubusercontent.com/{match.Groups[1].Value}/{match.Groups[2].Value}/{revision}/{name}";
-                    if (!downloads.TryGetValue(sourceUrl, out var result))
+                    foreach (var name in new[] { stem, stem + ".txt", stem + ".md", stem + ".TXT", stem.ToLowerInvariant(), stem.ToLowerInvariant() + ".txt", stem.ToLowerInvariant() + ".md" })
                     {
-                        result = await Download(http, sourceUrl);
-                        downloads.Add(sourceUrl, result);
-                    }
-                    sourceAttempts.Add(new
-                    {
-                        url = sourceUrl,
-                        revision,
-                        httpStatus = result.Status,
-                        status = result.Status == 404 ? "document-absent" : result.Error ?? "collected"
-                    });
-                    if (result.Error != null)
-                    {
-                        errors.Add(new { code = result.Error, url = sourceUrl, httpStatus = result.Status });
-                    }
+                        var sourceUrl = $"https://raw.githubusercontent.com/{match.Groups[1].Value}/{match.Groups[2].Value}/{revision}/{name}";
+                        if (!downloads.TryGetValue(sourceUrl, out var result))
+                        {
+                            result = await Download(http, sourceUrl);
+                            downloads.Add(sourceUrl, result);
+                        }
+                        sourceAttempts.Add(new
+                        {
+                            url = sourceUrl,
+                            revision,
+                            httpStatus = result.Status,
+                            status = result.Status == 404 ? "document-absent" : result.Error ?? "collected"
+                        });
+                        if (result.Error != null)
+                        {
+                            errors.Add(new { code = result.Error, url = sourceUrl, httpStatus = result.Status });
+                        }
 
-                    if (result.Bytes == null)
-                    {
-                        continue;
-                    }
+                        if (result.Bytes == null)
+                        {
+                            continue;
+                        }
 
-                    var destination = Path.Combine(output, "source", archive.Key, name);
-                    Directory.CreateDirectory(Path.GetDirectoryName(destination)!);
-                    File.WriteAllBytes(destination, result.Bytes);
-                    sourceDocuments.Add(new
-                    {
-                        path = name,
-                        url = sourceUrl,
-                        revision,
-                        sha256 = Convert.ToHexStringLower(SHA256.HashData(result.Bytes)),
-                        bytes = result.Bytes.Length
-                    });
-                    if (IsLicense(name))
-                    {
-                        hasLicense = true;
+                        var destination = Path.Combine(output, "source", archive.Key, name);
+                        Directory.CreateDirectory(Path.GetDirectoryName(destination)!);
+                        File.WriteAllBytes(destination, result.Bytes);
+                        sourceDocuments.Add(new
+                        {
+                            path = name,
+                            url = sourceUrl,
+                            revision,
+                            sha256 = Convert.ToHexStringLower(SHA256.HashData(result.Bytes)),
+                            bytes = result.Bytes.Length
+                        });
+                        if (IsLicense(name))
+                        {
+                            hasLicense = true;
+                        }
                     }
                 }
             }
         }
-    }
-    if (!hasLicense)
-    {
-        errors.Add(new { code = "unresolved-original-license" });
-    }
+        if (!hasLicense)
+        {
+            errors.Add(new { code = "unresolved-original-license" });
+        }
 
-    var declaredLicenseFileMissing = licenseFile != null && !zip.Entries.Any(e => e.FullName == licenseFile);
-    if (declaredLicenseFileMissing)
-    {
-        errors.Add(new { code = "declared-license-file-missing" });
-    }
+        var declaredLicenseFileMissing = licenseFile != null && !zip.Entries.Any(e => e.FullName == licenseFile);
+        if (declaredLicenseFileMissing)
+        {
+            errors.Add(new { code = "declared-license-file-missing" });
+        }
 
-    if (errors.Count > 0)
-    {
-        unresolved++;
-    }
+        if (errors.Count > 0)
+        {
+            unresolved++;
+        }
 
-    manifest.Add(new
-    {
-        id = archive.Value.Id,
-        version = archive.Value.Version,
-        source = "restored-nupkg",
-        packagePath = archive.Key + "/" + Path.GetFileName(archive.Path),
-        nupkgSha256 = Convert.ToHexStringLower(SHA256.HashData(File.ReadAllBytes(archive.Path))),
-        nuspecPath = nuspec.FullName,
-        licenseType = license?.Attribute("type")?.Value,
-        license = license?.Value,
-        licenseUrl = Field("licenseUrl")?.Value,
-        repository = Field("repository")?.Attributes().ToDictionary(a => a.Name.LocalName, a => a.Value),
-        status = errors.Count > 0 ? "error" : "original-license-collected",
-        declaredLicenseFileMissing,
-        sourceRetrieval,
-        documents,
-        sourceDocuments,
-        sourceAttempts,
-        errors,
-        attributionScope = "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
-    });
+        manifest.Add(new
+        {
+            id = archive.Value.Id,
+            version = archive.Value.Version,
+            source = "restored-nupkg",
+            packagePath = archive.Key + "/" + Path.GetFileName(archive.Path),
+            nupkgSha256 = Convert.ToHexStringLower(SHA256.HashData(File.ReadAllBytes(archive.Path))),
+            nuspecPath = nuspec.FullName,
+            licenseType = license?.Attribute("type")?.Value,
+            license = license?.Value,
+            licenseUrl = Field("licenseUrl")?.Value,
+            repository = Field("repository")?.Attributes().ToDictionary(a => a.Name.LocalName, a => a.Value),
+            status = errors.Count > 0 ? "error" : "original-license-collected",
+            declaredLicenseFileMissing,
+            sourceRetrieval,
+            documents,
+            sourceDocuments,
+            sourceAttempts,
+            errors,
+            attributionScope = "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
+        });
+        progress.Write(archives.IndexOf(archive), archives.Length);
+    }
 }
+
 File.WriteAllText(Path.Combine(output, "manifest.json"), JsonSerializer.Serialize(manifest,
     new JsonSerializerOptions { WriteIndented = true }) + "\n");
 Console.WriteLine($"Collected {packages.Count} packages; {unresolved} packages have unresolved collection errors (manifest.json).");
+if (unresolved != 0)
+{
+    var errorPackages = manifest.Select(x => (dynamic)x).Where(x => x.status == "error").Select(x => $"{x.id}: v{x.version}");
+    Console.Write($"Unresolved packages below:\n{string.Join("\n", errorPackages)}\n");
+}
 Environment.ExitCode = unresolved == 0 ? 0 : 2;
 
 static bool IsLicense(string name) => Regex.IsMatch(name, @"\A(?:licen[cs]e|copying)(?:[._-].*)?\z", RegexOptions.IgnoreCase);
@@ -324,5 +334,33 @@ static void SafePath(string path)
         path.Split('/').Any(p => p is ".." or "."))
     {
         throw new InvalidDataException("Unsafe archive path");
+    }
+}
+
+class ConsoleProgress : IDisposable
+{
+    private int _previousLength;
+
+    public ConsoleProgress()
+    {
+        Clear();
+    }
+
+    public void Dispose()
+    {
+        Clear();
+    }
+
+    private void Clear()
+    {
+        Console.WriteLine();
+        _previousLength = 0;
+    }
+
+    public void Write(int current, int total)
+    {
+        string message = $"Progress: {current}/{total} ({current * 100 / total}%)";
+        Console.Write($"\r{message.PadRight(_previousLength)}");
+        _previousLength = message.Length;
     }
 }

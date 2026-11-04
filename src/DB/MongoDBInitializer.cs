@@ -17,19 +17,19 @@ public sealed class MongoDBInitializer(MongoDBCollections collections) : IInitia
     private async Task InitializeSessionsAsync(CancellationToken cancellationToken)
     {
         var sessions = collections.Sessions;
-        await sessions.Indexes.CreateOneAsync(
-            model: new CreateIndexModel<MongoDBUISession>(
-                keys: Builders<MongoDBUISession>
-                    .IndexKeys
-                    .Ascending(session => session.SessionId),
-                options: new CreateIndexOptions
-                {
-                    Unique = true,
-                    Name = "uq_session_id"
-                }
-            ),
-            cancellationToken: cancellationToken
-        );
+//        await sessions.Indexes.CreateOneAsync(
+//            model: new CreateIndexModel<MongoDBUISession>(
+//                keys: Builders<MongoDBUISession>
+//                    .IndexKeys
+//                    .Ascending(session => session.SessionId),
+//                options: new CreateIndexOptions
+//                {
+//                    Unique = true,
+//                    Name = "uq_session_id"
+//                }
+//            ),
+//            cancellationToken: cancellationToken
+//        );
         await sessions.Indexes.CreateOneAsync(
             model: new CreateIndexModel<MongoDBUISession>(
                 keys: Builders<MongoDBUISession>

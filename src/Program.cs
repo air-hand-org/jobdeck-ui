@@ -95,7 +95,7 @@ builder.Services.AddHealthChecks()
         tags: ["ready"],
         args: ["auth-health"]
     )
-    // TODO: mongodb healthcheck
+    .AddMongoDb()
     ;
 
 
@@ -117,6 +117,7 @@ builder.Services.AddOpenIddict()
         - ビルドと、MongoDB を使った保存・取得・期限切れ・削除の検証を実施。
         */
 
+        // TODO: Inject Certificate as secret
         options.AddDevelopmentEncryptionCertificate()
             .AddDevelopmentSigningCertificate();
 

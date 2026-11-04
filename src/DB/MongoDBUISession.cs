@@ -11,15 +11,26 @@ public sealed record MongoDBUIUserProfile(string Name)
 }
 
 public sealed record MongoDBUISession(
-    [property: BsonGuidRepresentation(GuidRepresentation.Standard)]
+    [property: BsonGuidRepresentation(GuidRepresentation.Standard), BsonId]
     Guid SessionId,
     string AccessToken,
-    DateTimeOffset ExpiresAt,
+    DateTime ExpiresAt,
     MongoDBUIUserProfile Profile
 )
 {
-    public UISession ToDomain() => new(SessionId, AccessToken, ExpiresAt, Profile.ToDomain());
+    public UISession ToDomain() =>
+        new(
+            SessionId: SessionId,
+            AccessToken: AccessToken,
+            AccessTokenExpiresAt: ExpiresAt,
+            Profile: Profile.ToDomain()
+        );
 
     public static MongoDBUISession FromDomain(UISession session) =>
-        new(session.SessionId, session.AccessToken, session.AccessTokenExpiresAt, MongoDBUIUserProfile.FromDomain(session.Profile));
+        new(
+            SessionId: session.SessionId,
+            AccessToken: session.AccessToken,
+            ExpiresAt: session.AccessTokenExpiresAt.DateTime,
+            Profile: MongoDBUIUserProfile.FromDomain(session.Profile)
+        );
 }
