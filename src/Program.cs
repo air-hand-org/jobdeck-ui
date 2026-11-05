@@ -7,16 +7,14 @@ using ui.Telemetry;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
-using MongoDB.Driver;
 using Jobdeck.Auth.V1;
 using Jobdeck.Job.V1;
 using Grpc.Health.V1;
-using OpenIddict.MongoDb;
-using OpenIddict.MongoDb.Models;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 using ui.Endpoints;
 using ui.DB;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -79,8 +77,12 @@ builder.Services.AddGrpcClient<Health.HealthClient>(
     }
 );
 
-// TODO: check MONGODB_URI, MONGODB_DATABASE
-builder.Services.AddSingleton(new MongoClient(builder.Configuration["MONGODB_URI"]).GetDatabase(builder.Configuration["MONGODB_DATABASE"]));
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+    options.UseNpgsql(builder.Configuration.GetConnectionString("Postgres"));
+
+    options.UseOpenIddict();
+});
 
 builder.Services.AddHealthChecks()
     .AddTypeActivatedCheck<HealthCheckClient>(
@@ -95,26 +97,25 @@ builder.Services.AddHealthChecks()
         tags: ["ready"],
         args: ["auth-health"]
     )
-    .AddMongoDb()
+    .AddDbContextCheck<ApplicationDbContext>()
     ;
-
 
 builder.Services.AddOpenIddict()
     .AddCore(options =>
     {
-        // TODO https://documentation.openiddict.com/integrations/mongodb#basic-configuration
-        options.UseMongoDb();
+        options.UseEntityFrameworkCore()
+            .UseDbContext<ApplicationDbContext>();
     })
     .AddClient(options =>
     {
         /*
         TODO:
-        - IUISessionStore を MongoDB 実装に切り替え、セッションに TTL インデックスを設定。
+        - IUISessionStore を EntityFrameworkCore 実装に切り替え、セッションに TTL インデックスを設定。
         - TTL の削除待ち中も利用されないよう、取得時の期限チェックを維持。
-        - OpenIddict の公式 MongoDB ストアを導入し、期限切れ state の削除を設定。
+        - OpenIddict の公式 EntityFrameworkCore ストアを導入し、期限切れ state の削除を設定。
         - Data Protection のキーリングを専用コレクションに保存し、アプリ名を固定。ここには TTL を付けない。
-        - MongoDB の接続先を設定で切り替え可能にし、ローカル用のコンテナー起動手順を追加。
-        - ビルドと、MongoDB を使った保存・取得・期限切れ・削除の検証を実施。
+        - EntityFrameworkCore の接続先を設定で切り替え可能にし、ローカル用のコンテナー起動手順を追加。
+        - ビルドと、EntityFrameworkCore を使った保存・取得・期限切れ・削除の検証を実施。
         */
 
         // TODO: Inject Certificate as secret
@@ -160,21 +161,22 @@ builder.Services.AddAuthorization();
 builder.Services.AddCascadingAuthenticationState();
 
 builder.Services.AddMemoryCache();
-builder.Services.AddSingleton<IUISessionStore, MongoDBUISessionStore>();
+builder.Services.AddScoped<IUISessionStore, PostgresUISessionStore>();
 builder.Services.AddScoped<AccessTokenAccessor>();
 builder.Services.AddScoped<UIAuthenticationService>();
 builder.Services.AddScoped<UIUserProfileService>();
 
-builder.Services.AddSingleton<MongoDBCollections>();
-builder.Services.AddSingleton<MongoDBInitializer>();
+// FIXME: migrator
+//builder.Services.AddSingleton<MongoDBInitializer>();
 
 
 var app = builder.Build();
 
-await app.Services
-    .GetRequiredService<MongoDBInitializer>()
-    .InitializeAsync()
-    ;
+// FIXME: マイグレーターだけ実行して終了するモードを追加しておく
+//await app.Services
+//    .GetRequiredService<MongoDBInitializer>()
+//    .InitializeAsync()
+//    ;
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

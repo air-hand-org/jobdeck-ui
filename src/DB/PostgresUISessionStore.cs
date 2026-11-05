@@ -1,0 +1,66 @@
+using Microsoft.EntityFrameworkCore;
+using ui.Session;
+
+namespace ui.DB;
+
+public sealed class PostgresUISessionStore(ApplicationDbContext db) : IUISessionStore
+{
+    public async Task<UISession?> GetSessionAsync(Guid sessionId, CancellationToken cancellationToken = default)
+    {
+        var session = await db.Sessions
+            .AsNoTracking()
+            .Include(s => s.Profile)
+            .SingleOrDefaultAsync(
+                predicate: s => s.SessionId == sessionId
+                , cancellationToken: cancellationToken
+            );
+        return session?.ToDomain();
+    }
+
+    public async Task SetSessionAsync(UISession session, CancellationToken cancellationToken = default)
+    {
+        using var tx = await db.Database.BeginTransactionAsync(cancellationToken);
+        var dbSession = PostgresUISession.FromDomain(session);
+        await db.Database.ExecuteSqlAsync(
+            $"""
+            WITH s AS (
+                INSERT INTO "Sessions" (
+                    "SessionId"
+                    , "AccessToken"
+                    , "ExpiresAt"
+                ) VALUES (
+                    {dbSession.SessionId}
+                    , {dbSession.AccessToken}
+                    , {dbSession.ExpiresAt}
+                )
+                ON CONFLICT ("SessionId")
+                DO UPDATE SET
+                    "AccessToken" = EXCLUDED."AccessToken"
+                    , "ExpiresAt" = EXCLUDED."ExpiresAt"
+                RETURNING *
+            )
+            INSERT INTO "Profiles" (
+                "SessionId"
+                , "Name"
+            )
+            SELECT
+                s."SessionId"
+                , {dbSession.Profile.Name}
+            FROM s
+            ON CONFLICT ("SessionId")
+            DO UPDATE SET
+                "Name" = EXCLUDED."Name"
+            ;
+            """
+            , cancellationToken
+        );
+        await tx.CommitAsync(cancellationToken);
+    }
+
+    public async Task RemoveSessionAsync(Guid sessionId, CancellationToken cancellationToken = default)
+    {
+        await db.Sessions.Where(s => s.SessionId == sessionId)
+            .ExecuteDeleteAsync(cancellationToken)
+        ;
+    }
+}
