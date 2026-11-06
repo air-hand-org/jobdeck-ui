@@ -17,11 +17,27 @@ public sealed class UIAuthenticationService(AuthApiClient authApi, IUISessionSto
             return ApiResult.Failure(result.Error ?? new ApiError(ApiErrorCode.Unauthenticated, "Login failed"));
         }
 
-        var token = result.Value;
+        return await SignInAsync(result.Value, model.Id!, httpContext, cancellationToken);
+    }
+
+    public async Task<ApiResult> GitHubLoginAsync(string externalToken, string name, HttpContext httpContext, CancellationToken cancellationToken)
+    {
+        var result = await authApi.ExchangeGitHubTokenAsync(externalToken, cancellationToken);
+        if (!result.IsSuccess || result.Value is null)
+        {
+            return ApiResult.Failure(result.Error ?? new ApiError(ApiErrorCode.Unauthenticated, "External login failed"));
+        }
+
+        return await SignInAsync(result.Value, name, httpContext, cancellationToken);
+    }
+
+    private async Task<ApiResult> SignInAsync(Jobdeck.Auth.V1.Token token, string name, HttpContext httpContext, CancellationToken cancellationToken)
+    {
         var session = new UISession(
           Guid.NewGuid(),
           token.AccessToken,
-          DateTimeOffset.UtcNow.AddSeconds(token.ExpiresInSeconds)
+          DateTimeOffset.UtcNow.AddSeconds(token.ExpiresInSeconds),
+          new UIUserProfile(name)
         );
         await sessions.SetSessionAsync(session, cancellationToken);
 

@@ -20,7 +20,7 @@ public sealed class AccessTokenAccessor(AuthenticationStateProvider provider, IU
         {
             return null;
         }
-        if (session.AccessTokenExpiresAt <= DateTimeOffset.UtcNow)
+        if (session.IsExpired())
         {
             await sessions.RemoveSessionAsync(sessionId, cancellationToken);
             return null;
