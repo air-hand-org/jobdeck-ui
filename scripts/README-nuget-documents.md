@@ -2,7 +2,8 @@
 
 Run `make licenses` after restoring packages. The collector uses bundled original
 license/attribution documents first. If no bundled license is present, it probes
-standard root document names at the nuspec's exact 40-character commit.
+standard root document names at the nuspec's exact 40-character commit (including
+common title-case names such as Roslyn's `License.txt`).
 
 Only if that commit has no original license (all probes completed without
 retrieval errors), or the nuspec commit is missing/invalid, it looks for the exact
@@ -13,8 +14,10 @@ There is no default-branch fallback. A successful commit collection does not que
 tags. HTTP/auth/transport failures are not converted into missing documents or
 hidden by a tag fallback.
 
-Tag API access uses `gh-app --owner air-hand-org -- api`; install/configure that
-helper before collection. Raw document retrieval is SHA-pinned. `NOTICE.html`
+Tag API access uses .NET HTTP directly (no GitHub CLI/helper dependency). Optional
+`GITHUB_TOKEN` authentication is sent only to `api.github.com`, never to raw
+document URLs; redirects are disabled. CI supplies its read-only job token.
+Raw document retrieval is SHA-pinned. `NOTICE.html`
 and `notice.html` are candidates, and HTML is accepted only for those exact
 names on pinned raw GitHub URLs. Download responses and tag/API results are cached
 for the duration of a run.
@@ -33,10 +36,10 @@ rewritten merely by changing the collector; regenerate with a complete restore.
 
 ## Tests
 
-Requires Python 3 and .NET 10; no external test packages or GitHub/network access:
+Requires .NET 10 only; no Python, external test packages or GitHub/network access:
 
 ```sh
-python3 scripts/test-nuget-source-resolution.py
+dotnet run --file scripts/run-nuget-source-tests.cs
 ```
 
 The runner compiles the collector's actual resolver and download function in a

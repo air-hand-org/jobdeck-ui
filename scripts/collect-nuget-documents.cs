@@ -1,6 +1,5 @@
 #:property PublishAot=false
 using System.IO.Compression;
-using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Text.Json;
 using System.Text.RegularExpressions;
@@ -72,7 +71,8 @@ Directory.CreateDirectory(output);
 var manifest = new List<object>();
 var unresolved = 0;
 using var http = new HttpClient(new HttpClientHandler { AllowAutoRedirect = false }) { Timeout = TimeSpan.FromSeconds(15) };
-var resolver = new SourceResolver(SourceResolver.GitHubApi, url => Download(http, url));
+var resolver = new SourceResolver(path => SourceResolver.GitHubApi(http, path,
+    Environment.GetEnvironmentVariable("GITHUB_TOKEN")), url => Download(http, url));
 using (var progress = new ConsoleProgress())
 {
     foreach (var archive in archives)
@@ -415,6 +415,7 @@ class SourceResolver
     {
         foreach (var stem in new[] { "LICENSE", "LICENCE", "COPYING", "NOTICE", "THIRD-PARTY-NOTICES" })
         foreach (var name in new[] { stem, stem + ".txt", stem + ".md", stem + ".TXT", stem.ToLowerInvariant(), stem.ToLowerInvariant() + ".txt", stem.ToLowerInvariant() + ".md" }
+            .Concat(new[] { stem[..1] + stem[1..].ToLowerInvariant(), stem[..1] + stem[1..].ToLowerInvariant() + ".txt", stem[..1] + stem[1..].ToLowerInvariant() + ".md" })
             .Concat(stem == "NOTICE" ? new[] { "NOTICE.html", "notice.html" } : Array.Empty<string>()))
         {
             var url = $"https://raw.githubusercontent.com/{repository}/{sha}/{name}";
@@ -471,31 +472,37 @@ class SourceResolver
         }
     }
 
-    public static async Task<(string? Json, int Status)> GitHubApi(string path)
+    public static async Task<(string? Json, int Status)> GitHubApi(HttpClient http, string path, string? token = null)
     {
-        try
-        {
-            var start = new ProcessStartInfo("gh-app") { RedirectStandardOutput = true, RedirectStandardError = true, UseShellExecute = false };
-            foreach (var argument in new[] { "--owner", "air-hand-org", "--", "api", "--include", path })
-                start.ArgumentList.Add(argument);
-            using var process = Process.Start(start)!;
-            var stdout = process.StandardOutput.ReadToEndAsync();
-            var stderr = process.StandardError.ReadToEndAsync();
-            using var timeout = new CancellationTokenSource(TimeSpan.FromSeconds(45));
-            try { await process.WaitForExitAsync(timeout.Token); }
-            catch (OperationCanceledException) { process.Kill(entireProcessTree: true); await process.WaitForExitAsync(); return (null, 0); }
-            var text = (await stdout).Replace("\r\n", "\n");
-            await stderr; // Never emit authentication diagnostics or credentials into the manifest.
-            var separator = text.IndexOf("\n\n", StringComparison.Ordinal);
-            var statusMatch = Regex.Match(text, @"\AHTTP/\S+ ([0-9]{3})");
-            if (!statusMatch.Success || separator < 0) return (null, 0);
-            var status = int.Parse(statusMatch.Groups[1].Value);
-            if (process.ExitCode != 0 && status == 200) return (null, 0);
-            return (text[(separator + 2)..], status);
-        }
-        catch (Exception ex) when (ex is IOException or System.ComponentModel.Win32Exception or InvalidOperationException)
-        {
+        // Fixed origin, no redirects: credentials must never reach raw document hosts.
+        if (!Regex.IsMatch(path, @"\Arepos/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+/git/(?:ref/tags/[^/?#]+|tags/[0-9a-fA-F]{40})\z"))
             return (null, 0);
+        for (var attempt = 0; attempt < 3; attempt++)
+        {
+            try
+            {
+                using var request = new HttpRequestMessage(HttpMethod.Get, "https://api.github.com/" + path);
+                request.Headers.UserAgent.ParseAdd("jobdeck-nuget-documents/1.0");
+                request.Headers.Accept.ParseAdd("application/vnd.github+json");
+                request.Headers.Add("X-GitHub-Api-Version", "2022-11-28");
+                if (!string.IsNullOrEmpty(token)) request.Headers.Authorization = new("Bearer", token);
+                using var timeout = new CancellationTokenSource(TimeSpan.FromSeconds(15));
+                using var response = await http.SendAsync(request, timeout.Token);
+                var status = (int)response.StatusCode;
+                if ((status == 429 || status >= 500) && attempt < 2)
+                {
+                    await Task.Delay(250 * (attempt + 1));
+                    continue;
+                }
+                // Error bodies can contain diagnostics; only retain successful JSON.
+                return (status == 200 ? await response.Content.ReadAsStringAsync(timeout.Token) : null, status);
+            }
+            catch (Exception ex) when (ex is HttpRequestException or OperationCanceledException or IOException)
+            {
+                if (attempt == 2) return (null, 0);
+                await Task.Delay(250 * (attempt + 1));
+            }
         }
+        throw new InvalidOperationException("Unreachable API state");
     }
 }

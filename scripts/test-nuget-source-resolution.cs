@@ -4,6 +4,30 @@ using System.Text.RegularExpressions;
 using System.Diagnostics;
 using System.Text;
 
+using (var http = new HttpClient(new ApiHandler()))
+{
+    var response = await SourceResolver.GitHubApi(http, "repos/owner/repo/git/ref/tags/1.2.3", "fixture-token");
+    Check(response.Status == 200 && response.Json == "{}", "portable authenticated HTTP API");
+}
+Console.WriteLine("PASS GitHub API uses HTTP with scoped authentication and headers");
+foreach (var status in new[] { 404, 401, 403, 302, 503, 429 })
+{
+    var handler = new StatusHandler(status);
+    using var http = new HttpClient(handler);
+    var response = await SourceResolver.GitHubApi(http, "repos/owner/repo/git/ref/tags/1.2.3");
+    Check(response.Status == status && response.Json == null, "API failure status preserved without body");
+    Check(handler.Calls == (status is 503 or 429 ? 3 : 1), "bounded transient retries only");
+    Check(!handler.Authenticated, "optional token absent");
+}
+using (var http = new HttpClient(new StatusHandler(0)))
+{
+    var response = await SourceResolver.GitHubApi(http, "repos/owner/repo/git/ref/tags/1.2.3");
+    Check(response.Status == 0 && response.Json == null, "transport failure stays distinct from 404");
+    response = await SourceResolver.GitHubApi(http, "https://evil.example/token", "fixture-token");
+    Check(response.Status == 0, "reject non-API paths before sending credentials");
+}
+Console.WriteLine("PASS API absence/auth/redirect/transient/transport errors and optional token");
+
 const string commit = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
 const string tagCommit = "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb";
 var apiCalls = new List<string>();
@@ -104,6 +128,15 @@ result = await resolver.Resolve("owner/repo", "1.2.3", null);
 Check(result.Error == "tag-resolution-error" && result.Tags.All(t => t.Error == "invalid-tag-object"), "tag cycle bounded");
 Console.WriteLine("PASS annotated tag cycle rejected");
 
+resolver = new SourceResolver(_ => throw new Exception("title-case commit must not need tags"), url =>
+{
+    var found = url.EndsWith("/License.txt");
+    return Task.FromResult<(byte[]?, int?, string?)>((found ? Encoding.UTF8.GetBytes("original title-case license") : null, found ? 200 : 404, null));
+});
+result = await resolver.Resolve("dotnet/roslyn", "5.0.0", commit);
+Check(result.Documents.Any(d => d.Name == "License.txt") && result.Provenance == "nuspec-commit", "title-case root license");
+Console.WriteLine("PASS title-case License.txt at nuspec commit (Roslyn)");
+
 using (var http = new HttpClient(new HtmlHandler()))
 {
     var html = await Download(http, "https://raw.githubusercontent.com/owner/repo/" + commit + "/NOTICE.html");
@@ -115,6 +148,31 @@ Console.WriteLine("PASS original HTML NOTICE only; other HTML rejected");
 
 void Check(bool value, string name) { if (!value) throw new Exception(name); }
 // DOWNLOAD_FUNCTION
+
+class StatusHandler(int status) : HttpMessageHandler
+{
+    public int Calls { get; private set; }
+    public bool Authenticated { get; private set; }
+    protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+    {
+        Calls++;
+        Authenticated |= request.Headers.Authorization != null;
+        if (status == 0) throw new HttpRequestException("fixture transport failure");
+        return Task.FromResult(new HttpResponseMessage((System.Net.HttpStatusCode)status) { Content = new StringContent("diagnostics must not be retained") });
+    }
+}
+
+class ApiHandler : HttpMessageHandler
+{
+    protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+    {
+        if (request.RequestUri!.ToString() != "https://api.github.com/repos/owner/repo/git/ref/tags/1.2.3" ||
+            request.Headers.Authorization?.ToString() != "Bearer fixture-token" ||
+            !request.Headers.UserAgent.Any() || !request.Headers.Contains("X-GitHub-Api-Version"))
+            throw new Exception("API URI/auth/headers");
+        return Task.FromResult(new HttpResponseMessage(System.Net.HttpStatusCode.OK) { Content = new StringContent("{}") });
+    }
+}
 
 class HtmlHandler : HttpMessageHandler
 {
