@@ -23,7 +23,8 @@ public static class GitHubAuthenticationEndpoints
     public static async Task<IResult> HandleLoginAsync()
     {
         return Results.Challenge(
-            properties: new AuthenticationProperties {
+            properties: new AuthenticationProperties
+            {
                 RedirectUri = "/"
             },
             authenticationSchemes: [
