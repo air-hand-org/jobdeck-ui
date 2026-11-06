@@ -1,14 +1,18 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.DataProtection.EntityFrameworkCore;
 using ui.Session;
 
 namespace ui.DB;
 
-public sealed class ApplicationDbContext(DbContextOptions options) : DbContext(options)
+public sealed class ApplicationDbContext(DbContextOptions options)
+    : DbContext(options), IDataProtectionKeyContext
 {
     // TODO: not UISession, Use DBUISession
     // FIXME: cleanup expired sessions by pg_cron
     public DbSet<PostgresUISession> Sessions { get; set; }
     public DbSet<PostgresUIUserProfile> Profiles { get; set; }
+
+    public DbSet<DataProtectionKey> DataProtectionKeys { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

@@ -6,6 +6,7 @@ using ui.Session;
 using ui.Telemetry;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Jobdeck.Auth.V1;
 using Jobdeck.Job.V1;
@@ -15,6 +16,8 @@ using OpenTelemetry.Trace;
 using ui.Endpoints;
 using ui.DB;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Cryptography.X509Certificates;
+using ui.Certificates;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -100,6 +103,14 @@ builder.Services.AddHealthChecks()
     .AddDbContextCheck<ApplicationDbContext>()
     ;
 
+builder.Services.AddDataProtection()
+    .SetApplicationName("jobdeck-ui")
+    .PersistKeysToDbContext<ApplicationDbContext>()
+    .ProtectKeysWithCertificate(
+        CertLoader.LoadFromBase64Env(builder.Configuration, "CERT_DATAPROTECTION_BASE64")
+    )
+    ;
+
 builder.Services.AddOpenIddict()
     .AddCore(options =>
     {
@@ -118,9 +129,11 @@ builder.Services.AddOpenIddict()
         - ビルドと、EntityFrameworkCore を使った保存・取得・期限切れ・削除の検証を実施。
         */
 
-        // TODO: Inject Certificate as secret
-        options.AddDevelopmentEncryptionCertificate()
-            .AddDevelopmentSigningCertificate();
+        options.AddEncryptionCertificate(
+            CertLoader.LoadFromBase64Env(builder.Configuration, "CERT_OPENID_ENCRYPTION_BASE64")
+        ).AddSigningCertificate(
+            CertLoader.LoadFromBase64Env(builder.Configuration, "CERT_OPENID_SIGNING_BASE64")
+        );
 
         options.AllowAuthorizationCodeFlow();
 

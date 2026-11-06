@@ -10,7 +10,7 @@ cs-restore:
 .PHONY: cs-build
 cs-build: cs-restore
 	@cd $(CS_MK_DIR)../ && \
-	    dotnet build $(CS_SLN) --no-restore \
+	    dotnet build $(CS_SLN) --no-restore --warnaserror \
 		&& dotnet ef migrations bundle --project src/ui.csproj --self-contained -r linux-x64 --force --output src/bin/migrator
 
 .PHONY: cs-test

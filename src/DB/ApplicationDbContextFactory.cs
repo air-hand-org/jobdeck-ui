@@ -11,7 +11,8 @@ public sealed class ApplicationDbContextFactory
         var options = new DbContextOptionsBuilder<ApplicationDbContext>();
 
         options.UseNpgsql(
-            "Host=localhost;Database=dummy;Username=dummy"
+            Environment.GetEnvironmentVariable("ConnectionStrings__Postgres")
+            ?? "Host=localhost;Database=dummy;Username=dummy"
         );
         options.UseOpenIddict();
 
