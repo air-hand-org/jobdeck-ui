@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.4.4](https://github.com/air-hand-org/jobdeck-ui/compare/v1.4.3...v1.4.4) (2026-11-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency jobdeck.auth.contracts to 1.6.1 ([#45](https://github.com/air-hand-org/jobdeck-ui/issues/45)) ([4b476a8](https://github.com/air-hand-org/jobdeck-ui/commit/4b476a8ea52576ba7630f6933e40925b1152d35b))
+* **deps:** update dependency jobdeck.job.contracts to 1.3.1 ([#47](https://github.com/air-hand-org/jobdeck-ui/issues/47)) ([6c209ef](https://github.com/air-hand-org/jobdeck-ui/commit/6c209efb163aa2225bfe16e1b2ec1bbbf5d79a97))
+* **deps:** update grpc-dotnet monorepo to 2.85.0 ([#42](https://github.com/air-hand-org/jobdeck-ui/issues/42)) ([2792574](https://github.com/air-hand-org/jobdeck-ui/commit/2792574c7eb219241cc7cf6a590dcef351730556))
+
 ## [1.4.3](https://github.com/air-hand-org/jobdeck-ui/compare/v1.4.2...v1.4.3) (2026-10-29)
 
 
