@@ -1,7 +1,9 @@
+using Microsoft.EntityFrameworkCore;
 using ui.Session;
 
 namespace ui.DB;
 
+[PrimaryKey(nameof(SessionId))]
 public sealed record PostgresUIUserProfile(
     Guid SessionId
     , string Name
@@ -11,14 +13,17 @@ public sealed record PostgresUIUserProfile(
     public static PostgresUIUserProfile FromDomain(Guid sessionId, UIUserProfile profile) => new(sessionId, profile.Name);
 }
 
+[PrimaryKey(nameof(SessionId))]
+[Index(nameof(ExpiresAt))]
 public sealed record PostgresUISession(
     Guid SessionId
     , string AccessToken
     , DateTime ExpiresAt
 )
 {
-    // EFCoreのためにpropertyにしている
+    // Property for EFCore
     public PostgresUIUserProfile Profile { get; set; } = null!;
+    public DateTime CreatedAt { get; set; } // test to check migration diff
 
     public UISession ToDomain() =>
         new(

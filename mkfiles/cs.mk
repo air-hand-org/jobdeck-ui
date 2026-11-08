@@ -21,7 +21,8 @@ cs-test: cs-build
 .PHONY: cs-lint
 cs-lint:
 	@cd $(CS_MK_DIR)../ && \
-	    dotnet format --no-restore --verify-no-changes
+	    dotnet format --no-restore --verify-no-changes \
+		&& dotnet ef migrations --project src/ui.csproj has-pending-model-changes
 
 .PHONY: cs-fmt
 cs-fmt:

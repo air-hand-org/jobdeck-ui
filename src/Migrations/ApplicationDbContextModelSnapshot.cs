@@ -264,6 +264,8 @@ namespace ui.Migrations
 
                     b.HasKey("SessionId");
 
+                    b.HasIndex("ExpiresAt");
+
                     b.ToTable("Sessions");
                 });
 

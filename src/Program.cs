@@ -173,23 +173,15 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 builder.Services.AddAuthorization();
 builder.Services.AddCascadingAuthenticationState();
 
-builder.Services.AddMemoryCache();
 builder.Services.AddScoped<IUISessionStore, PostgresUISessionStore>();
 builder.Services.AddScoped<AccessTokenAccessor>();
 builder.Services.AddScoped<UIAuthenticationService>();
 builder.Services.AddScoped<UIUserProfileService>();
 
-// FIXME: migrator
-//builder.Services.AddSingleton<MongoDBInitializer>();
-
+// Background service
+builder.Services.AddHostedService<ExpiredSessionCleaner>();
 
 var app = builder.Build();
-
-// FIXME: マイグレーターだけ実行して終了するモードを追加しておく
-//await app.Services
-//    .GetRequiredService<MongoDBInitializer>()
-//    .InitializeAsync()
-//    ;
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

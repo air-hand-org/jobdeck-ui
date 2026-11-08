@@ -18,7 +18,7 @@ public sealed class UICookieAuthenticationEvents(IUISessionStore sessions) : Coo
         }
 
         var session = await sessions.GetSessionAsync(sessionId, context.HttpContext.RequestAborted);
-        if (session is null)
+        if (session is null || session.IsExpired())
         {
             context.RejectPrincipal();
             await context.HttpContext.SignOutAsync(context.Scheme.Name);
