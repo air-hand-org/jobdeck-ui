@@ -23,7 +23,6 @@ public sealed record PostgresUISession(
 {
     // Property for EFCore
     public PostgresUIUserProfile Profile { get; set; } = null!;
-    public DateTime CreatedAt { get; set; } // test to check migration diff
 
     public UISession ToDomain() =>
         new(
