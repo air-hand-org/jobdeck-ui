@@ -4,7 +4,9 @@ using ui.Session;
 
 namespace ui.Profile;
 
-public sealed class UIUserProfileService(AuthenticationStateProvider provider, IUISessionStore sessions)
+public sealed class UIUserProfileService(
+    AuthenticationStateProvider provider
+    , IUISessionStore sessions)
 {
     public async Task<UIUserProfile?> GetProfileAsync(CancellationToken cancellationToken = default)
     {
@@ -15,7 +17,7 @@ public sealed class UIUserProfileService(AuthenticationStateProvider provider, I
             return null;
         }
         var session = await sessions.GetSessionAsync(sessionId, cancellationToken);
-        if (session is null || session.IsExpired())
+        if (session is null)
         {
             return null;
         }

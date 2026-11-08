@@ -6,6 +6,7 @@ namespace ui.DB;
 
 public sealed class PostgresUISessionStore(
     ApplicationDbContext db
+    , TimeProvider timeProvider
     , IDataProtectionProvider provider
 ) : IUISessionStore
 {
@@ -17,7 +18,7 @@ public sealed class PostgresUISessionStore(
             .AsNoTracking()
             .Include(s => s.Profile)
             .SingleOrDefaultAsync(
-                predicate: s => s.SessionId == sessionId
+                predicate: s => s.SessionId == sessionId && s.ExpiresAt > timeProvider.GetUtcNow().UtcDateTime
                 , cancellationToken: cancellationToken
             );
         if (session is null)

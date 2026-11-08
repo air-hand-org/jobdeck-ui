@@ -9,5 +9,5 @@ public sealed record UISession(
     UIUserProfile Profile
 )
 {
-    public bool IsExpired() => AccessTokenExpiresAt <= DateTimeOffset.UtcNow;
+    public bool IsExpired(DateTimeOffset now) => AccessTokenExpiresAt <= now;
 }
