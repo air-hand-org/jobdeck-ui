@@ -5,7 +5,7 @@ using ui.Session;
 namespace ui.DB;
 
 public sealed class PostgresUISessionStore(
-    ApplicationDbContext db
+    IDbContextFactory<ApplicationDbContext> dbFactory
     , TimeProvider timeProvider
     , IDataProtectionProvider provider
 ) : IUISessionStore
@@ -14,6 +14,7 @@ public sealed class PostgresUISessionStore(
 
     public async Task<UISession?> GetSessionAsync(Guid sessionId, CancellationToken cancellationToken = default)
     {
+        await using var db = await dbFactory.CreateDbContextAsync(cancellationToken);
         var session = await db.Sessions
             .AsNoTracking()
             .Include(s => s.Profile)
@@ -34,6 +35,7 @@ public sealed class PostgresUISessionStore(
 
     public async Task SetSessionAsync(UISession session, CancellationToken cancellationToken = default)
     {
+        await using var db = await dbFactory.CreateDbContextAsync(cancellationToken);
         using var tx = await db.Database.BeginTransactionAsync(cancellationToken);
         var dbSession = PostgresUISession.FromDomain(session with
         {
@@ -77,6 +79,7 @@ public sealed class PostgresUISessionStore(
 
     public async Task RemoveSessionAsync(Guid sessionId, CancellationToken cancellationToken = default)
     {
+        await using var db = await dbFactory.CreateDbContextAsync(cancellationToken);
         await db.Sessions.Where(s => s.SessionId == sessionId)
             .ExecuteDeleteAsync(cancellationToken)
         ;

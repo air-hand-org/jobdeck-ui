@@ -16,7 +16,6 @@ using OpenTelemetry.Trace;
 using ui.Endpoints;
 using ui.DB;
 using Microsoft.EntityFrameworkCore;
-using System.Security.Cryptography.X509Certificates;
 using ui.Certificates;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -81,7 +80,7 @@ builder.Services.AddGrpcClient<Health.HealthClient>(
     }
 );
 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
+builder.Services.AddPooledDbContextFactory<ApplicationDbContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("Postgres"));
 
@@ -101,7 +100,11 @@ builder.Services.AddHealthChecks()
         tags: ["ready"],
         args: ["auth-health"]
     )
-    .AddDbContextCheck<ApplicationDbContext>()
+    .AddDbContextCheck<ApplicationDbContext>(
+        "db",
+        failureStatus: HealthStatus.Unhealthy,
+        tags: ["ready"]
+    )
     ;
 
 builder.Services.AddDataProtection()

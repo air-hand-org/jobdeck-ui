@@ -1,13 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.DataProtection.EntityFrameworkCore;
-using ui.Session;
 
 namespace ui.DB;
 
-public sealed class ApplicationDbContext(DbContextOptions options)
-    : DbContext(options), IDataProtectionKeyContext
+public sealed class ApplicationDbContext(
+    DbContextOptions<ApplicationDbContext> options
+) : DbContext(options), IDataProtectionKeyContext
 {
-    // FIXME: cleanup expired sessions by pg_cron
     public DbSet<PostgresUISession> Sessions { get; set; }
     public DbSet<PostgresUIUserProfile> Profiles { get; set; }
 
