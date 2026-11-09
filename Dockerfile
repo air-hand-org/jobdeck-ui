@@ -37,6 +37,8 @@ ENTRYPOINT ["/app/migrator"]
 FROM mcr.microsoft.com/dotnet/aspnet:10.0.14 AS ui
 WORKDIR /app
 COPY --from=build /app/publish .
+# MEMO: exec migrator when ui starts
+COPY --from=build /app/migrator .
 COPY LICENSE /usr/share/licenses/jobdeck-ui/LICENSE
 COPY third_party/licenses/nuget/ /usr/share/licenses/jobdeck-ui/third_party/nuget/
 ENV ASPNETCORE_URLS=http://+:8080 \
