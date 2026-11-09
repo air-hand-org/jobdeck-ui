@@ -63,6 +63,11 @@ jobs:
           secrets: |
             github_packages_token=${{ secrets.GITHUB_TOKEN }}
 
+      - name: Smoke test production migrator image
+        if: matrix.target.stage == 'migrator'
+        timeout-minutes: 5
+        run: bash scripts/test-migration-image.sh jobdeck-ui:test
+
   publish:
     if: ${{ inputs.push == true }}
     runs-on: ubuntu-latest
