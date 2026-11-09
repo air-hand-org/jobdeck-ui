@@ -35,7 +35,7 @@ jobs:
       - name: build
         run: make build
       - name: test NuGet source resolution (.NET only)
-        run: dotnet run --file scripts/run-nuget-source-tests.cs
+        run: dotnet run --project tools/NuGetDocuments.Tests
       - name: generate NuGet licenses
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

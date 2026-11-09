@@ -48,28 +48,45 @@ rewritten merely by changing the collector; regenerate with a complete restore.
 Requires .NET 10 only; no Python, external test packages or GitHub/network access:
 
 ```sh
-dotnet run --file scripts/run-nuget-source-tests.cs
+dotnet run --project tools/NuGetDocuments.Tests
 ```
 
-The runner compiles the collector's actual resolver and download function in a
-temporary file-based app with deterministic API/HTTP fixtures. It also runs the
-complete collector on synthetic nupkg inputs to verify bundled documents, unsafe
-repository rejection and unresolved exit status. No alternate resolver is kept
-in the tests. Temporary files use `TMPDIR` when configured. Concurrent fixtures
-also verify the shared request bound, single-flight success/failure caching,
-listing safety and deterministic output.
+The test project references the actual collector assembly (with internal access),
+not source-text extraction or a copied resolver. Fixtures exercise the resolver
+and HTTP client directly, then call the complete collector on synthetic nupkg
+inputs to verify bundled documents, unsafe repository rejection, unresolved
+status and repeat byte-deterministic output. Temporary files use `TMPDIR` when
+configured. Concurrent fixtures verify the shared request bound, single-flight
+success/failure caching and listing safety. No runtime or test packages are added.
+
+## Layout and entry point
+
+`tools/NuGetDocuments` is a .NET 10 console project:
+
+- `Program.cs` / `Collector.cs`: entry point and bounded package orchestration.
+- `PackageInventory.cs`: sorted inventory and archive preflight validation.
+- `PackageReader.cs`: bundled documents, nuspec metadata and per-package results.
+- `SourceResolver.cs`: commit/tag resolution, pinned root discovery and shared caches.
+- `GitHubClient.cs`: request-scoped API authentication and bounded raw downloads.
+- `ManifestWriter.cs`: deterministic manifest, summary and collection exit status.
+- `ConsoleProgress.cs`: progress display.
+
+`make licenses` invokes `dotnet run --project tools/NuGetDocuments -- INVENTORY CACHE OUTPUT`;
+there is no shell entry-point wrapper. The tooling projects are intentionally not
+added to `Jobdeck.slnx`. Attribution inventory remains explicitly scoped to
+`dotnet list src/ui.csproj package --include-transitive`, not the tools/tests.
 
 ## Live benchmark
 
-Use the same authentic restored package inventory/cache for both source versions:
+Use the same authentic restored package inventory/cache for both versions. Each
+input is either a historical file-based `.cs` app or a console `.csproj`:
 
 ```sh
-dotnet run --file scripts/benchmark-nuget-documents.cs -- BEFORE.cs scripts/collect-nuget-documents.cs INVENTORY.json RESTORED_CACHE OUTPUT
+dotnet run --file scripts/benchmark-nuget-documents.cs -- BEFORE.cs tools/NuGetDocuments/NuGetDocuments.csproj INVENTORY.json RESTORED_CACHE OUTPUT
 ```
 
-The harness reports collection time (excluding compilation/startup), real HTTP
-request count and response-body bytes, including retries/404s. It fails if any
-original file bytes or manifest fields differ, excluding only `sourceAttempts`
-which intentionally describes the changed discovery policy. Root listing JSON
-can increase body bytes even while eliminating many round trips. Network timings
-are environment-dependent; do not extrapolate a public subset to a full restore.
+The harness executes actual entry points without rewriting source, reports wall
+clock time **including compilation/startup**, and fails if any output differs,
+including every manifest field and original document byte. It does not count HTTP
+requests or isolate collector timing. Network timings are environment-dependent;
+do not extrapolate a public subset to a full restore.
