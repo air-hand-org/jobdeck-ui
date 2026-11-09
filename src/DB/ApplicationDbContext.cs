@@ -7,8 +7,8 @@ public sealed class ApplicationDbContext(
     DbContextOptions<ApplicationDbContext> options
 ) : DbContext(options), IDataProtectionKeyContext
 {
-    public DbSet<PostgresUISession> Sessions { get; set; }
-    public DbSet<PostgresUIUserProfile> Profiles { get; set; }
+    public DbSet<PostgresUISession> Sessions { get; set; } = null!;
+    public DbSet<PostgresUIUserProfile> Profiles { get; set; } = null!;
 
     public DbSet<DataProtectionKey> DataProtectionKeys { get; set; } = null!;
 
