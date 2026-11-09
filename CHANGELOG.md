@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.5.0](https://github.com/air-hand-org/jobdeck-ui/compare/v1.4.3...v1.5.0) (2026-11-09)
+
+
+### Features
+
+* github oauth flow ([#46](https://github.com/air-hand-org/jobdeck-ui/issues/46)) ([3764b28](https://github.com/air-hand-org/jobdeck-ui/commit/3764b286859b554e1986721a64574b5fd4567379))
+
+
+### Bug Fixes
+
+* **deps:** update dependency jobdeck.auth.contracts to 1.6.1 ([#45](https://github.com/air-hand-org/jobdeck-ui/issues/45)) ([4b476a8](https://github.com/air-hand-org/jobdeck-ui/commit/4b476a8ea52576ba7630f6933e40925b1152d35b))
+* **deps:** update dependency jobdeck.job.contracts to 1.3.1 ([#47](https://github.com/air-hand-org/jobdeck-ui/issues/47)) ([6c209ef](https://github.com/air-hand-org/jobdeck-ui/commit/6c209efb163aa2225bfe16e1b2ec1bbbf5d79a97))
+* **deps:** update dependency opentelemetry.instrumentation.aspnetcore to 1.20.2 ([#63](https://github.com/air-hand-org/jobdeck-ui/issues/63)) ([02e9d13](https://github.com/air-hand-org/jobdeck-ui/commit/02e9d13f3f17fd21d65481e130d71eb7b903b020))
+* **deps:** update grpc-dotnet monorepo to 2.85.0 ([#42](https://github.com/air-hand-org/jobdeck-ui/issues/42)) ([2792574](https://github.com/air-hand-org/jobdeck-ui/commit/2792574c7eb219241cc7cf6a590dcef351730556))
+* **deps:** update openiddict monorepo to 7.8.0 ([#59](https://github.com/air-hand-org/jobdeck-ui/issues/59)) ([c430132](https://github.com/air-hand-org/jobdeck-ui/commit/c430132b613faff8ddb1756b25d691397068d3d7))
+* exec migrate when ui starts ([#64](https://github.com/air-hand-org/jobdeck-ui/issues/64)) ([dbcd99e](https://github.com/air-hand-org/jobdeck-ui/commit/dbcd99eae12c8bae67207b2d61f3bb0c4d1bad5c))
+
+
+### Performance Improvements
+
+* reduce NuGet document probes with bounded collection ([#53](https://github.com/air-hand-org/jobdeck-ui/issues/53)) ([#61](https://github.com/air-hand-org/jobdeck-ui/issues/61)) ([7aa5af6](https://github.com/air-hand-org/jobdeck-ui/commit/7aa5af659fabc5fbfeda16e1b36fa6a2b8f5f673))
+
 ## [1.4.3](https://github.com/air-hand-org/jobdeck-ui/compare/v1.4.2...v1.4.3) (2026-10-29)
 
 
