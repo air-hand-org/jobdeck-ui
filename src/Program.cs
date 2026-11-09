@@ -35,6 +35,7 @@ builder.Services.AddOpenTelemetry()
       tracing
         .AddAspNetCoreInstrumentation()
         .AddGrpcClientInstrumentation()
+        .AddEntityFrameworkCoreInstrumentation()
         .AddSource(QuartzInstrumentation.ActivitySourceName)
         .AddSource(UiTelemetry.ActivitySourceName)
         ;
@@ -227,7 +228,7 @@ app.MapHealthChecks(
         Predicate = check => check.Tags.Contains("ready"),
     }
 );
-app.MapStaticAssets();
+app.MapStaticAssets().ShortCircuit();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 app.MapGitHubAuthenticationEndpoints();
