@@ -4816,6 +4816,38 @@
     "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
   },
   {
+    "id": "StyleCop.Analyzers",
+    "version": "1.3.177-beta",
+    "source": "restored-nupkg",
+    "packagePath": "stylecop.analyzers/1.3.177-beta/stylecop.analyzers.1.3.177-beta.nupkg",
+    "nupkgSha256": "e2b2d1cc92c95bb35bcfce2a7f4b2289ae437992a696dd72c40572da6cec2a7a",
+    "nuspecPath": "StyleCop.Analyzers.nuspec",
+    "licenseType": "expression",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "repository": null,
+    "status": "original-license-collected",
+    "declaredLicenseFileMissing": false,
+    "sourceRetrieval": "not-needed-package-license-present",
+    "sourceResolution": null,
+    "documents": [
+      {
+        "path": "LICENSE",
+        "sha256": "521bf93dae6c8b34c4eb3db20f5757e76ad6aa7774c0919952bf9c9880859710",
+        "bytes": 1104
+      },
+      {
+        "path": "THIRD-PARTY-NOTICES.txt",
+        "sha256": "f3b2330584ba74b37b94ec08b8f62dd6b9c9607b449e4e5a4817ca12932c0f72",
+        "bytes": 4600
+      }
+    ],
+    "sourceDocuments": [],
+    "sourceAttempts": [],
+    "errors": [],
+    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
+  },
+  {
     "id": "System.CodeDom",
     "version": "6.0.0",
     "source": "restored-nupkg",
