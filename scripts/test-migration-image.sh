@@ -25,7 +25,7 @@ sql() {
   "${compose[@]}" exec -T postgres psql -U postgres -d smoke -v ON_ERROR_STOP=1 -Atc "$1"
 }
 migrate() {
-  "${compose[@]}" run --rm --no-deps migrator --connection "$1" --verbose
+  "${compose[@]}" run --rm --no-deps -e "ConnectionStrings__Postgres=$1" migrator --verbose
 }
 check_equal() {
   if [[ "$1" != "$2" ]]; then

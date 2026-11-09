@@ -12,6 +12,8 @@ services:
   migrator:
     image: ${MIGRATOR_IMAGE:?Set the immutable migrator image ID}
     profiles: [migration]
+    environment:
+      MIGRATOR_EXECUTE: "true"
 networks:
   default:
     internal: true
