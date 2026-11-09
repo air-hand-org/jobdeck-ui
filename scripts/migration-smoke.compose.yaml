@@ -12,6 +12,13 @@ services:
   migrator:
     image: ${MIGRATOR_IMAGE:?Set the immutable migrator image ID}
     profiles: [migration]
+    environment:
+      MIGRATOR_EXECUTE: "true"
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: "5432"
+      POSTGRES_DB: smoke
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: smoke
 networks:
   default:
     internal: true

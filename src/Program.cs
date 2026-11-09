@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using ui.Auth;
 using ui.Components;
 using ui.Client;
@@ -97,7 +98,7 @@ builder.Services.AddGrpcClient<Health.HealthClient>(
 
 builder.Services.AddPooledDbContextFactory<ApplicationDbContext>(options =>
 {
-    options.UseNpgsql(builder.Configuration.GetConnectionString("Postgres"));
+    options.UseNpgsql(PostgresConfiguration.GetConnectionString(builder.Configuration));
 
     options.UseOpenIddict();
 });
@@ -197,6 +198,23 @@ builder.Services.AddScoped<IUISessionStore, PostgresUISessionStore>();
 builder.Services.AddScoped<AccessTokenAccessor>();
 builder.Services.AddScoped<UIAuthenticationService>();
 builder.Services.AddScoped<UIUserProfileService>();
+
+if (builder.Configuration.GetValue<bool>("MIGRATOR_EXECUTE"))
+{
+    using var migrator = Process.Start(new ProcessStartInfo
+    {
+        FileName = "/app/migrator",
+        WorkingDirectory = "/app",
+        UseShellExecute = false,
+    }) ?? throw new InvalidOperationException("Failed to start migrator.");
+
+    await migrator.WaitForExitAsync();
+
+    if (migrator.ExitCode != 0)
+    {
+        throw new InvalidOperationException($"Migrator failed with exit code {migrator.ExitCode}");
+    }
+}
 
 var app = builder.Build();
 

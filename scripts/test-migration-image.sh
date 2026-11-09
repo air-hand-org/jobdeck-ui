@@ -25,7 +25,7 @@ sql() {
   "${compose[@]}" exec -T postgres psql -U postgres -d smoke -v ON_ERROR_STOP=1 -Atc "$1"
 }
 migrate() {
-  "${compose[@]}" run --rm --no-deps migrator --connection "$1" --verbose
+  "${compose[@]}" run --rm --no-deps "$@" migrator --verbose
 }
 check_equal() {
   if [[ "$1" != "$2" ]]; then
@@ -39,8 +39,7 @@ check_equal "$(sql "SELECT count(*) FROM information_schema.tables WHERE table_s
 
 echo "Testing production migrator $1: $MIGRATOR_IMAGE"
 echo 'Applying image to empty database'
-connection='Host=postgres;Database=smoke;Username=postgres;Timeout=5'
-migrate "$connection"
+migrate
 expected_tables=$(printf '%s\n' DataProtectionKeys OpenIddictApplications OpenIddictAuthorizations OpenIddictScopes OpenIddictTokens Profiles Sessions __EFMigrationsHistory)
 check_equal "$(sql "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' ORDER BY table_name")" "$expected_tables" 'expected application tables and EF history'
 expected_migrations=$(
@@ -55,11 +54,11 @@ history=$(sql "$history_query")
 check_equal "$history" "$expected_migrations" 'history must contain every checked-in migration'
 
 echo 'Reapplying the same image ID'
-migrate "$connection"
+migrate
 check_equal "$(sql "$history_query")" "$history" 'repeat invocation must preserve migration history'
 
 echo 'Checking that bundle connection errors propagate'
 status=0
-migrate 'Host=postgres;Port=1;Database=smoke;Username=postgres;Timeout=1' || status=$?
+migrate -e POSTGRES_PORT=1 || status=$?
 check_equal "$status" 1 'bundle connection failure must exit 1'
 echo 'PASS migrator image empty database, schema/history, repeat invocation, and failure exit'

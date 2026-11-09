@@ -14,7 +14,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # Restore first so NuGet packages remain cached when only application code changes.
-COPY mise.toml NuGet.Config Directory.Build.props src/ui.csproj ./
+COPY mise.toml NuGet.Config .editorconfig Directory.Build.props src/ui.csproj ./
 RUN mise install && mise reshim
 RUN --mount=type=secret,id=github_packages_token \
     NuGetPackageSourceCredentials_github="Username=${GITHUB_ACTOR};Password=$(cat /run/secrets/github_packages_token)" \
@@ -37,6 +37,8 @@ ENTRYPOINT ["/app/migrator"]
 FROM mcr.microsoft.com/dotnet/aspnet:10.0.14 AS ui
 WORKDIR /app
 COPY --from=build /app/publish .
+# MEMO: exec migrator when ui starts
+COPY --from=build /app/migrator .
 COPY LICENSE /usr/share/licenses/jobdeck-ui/LICENSE
 COPY third_party/licenses/nuget/ /usr/share/licenses/jobdeck-ui/third_party/nuget/
 ENV ASPNETCORE_URLS=http://+:8080 \
