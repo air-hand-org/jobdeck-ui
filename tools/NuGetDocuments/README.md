@@ -45,7 +45,7 @@ rewritten merely by changing the collector; regenerate with a complete restore.
 
 ## Tests
 
-Requires .NET 10 only; no Python, external test packages or GitHub/network access:
+Requires .NET 10 and restores xUnit.v3; fixtures need no Python or GitHub/network access after restore:
 
 ```sh
 dotnet run --project tools/NuGetDocuments.Tests
@@ -57,7 +57,9 @@ and HTTP client directly, then call the complete collector on synthetic nupkg
 inputs to verify bundled documents, unsafe repository rejection, unresolved
 status and repeat byte-deterministic output. Temporary files use `TMPDIR` when
 configured. Concurrent fixtures verify the shared request bound, single-flight
-success/failure caching and listing safety. No runtime or test packages are added.
+success/failure caching and listing safety. Resolver and full-collector fixtures
+are separate xUnit facts. The live benchmark is explicit and does not run in the
+normal fixture command. No test dependencies enter the shipped UI inventory.
 
 ## Layout and entry point
 
@@ -82,7 +84,12 @@ Use the same authentic restored package inventory/cache for both versions. Each
 input is either a historical file-based `.cs` app or a console `.csproj`:
 
 ```sh
-dotnet run --file scripts/benchmark-nuget-documents.cs -- BEFORE.cs tools/NuGetDocuments/NuGetDocuments.csproj INVENTORY.json RESTORED_CACHE OUTPUT
+NUGET_BENCHMARK_BEFORE=/path/to/BEFORE.cs \
+NUGET_BENCHMARK_AFTER="$PWD/tools/NuGetDocuments/NuGetDocuments.csproj" \
+NUGET_BENCHMARK_INVENTORY=/path/to/INVENTORY.json \
+NUGET_BENCHMARK_CACHE=/path/to/RESTORED_CACHE \
+NUGET_BENCHMARK_OUTPUT=/path/to/fresh/OUTPUT \
+dotnet run --project tools/NuGetDocuments.Tests -- -class BenchmarkTests -explicit only
 ```
 
 The harness executes actual entry points without rewriting source, reports wall

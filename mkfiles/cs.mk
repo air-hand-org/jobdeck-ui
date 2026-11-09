@@ -22,9 +22,13 @@ cs-test: cs-build
 cs-lint:
 	@cd $(CS_MK_DIR)../ && \
 	    dotnet format --no-restore --verify-no-changes \
+		&& dotnet format tools/NuGetDocuments --no-restore --verify-no-changes \
+		&& dotnet format tools/NuGetDocuments.Tests --no-restore --verify-no-changes \
 		&& dotnet ef migrations --project src/ui.csproj has-pending-model-changes
 
 .PHONY: cs-fmt
 cs-fmt:
 	@cd $(CS_MK_DIR)../ && \
-	    dotnet format --no-restore
+	    dotnet format --no-restore \
+		&& dotnet format tools/NuGetDocuments --no-restore \
+		&& dotnet format tools/NuGetDocuments.Tests --no-restore

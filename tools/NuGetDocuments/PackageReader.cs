@@ -79,7 +79,10 @@ internal static class PackageReader
                 sourceAttempts.AddRange(resolution.Attempts);
                 errors.AddRange(resolution.Errors);
                 if (resolution.Error != null)
+                {
                     errors.Add(new { code = resolution.Error });
+                }
+
                 foreach (var document in resolution.Documents)
                 {
                     var path = document.Revision + "/" + document.Name;
@@ -94,7 +97,10 @@ internal static class PackageReader
                         sha256 = Convert.ToHexStringLower(SHA256.HashData(document.Bytes)),
                         bytes = document.Bytes.Length
                     });
-                    if (IsLicense(document.Name)) hasLicense = true;
+                    if (IsLicense(document.Name))
+                    {
+                        hasLicense = true;
+                    }
                 }
             }
         }

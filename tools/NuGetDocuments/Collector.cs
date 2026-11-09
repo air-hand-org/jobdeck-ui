@@ -2,11 +2,19 @@ internal static class Collector
 {
     public static async Task<int> Run(string[] args)
     {
-        if (args.Length != 3) throw new ArgumentException("Expected INVENTORY CACHE OUTPUT");
+        if (args.Length != 3)
+        {
+            throw new ArgumentException("Expected INVENTORY CACHE OUTPUT");
+        }
+
         var output = Path.GetFullPath(args[2]);
         // Validate all archives before replacing the scoped generated output.
         var archives = PackageInventory.Read(args[0], args[1]);
-        if (Directory.Exists(output)) Directory.Delete(output, true);
+        if (Directory.Exists(output))
+        {
+            Directory.Delete(output, true);
+        }
+
         Directory.CreateDirectory(output);
         var results = new PackageResult[archives.Length];
         var completed = 0;
@@ -19,7 +27,10 @@ internal static class Collector
                 new ParallelOptions { MaxDegreeOfParallelism = 4 }, async (index, cancellationToken) =>
             {
                 results[index] = await PackageReader.Read(archives[index], output, resolver);
-                lock (progress) progress.Write(++completed, archives.Length);
+                lock (progress)
+                {
+                    progress.Write(++completed, archives.Length);
+                }
             });
         }
         return ManifestWriter.Write(output, results);

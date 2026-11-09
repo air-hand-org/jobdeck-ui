@@ -5,5 +5,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-  <ItemGroup><ProjectReference Include="../NuGetDocuments/NuGetDocuments.csproj" /></ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" Version="3.2.2" />
+    <Using Include="Xunit" />
+    <ProjectReference Include="../NuGetDocuments/NuGetDocuments.csproj" />
+  </ItemGroup>
 </Project>

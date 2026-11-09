@@ -84,7 +84,10 @@ internal static class GitHubClient
     {
         // Fixed origin, no redirects: credentials must never reach raw document hosts.
         if (!Regex.IsMatch(path, @"\Arepos/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+/git/(?:ref/tags/[^/?#]+|(?:tags|trees)/[0-9a-fA-F]{40})\z"))
+        {
             return (null, 0);
+        }
+
         for (var attempt = 0; attempt < 3; attempt++)
         {
             try
@@ -93,7 +96,11 @@ internal static class GitHubClient
                 request.Headers.UserAgent.ParseAdd("jobdeck-nuget-documents/1.0");
                 request.Headers.Accept.ParseAdd("application/vnd.github+json");
                 request.Headers.Add("X-GitHub-Api-Version", "2022-11-28");
-                if (!string.IsNullOrEmpty(token)) request.Headers.Authorization = new("Bearer", token);
+                if (!string.IsNullOrEmpty(token))
+                {
+                    request.Headers.Authorization = new("Bearer", token);
+                }
+
                 using var timeout = new CancellationTokenSource(TimeSpan.FromSeconds(15));
                 using var response = await http.SendAsync(request, timeout.Token);
                 var status = (int)response.StatusCode;
@@ -107,7 +114,11 @@ internal static class GitHubClient
             }
             catch (Exception ex) when (ex is HttpRequestException or OperationCanceledException or IOException)
             {
-                if (attempt == 2) return (null, 0);
+                if (attempt == 2)
+                {
+                    return (null, 0);
+                }
+
                 await Task.Delay(250 * (attempt + 1));
             }
         }

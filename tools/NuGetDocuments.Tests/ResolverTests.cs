@@ -3,9 +3,10 @@ using System.Text.RegularExpressions;
 using System.Diagnostics;
 using System.Text;
 
-internal static class ResolverTests
+public class ResolverTests
 {
-    public static async Task Run()
+    [Fact]
+    public async Task SourceResolutionPreservesSafetyCachingAndConcurrency()
     {
         using (var http = new HttpClient(new ApiHandler()))
         {
@@ -56,9 +57,17 @@ internal static class ResolverTests
         var gateLock = new object();
         var bounded = new SourceResolver(async _ =>
         {
-            lock (gateLock) { active++; peak = Math.Max(peak, active); }
+            lock (gateLock)
+            {
+                active++;
+                peak = Math.Max(peak, active);
+            }
             await Task.Delay(30);
-            lock (gateLock) active--;
+            lock (gateLock)
+            {
+                active--;
+            }
+
             return ("{\"truncated\":false,\"tree\":[]}", 200);
         }, _ => throw new Exception("empty tree must not download"));
         await Task.WhenAll(Enumerable.Range(0, 20).Select(i => bounded.Resolve("owner/repo" + i, "1.2.3", commit)));
@@ -99,8 +108,16 @@ internal static class ResolverTests
         resolver = CreateResolver(path =>
         {
             apiCalls.Add(path);
-            if (path.EndsWith("/git/ref/tags/1.2.3")) return Task.FromResult<(string?, int)>(("{\"ref\":\"refs/tags/1.2.3\",\"object\":{\"type\":\"tag\",\"sha\":\"" + tagObject + "\"}}", 200));
-            if (path.EndsWith("/git/tags/" + tagObject)) return Task.FromResult<(string?, int)>(("{\"object\":{\"type\":\"commit\",\"sha\":\"" + tagCommit + "\"}}", 200));
+            if (path.EndsWith("/git/ref/tags/1.2.3"))
+            {
+                return Task.FromResult<(string?, int)>(("{\"ref\":\"refs/tags/1.2.3\",\"object\":{\"type\":\"tag\",\"sha\":\"" + tagObject + "\"}}", 200));
+            }
+
+            if (path.EndsWith("/git/tags/" + tagObject))
+            {
+                return Task.FromResult<(string?, int)>(("{\"object\":{\"type\":\"commit\",\"sha\":\"" + tagCommit + "\"}}", 200));
+            }
+
             return Task.FromResult<(string?, int)>((null, 404));
         }, url =>
         {
@@ -206,7 +223,13 @@ internal static class ResolverTests
                 ? Task.FromResult<(string?, int)>((JsonSerializer.Serialize(new { truncated = false, tree = new[] { "LICENSE", "License.txt", "NOTICE.html" }.Select(path => new { path, type = "blob", mode = "100644" }) }), 200))
                 : api(path), download);
 
-        void Check(bool value, string name) { if (!value) throw new Exception(name); }
+        void Check(bool value, string name)
+        {
+            if (!value)
+            {
+                throw new Exception(name);
+            }
+        }
 
 
     }
@@ -218,7 +241,11 @@ internal static class ResolverTests
         {
             Calls++;
             Authenticated |= request.Headers.Authorization != null;
-            if (status == 0) throw new HttpRequestException("fixture transport failure");
+            if (status == 0)
+            {
+                throw new HttpRequestException("fixture transport failure");
+            }
+
             return Task.FromResult(new HttpResponseMessage((System.Net.HttpStatusCode)status) { Content = new StringContent("diagnostics must not be retained") });
         }
     }
@@ -230,7 +257,10 @@ internal static class ResolverTests
             if (request.RequestUri!.ToString() != "https://api.github.com/repos/owner/repo/git/ref/tags/1.2.3" ||
                 request.Headers.Authorization?.ToString() != "Bearer fixture-token" ||
                 !request.Headers.UserAgent.Any() || !request.Headers.Contains("X-GitHub-Api-Version"))
+            {
                 throw new Exception("API URI/auth/headers");
+            }
+
             return Task.FromResult(new HttpResponseMessage(System.Net.HttpStatusCode.OK) { Content = new StringContent("{}") });
         }
     }
