@@ -4,9 +4,9 @@ using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
-internal record PackageResult(object Manifest, string Id, string Version, bool HasErrors);
+public record PackageResult(object Manifest, string Id, string Version, bool HasErrors);
 
-internal static class PackageReader
+public static class PackageReader
 {
     public static async Task<PackageResult> Read(Archive archive, string output, SourceResolver resolver)
     {
@@ -150,9 +150,9 @@ internal static class PackageReader
         return new(manifest, archive.Value.Id, archive.Value.Version, errors.Count > 0);
     }
 
-    internal static bool IsLicense(string name) => Regex.IsMatch(name, @"\A(?:licen[cs]e|copying)(?:[._-].*)?\z", RegexOptions.IgnoreCase);
+    public static bool IsLicense(string name) => Regex.IsMatch(name, @"\A(?:licen[cs]e|copying)(?:[._-].*)?\z", RegexOptions.IgnoreCase);
 
-    internal static void SafePath(string path)
+    public static void SafePath(string path)
     {
         if (string.IsNullOrEmpty(path) || path.StartsWith('/') || path.Contains('\\') || path.Contains(':') ||
             path.Split('/').Any(p => p is ".." or "."))

@@ -256,7 +256,7 @@ public class ResolverTests
         {
             if (request.RequestUri!.ToString() != "https://api.github.com/repos/owner/repo/git/ref/tags/1.2.3" ||
                 request.Headers.Authorization?.ToString() != "Bearer fixture-token" ||
-                !request.Headers.UserAgent.Any() || !request.Headers.Contains("X-GitHub-Api-Version"))
+                request.Headers.UserAgent.ToString() != ".NET HttpClient" || !request.Headers.Contains("X-GitHub-Api-Version"))
             {
                 throw new Exception("API URI/auth/headers");
             }

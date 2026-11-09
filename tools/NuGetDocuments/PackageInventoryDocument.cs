@@ -1,12 +1,12 @@
 using System.Text.Json.Serialization;
 
-internal sealed record PackageInventoryDocument(
+public sealed record PackageInventoryDocument(
     [property: JsonPropertyName("projects")] ProjectInventory[] Projects);
 
-internal sealed record ProjectInventory(
+public sealed record ProjectInventory(
     [property: JsonPropertyName("frameworks")] FrameworkInventory[] Frameworks);
 
-internal sealed record FrameworkInventory
+public sealed record FrameworkInventory
 {
     [JsonPropertyName("topLevelPackages")]
     public InventoryPackage[] TopLevelPackages { get; init; } = [];
@@ -15,6 +15,6 @@ internal sealed record FrameworkInventory
     public InventoryPackage[] TransitivePackages { get; init; } = [];
 }
 
-internal sealed record InventoryPackage(
+public sealed record InventoryPackage(
     [property: JsonPropertyName("id")] string Id,
     [property: JsonPropertyName("resolvedVersion")] string ResolvedVersion);

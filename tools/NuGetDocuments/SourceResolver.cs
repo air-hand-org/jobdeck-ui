@@ -1,7 +1,7 @@
 using System.Text.Json;
 using System.Text.RegularExpressions;
 
-internal sealed class SourceResolver
+public sealed class SourceResolver
 {
     public record Document(string Name, string Url, string Revision, byte[] Bytes);
     public record Candidate(string Tag, string? Sha, string? Error);

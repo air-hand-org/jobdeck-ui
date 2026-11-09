@@ -1,4 +1,4 @@
-internal static class Collector
+public static class Collector
 {
     public static async Task<int> Run(string[] args)
     {

@@ -1,4 +1,4 @@
-internal sealed class ConsoleProgress : IDisposable
+public sealed class ConsoleProgress : IDisposable
 {
     private int _previousLength;
 

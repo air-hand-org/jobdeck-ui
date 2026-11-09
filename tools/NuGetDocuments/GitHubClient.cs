@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-internal static class GitHubClient
+public static class GitHubClient
 {
     public static async Task<(byte[]? Bytes, int? Status, string? Error)> Download(HttpClient http, string url)
     {
@@ -93,7 +93,7 @@ internal static class GitHubClient
             try
             {
                 using var request = new HttpRequestMessage(HttpMethod.Get, "https://api.github.com/" + path);
-                request.Headers.UserAgent.ParseAdd("jobdeck-nuget-documents/1.0");
+                request.Headers.UserAgent.ParseAdd(".NET HttpClient");
                 request.Headers.Accept.ParseAdd("application/vnd.github+json");
                 request.Headers.Add("X-GitHub-Api-Version", "2022-11-28");
                 if (!string.IsNullOrEmpty(token))

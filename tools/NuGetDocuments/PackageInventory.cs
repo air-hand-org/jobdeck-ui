@@ -2,9 +2,9 @@ using System.IO.Compression;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 
-internal record Archive(string Key, (string Id, string Version) Value, string Path);
+public record Archive(string Key, (string Id, string Version) Value, string Path);
 
-internal static class PackageInventory
+public static class PackageInventory
 {
     public static Archive[] Read(string inventoryPath, string cache)
     {

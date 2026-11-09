@@ -51,7 +51,7 @@ Requires .NET 10 and restores xUnit.v3; fixtures need no Python or GitHub/networ
 dotnet run --project tools/NuGetDocuments.Tests
 ```
 
-The test project references the actual collector assembly (with internal access),
+The test project references the actual CLI project through public types (without friend assembly access),
 not source-text extraction or a copied resolver. Fixtures exercise the resolver
 and HTTP client directly, then call the complete collector on synthetic nupkg
 inputs to verify bundled documents, unsafe repository rejection, unresolved

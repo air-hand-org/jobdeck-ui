@@ -1,6 +1,6 @@
 using System.Text.Json;
 
-internal static class ManifestWriter
+public static class ManifestWriter
 {
     public static int Write(string output, PackageResult[] results)
     {
