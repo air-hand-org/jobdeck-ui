@@ -34,8 +34,19 @@ jobs:
             nuget-${{ runner.os }}-
       - name: build
         run: make build
+      - name: test NuGet source resolution (.NET only)
+        run: dotnet run --file scripts/run-nuget-source-tests.cs
       - name: generate NuGet licenses
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: make licenses
+      - name: preserve generated NuGet documents
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: nuget-original-documents
+          path: third_party/licenses/nuget
+          if-no-files-found: error
+          retention-days: 7
       - name: update generated licenses
         uses: air-hand-org/jobdeck-actions/actions/auto-commit@942a96db0ec375d908dd8a8fd97cefc6eaf9f734 # v1.7.2
         with:

@@ -4,7 +4,10 @@ using ui.Session;
 
 namespace ui.Auth;
 
-public sealed class AccessTokenAccessor(AuthenticationStateProvider provider, IUISessionStore sessions)
+public sealed class AccessTokenAccessor(
+    AuthenticationStateProvider provider
+    , IUISessionStore sessions
+)
 {
     public async Task<string?> GetAsync(CancellationToken cancellationToken = default)
     {
@@ -16,16 +19,6 @@ public sealed class AccessTokenAccessor(AuthenticationStateProvider provider, IU
         }
 
         var session = await sessions.GetSessionAsync(sessionId, cancellationToken);
-        if (session is null)
-        {
-            return null;
-        }
-        if (session.AccessTokenExpiresAt <= DateTimeOffset.UtcNow)
-        {
-            await sessions.RemoveSessionAsync(sessionId, cancellationToken);
-            return null;
-        }
-
-        return session.AccessToken;
+        return session?.AccessToken;
     }
 }

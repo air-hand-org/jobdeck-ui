@@ -6,7 +6,18 @@
 
 <PageTitle>Login</PageTitle>
 
-<h1>Login page</h1>
+<h1>Login</h1>
+
+<section class="sso-login" aria-labelledby="sso-heading">
+    <h3 id="sso-heading">Login with SSO</h3>
+    <a class="github-login-button" href="/account/github/login" data-enhance-nav="false">
+        <img src="/images/GitHub_Lockup_Black.svg" alt="" />
+        <span>Continue with GitHub</span>
+    </a>
+</section>
+
+<section class="internal-login" aria-labelledby="internal-heading">
+<h3 id="internal-heading">Login with your account</h3>
 
 <EditForm Model="@Model" OnValidSubmit="@LoginAsync" FormName="login">
   <DataAnnotationsValidator />
@@ -29,6 +40,7 @@
   </div>
   <button type="submit" class="btn btn-primary">Login</button>
 </EditForm>
+</section>
 
 @code {
     [CascadingParameter]

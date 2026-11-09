@@ -1,20 +1,30 @@
 using ui.Auth;
 using ui.Components;
 using ui.Client;
+using ui.Profile;
 using ui.Session;
 using ui.Telemetry;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Jobdeck.Auth.V1;
 using Jobdeck.Job.V1;
 using Grpc.Health.V1;
+using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
+using ui.Endpoints;
+using ui.DB;
+using Microsoft.EntityFrameworkCore;
+using ui.Certificates;
+using Quartz;
+using Quartz.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddSingleton<TimeProvider>(TimeProvider.System);
 builder.Services.AddRazorComponents()
   .AddInteractiveServerComponents()
   ;
@@ -25,11 +35,23 @@ builder.Services.AddOpenTelemetry()
       tracing
         .AddAspNetCoreInstrumentation()
         .AddGrpcClientInstrumentation()
-        .AddSource(UiTelemetry.ActivitySourceName);
+        .AddEntityFrameworkCoreInstrumentation()
+        .AddSource(QuartzInstrumentation.ActivitySourceName)
+        .AddSource(UiTelemetry.ActivitySourceName)
+        ;
 
       if (!string.IsNullOrWhiteSpace(builder.Configuration["OTEL_EXPORTER_OTLP_ENDPOINT"]))
       {
           tracing.AddOtlpExporter();
+      }
+  })
+  .WithMetrics(metrics =>
+  {
+      metrics.AddMeter(QuartzInstrumentation.MeterName);
+
+      if (!string.IsNullOrWhiteSpace(builder.Configuration["OTEL_EXPORTER_OTLP_ENDPOINT"]))
+      {
+          metrics.AddOtlpExporter();
       }
   })
   ;
@@ -72,6 +94,14 @@ builder.Services.AddGrpcClient<Health.HealthClient>(
         options.Address = new Uri(address);
     }
 );
+
+builder.Services.AddPooledDbContextFactory<ApplicationDbContext>(options =>
+{
+    options.UseNpgsql(builder.Configuration.GetConnectionString("Postgres"));
+
+    options.UseOpenIddict();
+});
+
 builder.Services.AddHealthChecks()
     .AddTypeActivatedCheck<HealthCheckClient>(
         "job-api",
@@ -85,6 +115,67 @@ builder.Services.AddHealthChecks()
         tags: ["ready"],
         args: ["auth-health"]
     )
+    .AddDbContextCheck<ApplicationDbContext>(
+        "db",
+        failureStatus: HealthStatus.Unhealthy,
+        tags: ["ready"]
+    )
+    ;
+
+builder.Services.AddDataProtection()
+    .SetApplicationName("jobdeck-ui")
+    .PersistKeysToDbContext<ApplicationDbContext>()
+    .ProtectKeysWithCertificate(
+        CertLoader.LoadFromBase64Env(builder.Configuration, "CERT_DATAPROTECTION_BASE64")
+    )
+    ;
+
+builder.Services.AddQuartz(options =>
+{
+    options.UseInMemoryStore();
+    options.AddDeclaredJobs();
+});
+builder.Services.AddQuartzHostedService(options =>
+{
+    options.WaitForJobsToComplete = true;
+});
+
+builder.Services.AddOpenIddict()
+    .AddCore(options =>
+    {
+        options.UseEntityFrameworkCore()
+            .UseDbContext<ApplicationDbContext>();
+        options.UseQuartz();
+    })
+    .AddClient(options =>
+    {
+        options.AddEncryptionCertificate(
+            CertLoader.LoadFromBase64Env(builder.Configuration, "CERT_OPENID_ENCRYPTION_BASE64")
+        ).AddSigningCertificate(
+            CertLoader.LoadFromBase64Env(builder.Configuration, "CERT_OPENID_SIGNING_BASE64")
+        );
+
+        options.AllowAuthorizationCodeFlow();
+
+        options.UseAspNetCore()
+            .EnableRedirectionEndpointPassthrough()
+            .EnablePostLogoutRedirectionEndpointPassthrough()
+            ;
+
+        options.UseSystemNetHttp();
+
+        options.UseWebProviders()
+            .AddGitHub(options =>
+            {
+                var clientID = builder.Configuration["GITHUB_OAUTH_CLIENT_ID"] ?? throw new InvalidOperationException("GITHUB_OAUTH_CLIENT_ID is required");
+                var clientSecret = builder.Configuration["GITHUB_OAUTH_CLIENT_SECRET"] ?? throw new InvalidOperationException("GITHUB_OAUTH_CLIENT_SECRET is required");
+                options.SetClientId(clientID)
+                    .SetClientSecret(clientSecret)
+                    .SetRedirectUri("account/github/callback/login")
+                    ;
+            })
+        ;
+    })
     ;
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -102,11 +193,10 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 builder.Services.AddAuthorization();
 builder.Services.AddCascadingAuthenticationState();
 
-builder.Services.AddMemoryCache();
-builder.Services.AddSingleton<IUISessionStore, MemoryUISessionStore>();
+builder.Services.AddScoped<IUISessionStore, PostgresUISessionStore>();
 builder.Services.AddScoped<AccessTokenAccessor>();
 builder.Services.AddScoped<UIAuthenticationService>();
-
+builder.Services.AddScoped<UIUserProfileService>();
 
 var app = builder.Build();
 
@@ -138,8 +228,9 @@ app.MapHealthChecks(
         Predicate = check => check.Tags.Contains("ready"),
     }
 );
-app.MapStaticAssets();
+app.MapStaticAssets().ShortCircuit();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
+app.MapGitHubAuthenticationEndpoints();
 
 app.Run();

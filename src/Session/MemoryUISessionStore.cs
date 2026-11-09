@@ -2,14 +2,26 @@ using Microsoft.Extensions.Caching.Memory;
 
 namespace ui.Session;
 
-public sealed class MemoryUISessionStore(IMemoryCache cache) : IUISessionStore
+public sealed class MemoryUISessionStore(
+    IMemoryCache cache
+    , TimeProvider timeProvider
+) : IUISessionStore
 {
     private static string Key(Guid id) => $"session:{id}";
 
-    public Task<UISession?> GetSessionAsync(Guid sessionId, CancellationToken cancellationToken = default)
+    public async Task<UISession?> GetSessionAsync(Guid sessionId, CancellationToken cancellationToken = default)
     {
         cache.TryGetValue(Key(sessionId), out UISession? session);
-        return Task.FromResult(session);
+        if (session is null)
+        {
+            return null;
+        }
+        if (session.IsExpired(timeProvider.GetUtcNow()))
+        {
+            await RemoveSessionAsync(sessionId, cancellationToken);
+            return null;
+        }
+        return session;
     }
 
     public Task SetSessionAsync(UISession session, CancellationToken cancellationToken = default)
