@@ -32,7 +32,7 @@ COPY --from=build /app/migrator .
 USER $APP_UID
 ENTRYPOINT ["/app/migrator"]
 
-FROM mcr.microsoft.com/dotnet/aspnet:10.0.14 AS app
+FROM mcr.microsoft.com/dotnet/aspnet:10.0.14 AS ui
 WORKDIR /app
 COPY --from=build /app/publish .
 COPY LICENSE /usr/share/licenses/jobdeck-ui/LICENSE

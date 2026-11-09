@@ -36,6 +36,13 @@ jobs:
     permissions:
       contents: read
       packages: read
+    strategy:
+      matrix:
+        target:
+          - stage: "ui"
+            ghcr: "jobdeck-ui"
+          - stage: "migrator"
+            ghcr: "jobdeck-ui-migrator"
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -48,8 +55,9 @@ jobs:
           load: true
           push: false
           tags: jobdeck-ui:test
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          target: ${{ matrix.target.stage }}
+          cache-from: type=gha,scope=${{ matrix.target.stage }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.target.stage }}
           build-args: |
             GITHUB_ACTOR=${{ github.actor }}
           secrets: |
@@ -63,6 +71,13 @@ jobs:
       contents: read
       packages: write
       id-token: write
+    strategy:
+      matrix:
+        target:
+          - stage: "ui"
+            ghcr: "jobdeck-ui"
+          - stage: "migrator"
+            ghcr: "jobdeck-ui-migrator"
     env:
       ARTIFACT_REGISTRY_HOST: asia-northeast1-docker.pkg.dev
       IMAGE_TAG: ${{ inputs.image-tag }}
@@ -72,8 +87,8 @@ jobs:
           echo "AR_IMAGE=${AR_IMAGE}" >> "$GITHUB_ENV"
           echo "GHCR_IMAGE=${GHCR_IMAGE}" >> "$GITHUB_ENV"
         env:
-          AR_IMAGE: ${{ env.ARTIFACT_REGISTRY_HOST }}/${{ vars.GCP_PROJECT_ID }}/jobdeck-ui/ui:${{ env.IMAGE_TAG }}
-          GHCR_IMAGE: ghcr.io/${{ github.repository_owner }}/jobdeck-ui:${{ env.IMAGE_TAG }}
+          AR_IMAGE: ${{ env.ARTIFACT_REGISTRY_HOST }}/${{ vars.GCP_PROJECT_ID }}/jobdeck-ui/${{ matrix.target.stage }}:${{ env.IMAGE_TAG }}
+          GHCR_IMAGE: ghcr.io/${{ github.repository_owner }}/${{ matrix.target.ghcr }}:${{ env.IMAGE_TAG }}
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
@@ -115,8 +130,9 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: ${{ env.AR_IMAGE }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          target: ${{ matrix.target.stage }}
+          cache-from: type=gha,scope=${{ matrix.target.stage }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.target.stage }}
           build-args: |
             GITHUB_ACTOR=${{ github.actor }}
           secrets: |

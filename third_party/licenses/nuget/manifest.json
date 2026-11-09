@@ -3257,10 +3257,10 @@
   },
   {
     "id": "Microsoft.AspNetCore.App.Internal.Assets",
-    "version": "10.0.14",
+    "version": "10.0.9",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.aspnetcore.app.internal.assets/10.0.14/microsoft.aspnetcore.app.internal.assets.10.0.14.nupkg",
-    "nupkgSha256": "422031c229b31e1892d0eb56711d587c2c5155c50645ed8f9dbee536ec3ed4bc",
+    "packagePath": "microsoft.aspnetcore.app.internal.assets/10.0.9/microsoft.aspnetcore.app.internal.assets.10.0.9.nupkg",
+    "nupkgSha256": "04c7a129dfd99fc51c4b8863f114df9c0045433f4fa27724c70c8c56e380631d",
     "nuspecPath": "Microsoft.AspNetCore.App.Internal.Assets.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -3268,15 +3268,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "0427b9abbead3fa64c6655eb4290c537397131fa"
+      "commit": "901ca941248413c79832d2fdbd709da0c4386353"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "nuspecCommit": "901ca941248413c79832d2fdbd709da0c4386353",
       "tag": null,
-      "resolvedSha": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "resolvedSha": "901ca941248413c79832d2fdbd709da0c4386353",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3291,330 +3291,330 @@
     ],
     "sourceDocuments": [
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "901ca941248413c79832d2fdbd709da0c4386353/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/LICENSE.TXT",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
-        "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
-        "bytes": 265586
+        "path": "901ca941248413c79832d2fdbd709da0c4386353/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/THIRD-PARTY-NOTICES.txt",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
+        "sha256": "4bef6a7e7b359869d751c9ff70274a80a0f626927afa5a0681583c1b1861267b",
+        "bytes": 265585
       }
     ],
     "sourceAttempts": [
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/LICENSE",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/LICENSE.txt",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.md",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/LICENSE.md",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/LICENSE.TXT",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/license",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/license",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/license.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/license.txt",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/license.md",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/license.md",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/License",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/License",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/License.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/License.txt",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/License.md",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/License.md",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENCE",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/LICENCE",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENCE.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/LICENCE.txt",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENCE.md",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/LICENCE.md",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENCE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/LICENCE.TXT",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/licence",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/licence",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/licence.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/licence.txt",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/licence.md",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/licence.md",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/Licence",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/Licence",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/Licence.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/Licence.txt",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/Licence.md",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/Licence.md",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/COPYING",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/COPYING",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/COPYING.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/COPYING.txt",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/COPYING.md",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/COPYING.md",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/COPYING.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/COPYING.TXT",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/copying",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/copying",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/copying.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/copying.txt",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/copying.md",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/copying.md",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/Copying",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/Copying",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/Copying.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/Copying.txt",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/Copying.md",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/Copying.md",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/NOTICE",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/NOTICE",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/NOTICE.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/NOTICE.txt",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/NOTICE.md",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/NOTICE.md",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/NOTICE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/NOTICE.TXT",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/notice",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/notice",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/notice.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/notice.txt",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/notice.md",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/notice.md",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/Notice",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/Notice",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/Notice.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/Notice.txt",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/Notice.md",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/Notice.md",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/NOTICE.html",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/NOTICE.html",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/notice.html",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/notice.html",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/THIRD-PARTY-NOTICES",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/THIRD-PARTY-NOTICES.txt",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.md",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/THIRD-PARTY-NOTICES.md",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/THIRD-PARTY-NOTICES.TXT",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/third-party-notices",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/third-party-notices",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/third-party-notices.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/third-party-notices.txt",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/third-party-notices.md",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/third-party-notices.md",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/Third-party-notices",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/Third-party-notices",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/Third-party-notices.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/Third-party-notices.txt",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/Third-party-notices.md",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/901ca941248413c79832d2fdbd709da0c4386353/Third-party-notices.md",
+        "revision": "901ca941248413c79832d2fdbd709da0c4386353",
         "httpStatus": 404,
         "status": "document-absent"
       }
@@ -21848,6 +21848,360 @@
     "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
   },
   {
+    "id": "OpenIddict.Quartz",
+    "version": "7.7.2",
+    "source": "restored-nupkg",
+    "packagePath": "openiddict.quartz/7.7.2/openiddict.quartz.7.7.2.nupkg",
+    "nupkgSha256": "c60f40aa8487f023bbdc42436692f79c414c90b9c6170e7e5cfdf663415bb496",
+    "nuspecPath": "OpenIddict.Quartz.nuspec",
+    "licenseType": "expression",
+    "license": "Apache-2.0",
+    "licenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/openiddict/openiddict-core.git",
+      "commit": "950cb13bd0f6d24d1d745967e5b30832c4833e04"
+    },
+    "status": "original-license-collected",
+    "declaredLicenseFileMissing": false,
+    "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
+    "sourceResolution": {
+      "nuspecCommit": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+      "tag": null,
+      "resolvedSha": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+      "provenance": "nuspec-commit",
+      "fallbackReason": null,
+      "nuspecCommitMismatch": false,
+      "tagCandidates": []
+    },
+    "documents": [],
+    "sourceDocuments": [
+      {
+        "path": "950cb13bd0f6d24d1d745967e5b30832c4833e04/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/LICENSE.md",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "bytes": 11358
+      }
+    ],
+    "sourceAttempts": [
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/LICENSE",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/LICENSE.txt",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/LICENSE.md",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 200,
+        "status": "collected"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/LICENSE.TXT",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/license",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/license.txt",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/license.md",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/License",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/License.txt",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/License.md",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/LICENCE",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/LICENCE.txt",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/LICENCE.md",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/LICENCE.TXT",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/licence",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/licence.txt",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/licence.md",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/Licence",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/Licence.txt",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/Licence.md",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/COPYING",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/COPYING.txt",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/COPYING.md",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/COPYING.TXT",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/copying",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/copying.txt",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/copying.md",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/Copying",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/Copying.txt",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/Copying.md",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/NOTICE",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/NOTICE.txt",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/NOTICE.md",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/NOTICE.TXT",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/notice",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/notice.txt",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/notice.md",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/Notice",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/Notice.txt",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/Notice.md",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/NOTICE.html",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/notice.html",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/THIRD-PARTY-NOTICES",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/THIRD-PARTY-NOTICES.txt",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/THIRD-PARTY-NOTICES.md",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/THIRD-PARTY-NOTICES.TXT",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/third-party-notices",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/third-party-notices.txt",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/third-party-notices.md",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/Third-party-notices",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/Third-party-notices.txt",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/950cb13bd0f6d24d1d745967e5b30832c4833e04/Third-party-notices.md",
+        "revision": "950cb13bd0f6d24d1d745967e5b30832c4833e04",
+        "httpStatus": 404,
+        "status": "document-absent"
+      }
+    ],
+    "errors": [],
+    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
+  },
+  {
     "id": "OpenIddict.Server.AspNetCore",
     "version": "7.7.2",
     "source": "restored-nupkg",
@@ -25209,6 +25563,37 @@
     "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
   },
   {
+    "id": "OpenTelemetry.Instrumentation.EntityFrameworkCore",
+    "version": "1.20.2-beta.1",
+    "source": "restored-nupkg",
+    "packagePath": "opentelemetry.instrumentation.entityframeworkcore/1.20.2-beta.1/opentelemetry.instrumentation.entityframeworkcore.1.20.2-beta.1.nupkg",
+    "nupkgSha256": "1f6b6728017c23672f0724daa24fcb8094b35638441c5d7266ccca4a9af47e90",
+    "nuspecPath": "OpenTelemetry.Instrumentation.EntityFrameworkCore.nuspec",
+    "licenseType": "expression",
+    "license": "Apache-2.0",
+    "licenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/open-telemetry/opentelemetry-dotnet-contrib",
+      "commit": "7df4057c22c896f8dacf302c92abcef5df1d960a"
+    },
+    "status": "original-license-collected",
+    "declaredLicenseFileMissing": false,
+    "sourceRetrieval": "not-needed-package-license-present",
+    "sourceResolution": null,
+    "documents": [
+      {
+        "path": "LICENSE.TXT",
+        "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
+        "bytes": 11558
+      }
+    ],
+    "sourceDocuments": [],
+    "sourceAttempts": [],
+    "errors": [],
+    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
+  },
+  {
     "id": "OpenTelemetry.Instrumentation.GrpcNetClient",
     "version": "1.16.0-beta.1",
     "source": "restored-nupkg",
@@ -27038,6 +27423,714 @@
       {
         "url": "https://raw.githubusercontent.com/App-vNext/Polly/b1a5a17de8ef5d0bc86e5a4502ad30891e674379/Third-party-notices.md",
         "revision": "b1a5a17de8ef5d0bc86e5a4502ad30891e674379",
+        "httpStatus": 404,
+        "status": "document-absent"
+      }
+    ],
+    "errors": [],
+    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
+  },
+  {
+    "id": "Quartz.Extensions.Hosting",
+    "version": "4.7.2",
+    "source": "restored-nupkg",
+    "packagePath": "quartz.extensions.hosting/4.7.2/quartz.extensions.hosting.4.7.2.nupkg",
+    "nupkgSha256": "3a0d37137c373b6e4197efaba654457dd6fb599a8b688c6767b7954660903321",
+    "nuspecPath": "Quartz.Extensions.Hosting.nuspec",
+    "licenseType": "expression",
+    "license": "Apache-2.0",
+    "licenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/quartznet/quartznet",
+      "commit": "b3989f8373f675667a393401bfb9656c014879b3"
+    },
+    "status": "original-license-collected",
+    "declaredLicenseFileMissing": false,
+    "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
+    "sourceResolution": {
+      "nuspecCommit": "b3989f8373f675667a393401bfb9656c014879b3",
+      "tag": null,
+      "resolvedSha": "b3989f8373f675667a393401bfb9656c014879b3",
+      "provenance": "nuspec-commit",
+      "fallbackReason": null,
+      "nuspecCommitMismatch": false,
+      "tagCandidates": []
+    },
+    "documents": [],
+    "sourceDocuments": [
+      {
+        "path": "b3989f8373f675667a393401bfb9656c014879b3/license.txt",
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/license.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "sha256": "00e9a450180b721349dc5519f3ed9e98e4f1d38e5d212ca9f9fcb1ec1103b0bf",
+        "bytes": 11341
+      }
+    ],
+    "sourceAttempts": [
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/LICENSE",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/LICENSE.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/LICENSE.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/LICENSE.TXT",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/license",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/license.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 200,
+        "status": "collected"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/license.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/License",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/License.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/License.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/LICENCE",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/LICENCE.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/LICENCE.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/LICENCE.TXT",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/licence",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/licence.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/licence.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/Licence",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/Licence.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/Licence.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/COPYING",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/COPYING.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/COPYING.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/COPYING.TXT",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/copying",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/copying.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/copying.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/Copying",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/Copying.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/Copying.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/NOTICE",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/NOTICE.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/NOTICE.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/NOTICE.TXT",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/notice",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/notice.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/notice.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/Notice",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/Notice.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/Notice.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/NOTICE.html",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/notice.html",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/THIRD-PARTY-NOTICES",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/THIRD-PARTY-NOTICES.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/THIRD-PARTY-NOTICES.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/THIRD-PARTY-NOTICES.TXT",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/third-party-notices",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/third-party-notices.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/third-party-notices.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/Third-party-notices",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/Third-party-notices.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/Third-party-notices.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      }
+    ],
+    "errors": [],
+    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
+  },
+  {
+    "id": "Quartz",
+    "version": "4.7.2",
+    "source": "restored-nupkg",
+    "packagePath": "quartz/4.7.2/quartz.4.7.2.nupkg",
+    "nupkgSha256": "39285d543a2b3d08808f76b7648883996f23e273bfc59e64f0bd45cfbd14a5c2",
+    "nuspecPath": "Quartz.nuspec",
+    "licenseType": "expression",
+    "license": "Apache-2.0",
+    "licenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/quartznet/quartznet",
+      "commit": "b3989f8373f675667a393401bfb9656c014879b3"
+    },
+    "status": "original-license-collected",
+    "declaredLicenseFileMissing": false,
+    "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
+    "sourceResolution": {
+      "nuspecCommit": "b3989f8373f675667a393401bfb9656c014879b3",
+      "tag": null,
+      "resolvedSha": "b3989f8373f675667a393401bfb9656c014879b3",
+      "provenance": "nuspec-commit",
+      "fallbackReason": null,
+      "nuspecCommitMismatch": false,
+      "tagCandidates": []
+    },
+    "documents": [],
+    "sourceDocuments": [
+      {
+        "path": "b3989f8373f675667a393401bfb9656c014879b3/license.txt",
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/license.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "sha256": "00e9a450180b721349dc5519f3ed9e98e4f1d38e5d212ca9f9fcb1ec1103b0bf",
+        "bytes": 11341
+      }
+    ],
+    "sourceAttempts": [
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/LICENSE",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/LICENSE.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/LICENSE.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/LICENSE.TXT",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/license",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/license.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 200,
+        "status": "collected"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/license.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/License",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/License.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/License.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/LICENCE",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/LICENCE.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/LICENCE.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/LICENCE.TXT",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/licence",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/licence.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/licence.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/Licence",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/Licence.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/Licence.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/COPYING",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/COPYING.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/COPYING.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/COPYING.TXT",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/copying",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/copying.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/copying.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/Copying",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/Copying.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/Copying.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/NOTICE",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/NOTICE.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/NOTICE.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/NOTICE.TXT",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/notice",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/notice.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/notice.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/Notice",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/Notice.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/Notice.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/NOTICE.html",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/notice.html",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/THIRD-PARTY-NOTICES",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/THIRD-PARTY-NOTICES.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/THIRD-PARTY-NOTICES.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/THIRD-PARTY-NOTICES.TXT",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/third-party-notices",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/third-party-notices.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/third-party-notices.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/Third-party-notices",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/Third-party-notices.txt",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "httpStatus": 404,
+        "status": "document-absent"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/Third-party-notices.md",
+        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
         "httpStatus": 404,
         "status": "document-absent"
       }
