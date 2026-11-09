@@ -7,6 +7,21 @@ end_of_line = lf
 
 [*.{cs,razor}]
 indent_size = 4
+# diable all StyleCop
+dotnet_analyzer_diagnostic.category-StyleCop.CSharp.SpacingRules.severity = none
+dotnet_analyzer_diagnostic.category-StyleCop.CSharp.ReadabilityRules.severity = none
+dotnet_analyzer_diagnostic.category-StyleCop.CSharp.OrderingRules.severity = none
+dotnet_analyzer_diagnostic.category-StyleCop.CSharp.NamingRules.severity = none
+dotnet_analyzer_diagnostic.category-StyleCop.CSharp.MaintainabilityRules.severity = none
+dotnet_analyzer_diagnostic.category-StyleCop.CSharp.LayoutRules.severity = none
+dotnet_analyzer_diagnostic.category-StyleCop.CSharp.DocumentationRules.severity = none
+dotnet_analyzer_diagnostic.category-StyleCop.CSharp.SpecialRules.severity = none
+# oneliner if, for statement as error
+csharp_prefer_braces = true
+dotnet_diagnostic.IDE0011.severity = error
+
+# With statements, blocks { } needs line feeds
+dotnet_diagnostic.SA1501.severity = error
 
 [*.go]
 indent_type = tab

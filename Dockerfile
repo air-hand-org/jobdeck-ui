@@ -14,7 +14,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # Restore first so NuGet packages remain cached when only application code changes.
-COPY mise.toml NuGet.Config src/ui.csproj ./
+COPY mise.toml NuGet.Config Directory.Build.props src/ui.csproj ./
 RUN mise install && mise reshim
 RUN --mount=type=secret,id=github_packages_token \
     NuGetPackageSourceCredentials_github="Username=${GITHUB_ACTOR};Password=$(cat /run/secrets/github_packages_token)" \
