@@ -56,8 +56,6 @@ jobs:
           push: false
           tags: jobdeck-ui:test
           target: ${{ matrix.target.stage }}
-          # Temporary acceptance run: re-execute restore with an empty image cache.
-          no-cache-filters: build
           cache-from: type=gha,scope=${{ matrix.target.stage }}
           cache-to: type=gha,mode=max,scope=${{ matrix.target.stage }}
           secrets: |
@@ -136,8 +134,6 @@ jobs:
           push: true
           tags: ${{ env.AR_IMAGE }}
           target: ${{ matrix.target.stage }}
-          # Temporary acceptance run: re-execute restore with an empty image cache.
-          no-cache-filters: build
           cache-from: type=gha,scope=${{ matrix.target.stage }}
           cache-to: type=gha,mode=max,scope=${{ matrix.target.stage }}
           secrets: |
