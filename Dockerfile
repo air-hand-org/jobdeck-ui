@@ -29,6 +29,8 @@ RUN --mount=type=secret,id=github_packages_token \
 FROM mcr.microsoft.com/dotnet/runtime-deps:10.0.14-noble-chiseled-extra AS migrator
 WORKDIR /app
 COPY --from=build /app/migrator .
+COPY LICENSE /usr/share/licenses/jobdeck-ui/LICENSE
+COPY third_party/licenses/nuget/ /usr/share/licenses/jobdeck-ui/third_party/nuget/
 USER $APP_UID
 ENTRYPOINT ["/app/migrator"]
 
