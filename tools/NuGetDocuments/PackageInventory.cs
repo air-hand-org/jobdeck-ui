@@ -8,24 +8,25 @@ internal static class PackageInventory
 {
     public static Archive[] Read(string inventoryPath, string cache)
     {
-        using var inventory = JsonDocument.Parse(File.ReadAllText(inventoryPath));
+        var inventory = JsonSerializer.Deserialize<PackageInventoryDocument>(File.ReadAllText(inventoryPath))
+            ?? throw new InvalidDataException("Invalid package inventory");
         cache = Path.GetFullPath(cache);
         var packages = new SortedDictionary<string, (string Id, string Version)>(StringComparer.Ordinal);
-        foreach (var project in inventory.RootElement.GetProperty("projects").EnumerateArray())
+        foreach (var project in inventory.Projects)
         {
-            foreach (var framework in project.GetProperty("frameworks").EnumerateArray())
+            foreach (var framework in project.Frameworks)
             {
-                foreach (var group in new[] { "topLevelPackages", "transitivePackages" })
+                foreach (var rows in new[] { framework.TopLevelPackages, framework.TransitivePackages })
                 {
-                    if (!framework.TryGetProperty(group, out var rows))
+                    if (rows == null)
                     {
-                        continue;
+                        throw new InvalidDataException("Invalid package group");
                     }
 
-                    foreach (var row in rows.EnumerateArray())
+                    foreach (var row in rows)
                     {
-                        var id = row.GetProperty("id").GetString()!;
-                        var version = row.GetProperty("resolvedVersion").GetString()!;
+                        var id = row.Id;
+                        var version = row.ResolvedVersion;
                         if (!Regex.IsMatch(id, @"\A[A-Za-z0-9][A-Za-z0-9_.-]*\z") ||
                             !Regex.IsMatch(version, @"\A[0-9][A-Za-z0-9.+-]*\z"))
                         {
