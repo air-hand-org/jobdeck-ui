@@ -30,5 +30,5 @@ jobs:
     needs: images
     uses: air-hand-org/jobdeck-actions/.github/workflows/reusable-release-dispatch.yaml@1d9ce1953c373273f28cac191bcf5ff0fc58100d # v1.7.0
     with:
-      service-names: ui
+      service-names: ui,ui-migrator
     secrets: inherit
