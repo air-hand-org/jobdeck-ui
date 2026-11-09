@@ -11,12 +11,15 @@ using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Jobdeck.Auth.V1;
 using Jobdeck.Job.V1;
 using Grpc.Health.V1;
+using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 using ui.Endpoints;
 using ui.DB;
 using Microsoft.EntityFrameworkCore;
 using ui.Certificates;
+using Quartz;
+using Quartz.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,11 +35,22 @@ builder.Services.AddOpenTelemetry()
       tracing
         .AddAspNetCoreInstrumentation()
         .AddGrpcClientInstrumentation()
-        .AddSource(UiTelemetry.ActivitySourceName);
+        .AddSource(QuartzInstrumentation.ActivitySourceName)
+        .AddSource(UiTelemetry.ActivitySourceName)
+        ;
 
       if (!string.IsNullOrWhiteSpace(builder.Configuration["OTEL_EXPORTER_OTLP_ENDPOINT"]))
       {
           tracing.AddOtlpExporter();
+      }
+  })
+  .WithMetrics(metrics =>
+  {
+      metrics.AddMeter(QuartzInstrumentation.MeterName);
+
+      if (!string.IsNullOrWhiteSpace(builder.Configuration["OTEL_EXPORTER_OTLP_ENDPOINT"]))
+      {
+          metrics.AddOtlpExporter();
       }
   })
   ;
@@ -115,24 +129,25 @@ builder.Services.AddDataProtection()
     )
     ;
 
+builder.Services.AddQuartz(options =>
+{
+    options.UseInMemoryStore();
+    options.AddDeclaredJobs();
+});
+builder.Services.AddQuartzHostedService(options =>
+{
+    options.WaitForJobsToComplete = true;
+});
+
 builder.Services.AddOpenIddict()
     .AddCore(options =>
     {
         options.UseEntityFrameworkCore()
             .UseDbContext<ApplicationDbContext>();
+        options.UseQuartz();
     })
     .AddClient(options =>
     {
-        /*
-        TODO:
-        - IUISessionStore を EntityFrameworkCore 実装に切り替え、セッションに TTL インデックスを設定。
-        - TTL の削除待ち中も利用されないよう、取得時の期限チェックを維持。
-        - OpenIddict の公式 EntityFrameworkCore ストアを導入し、期限切れ state の削除を設定。
-        - Data Protection のキーリングを専用コレクションに保存し、アプリ名を固定。ここには TTL を付けない。
-        - EntityFrameworkCore の接続先を設定で切り替え可能にし、ローカル用のコンテナー起動手順を追加。
-        - ビルドと、EntityFrameworkCore を使った保存・取得・期限切れ・削除の検証を実施。
-        */
-
         options.AddEncryptionCertificate(
             CertLoader.LoadFromBase64Env(builder.Configuration, "CERT_OPENID_ENCRYPTION_BASE64")
         ).AddSigningCertificate(
@@ -181,9 +196,6 @@ builder.Services.AddScoped<IUISessionStore, PostgresUISessionStore>();
 builder.Services.AddScoped<AccessTokenAccessor>();
 builder.Services.AddScoped<UIAuthenticationService>();
 builder.Services.AddScoped<UIUserProfileService>();
-
-// Background service
-builder.Services.AddHostedService<ExpiredSessionCleaner>();
 
 var app = builder.Build();
 

@@ -2,55 +2,32 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Quartz;
 
 namespace ui.DB;
 
+[QuartzJob(Name = nameof(ExpiredSessionCleaner), Group = "maintenance", Description = "removes expired sessions")]
+[CronTrigger("0 */5 * * * ?")]
+[DisallowConcurrentExecution]
 public sealed partial class ExpiredSessionCleaner(
     IServiceScopeFactory scopeFactory
+    , TimeProvider timeProvider
     , ILogger<ExpiredSessionCleaner> logger
-) : BackgroundService
+) : IJob
 {
-    protected override async Task ExecuteAsync(
-        CancellationToken cancellationToken
+    public async ValueTask Execute(
+        IJobExecutionContext context
+        , CancellationToken cancellationToken
     )
     {
-        try
-        {
-            while (!cancellationToken.IsCancellationRequested)
-            {
-                try
-                {
-                    await using var scope = scopeFactory.CreateAsyncScope();
-                    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+        await using var scope = scopeFactory.CreateAsyncScope();
+        var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
 
-                    var now = DateTime.UtcNow;
+        var deleted = await db.Sessions
+            .Where(s => s.ExpiresAt <= timeProvider.GetUtcNow().UtcDateTime)
+            .ExecuteDeleteAsync(cancellationToken);
 
-                    var deleted = await db.Sessions
-                        .Where(s => s.ExpiresAt <= now)
-                        .ExecuteDeleteAsync(cancellationToken);
-
-                    LogDeletedCount(deleted);
-                }
-                catch (OperationCanceledException)
-                    when (cancellationToken.IsCancellationRequested)
-                {
-                    break;
-                }
-                catch (Exception ex)
-                {
-                    logger.LogError(ex, "Failed to delete expired sessions");
-                }
-
-                await Task.Delay(
-                    TimeSpan.FromMinutes(5), cancellationToken
-                );
-            }
-        }
-        catch (OperationCanceledException)
-            when (cancellationToken.IsCancellationRequested)
-        {
-            logger.LogInformation($"Stopping {nameof(ExpiredSessionCleaner)}");
-        }
+        LogDeletedCount(deleted);
     }
 
     [LoggerMessage(Level = LogLevel.Debug, Message = "Deleted {Count} expired sessions")]
