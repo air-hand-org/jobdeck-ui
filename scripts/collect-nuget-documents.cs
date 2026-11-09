@@ -68,15 +68,17 @@ if (Directory.Exists(output))
 }
 
 Directory.CreateDirectory(output);
-var manifest = new List<object>();
+var manifest = new object[archives.Length];
 var unresolved = 0;
+var completed = 0;
 using var http = new HttpClient(new HttpClientHandler { AllowAutoRedirect = false }) { Timeout = TimeSpan.FromSeconds(15) };
 var resolver = new SourceResolver(path => SourceResolver.GitHubApi(http, path,
     Environment.GetEnvironmentVariable("GITHUB_TOKEN")), url => Download(http, url));
 using (var progress = new ConsoleProgress())
 {
-    foreach (var archive in archives)
+    await Parallel.ForEachAsync(Enumerable.Range(0, archives.Length), new ParallelOptions { MaxDegreeOfParallelism = 4 }, async (index, cancellationToken) =>
     {
+        var archive = archives[index];
         using var zip = ZipFile.OpenRead(archive.Path);
         var nuspec = zip.Entries.Single(e => !e.FullName.Contains('/') && e.FullName.EndsWith(".nuspec", StringComparison.OrdinalIgnoreCase));
         using var stream = nuspec.Open();
@@ -178,10 +180,10 @@ using (var progress = new ConsoleProgress())
 
         if (errors.Count > 0)
         {
-            unresolved++;
+            Interlocked.Increment(ref unresolved);
         }
 
-        manifest.Add(new
+        manifest[index] = new
         {
             id = archive.Value.Id,
             version = archive.Value.Version,
@@ -212,9 +214,9 @@ using (var progress = new ConsoleProgress())
             sourceAttempts,
             errors,
             attributionScope = "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
-        });
-        progress.Write(archives.IndexOf(archive), archives.Length);
-    }
+        };
+        lock (progress) progress.Write(++completed, archives.Length);
+    });
 }
 
 File.WriteAllText(Path.Combine(output, "manifest.json"), JsonSerializer.Serialize(manifest,
@@ -361,10 +363,11 @@ class SourceResolver
         public List<object> Errors { get; } = [];
     }
 
+    private readonly SemaphoreSlim requests = new(4);
     private readonly Func<string, Task<(string? Json, int Status)>> api;
     private readonly Func<string, Task<(byte[]? Bytes, int? Status, string? Error)>> download;
-    private readonly Dictionary<string, (byte[]? Bytes, int? Status, string? Error)> downloads = new();
-    private readonly Dictionary<string, (string? Json, int Status)> apiCache = new();
+    private readonly System.Collections.Concurrent.ConcurrentDictionary<string, Lazy<Task<(byte[]? Bytes, int? Status, string? Error)>>> downloads = new();
+    private readonly System.Collections.Concurrent.ConcurrentDictionary<string, Lazy<Task<(string? Json, int Status)>>> apiCache = new();
 
     public SourceResolver(Func<string, Task<(string? Json, int Status)>> api,
         Func<string, Task<(byte[]? Bytes, int? Status, string? Error)>> download)
@@ -413,17 +416,40 @@ class SourceResolver
 
     private async Task Collect(string repository, string sha, Result result)
     {
-        foreach (var stem in new[] { "LICENSE", "LICENCE", "COPYING", "NOTICE", "THIRD-PARTY-NOTICES" })
-        foreach (var name in new[] { stem, stem + ".txt", stem + ".md", stem + ".TXT", stem.ToLowerInvariant(), stem.ToLowerInvariant() + ".txt", stem.ToLowerInvariant() + ".md" }
-            .Concat(new[] { stem[..1] + stem[1..].ToLowerInvariant(), stem[..1] + stem[1..].ToLowerInvariant() + ".txt", stem[..1] + stem[1..].ToLowerInvariant() + ".md" })
-            .Concat(stem == "NOTICE" ? new[] { "NOTICE.html", "notice.html" } : Array.Empty<string>()))
+        var listingPath = $"repos/{repository}/git/trees/{sha}";
+        var listing = await GetApi(listingPath);
+        result.Attempts.Add(new { apiPath = listingPath, revision = sha, httpStatus = listing.Status,
+            status = listing.Status == 404 ? "revision-absent" : listing.Status == 200 ? "root-listed" : "source-tree-api-error" });
+        if (listing.Status == 404) return;
+        if (listing.Status != 200)
+        {
+            result.Errors.Add(new { code = "source-tree-api-error", apiPath = listingPath, httpStatus = listing.Status });
+            return;
+        }
+        HashSet<string> files = new(StringComparer.Ordinal);
+        try
+        {
+            using var tree = JsonDocument.Parse(listing.Json!);
+            if (tree.RootElement.GetProperty("truncated").GetBoolean()) throw new InvalidDataException("Truncated root tree");
+            foreach (var entry in tree.RootElement.GetProperty("tree").EnumerateArray())
+            {
+                var name = entry.GetProperty("path").GetString()!;
+                // Never follow symlinks, submodules or nested paths from untrusted listings.
+                if (!RootNames().Contains(name, StringComparer.Ordinal)) continue;
+                if (entry.GetProperty("type").GetString() != "blob" ||
+                    entry.GetProperty("mode").GetString() is not ("100644" or "100755") || !files.Add(name))
+                    throw new InvalidDataException("Unsafe or duplicate root document");
+            }
+        }
+        catch (Exception ex) when (ex is JsonException or KeyNotFoundException or InvalidOperationException or ArgumentException or InvalidDataException)
+        {
+            result.Errors.Add(new { code = "invalid-source-tree", apiPath = listingPath });
+            return;
+        }
+        foreach (var name in RootNames().Where(files.Contains))
         {
             var url = $"https://raw.githubusercontent.com/{repository}/{sha}/{name}";
-            if (!downloads.TryGetValue(url, out var response))
-            {
-                response = await download(url);
-                downloads.Add(url, response);
-            }
+            var response = await downloads.GetOrAdd(url, key => new(() => Limited(() => download(key)))).Value;
             result.Attempts.Add(new { url, revision = sha, httpStatus = response.Status,
                 status = response.Status == 404 ? "document-absent" : response.Error ?? "collected" });
             if (response.Error != null) result.Errors.Add(new { code = response.Error, url, httpStatus = response.Status });
@@ -431,20 +457,27 @@ class SourceResolver
         }
     }
 
+    private async Task<T> Limited<T>(Func<Task<T>> action)
+    {
+        await requests.WaitAsync();
+        try { return await action(); }
+        finally { requests.Release(); }
+    }
+
+    private Task<(string? Json, int Status)> GetApi(string path) =>
+        apiCache.GetOrAdd(path, key => new(() => Limited(() => api(key)))).Value;
+
+    private static IEnumerable<string> RootNames() =>
+        new[] { "LICENSE", "LICENCE", "COPYING", "NOTICE", "THIRD-PARTY-NOTICES" }.SelectMany(stem =>
+            new[] { stem, stem + ".txt", stem + ".md", stem + ".TXT", stem.ToLowerInvariant(), stem.ToLowerInvariant() + ".txt", stem.ToLowerInvariant() + ".md",
+                stem[..1] + stem[1..].ToLowerInvariant(), stem[..1] + stem[1..].ToLowerInvariant() + ".txt", stem[..1] + stem[1..].ToLowerInvariant() + ".md" }
+            .Concat(stem == "NOTICE" ? new[] { "NOTICE.html", "notice.html" } : Array.Empty<string>()));
+
     private async Task<Candidate> ResolveTag(string repository, string tag)
     {
-        async Task<(string? Json, int Status)> Get(string path)
-        {
-            if (!apiCache.TryGetValue(path, out var response))
-            {
-                response = await api(path);
-                apiCache.Add(path, response);
-            }
-            return response;
-        }
         try
         {
-            var response = await Get($"repos/{repository}/git/ref/tags/{Uri.EscapeDataString(tag)}");
+            var response = await GetApi($"repos/{repository}/git/ref/tags/{Uri.EscapeDataString(tag)}");
             if (response.Status == 404) return new(tag, null, "tag-absent");
             if (response.Status != 200) return new(tag, null, "tag-api-error");
             using var reference = JsonDocument.Parse(response.Json!);
@@ -459,7 +492,7 @@ class SourceResolver
                 if (!Regex.IsMatch(sha ?? "", @"\A[0-9a-fA-F]{40}\z")) return new(tag, null, "invalid-tag-sha");
                 if (type == "commit") return new(tag, sha!.ToLowerInvariant(), null);
                 if (type != "tag" || !visited.Add(sha!)) return new(tag, null, "invalid-tag-object");
-                response = await Get($"repos/{repository}/git/tags/{sha}");
+                response = await GetApi($"repos/{repository}/git/tags/{sha}");
                 if (response.Status != 200) return new(tag, null, "tag-object-api-error");
                 using var annotated = JsonDocument.Parse(response.Json!);
                 obj = annotated.RootElement.GetProperty("object").Clone();
@@ -475,7 +508,7 @@ class SourceResolver
     public static async Task<(string? Json, int Status)> GitHubApi(HttpClient http, string path, string? token = null)
     {
         // Fixed origin, no redirects: credentials must never reach raw document hosts.
-        if (!Regex.IsMatch(path, @"\Arepos/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+/git/(?:ref/tags/[^/?#]+|tags/[0-9a-fA-F]{40})\z"))
+        if (!Regex.IsMatch(path, @"\Arepos/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+/git/(?:ref/tags/[^/?#]+|(?:tags|trees)/[0-9a-fA-F]{40})\z"))
             return (null, 0);
         for (var attempt = 0; attempt < 3; attempt++)
         {

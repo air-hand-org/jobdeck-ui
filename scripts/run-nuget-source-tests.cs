@@ -35,7 +35,10 @@ try
     Check(File.ReadAllText(Path.Combine(output, "packages/bundled/1.0.0/LICENSE")) == "Original bundled license", "original bytes");
     Check(unsafePackage.GetProperty("status").GetString() == "error" && unsafePackage.GetProperty("sourceAttempts").GetArrayLength() == 0, "unsafe repository");
     Check(unsafePackage.GetProperty("errors").EnumerateArray().Select(e => e.GetProperty("code").GetString()).ToHashSet().SetEquals(new[] { "unsafe-or-unsupported-repository", "unresolved-original-license" }), "error codes");
-    Console.WriteLine("PASS full collector bundled license + unsafe repository + unresolved exit 2");
+    var firstManifest = File.ReadAllBytes(Path.Combine(output, "manifest.json"));
+    Check(await Run("run", "--file", Path.Combine(scripts, "collect-nuget-documents.cs"), "--", inventory, cache, output) == 2, "repeat unresolved collection must exit 2");
+    Check(firstManifest.SequenceEqual(File.ReadAllBytes(Path.Combine(output, "manifest.json"))), "parallel collector manifest must be byte-deterministic");
+    Console.WriteLine("PASS full collector bundled license + unsafe repository + unresolved exit 2 + repeat byte-deterministic manifest");
 }
 finally { Directory.Delete(root, true); }
 
