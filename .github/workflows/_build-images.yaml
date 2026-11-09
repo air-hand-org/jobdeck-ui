@@ -63,12 +63,10 @@ jobs:
           secrets: |
             github_packages_token=${{ secrets.GITHUB_TOKEN }}
 
-      - uses: air-hand-org/jobdeck-actions/actions/setup-tools@942a96db0ec375d908dd8a8fd97cefc6eaf9f734 # v1.7.2
-        if: matrix.target.stage == 'migrator'
       - name: Smoke test production migrator image
         if: matrix.target.stage == 'migrator'
         timeout-minutes: 5
-        run: dotnet run --file scripts/test-migration-image.cs -- jobdeck-ui:test
+        run: bash scripts/test-migration-image.sh jobdeck-ui:test
 
   publish:
     if: ${{ inputs.push == true }}
