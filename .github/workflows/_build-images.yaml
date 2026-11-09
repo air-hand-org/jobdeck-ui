@@ -56,10 +56,10 @@ jobs:
           push: false
           tags: jobdeck-ui:test
           target: ${{ matrix.target.stage }}
+          # Temporary acceptance run: re-execute restore with an empty image cache.
+          no-cache-filters: build
           cache-from: type=gha,scope=${{ matrix.target.stage }}
           cache-to: type=gha,mode=max,scope=${{ matrix.target.stage }}
-          build-args: |
-            GITHUB_ACTOR=${{ github.actor }}
           secrets: |
             github_packages_token=${{ secrets.GITHUB_TOKEN }}
 
@@ -136,10 +136,10 @@ jobs:
           push: true
           tags: ${{ env.AR_IMAGE }}
           target: ${{ matrix.target.stage }}
+          # Temporary acceptance run: re-execute restore with an empty image cache.
+          no-cache-filters: build
           cache-from: type=gha,scope=${{ matrix.target.stage }}
           cache-to: type=gha,mode=max,scope=${{ matrix.target.stage }}
-          build-args: |
-            GITHUB_ACTOR=${{ github.actor }}
           secrets: |
             github_packages_token=${{ secrets.GITHUB_TOKEN }}
       # Always check GHCR, including when a previous attempt already pushed to AR.

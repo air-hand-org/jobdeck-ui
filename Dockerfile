@@ -3,8 +3,6 @@
 #FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 FROM ghcr.io/jdx/mise:2026.10.15-debian AS build
 
-ARG GITHUB_ACTOR
-
 WORKDIR /src
 ENV MISE_NO_ENV=1 \
     MISE_TRUSTED_CONFIG_PATHS=/src
@@ -17,13 +15,13 @@ RUN apt-get update \
 COPY mise.toml NuGet.Config .editorconfig Directory.Build.props src/ui.csproj ./
 RUN mise install && mise reshim
 RUN --mount=type=secret,id=github_packages_token \
-    NuGetPackageSourceCredentials_github="Username=${GITHUB_ACTOR};Password=$(cat /run/secrets/github_packages_token)" \
+    NuGetPackageSourceCredentials_github="Username=air-hand-org;Password=$(cat /run/secrets/github_packages_token)" \
     dotnet restore
 
 COPY src/ ./
 RUN dotnet publish ui.csproj --no-restore --configuration Release --output /app/publish
 RUN --mount=type=secret,id=github_packages_token \
-    NuGetPackageSourceCredentials_github="Username=${GITHUB_ACTOR};Password=$(cat /run/secrets/github_packages_token)" \
+    NuGetPackageSourceCredentials_github="Username=air-hand-org;Password=$(cat /run/secrets/github_packages_token)" \
     dotnet ef migrations bundle --project ui.csproj --configuration Release --self-contained -r linux-x64 --output /app/migrator
 
 FROM mcr.microsoft.com/dotnet/runtime-deps:10.0.14-noble-chiseled-extra AS migrator
