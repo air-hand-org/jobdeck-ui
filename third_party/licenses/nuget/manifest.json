@@ -25595,10 +25595,10 @@
   },
   {
     "id": "OpenTelemetry.Instrumentation.GrpcNetClient",
-    "version": "1.16.0-beta.1",
+    "version": "1.20.1-beta.1",
     "source": "restored-nupkg",
-    "packagePath": "opentelemetry.instrumentation.grpcnetclient/1.16.0-beta.1/opentelemetry.instrumentation.grpcnetclient.1.16.0-beta.1.nupkg",
-    "nupkgSha256": "0919ae46ce2dbb8cc45760803ab61037589fb07ba8b73ae6fbfabe20e5beb90d",
+    "packagePath": "opentelemetry.instrumentation.grpcnetclient/1.20.1-beta.1/opentelemetry.instrumentation.grpcnetclient.1.20.1-beta.1.nupkg",
+    "nupkgSha256": "f7e17dd123ce60f207d9ce5eb89abd64522ded17ec98c8a6227ee4707648e993",
     "nuspecPath": "OpenTelemetry.Instrumentation.GrpcNetClient.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -25606,7 +25606,7 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/open-telemetry/opentelemetry-dotnet-contrib",
-      "commit": "ccb70116f430f7add50e952c056787cf8897e697"
+      "commit": "4f2a49444969d8ffae3d46007ce533d28ad153d3"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
