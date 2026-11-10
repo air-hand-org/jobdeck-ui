@@ -24,7 +24,7 @@ jobs:
         with:
           persist-credentials: false
           ref: ${{ case(env.ARTIFACT_ELIGIBLE == 'true', github.event.pull_request.head.sha, github.sha) }}
-      - uses: air-hand-org/jobdeck-actions/actions/setup-tools@942a96db0ec375d908dd8a8fd97cefc6eaf9f734 # v1.7.2
+      - uses: air-hand-org/jobdeck-actions/actions/setup-tools@56b5a3e5540b1a1d42a0dbd3ae45b48910f42e83 # v1.7.3
       - name: Restore Nuget cache
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
@@ -48,7 +48,7 @@ jobs:
           if-no-files-found: error
           retention-days: 7
       - name: update generated licenses
-        uses: air-hand-org/jobdeck-actions/actions/auto-commit@942a96db0ec375d908dd8a8fd97cefc6eaf9f734 # v1.7.2
+        uses: air-hand-org/jobdeck-actions/actions/auto-commit@56b5a3e5540b1a1d42a0dbd3ae45b48910f42e83 # v1.7.3
         with:
           eligible: ${{ env.ARTIFACT_ELIGIBLE }}
           paths: |
