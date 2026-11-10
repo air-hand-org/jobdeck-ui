@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/air-hand-org/jobdeck-ui/compare/v1.5.0...v1.5.1) (2026-11-10)
+
+
+### Bug Fixes
+
+* **build:** stabilize NuGet authentication username ([#66](https://github.com/air-hand-org/jobdeck-ui/issues/66)) ([9d235a6](https://github.com/air-hand-org/jobdeck-ui/commit/9d235a69a83ecba81b7ecdda9f7bebb68ede6de4))
+
 ## [1.5.0](https://github.com/air-hand-org/jobdeck-ui/compare/v1.4.3...v1.5.0) (2026-11-09)
 
 
