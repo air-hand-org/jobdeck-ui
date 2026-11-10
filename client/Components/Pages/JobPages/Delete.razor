@@ -1,6 +1,6 @@
 @page "/jobs/{JobId}/delete"
-@rendermode InteractiveServer
-@using Jobdeck.Job.V1
+@rendermode @(new InteractiveWebAssemblyRenderMode(prerender: false))
+@using ui.Models
 @using ui.Client
 @inject JobApiClient JobApiClient
 @inject ILogger<Delete> Logger
@@ -13,6 +13,12 @@
 <p>
   <a href="/jobs">Back to list</a>
 </p>
+
+@if (_errorMessage is not null)
+{
+    <p role="alert">@_errorMessage</p>
+    <a href="" data-enhance-nav="false">Reload and check the result</a>
+}
 
 @if (_job is null)
 {
@@ -35,14 +41,15 @@ else
         <div class="alert alert-danger">@_errorMessage</div>
     }
 
-    <button class="btn btn-danger" @onclick="DeleteJob">Delete</button>
+    <button class="btn btn-danger" disabled="@_submitted" @onclick="DeleteJob">Delete</button>
 }
 
 @code {
     [Parameter]
     public string JobId {get; set;} = "";
 
-    private Job? _job;
+    private JobView? _job;
+    private bool _submitted;
 
     private string? _errorMessage;
 
@@ -55,7 +62,7 @@ else
             {
                 NavigationManager.NavigateTo("/account/login", forceLoad: true);
             } else {
-                NavigationManager.NavigateTo("/jobs");
+                _errorMessage = result.Error.Message;
             }
             return;
         }
@@ -64,6 +71,11 @@ else
 
     private async Task DeleteJob()
     {
+        if (_submitted)
+        {
+            return;
+        }
+        _submitted = true;
         _errorMessage = null;
         var result = await JobApiClient.DeleteJobAsync(JobId);
         if (!result.IsSuccess)

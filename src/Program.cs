@@ -27,7 +27,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddSingleton<TimeProvider>(TimeProvider.System);
 builder.Services.AddRazorComponents()
-  .AddInteractiveServerComponents()
+  .AddInteractiveWebAssemblyComponents()
   ;
 builder.Services.AddOpenTelemetry()
   .ConfigureResource(resource => resource.AddService("jobdeck-ui"))
@@ -74,8 +74,8 @@ builder.Services.AddGrpcClient<AuthService.AuthServiceClient>(options =>
       options.Address = new Uri(address);
   }
 );
-builder.Services.AddScoped<JobApiClient>();
-builder.Services.AddScoped<ExecutionApiClient>();
+builder.Services.AddScoped<BackendJobClient>();
+builder.Services.AddScoped<BackendExecutionClient>();
 builder.Services.AddScoped<AuthApiClient>();
 builder.Services.AddScoped<UICookieAuthenticationEvents>();
 
@@ -192,6 +192,8 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         }
     );
 builder.Services.AddAuthorization();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddAntiforgery(options => options.HeaderName = "X-CSRF-TOKEN");
 builder.Services.AddCascadingAuthenticationState();
 
 builder.Services.AddScoped<IUISessionStore, PostgresUISessionStore>();
@@ -248,7 +250,9 @@ app.MapHealthChecks(
 );
 app.MapStaticAssets().ShortCircuit();
 app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
+    .AddInteractiveWebAssemblyRenderMode()
+    .AddAdditionalAssemblies(typeof(JobApiClient).Assembly);
+app.MapBffEndpoints();
 app.MapGitHubAuthenticationEndpoints();
 
 app.Run();

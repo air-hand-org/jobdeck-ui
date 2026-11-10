@@ -1,18 +1,17 @@
 using System.Security.Claims;
-using Microsoft.AspNetCore.Components.Authorization;
+
 using ui.Session;
 
 namespace ui.Auth;
 
 public sealed class AccessTokenAccessor(
-    AuthenticationStateProvider provider
+    IHttpContextAccessor context
     , IUISessionStore sessions
 )
 {
     public async Task<string?> GetAsync(CancellationToken cancellationToken = default)
     {
-        var state = await provider.GetAuthenticationStateAsync();
-        var sid = state.User.FindFirstValue("sid");
+        var sid = context.HttpContext?.User.FindFirstValue("sid");
         if (!Guid.TryParse(sid, out var sessionId))
         {
             return null;

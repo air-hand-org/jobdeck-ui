@@ -1,6 +1,5 @@
 @using ui.Models
-@using Jobdeck.Job.V1
-@using JobdeckHttpMethod = Jobdeck.Job.V1.HttpMethod
+@using JobdeckHttpMethod = ui.Models.JobHttpMethod
 
 <EditForm Model="@Model" OnValidSubmit="@HandleValidSubmit" FormName="@FormName">
   <DataAnnotationsValidator />
@@ -9,6 +8,7 @@
   {
     <div class="alert alert-danger" role="alert">
         <p>@ErrorMessage</p>
+        <a href="" data-enhance-nav="false">Reload and check the result before submitting again</a>
     </div>
   }
   <div class="mb-3">
@@ -104,11 +104,12 @@
     <ValidationMessage For="() => Model.MaxDelaySeconds" class="text-danger" />
   </div>
 
-  <button type="submit" class="btn btn-primary" disabled="@(!_isInteractive)">@SubmitText</button>
+  <button type="submit" class="btn btn-primary" disabled="@(!_isInteractive || _submitted)">@SubmitText</button>
 </EditForm>
 
 @code {
   private bool _isInteractive;
+  private bool _submitted;
 
   [Parameter, EditorRequired]
   public HttpJobFormModel Model { get; set; } = default!;
@@ -136,6 +137,11 @@
 
   private async Task HandleValidSubmit(EditContext _)
   {
+    if (_submitted)
+    {
+      return;
+    }
+    _submitted = true;
     await OnValidSubmit.InvokeAsync();
   }
 

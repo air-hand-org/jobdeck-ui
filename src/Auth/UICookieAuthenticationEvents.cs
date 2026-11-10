@@ -7,6 +7,32 @@ namespace ui.Auth;
 
 public sealed class UICookieAuthenticationEvents(IUISessionStore sessions) : CookieAuthenticationEvents
 {
+    public override Task RedirectToLogin(RedirectContext<CookieAuthenticationOptions> context)
+    {
+        if (context.Request.Path.StartsWithSegments("/bff"))
+        {
+            context.Response.StatusCode = 401;
+        }
+        else
+        {
+            context.Response.Redirect(context.RedirectUri);
+        }
+        return Task.CompletedTask;
+    }
+
+    public override Task RedirectToAccessDenied(RedirectContext<CookieAuthenticationOptions> context)
+    {
+        if (context.Request.Path.StartsWithSegments("/bff"))
+        {
+            context.Response.StatusCode = 403;
+        }
+        else
+        {
+            context.Response.Redirect(context.RedirectUri);
+        }
+        return Task.CompletedTask;
+    }
+
     public override async Task ValidatePrincipal(CookieValidatePrincipalContext context)
     {
         var sessionIdValue = context.Principal?.FindFirstValue("sid");

@@ -1,7 +1,7 @@
 @page "/jobs"
-@rendermode InteractiveServer
+@rendermode @(new InteractiveWebAssemblyRenderMode(prerender: false))
 @using Microsoft.AspNetCore.Components.QuickGrid
-@using Jobdeck.Job.V1
+@using ui.Models
 @using ui.Client
 @inject JobApiClient JobApiClient
 @inject NavigationManager Navigation
@@ -13,6 +13,12 @@
 <p>
   <a href="/jobs/new">Create New</a>
 </p>
+
+@if (_errorMessage is not null)
+{
+  <div class="alert alert-danger" role="alert">@_errorMessage</div>
+  <button type="button" class="btn btn-secondary" @onclick="LoadJobsAsync">Retry read</button>
+}
 
 <QuickGrid Class="table" Items="_jobs.AsQueryable()">
   <PropertyColumn Property="job => job.Name" Title="Name" />
@@ -27,16 +33,25 @@
 </QuickGrid>
 
 @code {
-  private List<Job> _jobs = [];
+  private List<JobView> _jobs = [];
 
-  protected override async Task OnInitializedAsync()
+  private string? _errorMessage;
+
+  protected override Task OnInitializedAsync() => LoadJobsAsync();
+
+  private async Task LoadJobsAsync()
   {
+    _errorMessage = null;
     var result = await JobApiClient.ListJobsAsync(pageSize: 100);
     if (!result.IsSuccess)
     {
         if (result.Error!.Code == ApiErrorCode.Unauthenticated)
         {
             Navigation.NavigateTo("/account/login", forceLoad: true);
+        }
+        else
+        {
+            _errorMessage = result.Error!.Message;
         }
         return;
     }

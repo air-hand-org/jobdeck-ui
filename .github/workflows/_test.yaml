@@ -34,6 +34,10 @@ jobs:
             nuget-${{ runner.os }}-
       - name: build
         run: make build
+      - name: verify published browser boundary
+        run: |
+          dotnet publish src/ui.csproj --no-restore --configuration Release --output "$RUNNER_TEMP/ui-publish"
+          bash scripts/check-browser-assets.sh "$RUNNER_TEMP/ui-publish"
       - name: test NuGet source resolution (.NET only)
         run: dotnet run --project tools/NuGetDocuments.Tests
       - name: generate NuGet licenses

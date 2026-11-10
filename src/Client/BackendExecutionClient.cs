@@ -6,9 +6,9 @@ using ui.Telemetry;
 
 namespace ui.Client;
 
-public sealed record ListExecutionsResult(List<Execution> Executions, string NextPageToken);
+public sealed record BackendListExecutionsResult(List<Execution> Executions, string NextPageToken);
 
-public sealed class ExecutionApiClient(ExecutionService.ExecutionServiceClient execs, AccessTokenAccessor tokens, ILogger<ExecutionApiClient> logger)
+public sealed class BackendExecutionClient(ExecutionService.ExecutionServiceClient execs, AccessTokenAccessor tokens, ILogger<BackendExecutionClient> logger)
 {
     public async Task<ApiResult> DoExecutionAsync(string jobId, CancellationToken cancellationToken = default)
     {
@@ -42,11 +42,11 @@ public sealed class ExecutionApiClient(ExecutionService.ExecutionServiceClient e
             logger.LogWarning(ex, "Execution API request failed");
             activity?.SetStatus(ActivityStatusCode.Error, ex.Status.Detail);
             activity?.AddException(ex);
-            return ApiResult.Failure(ApiError.FromRPCException(ex));
+            return ApiResult.Failure(BackendErrors.FromRPCException(ex));
         }
     }
 
-    public async Task<ApiResult<ListExecutionsResult>> ListExecutionsAsync(string jobId, int pageSize, string pageToken = "", CancellationToken cancellationToken = default)
+    public async Task<ApiResult<BackendListExecutionsResult>> ListExecutionsAsync(string jobId, int pageSize, string pageToken = "", CancellationToken cancellationToken = default)
     {
         using var activity = UiTelemetry.Source.StartActivity("execution.list", ActivityKind.Internal);
         activity?.SetTag("jobdeck.execution.job_id", jobId);
@@ -72,7 +72,7 @@ public sealed class ExecutionApiClient(ExecutionService.ExecutionServiceClient e
                 headers,
                 cancellationToken: cancellationToken
             );
-            return ApiResult<ListExecutionsResult>.Success(new ListExecutionsResult(
+            return ApiResult<BackendListExecutionsResult>.Success(new BackendListExecutionsResult(
               [.. response.Executions],
               response.NextPageToken
             ));
@@ -82,7 +82,7 @@ public sealed class ExecutionApiClient(ExecutionService.ExecutionServiceClient e
             logger.LogWarning(ex, "Execution API request failed");
             activity?.SetStatus(ActivityStatusCode.Error, ex.Status.Detail);
             activity?.AddException(ex);
-            return ApiResult<ListExecutionsResult>.Failure(ApiError.FromRPCException(ex));
+            return ApiResult<BackendListExecutionsResult>.Failure(BackendErrors.FromRPCException(ex));
         }
     }
 }

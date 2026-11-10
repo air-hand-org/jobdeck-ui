@@ -7,9 +7,9 @@ using ui.Telemetry;
 
 namespace ui.Client;
 
-public sealed record ListJobsResult(IReadOnlyList<Job> Jobs, string NextPageToken);
+public sealed record BackendListJobsResult(List<Job> Jobs, string NextPageToken);
 
-public sealed class JobApiClient(JobService.JobServiceClient jobs, AccessTokenAccessor tokens, ILogger<JobApiClient> logger)
+public sealed class BackendJobClient(JobService.JobServiceClient jobs, AccessTokenAccessor tokens, ILogger<BackendJobClient> logger)
 {
     public async Task<ApiResult<Job>> CreateJobAsync(HttpJobFormModel model, CancellationToken cancellationToken = default)
     {
@@ -44,7 +44,7 @@ public sealed class JobApiClient(JobService.JobServiceClient jobs, AccessTokenAc
             logger.LogWarning(ex, "Job API request failed");
             activity?.SetStatus(ActivityStatusCode.Error, ex.Status.Detail);
             activity?.AddException(ex);
-            return ApiResult<Job>.Failure(ApiError.FromRPCException(ex));
+            return ApiResult<Job>.Failure(BackendErrors.FromRPCException(ex));
         }
     }
 
@@ -82,7 +82,7 @@ public sealed class JobApiClient(JobService.JobServiceClient jobs, AccessTokenAc
             logger.LogWarning(ex, "Job API request failed");
             activity?.SetStatus(ActivityStatusCode.Error, ex.Status.Detail);
             activity?.AddException(ex);
-            return ApiResult<Job>.Failure(ApiError.FromRPCException(ex));
+            return ApiResult<Job>.Failure(BackendErrors.FromRPCException(ex));
         }
     }
 
@@ -117,7 +117,7 @@ public sealed class JobApiClient(JobService.JobServiceClient jobs, AccessTokenAc
             logger.LogWarning(ex, "Job API request failed");
             activity?.SetStatus(ActivityStatusCode.Error, ex.Status.Detail);
             activity?.AddException(ex);
-            return ApiResult.Failure(ApiError.FromRPCException(ex));
+            return ApiResult.Failure(BackendErrors.FromRPCException(ex));
         }
     }
 
@@ -152,11 +152,11 @@ public sealed class JobApiClient(JobService.JobServiceClient jobs, AccessTokenAc
             logger.LogWarning(ex, "Job API request failed");
             activity?.SetStatus(ActivityStatusCode.Error, ex.Status.Detail);
             activity?.AddException(ex);
-            return ApiResult<Job>.Failure(ApiError.FromRPCException(ex));
+            return ApiResult<Job>.Failure(BackendErrors.FromRPCException(ex));
         }
     }
 
-    public async Task<ApiResult<ListJobsResult>> ListJobsAsync(int pageSize, string pageToken = "", CancellationToken cancellationToken = default)
+    public async Task<ApiResult<BackendListJobsResult>> ListJobsAsync(int pageSize, string pageToken = "", CancellationToken cancellationToken = default)
     {
         using var activity = UiTelemetry.Source.StartActivity("job.list", ActivityKind.Internal);
         activity?.SetTag("jobdeck.job.list_page_size", pageSize);
@@ -181,7 +181,7 @@ public sealed class JobApiClient(JobService.JobServiceClient jobs, AccessTokenAc
                 headers,
                 cancellationToken: cancellationToken
             );
-            return ApiResult<ListJobsResult>.Success(new ListJobsResult(
+            return ApiResult<BackendListJobsResult>.Success(new BackendListJobsResult(
               [.. response.Jobs],
               response.NextPageToken
             ));
@@ -191,7 +191,7 @@ public sealed class JobApiClient(JobService.JobServiceClient jobs, AccessTokenAc
             logger.LogWarning(ex, "Job API request failed");
             activity?.SetStatus(ActivityStatusCode.Error, ex.Status.Detail);
             activity?.AddException(ex);
-            return ApiResult<ListJobsResult>.Failure(ApiError.FromRPCException(ex));
+            return ApiResult<BackendListJobsResult>.Failure(BackendErrors.FromRPCException(ex));
         }
     }
 }

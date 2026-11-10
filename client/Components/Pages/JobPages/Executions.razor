@@ -1,8 +1,7 @@
 @page "/jobs/{JobId}/executions"
-@rendermode InteractiveServer
+@rendermode @(new InteractiveWebAssemblyRenderMode(prerender: false))
 @using Microsoft.AspNetCore.Components.QuickGrid
-@using Google.Protobuf
-@using Jobdeck.Job.V1
+@using ui.Models
 @using ui.Client
 @inject JobApiClient JobApiClient
 @inject ExecutionApiClient ExecutionApiClient
@@ -21,7 +20,7 @@
 <div>
   <p>@_errorMessage</p>
   <p>
-    <button type="button" class="btn btn-primary" disabled="@(!_isInteractive)" @onclick="RequestExecution">Request to run the job</button>
+    <button type="button" class="btn btn-primary" disabled="@(!_isInteractive || _requesting || _uncertain)" @onclick="RequestExecution">Request to run the job</button>
   </p>
 </div>
 
@@ -29,8 +28,8 @@
   <PropertyColumn Property="exec => exec.Id" Title="Id" />
   <PropertyColumn Property="exec => exec.Attempt" Title="Attempt" />
   <PropertyColumn Property="exec => exec.Status" Title="Status" />
-  <PropertyColumn Property="exec => FormatDateTime(exec.CreatedAt.ToDateTime())" Title="CreatedAt" />
-  <PropertyColumn Property="exec => FormatDateTime(exec.UpdatedAt.ToDateTime())" Title="UpdatedAt" />
+  <PropertyColumn Property="exec => FormatDateTime(exec.CreatedAt)" Title="CreatedAt" />
+  <PropertyColumn Property="exec => FormatDateTime(exec.UpdatedAt)" Title="UpdatedAt" />
   <TemplateColumn Context="exec" Title="Result">
     <pre class="bg-light border rounded p-2 small mb-0">
         @FormatResult(exec)
@@ -42,17 +41,19 @@
   [Parameter]
   public string JobId {get; set;} = "";
 
-  private Job? _job;
-  private List<Execution> _execs = [];
+  private JobView? _job;
+  private List<ExecutionView> _execs = [];
   private string? _errorMessage;
   private bool _isInteractive;
+  private bool _requesting;
+  private bool _uncertain;
 
   private readonly CancellationTokenSource _cts = new();
   private Task? _refreshTask;
 
   protected override async Task OnInitializedAsync()
   {
-    var result = await JobApiClient.GetJobAsync(JobId);
+    var result = await JobApiClient.GetJobAsync(JobId, _cts.Token);
     if (!result.IsSuccess)
     {
         if (result.Error!.Code == ApiErrorCode.Unauthenticated)
@@ -68,16 +69,18 @@
     await LoadExecutionsAsync();
   }
 
-  protected override async Task OnAfterRenderAsync(bool firstRender)
+  protected override void OnAfterRender(bool firstRender)
   {
-    if (!firstRender)
+    // The first render can precede the asynchronous job read in WASM.
+    if (_refreshTask is null && _job is not null)
     {
-        return;
+        _refreshTask = RefreshLoopAsync(_cts.Token);
     }
-
-    _refreshTask = RefreshLoopAsync(_cts.Token);
-    _isInteractive = true;
-    StateHasChanged();
+    if (!_isInteractive)
+    {
+        _isInteractive = true;
+        StateHasChanged();
+    }
   }
 
   private async Task RefreshLoopAsync(CancellationToken token)
@@ -119,7 +122,7 @@
   {
     _errorMessage = null;
 
-    var result = await ExecutionApiClient.ListExecutionsAsync(jobId: JobId, pageSize: 100);
+    var result = await ExecutionApiClient.ListExecutionsAsync(jobId: JobId, pageSize: 100, cancellationToken: _cts.Token);
     if (!result.IsSuccess)
     {
         if (result.Error!.Code == ApiErrorCode.Unauthenticated)
@@ -134,24 +137,31 @@
     _execs = [.. result.Value!.Executions];
   }
 
-  private string FormatDateTime(DateTime dt)
+  private string FormatDateTime(DateTime? dt)
   {
-    return dt.ToLocalTime().ToString("yyyy-MM-dd HH:mm:ss");
+    return dt?.ToLocalTime().ToString("yyyy-MM-dd HH:mm:ss") ?? "-";
   }
 
-  private string FormatResult(Execution execution)
+  private string FormatResult(ExecutionView execution)
   {
     if (execution.Result is null)
     {
         return "-";
     }
-    return JsonFormatter.Default.Format(execution.Result);
+    return execution.Result;
   }
 
   private async Task RequestExecution()
   {
+    if (_requesting || _uncertain)
+    {
+        return;
+    }
+    _requesting = true;
     _errorMessage = null;
-    var result = await ExecutionApiClient.DoExecutionAsync(JobId);
+    var result = await ExecutionApiClient.DoExecutionAsync(JobId, _cts.Token);
+    _requesting = false;
+    _uncertain = result.Error?.Code == ApiErrorCode.Internal;
     if (!result.IsSuccess)
     {
         if (result.Error!.Code == ApiErrorCode.Unauthenticated)
@@ -163,6 +173,5 @@
         return;
     }
 
-    await LoadExecutionsAsync();
   }
 }

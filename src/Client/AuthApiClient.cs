@@ -31,7 +31,7 @@ public sealed class AuthApiClient(AuthService.AuthServiceClient auth, ILogger<Au
             logger.LogWarning(ex, "Auth API request failed");
             activity?.SetStatus(ActivityStatusCode.Error, ex.Status.Detail);
             activity?.AddException(ex);
-            return ApiResult<Token>.Failure(ApiError.FromRPCException(ex));
+            return ApiResult<Token>.Failure(BackendErrors.FromRPCException(ex));
         }
     }
 
@@ -63,7 +63,7 @@ public sealed class AuthApiClient(AuthService.AuthServiceClient auth, ILogger<Au
             logger.LogWarning(ex, "Auth API request failed");
             activity?.SetStatus(ActivityStatusCode.Error, ex.Status.Detail);
             activity?.AddException(ex);
-            return ApiResult<Token>.Failure(ApiError.FromRPCException(ex));
+            return ApiResult<Token>.Failure(BackendErrors.FromRPCException(ex));
         }
     }
 }

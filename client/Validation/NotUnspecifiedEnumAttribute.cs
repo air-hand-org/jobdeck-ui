@@ -15,6 +15,6 @@ public sealed class NotUnspecifiedEnumAttribute : ValidationAttribute
         {
             return false;
         }
-        return Convert.ToInt32(value) != 0; // proto enum unspecified is 0
+        return Enum.IsDefined(value.GetType(), value) && Convert.ToInt32(value) != 0;
     }
 }

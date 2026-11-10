@@ -1,4 +1,3 @@
-using Grpc.Core;
 
 namespace ui.Client;
 
@@ -9,21 +8,7 @@ public enum ApiErrorCode
     Internal,
 }
 
-public sealed record ApiError(ApiErrorCode Code, string Message)
-{
-    public static ApiError FromRPCException(RpcException ex)
-    {
-        return ex.StatusCode switch
-        {
-            StatusCode.Unauthenticated =>
-                new(ApiErrorCode.Unauthenticated, "ログインの有効期限が切れました"),
-            StatusCode.PermissionDenied =>
-                new(ApiErrorCode.PermissionDenied, "この操作を実行する権限が足りません"),
-            _ =>
-                new(ApiErrorCode.Internal, ex.Status.Detail),
-        };
-    }
-}
+public sealed record ApiError(ApiErrorCode Code, string Message);
 
 public sealed record ApiResult<T>(T? Value, ApiError? Error)
 {

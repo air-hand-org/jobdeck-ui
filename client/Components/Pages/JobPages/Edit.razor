@@ -1,16 +1,24 @@
 @page "/jobs/{JobId}/edit"
-@rendermode InteractiveServer
+@rendermode @(new InteractiveWebAssemblyRenderMode(prerender: false))
 @using ui.Models
 @using ui.Client
-@using Jobdeck.Job.V1
 @inject JobApiClient JobApiClient
 @inject NavigationManager NavigationManager
 
+@if (_loaded)
+{
 <div class="row">
   <div class="col-md-4">
     <HttpJobForm Model="@_model" OnValidSubmit="@UpdateJob" FormName="UpdateJob" SubmitText="Update" ErrorMessage="@_errorMessage" />
   </div>
 </div>
+
+}
+else if (_errorMessage is not null)
+{
+  <p role="alert">@_errorMessage</p>
+  <button type="button" @onclick="LoadJobAsync">Retry read</button>
+}
 
 <div>
   <a href="/jobs">Back to list</a>
@@ -23,7 +31,11 @@
   private HttpJobFormModel _model = new();
   private string? _errorMessage;
 
-  protected override async Task OnInitializedAsync()
+  private bool _loaded;
+
+  protected override Task OnInitializedAsync() => LoadJobAsync();
+
+  private async Task LoadJobAsync()
   {
     _errorMessage = null;
 
@@ -39,7 +51,8 @@
         return;
     }
 
-    _model = HttpJobFormModel.FromProto(result.Value!);
+    _model = result.Value!.Form;
+    _loaded = true;
   }
 
   private async Task UpdateJob()
