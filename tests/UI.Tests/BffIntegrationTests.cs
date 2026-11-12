@@ -3,6 +3,8 @@ using System.Net.Http.Json;
 using System.Security.Claims;
 using System.Text.Json;
 using Grpc.Core;
+using Grpc.Net.Client;
+using Grpc.Net.Client.Web;
 using Jobdeck.Job.V1;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -146,6 +148,66 @@ public sealed class BffIntegrationTests
         Assert.Equal(0, host.Rpc.Calls);
     }
 
+    [Fact]
+    public async Task GrpcWebListsJobsOnTheSameHttp11Port()
+    {
+        await using var host = await Host.Start();
+        using var browser = await host.SignIn();
+        using var csrfResponse = await browser.GetAsync("bff/antiforgery", TestContext.Current.CancellationToken);
+        var csrf = await csrfResponse.Content.ReadFromJsonAsync<JsonElement>(TestContext.Current.CancellationToken);
+        var cookies = host.SessionCookie + "; " + string.Join("; ", csrfResponse.Headers.GetValues("Set-Cookie").Select(value => value.Split(';')[0]));
+        using var channel = GrpcChannel.ForAddress(browser.BaseAddress!, new GrpcChannelOptions
+        {
+            HttpVersion = HttpVersion.Version11,
+            HttpVersionPolicy = HttpVersionPolicy.RequestVersionExact,
+            HttpHandler = new GrpcWebHandler(GrpcWebMode.GrpcWeb, new HttpClientHandler { UseCookies = false }),
+        });
+        var headers = new Metadata
+        {
+            { "cookie", cookies },
+            { "x-csrf-token", csrf.GetProperty("token").GetString()! },
+        };
+        var response = await new JobService.JobServiceClient(channel).ListJobsAsync(new ListJobsRequest { PageSize = 100 }, headers, cancellationToken: TestContext.Current.CancellationToken);
+        Assert.Single(response.Jobs);
+        Assert.Equal("Bearer server-only-token", host.Rpc.Authorization);
+        Assert.Equal(1, host.Rpc.Calls);
+        var unsupported = await Assert.ThrowsAsync<RpcException>(async () => await new JobService.JobServiceClient(channel).DeleteJobAsync(new DeleteJobRequest { JobId = "job-id" }, headers, cancellationToken: TestContext.Current.CancellationToken));
+        Assert.Equal(StatusCode.Unimplemented, unsupported.StatusCode);
+        var client = new JobService.JobServiceClient(channel);
+        var invalidPage = await Assert.ThrowsAsync<RpcException>(async () => await client.ListJobsAsync(new ListJobsRequest { PageSize = 101 }, headers, cancellationToken: TestContext.Current.CancellationToken));
+        Assert.Equal(StatusCode.InvalidArgument, invalidPage.StatusCode);
+        var invalidCsrf = new Metadata { { "cookie", cookies }, { "x-csrf-token", "forged" } };
+        var denied = await Assert.ThrowsAsync<RpcException>(async () => await client.ListJobsAsync(new ListJobsRequest { PageSize = 100 }, invalidCsrf, cancellationToken: TestContext.Current.CancellationToken));
+        Assert.Equal(StatusCode.PermissionDenied, denied.StatusCode);
+        await host.Sessions.RemoveSessionAsync(host.SessionId, TestContext.Current.CancellationToken);
+        var revoked = await Assert.ThrowsAsync<RpcException>(async () => await client.ListJobsAsync(new ListJobsRequest { PageSize = 100 }, headers, cancellationToken: TestContext.Current.CancellationToken));
+        Assert.Equal(StatusCode.Unauthenticated, revoked.StatusCode);
+        Assert.Equal(1, host.Rpc.Calls);
+    }
+
+    [Theory]
+    [InlineData(false, StatusCode.Unauthenticated)]
+    [InlineData(true, StatusCode.PermissionDenied)]
+    public async Task GrpcWebRejectsMissingSessionOrAntiforgery(bool signedIn, StatusCode expected)
+    {
+        await using var host = await Host.Start();
+        using var browser = signedIn ? await host.SignIn() : host.Client();
+        using var channel = GrpcChannel.ForAddress(browser.BaseAddress!, new GrpcChannelOptions
+        {
+            HttpVersion = HttpVersion.Version11,
+            HttpVersionPolicy = HttpVersionPolicy.RequestVersionExact,
+            HttpHandler = new GrpcWebHandler(GrpcWebMode.GrpcWeb, new HttpClientHandler { UseCookies = false }),
+        });
+        var headers = new Metadata();
+        if (signedIn)
+        {
+            headers.Add("cookie", host.SessionCookie);
+        }
+        var error = await Assert.ThrowsAsync<RpcException>(async () => await new JobService.JobServiceClient(channel).ListJobsAsync(new ListJobsRequest { PageSize = 100 }, headers, cancellationToken: TestContext.Current.CancellationToken));
+        Assert.Equal(expected, error.StatusCode);
+        Assert.Equal(0, host.Rpc.Calls);
+    }
+
     private static HttpJobFormModel ValidForm() => new()
     {
         Name = "example",
@@ -181,6 +243,7 @@ public sealed class BffIntegrationTests
         {
             var builder = WebApplication.CreateBuilder(new WebApplicationOptions { ApplicationName = typeof(ui.Components.App).Assembly.GetName().Name });
             builder.WebHost.UseStaticWebAssets();
+            builder.Services.AddGrpc();
             builder.Services.AddRazorComponents().AddInteractiveWebAssemblyComponents();
             builder.Services.AddCascadingAuthenticationState();
             builder.Services.AddScoped<ui.Profile.UIUserProfileService>();
@@ -204,12 +267,15 @@ public sealed class BffIntegrationTests
             builder.Services.AddScoped<AuthApiClient>();
             builder.Services.AddScoped<UIAuthenticationService>();
             var app = builder.Build();
+            app.UseRouting();
+            app.UseGrpcWeb();
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseAntiforgery();
             app.MapStaticAssets().ShortCircuit();
             app.MapRazorComponents<ui.Components.App>().AddInteractiveWebAssemblyRenderMode().AddAdditionalAssemblies(typeof(JobApiClient).Assembly);
             app.MapBffEndpoints();
+            app.MapGrpcService<BrowserJobService>().EnableGrpcWeb().RequireAuthorization();
             app.MapPost("/test/logout", async (Microsoft.AspNetCore.Http.HttpContext context, UIAuthenticationService auth) =>
             {
                 await auth.LogoutAsync(context, context.RequestAborted);

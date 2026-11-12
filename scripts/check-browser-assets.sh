@@ -8,7 +8,8 @@ for file in "$framework"/*; do
   name=${file##*/}
   case "$name" in
     ui.Client.*.wasm) client_found=true ;;
-    ui.*.wasm|Jobdeck.*|Grpc.*|Google.Protobuf.*|Npgsql.*|OpenIddict.*|Microsoft.EntityFrameworkCore.*)
+    Jobdeck.Job.*) ;;
+    ui.*.wasm|Jobdeck.*|Grpc.AspNetCore.*|Npgsql.*|OpenIddict.*|Microsoft.EntityFrameworkCore.*)
       printf 'Server-only assembly in browser assets: %s\n' "$name" >&2
       exit 1 ;;
   esac

@@ -76,7 +76,7 @@ normal fixture command. No test dependencies enter the shipped UI inventory.
 `make licenses` invokes `dotnet run --project tools/NuGetDocuments -- INVENTORY CACHE OUTPUT`;
 there is no shell entry-point wrapper. The tooling projects are intentionally not
 added to `Jobdeck.slnx`. Attribution inventory remains explicitly scoped to
-`dotnet list src/ui.csproj package --include-transitive`, not the tools/tests.
+`dotnet list src/bff/ui.csproj package --include-transitive`, not the tools/tests.
 
 ## Live benchmark
 

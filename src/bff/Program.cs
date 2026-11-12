@@ -74,6 +74,7 @@ builder.Services.AddGrpcClient<AuthService.AuthServiceClient>(options =>
       options.Address = new Uri(address);
   }
 );
+builder.Services.AddGrpc();
 builder.Services.AddScoped<BackendJobClient>();
 builder.Services.AddScoped<BackendExecutionClient>();
 builder.Services.AddScoped<AuthApiClient>();
@@ -227,9 +228,13 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
+// API status codes must reach clients unchanged, not render an HTML error page.
+app.UseWhen(context => !context.Request.Path.StartsWithSegments("/bff") && !context.Request.Path.StartsWithSegments("/jobdeck.job.v1.JobService"),
+    branch => branch.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true));
 app.UseHttpsRedirection();
 
+app.UseRouting();
+app.UseGrpcWeb();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseAntiforgery();
@@ -253,6 +258,7 @@ app.MapRazorComponents<App>()
     .AddInteractiveWebAssemblyRenderMode()
     .AddAdditionalAssemblies(typeof(JobApiClient).Assembly);
 app.MapBffEndpoints();
+app.MapGrpcService<BrowserJobService>().EnableGrpcWeb().RequireAuthorization();
 app.MapGitHubAuthenticationEndpoints();
 
 app.Run();

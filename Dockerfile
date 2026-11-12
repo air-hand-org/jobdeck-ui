@@ -13,19 +13,18 @@ RUN apt-get update \
 
 # Restore first so NuGet packages remain cached when only application code changes.
 COPY mise.toml NuGet.Config .editorconfig Directory.Build.props ./
-COPY src/ui.csproj src/
-COPY client/ui.Client.csproj client/
+COPY src/bff/ui.csproj src/bff/
+COPY src/client/ui.Client.csproj src/client/
 RUN mise install && mise reshim
 RUN --mount=type=secret,id=github_packages_token \
     NuGetPackageSourceCredentials_github="Username=air-hand-org;Password=$(cat /run/secrets/github_packages_token)" \
-    dotnet restore src/ui.csproj
+    dotnet restore src/bff/ui.csproj
 
 COPY src/ src/
-COPY client/ client/
-RUN dotnet publish src/ui.csproj --no-restore --configuration Release --output /app/publish
+RUN dotnet publish src/bff/ui.csproj --no-restore --configuration Release --output /app/publish
 RUN --mount=type=secret,id=github_packages_token \
     NuGetPackageSourceCredentials_github="Username=air-hand-org;Password=$(cat /run/secrets/github_packages_token)" \
-    dotnet ef migrations bundle --project src/ui.csproj --configuration Release --self-contained -r linux-x64 --output /app/migrator
+    dotnet ef migrations bundle --project src/bff/ui.csproj --configuration Release --self-contained -r linux-x64 --output /app/migrator
 
 FROM mcr.microsoft.com/dotnet/runtime-deps:10.0.14-noble-chiseled-extra AS migrator
 WORKDIR /app

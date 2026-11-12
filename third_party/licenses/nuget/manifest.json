@@ -162,6 +162,60 @@
     "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
   },
   {
+    "id": "Grpc.AspNetCore.Web",
+    "version": "2.85.0",
+    "source": "restored-nupkg",
+    "packagePath": "grpc.aspnetcore.web/2.85.0/grpc.aspnetcore.web.2.85.0.nupkg",
+    "nupkgSha256": "5f29cda5fa57c46fe7b7b0c3aeaa39b6d0d280c1ea53a74d81b2971aceb289e3",
+    "nuspecPath": "Grpc.AspNetCore.Web.nuspec",
+    "licenseType": "expression",
+    "license": "Apache-2.0",
+    "licenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/grpc/grpc-dotnet.git",
+      "commit": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0"
+    },
+    "status": "original-license-collected",
+    "declaredLicenseFileMissing": false,
+    "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
+    "sourceResolution": {
+      "nuspecCommit": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0",
+      "tag": null,
+      "resolvedSha": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0",
+      "provenance": "nuspec-commit",
+      "fallbackReason": null,
+      "nuspecCommitMismatch": false,
+      "tagCandidates": []
+    },
+    "documents": [],
+    "sourceDocuments": [
+      {
+        "path": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0/LICENSE",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/a7767e28a2c2f4e89a17e9efb95f75e8a82637d0/LICENSE",
+        "revision": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "bytes": 11358
+      }
+    ],
+    "sourceAttempts": [
+      {
+        "apiPath": "repos/grpc/grpc-dotnet/git/trees/a7767e28a2c2f4e89a17e9efb95f75e8a82637d0",
+        "revision": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0",
+        "httpStatus": 200,
+        "status": "root-listed"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/a7767e28a2c2f4e89a17e9efb95f75e8a82637d0/LICENSE",
+        "revision": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0",
+        "httpStatus": 200,
+        "status": "collected"
+      }
+    ],
+    "errors": [],
+    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
+  },
+  {
     "id": "Grpc.Core.Api",
     "version": "2.85.0",
     "source": "restored-nupkg",
@@ -276,6 +330,60 @@
     "packagePath": "grpc.net.client/2.85.0/grpc.net.client.2.85.0.nupkg",
     "nupkgSha256": "322d150cd394151d611464d2b8c6186c2fe2a875565ab6048cb18fb0d289a081",
     "nuspecPath": "Grpc.Net.Client.nuspec",
+    "licenseType": "expression",
+    "license": "Apache-2.0",
+    "licenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/grpc/grpc-dotnet.git",
+      "commit": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0"
+    },
+    "status": "original-license-collected",
+    "declaredLicenseFileMissing": false,
+    "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
+    "sourceResolution": {
+      "nuspecCommit": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0",
+      "tag": null,
+      "resolvedSha": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0",
+      "provenance": "nuspec-commit",
+      "fallbackReason": null,
+      "nuspecCommitMismatch": false,
+      "tagCandidates": []
+    },
+    "documents": [],
+    "sourceDocuments": [
+      {
+        "path": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0/LICENSE",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/a7767e28a2c2f4e89a17e9efb95f75e8a82637d0/LICENSE",
+        "revision": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "bytes": 11358
+      }
+    ],
+    "sourceAttempts": [
+      {
+        "apiPath": "repos/grpc/grpc-dotnet/git/trees/a7767e28a2c2f4e89a17e9efb95f75e8a82637d0",
+        "revision": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0",
+        "httpStatus": 200,
+        "status": "root-listed"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/a7767e28a2c2f4e89a17e9efb95f75e8a82637d0/LICENSE",
+        "revision": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0",
+        "httpStatus": 200,
+        "status": "collected"
+      }
+    ],
+    "errors": [],
+    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
+  },
+  {
+    "id": "Grpc.Net.Client.Web",
+    "version": "2.85.0",
+    "source": "restored-nupkg",
+    "packagePath": "grpc.net.client.web/2.85.0/grpc.net.client.web.2.85.0.nupkg",
+    "nupkgSha256": "405af41ba8115efc7f43f48d1fe37a6da9459cb5bccfffdc4aad92567aa36808",
+    "nuspecPath": "Grpc.Net.Client.Web.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
     "licenseUrl": "https://licenses.nuget.org/Apache-2.0",

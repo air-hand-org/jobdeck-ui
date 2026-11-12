@@ -3,17 +3,23 @@
 ## Browser/server boundary
 
 Job pages and forms run as Blazor WebAssembly, without a SignalR circuit.
-The existing UI server remains the same-origin BFF and statically renders account
-pages. OAuth callbacks, token exchange, database-backed sessions, certificates,
-and gRPC clients stay on the server. The client project never references the
-server project or backend contracts.
+`src/client/ui.Client.csproj` contains browser code; `src/bff/ui.csproj` hosts
+WASM assets, statically rendered account pages and browser API endpoints in one
+ASP.NET Core process on the same port. OAuth callbacks, token exchange,
+database-backed sessions, certificates and backend gRPC connections stay server-side.
 
-The browser calls only the fixed `/bff/jobs` and job execution endpoints. They
-require a validated session cookie; mutations additionally require an ASP.NET
-Core antiforgery cookie/token pair (`X-CSRF-TOKEN`). The BFF validates form data
-and explicitly maps browser DTOs to/from protobuf messages. Backend job ownership
-authorization still applies using the session's access token. No generic RPC,
-method/type selection, browser bearer token, or localStorage token is exposed.
+The job list uses the existing `jobdeck.job.v1.JobService/ListJobs` contract over
+gRPC-Web (including HTTP/1.1). This is the only implemented browser RPC; all other
+methods of that generated service return UNIMPLEMENTED and do not reach the
+backend. The endpoint requires a session cookie and the ASP.NET Core antiforgery
+cookie/token pair (`X-CSRF-TOKEN`). The BFF calls the backend through the session's
+access token, preserving job ownership authorization. This trial intentionally
+references `Jobdeck.Job.Contracts` from the browser; a separate `jobdeck.bff.v1`
+contract is a later step. Backend auth contracts and credentials are not browser assets.
+
+Other job operations and execution polling retain fixed JSON `/bff/jobs`
+endpoints. Mutations require antiforgery validation and server-side form validation.
+No generic RPC forwarding, browser bearer token or localStorage token is exposed.
 Backend exception details are not returned to the browser.
 
 Reads can be retried after connection failures. Execution polling is sequential
@@ -24,7 +30,7 @@ Logout removes the server session, invalidating other tabs' cookies as well.
 
 Deployment keeps the existing UI container, origin, port and PostgreSQL session
 store. This migration requires no separate browser host, DNS, IAM or CORS rule.
-`Dockerfile` publishes both projects through `src/ui.csproj`. CI checks the
+`Dockerfile` publishes both projects through `src/bff/ui.csproj`. CI checks the
 published browser assets with `scripts/check-browser-assets.sh`; the existing
 image build/publish workflows still build the `ui` and `migrator` targets.
 

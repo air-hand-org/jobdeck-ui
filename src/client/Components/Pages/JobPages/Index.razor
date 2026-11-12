@@ -1,9 +1,9 @@
 @page "/jobs"
 @rendermode @(new InteractiveWebAssemblyRenderMode(prerender: false))
 @using Microsoft.AspNetCore.Components.QuickGrid
-@using ui.Models
+@using Jobdeck.Job.V1
 @using ui.Client
-@inject JobApiClient JobApiClient
+@inject BrowserJobClient JobApiClient
 @inject NavigationManager Navigation
 
 <PageTitle>Jobs</PageTitle>
@@ -33,7 +33,7 @@
 </QuickGrid>
 
 @code {
-  private List<JobView> _jobs = [];
+  private List<Job> _jobs = [];
 
   private string? _errorMessage;
 
@@ -42,7 +42,7 @@
   private async Task LoadJobsAsync()
   {
     _errorMessage = null;
-    var result = await JobApiClient.ListJobsAsync(pageSize: 100);
+    var result = await JobApiClient.ListJobsAsync();
     if (!result.IsSuccess)
     {
         if (result.Error!.Code == ApiErrorCode.Unauthenticated)

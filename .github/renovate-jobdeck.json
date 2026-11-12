@@ -11,7 +11,7 @@
   "branchPrefix": "renovate-jobdeck/",
   "dependencyDashboard": false,
   "enabledManagers": ["nuget"],
-  "includePaths": ["src/ui.csproj", "NuGet.Config"],
+  "includePaths": ["src/bff/ui.csproj", "src/client/ui.Client.csproj", "NuGet.Config"],
   "prConcurrentLimit": 10,
   "labels": ["dependencies"],
   "minimumReleaseAge": "3 days",

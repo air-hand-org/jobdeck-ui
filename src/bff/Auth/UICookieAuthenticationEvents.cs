@@ -9,7 +9,7 @@ public sealed class UICookieAuthenticationEvents(IUISessionStore sessions) : Coo
 {
     public override Task RedirectToLogin(RedirectContext<CookieAuthenticationOptions> context)
     {
-        if (context.Request.Path.StartsWithSegments("/bff"))
+        if (context.Request.Path.StartsWithSegments("/bff") || context.Request.Path.StartsWithSegments("/jobdeck.job.v1.JobService"))
         {
             context.Response.StatusCode = 401;
         }
@@ -22,7 +22,7 @@ public sealed class UICookieAuthenticationEvents(IUISessionStore sessions) : Coo
 
     public override Task RedirectToAccessDenied(RedirectContext<CookieAuthenticationOptions> context)
     {
-        if (context.Request.Path.StartsWithSegments("/bff"))
+        if (context.Request.Path.StartsWithSegments("/bff") || context.Request.Path.StartsWithSegments("/jobdeck.job.v1.JobService"))
         {
             context.Response.StatusCode = 403;
         }

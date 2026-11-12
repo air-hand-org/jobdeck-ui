@@ -1,7 +1,7 @@
 <Solution>
   <Folder Name="/src/">
-    <Project Path="src/ui.csproj" />
-    <Project Path="client/ui.Client.csproj" />
+    <Project Path="src/bff/ui.csproj" />
+    <Project Path="src/client/ui.Client.csproj" />
     <Project Path="tests/UI.Tests/UI.Tests.csproj" />
   </Folder>
   <Folder Name="/tools/">
