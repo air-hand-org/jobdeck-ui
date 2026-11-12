@@ -1,0 +1,73 @@
+@page "/jobs"
+@rendermode InteractiveWebAssembly
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using ui.Client
+@inject IJobPageClient PageClient
+@inject NavigationManager Navigation
+
+<PageTitle>Jobs</PageTitle>
+
+<h1>Jobs list</h1>
+
+<p>
+  <a href="/jobs/new">Create New</a>
+</p>
+
+@if (_errorMessage is not null)
+{
+  <div class="alert alert-danger" role="alert">@_errorMessage</div>
+  <button type="button" class="btn btn-secondary" @onclick="() => LoadJobsAsync()">Retry read</button>
+}
+
+<QuickGrid Class="table" Items="_jobs.AsQueryable()">
+  <PropertyColumn Property="job => job.Name" Title="Name" />
+  <PropertyColumn Property="job => job.Enabled" Title="Enabled" />
+
+  <TemplateColumn Context="job" Title="Links">
+    <a href="@($"/jobs/{job.Id}")">Details</a> |
+    <a href="@($"/jobs/{job.Id}/edit")">Edit</a> |
+    <a href="@($"/jobs/{job.Id}/delete")">Delete</a> |
+    <a href="@($"/jobs/{job.Id}/executions")">Executions</a>
+  </TemplateColumn>
+</QuickGrid>
+
+@code {
+  public sealed record JobListItem(string Id, string Name, bool Enabled);
+
+  [PersistentState]
+  public ApiResult<List<JobListItem>>? InitialJobs { get; set; }
+
+  private List<JobListItem> _jobs = [];
+
+  private string? _errorMessage;
+
+  protected override Task OnInitializedAsync() => LoadJobsAsync(restore: true);
+
+  private async Task LoadJobsAsync(bool restore = false)
+  {
+    _errorMessage = null;
+    var result = restore ? InitialJobs : null;
+    if (result is null)
+    {
+        var response = await PageClient.ListJobsAsync();
+        result = response.IsSuccess
+            ? ApiResult<List<JobListItem>>.Success(response.Value!.Jobs.Select(job => new JobListItem(job.Id, job.Name, job.Enabled)).ToList())
+            : ApiResult<List<JobListItem>>.Failure(response.Error!);
+    }
+    InitialJobs = result;
+    if (!result.IsSuccess)
+    {
+        if (result.Error!.Code == ApiErrorCode.Unauthenticated)
+        {
+            Navigation.NavigateTo("/account/login", forceLoad: true);
+        }
+        else
+        {
+            _errorMessage = result.Error!.Message;
+        }
+        return;
+    }
+
+    _jobs = result.Value!;
+  }
+}

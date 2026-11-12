@@ -162,6 +162,60 @@
     "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
   },
   {
+    "id": "Grpc.AspNetCore.Web",
+    "version": "2.85.0",
+    "source": "restored-nupkg",
+    "packagePath": "grpc.aspnetcore.web/2.85.0/grpc.aspnetcore.web.2.85.0.nupkg",
+    "nupkgSha256": "5f29cda5fa57c46fe7b7b0c3aeaa39b6d0d280c1ea53a74d81b2971aceb289e3",
+    "nuspecPath": "Grpc.AspNetCore.Web.nuspec",
+    "licenseType": "expression",
+    "license": "Apache-2.0",
+    "licenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/grpc/grpc-dotnet.git",
+      "commit": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0"
+    },
+    "status": "original-license-collected",
+    "declaredLicenseFileMissing": false,
+    "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
+    "sourceResolution": {
+      "nuspecCommit": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0",
+      "tag": null,
+      "resolvedSha": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0",
+      "provenance": "nuspec-commit",
+      "fallbackReason": null,
+      "nuspecCommitMismatch": false,
+      "tagCandidates": []
+    },
+    "documents": [],
+    "sourceDocuments": [
+      {
+        "path": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0/LICENSE",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/a7767e28a2c2f4e89a17e9efb95f75e8a82637d0/LICENSE",
+        "revision": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "bytes": 11358
+      }
+    ],
+    "sourceAttempts": [
+      {
+        "apiPath": "repos/grpc/grpc-dotnet/git/trees/a7767e28a2c2f4e89a17e9efb95f75e8a82637d0",
+        "revision": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0",
+        "httpStatus": 200,
+        "status": "root-listed"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/a7767e28a2c2f4e89a17e9efb95f75e8a82637d0/LICENSE",
+        "revision": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0",
+        "httpStatus": 200,
+        "status": "collected"
+      }
+    ],
+    "errors": [],
+    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
+  },
+  {
     "id": "Grpc.Core.Api",
     "version": "2.85.0",
     "source": "restored-nupkg",
@@ -222,6 +276,60 @@
     "packagePath": "grpc.healthcheck/2.85.0/grpc.healthcheck.2.85.0.nupkg",
     "nupkgSha256": "38b4ce0b68b0d2e615727117da50e2a03b65a0c93f7bb59a3705d95eae51a3bc",
     "nuspecPath": "Grpc.HealthCheck.nuspec",
+    "licenseType": "expression",
+    "license": "Apache-2.0",
+    "licenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/grpc/grpc-dotnet.git",
+      "commit": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0"
+    },
+    "status": "original-license-collected",
+    "declaredLicenseFileMissing": false,
+    "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
+    "sourceResolution": {
+      "nuspecCommit": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0",
+      "tag": null,
+      "resolvedSha": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0",
+      "provenance": "nuspec-commit",
+      "fallbackReason": null,
+      "nuspecCommitMismatch": false,
+      "tagCandidates": []
+    },
+    "documents": [],
+    "sourceDocuments": [
+      {
+        "path": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0/LICENSE",
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/a7767e28a2c2f4e89a17e9efb95f75e8a82637d0/LICENSE",
+        "revision": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "bytes": 11358
+      }
+    ],
+    "sourceAttempts": [
+      {
+        "apiPath": "repos/grpc/grpc-dotnet/git/trees/a7767e28a2c2f4e89a17e9efb95f75e8a82637d0",
+        "revision": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0",
+        "httpStatus": 200,
+        "status": "root-listed"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/grpc/grpc-dotnet/a7767e28a2c2f4e89a17e9efb95f75e8a82637d0/LICENSE",
+        "revision": "a7767e28a2c2f4e89a17e9efb95f75e8a82637d0",
+        "httpStatus": 200,
+        "status": "collected"
+      }
+    ],
+    "errors": [],
+    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
+  },
+  {
+    "id": "Grpc.Net.Client.Web",
+    "version": "2.85.0",
+    "source": "restored-nupkg",
+    "packagePath": "grpc.net.client.web/2.85.0/grpc.net.client.web.2.85.0.nupkg",
+    "nupkgSha256": "405af41ba8115efc7f43f48d1fe37a6da9459cb5bccfffdc4aad92567aa36808",
+    "nuspecPath": "Grpc.Net.Client.Web.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
     "licenseUrl": "https://licenses.nuget.org/Apache-2.0",
@@ -635,6 +743,152 @@
     "packagePath": "microsoft.aspnetcore.components.quickgrid/10.0.14/microsoft.aspnetcore.components.quickgrid.10.0.14.nupkg",
     "nupkgSha256": "de974c51adea79539cc64c10ec5c0ba26de89c1cff2647cd2a0af20971d5f52e",
     "nuspecPath": "Microsoft.AspNetCore.Components.QuickGrid.nuspec",
+    "licenseType": "expression",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "0427b9abbead3fa64c6655eb4290c537397131fa"
+    },
+    "status": "original-license-collected",
+    "declaredLicenseFileMissing": false,
+    "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
+    "sourceResolution": {
+      "nuspecCommit": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "tag": null,
+      "resolvedSha": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "provenance": "nuspec-commit",
+      "fallbackReason": null,
+      "nuspecCommitMismatch": false,
+      "tagCandidates": []
+    },
+    "documents": [
+      {
+        "path": "THIRD-PARTY-NOTICES.txt",
+        "sha256": "ae45a01fa3062e9d9932760cf834dae3ba23dbd75a75a2b919654f9c738d1ed9",
+        "bytes": 32160
+      }
+    ],
+    "sourceDocuments": [
+      {
+        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
+        "bytes": 1115
+      },
+      {
+        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
+        "bytes": 265586
+      }
+    ],
+    "sourceAttempts": [
+      {
+        "apiPath": "repos/dotnet/dotnet/git/trees/0427b9abbead3fa64c6655eb4290c537397131fa",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "httpStatus": 200,
+        "status": "root-listed"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "httpStatus": 200,
+        "status": "collected"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "httpStatus": 200,
+        "status": "collected"
+      }
+    ],
+    "errors": [],
+    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
+  },
+  {
+    "id": "Microsoft.AspNetCore.Components.WebAssembly.Server",
+    "version": "10.0.14",
+    "source": "restored-nupkg",
+    "packagePath": "microsoft.aspnetcore.components.webassembly.server/10.0.14/microsoft.aspnetcore.components.webassembly.server.10.0.14.nupkg",
+    "nupkgSha256": "9a1b085e99c929a5223a9dd4ca6d8ac96223dfd6534f53c20570c601478fe084",
+    "nuspecPath": "Microsoft.AspNetCore.Components.WebAssembly.Server.nuspec",
+    "licenseType": "expression",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "0427b9abbead3fa64c6655eb4290c537397131fa"
+    },
+    "status": "original-license-collected",
+    "declaredLicenseFileMissing": false,
+    "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
+    "sourceResolution": {
+      "nuspecCommit": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "tag": null,
+      "resolvedSha": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "provenance": "nuspec-commit",
+      "fallbackReason": null,
+      "nuspecCommitMismatch": false,
+      "tagCandidates": []
+    },
+    "documents": [
+      {
+        "path": "THIRD-PARTY-NOTICES.txt",
+        "sha256": "ae45a01fa3062e9d9932760cf834dae3ba23dbd75a75a2b919654f9c738d1ed9",
+        "bytes": 32160
+      }
+    ],
+    "sourceDocuments": [
+      {
+        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
+        "bytes": 1115
+      },
+      {
+        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
+        "bytes": 265586
+      }
+    ],
+    "sourceAttempts": [
+      {
+        "apiPath": "repos/dotnet/dotnet/git/trees/0427b9abbead3fa64c6655eb4290c537397131fa",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "httpStatus": 200,
+        "status": "root-listed"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "httpStatus": 200,
+        "status": "collected"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "httpStatus": 200,
+        "status": "collected"
+      }
+    ],
+    "errors": [],
+    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
+  },
+  {
+    "id": "Microsoft.AspNetCore.Components.WebAssembly",
+    "version": "10.0.14",
+    "source": "restored-nupkg",
+    "packagePath": "microsoft.aspnetcore.components.webassembly/10.0.14/microsoft.aspnetcore.components.webassembly.10.0.14.nupkg",
+    "nupkgSha256": "8fa1d8e1edead0b3274e2b4455fac7363cf998730e221cf3db834b205faeeb54",
+    "nuspecPath": "Microsoft.AspNetCore.Components.WebAssembly.nuspec",
     "licenseType": "expression",
     "license": "MIT",
     "licenseUrl": "https://licenses.nuget.org/MIT",
@@ -2793,6 +3047,79 @@
       {
         "url": "https://raw.githubusercontent.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet/8b16f418b3d587416d293e9ba34c5d310781cdb3/NOTICE.html",
         "revision": "8b16f418b3d587416d293e9ba34c5d310781cdb3",
+        "httpStatus": 200,
+        "status": "collected"
+      }
+    ],
+    "errors": [],
+    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
+  },
+  {
+    "id": "Microsoft.JSInterop.WebAssembly",
+    "version": "10.0.14",
+    "source": "restored-nupkg",
+    "packagePath": "microsoft.jsinterop.webassembly/10.0.14/microsoft.jsinterop.webassembly.10.0.14.nupkg",
+    "nupkgSha256": "f4900b930eafc9cce8595c42c06c184836a6af9df0fbfb287693901dd47b6ec2",
+    "nuspecPath": "Microsoft.JSInterop.WebAssembly.nuspec",
+    "licenseType": "expression",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "0427b9abbead3fa64c6655eb4290c537397131fa"
+    },
+    "status": "original-license-collected",
+    "declaredLicenseFileMissing": false,
+    "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
+    "sourceResolution": {
+      "nuspecCommit": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "tag": null,
+      "resolvedSha": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "provenance": "nuspec-commit",
+      "fallbackReason": null,
+      "nuspecCommitMismatch": false,
+      "tagCandidates": []
+    },
+    "documents": [
+      {
+        "path": "THIRD-PARTY-NOTICES.txt",
+        "sha256": "ae45a01fa3062e9d9932760cf834dae3ba23dbd75a75a2b919654f9c738d1ed9",
+        "bytes": 32160
+      }
+    ],
+    "sourceDocuments": [
+      {
+        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
+        "bytes": 1115
+      },
+      {
+        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
+        "bytes": 265586
+      }
+    ],
+    "sourceAttempts": [
+      {
+        "apiPath": "repos/dotnet/dotnet/git/trees/0427b9abbead3fa64c6655eb4290c537397131fa",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "httpStatus": 200,
+        "status": "root-listed"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "httpStatus": 200,
+        "status": "collected"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
+        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
         "httpStatus": 200,
         "status": "collected"
       }

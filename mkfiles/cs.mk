@@ -11,7 +11,7 @@ cs-restore:
 cs-build: cs-restore
 	@cd $(CS_MK_DIR)../ && \
 	    dotnet build $(CS_SLN) --no-restore --warnaserror \
-		&& dotnet ef migrations bundle --project src/ui.csproj --self-contained -r linux-x64 --force --output src/bin/migrator
+		&& dotnet ef migrations bundle --project src/bff/ui.csproj --self-contained -r linux-x64 --force --output src/bff/bin/migrator
 
 .PHONY: cs-test
 cs-test: cs-build
@@ -22,7 +22,7 @@ cs-test: cs-build
 cs-lint:
 	@cd $(CS_MK_DIR)../ && \
 	    dotnet format --no-restore --verify-no-changes \
-		&& dotnet ef migrations --project src/ui.csproj has-pending-model-changes
+		&& dotnet ef migrations --project src/bff/ui.csproj has-pending-model-changes
 
 .PHONY: cs-fmt
 cs-fmt:
