@@ -1,8 +1,8 @@
 @page "/jobs/{JobId}/delete"
-@rendermode @(new InteractiveWebAssemblyRenderMode(prerender: false))
+@rendermode InteractiveWebAssembly
 @using ui.Models
 @using ui.Client
-@inject JobApiClient JobApiClient
+@inject IJobPageClient PageClient
 @inject ILogger<Delete> Logger
 @inject NavigationManager NavigationManager
 
@@ -41,21 +41,25 @@ else
         <div class="alert alert-danger">@_errorMessage</div>
     }
 
-    <button class="btn btn-danger" disabled="@_submitted" @onclick="DeleteJob">Delete</button>
+    <button class="btn btn-danger" disabled="@(!_isInteractive || _submitted)" @onclick="DeleteJob">Delete</button>
 }
 
 @code {
     [Parameter]
     public string JobId {get; set;} = "";
 
+    [PersistentState]
+    public ApiResult<JobView>? InitialJob { get; set; }
+
     private JobView? _job;
+    private bool _isInteractive;
     private bool _submitted;
 
     private string? _errorMessage;
 
     protected override async Task OnInitializedAsync()
     {
-        var result = await JobApiClient.GetJobAsync(JobId);
+        var result = InitialJob ??= await PageClient.GetJobAsync(JobId);
         if (!result.IsSuccess)
         {
             if (result.Error!.Code == ApiErrorCode.Unauthenticated)
@@ -69,6 +73,15 @@ else
         _job = result.Value!;
     }
 
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            _isInteractive = true;
+            StateHasChanged();
+        }
+    }
+
     private async Task DeleteJob()
     {
         if (_submitted)
@@ -77,7 +90,7 @@ else
         }
         _submitted = true;
         _errorMessage = null;
-        var result = await JobApiClient.DeleteJobAsync(JobId);
+        var result = await PageClient.DeleteJobAsync(JobId);
         if (!result.IsSuccess)
         {
             if (result.Error!.Code == ApiErrorCode.Unauthenticated)

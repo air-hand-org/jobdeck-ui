@@ -1,10 +1,9 @@
 @page "/jobs/{JobId}/executions"
-@rendermode @(new InteractiveWebAssemblyRenderMode(prerender: false))
+@rendermode InteractiveWebAssembly
 @using Microsoft.AspNetCore.Components.QuickGrid
 @using ui.Models
 @using ui.Client
-@inject JobApiClient JobApiClient
-@inject ExecutionApiClient ExecutionApiClient
+@inject IJobPageClient PageClient
 @inject NavigationManager NavigationManager
 @inject ILogger<Executions> Logger
 @implements IAsyncDisposable
@@ -41,6 +40,12 @@
   [Parameter]
   public string JobId {get; set;} = "";
 
+  [PersistentState]
+  public ApiResult<JobView>? InitialJob { get; set; }
+
+  [PersistentState]
+  public ApiResult<ListExecutionsResult>? InitialExecutions { get; set; }
+
   private JobView? _job;
   private List<ExecutionView> _execs = [];
   private string? _errorMessage;
@@ -53,7 +58,7 @@
 
   protected override async Task OnInitializedAsync()
   {
-    var result = await JobApiClient.GetJobAsync(JobId, _cts.Token);
+    var result = InitialJob ??= await PageClient.GetJobAsync(JobId, _cts.Token);
     if (!result.IsSuccess)
     {
         if (result.Error!.Code == ApiErrorCode.Unauthenticated)
@@ -66,7 +71,7 @@
     }
 
     _job = result.Value!;
-    await LoadExecutionsAsync();
+    await LoadExecutionsAsync(restore: true);
   }
 
   protected override void OnAfterRender(bool firstRender)
@@ -118,11 +123,12 @@
     _cts.Dispose();
   }
 
-  private async Task LoadExecutionsAsync()
+  private async Task LoadExecutionsAsync(bool restore = false)
   {
     _errorMessage = null;
 
-    var result = await ExecutionApiClient.ListExecutionsAsync(jobId: JobId, pageSize: 100, cancellationToken: _cts.Token);
+    var result = (restore ? InitialExecutions : null) ?? await PageClient.ListExecutionsAsync(jobId: JobId, pageSize: 100, cancellationToken: _cts.Token);
+    InitialExecutions = result;
     if (!result.IsSuccess)
     {
         if (result.Error!.Code == ApiErrorCode.Unauthenticated)
@@ -159,7 +165,7 @@
     }
     _requesting = true;
     _errorMessage = null;
-    var result = await ExecutionApiClient.DoExecutionAsync(JobId, _cts.Token);
+    var result = await PageClient.DoExecutionAsync(JobId, _cts.Token);
     _requesting = false;
     _uncertain = result.Error?.Code == ApiErrorCode.Internal;
     if (!result.IsSuccess)

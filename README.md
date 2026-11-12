@@ -8,6 +8,15 @@ WASM assets, statically rendered account pages and browser API endpoints in one
 ASP.NET Core process on the same port. OAuth callbacks, token exchange,
 database-backed sessions, certificates and backend gRPC connections stay server-side.
 
+Job pages prerender authenticated initial HTML. A request-scoped read-only client
+calls the existing backend clients directly, without self-HTTP requests. Public
+page data is transferred to WASM via component `[PersistentState]` properties,
+so hydration does not repeat the initial reads. The list transfers only its
+visible ID/name/enabled fields; forms and execution rows transfer their existing
+browser-facing models, never session tokens or backend credentials. Job-page
+responses use `Cache-Control: no-store`. Polling and mutation controls start only
+after WASM becomes interactive; there is no Circuit or per-connection server UI state.
+
 The job list uses the existing `jobdeck.job.v1.JobService/ListJobs` contract over
 gRPC-Web (including HTTP/1.1). This is the only implemented browser RPC; all other
 methods of that generated service return UNIMPLEMENTED and do not reach the

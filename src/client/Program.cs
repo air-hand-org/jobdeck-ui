@@ -14,6 +14,7 @@ builder.Services.AddScoped(_ => GrpcChannel.ForAddress(builder.HostEnvironment.B
 }));
 builder.Services.AddScoped(provider => new JobService.JobServiceClient(provider.GetRequiredService<GrpcChannel>()));
 builder.Services.AddScoped<BrowserJobClient>();
+builder.Services.AddScoped<IJobPageClient, BrowserJobPageClient>();
 builder.Services.AddScoped<BffTransport>();
 builder.Services.AddScoped<JobApiClient>();
 builder.Services.AddScoped<ExecutionApiClient>();

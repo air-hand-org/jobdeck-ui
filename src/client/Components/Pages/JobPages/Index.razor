@@ -1,9 +1,8 @@
 @page "/jobs"
-@rendermode @(new InteractiveWebAssemblyRenderMode(prerender: false))
+@rendermode InteractiveWebAssembly
 @using Microsoft.AspNetCore.Components.QuickGrid
-@using Jobdeck.Job.V1
 @using ui.Client
-@inject BrowserJobClient JobApiClient
+@inject IJobPageClient PageClient
 @inject NavigationManager Navigation
 
 <PageTitle>Jobs</PageTitle>
@@ -17,7 +16,7 @@
 @if (_errorMessage is not null)
 {
   <div class="alert alert-danger" role="alert">@_errorMessage</div>
-  <button type="button" class="btn btn-secondary" @onclick="LoadJobsAsync">Retry read</button>
+  <button type="button" class="btn btn-secondary" @onclick="() => LoadJobsAsync()">Retry read</button>
 }
 
 <QuickGrid Class="table" Items="_jobs.AsQueryable()">
@@ -33,16 +32,29 @@
 </QuickGrid>
 
 @code {
-  private List<Job> _jobs = [];
+  public sealed record JobListItem(string Id, string Name, bool Enabled);
+
+  [PersistentState]
+  public ApiResult<List<JobListItem>>? InitialJobs { get; set; }
+
+  private List<JobListItem> _jobs = [];
 
   private string? _errorMessage;
 
-  protected override Task OnInitializedAsync() => LoadJobsAsync();
+  protected override Task OnInitializedAsync() => LoadJobsAsync(restore: true);
 
-  private async Task LoadJobsAsync()
+  private async Task LoadJobsAsync(bool restore = false)
   {
     _errorMessage = null;
-    var result = await JobApiClient.ListJobsAsync();
+    var result = restore ? InitialJobs : null;
+    if (result is null)
+    {
+        var response = await PageClient.ListJobsAsync();
+        result = response.IsSuccess
+            ? ApiResult<List<JobListItem>>.Success(response.Value!.Jobs.Select(job => new JobListItem(job.Id, job.Name, job.Enabled)).ToList())
+            : ApiResult<List<JobListItem>>.Failure(response.Error!);
+    }
+    InitialJobs = result;
     if (!result.IsSuccess)
     {
         if (result.Error!.Code == ApiErrorCode.Unauthenticated)
@@ -56,6 +68,6 @@
         return;
     }
 
-    _jobs = [.. result.Value!.Jobs];
+    _jobs = result.Value!;
   }
 }

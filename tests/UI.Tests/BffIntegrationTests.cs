@@ -137,15 +137,44 @@ public sealed class BffIntegrationTests
     }
 
     [Fact]
-    public async Task JobPageBootsWasmWithoutServerPrerenderingOrACircuit()
+    public async Task JobPagePrerendersDataAndBootsWasmWithoutACircuit()
     {
         await using var host = await Host.Start();
         using var client = await host.SignIn();
         var html = await client.GetStringAsync("jobs", TestContext.Current.CancellationToken);
         Assert.Contains("webassembly", html);
+        Assert.Contains("example", html);
+        Assert.Contains("Blazor-WebAssembly-Component-State:", html);
+        Assert.DoesNotContain("owner-id", html);
         Assert.DoesNotContain("server-only-token", html);
         Assert.DoesNotContain("<!--Blazor:{\"type\":\"server\"", html);
-        Assert.Equal(0, host.Rpc.Calls);
+        Assert.Equal(1, host.Rpc.Calls);
+        AssertSafePrerenderState(html);
+    }
+
+    [Theory]
+    [InlineData("jobs/new", "New Job", 0)]
+    [InlineData("jobs/job-id", "Job detail", 0)]
+    [InlineData("jobs/job-id/edit", "value=\"example\"", 1)]
+    [InlineData("jobs/job-id/delete", "example", 1)]
+    [InlineData("jobs/job-id/executions", "execution-id", 2)]
+    public async Task JobPagesIncludeInitialHtmlBeforeWasmLoads(string path, string content, int reads)
+    {
+        await using var host = await Host.Start();
+        using var client = await host.SignIn();
+        using var response = await client.GetAsync(path, TestContext.Current.CancellationToken);
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        Assert.True(response.Headers.CacheControl?.NoStore);
+        var html = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
+        Assert.Contains(content, html);
+        Assert.Contains("webassembly", html);
+        Assert.DoesNotContain("server-only-token", html);
+        Assert.DoesNotContain("owner-id", html);
+        Assert.Equal(reads, host.Rpc.Calls);
+        if (reads > 0)
+        {
+            AssertSafePrerenderState(html);
+        }
     }
 
     [Fact]
@@ -208,6 +237,27 @@ public sealed class BffIntegrationTests
         Assert.Equal(0, host.Rpc.Calls);
     }
 
+    [Fact]
+    public async Task RevokedSessionCannotPrerenderJobData()
+    {
+        await using var host = await Host.Start();
+        using var client = await host.SignIn();
+        await host.Sessions.RemoveSessionAsync(host.SessionId, TestContext.Current.CancellationToken);
+        using var response = await client.GetAsync("jobs", TestContext.Current.CancellationToken);
+        Assert.Equal(HttpStatusCode.Redirect, response.StatusCode);
+        Assert.Equal(0, host.Rpc.Calls);
+    }
+
+    private static void AssertSafePrerenderState(string html)
+    {
+        var match = System.Text.RegularExpressions.Regex.Match(html, "<!--Blazor-WebAssembly-Component-State:([A-Za-z0-9+/=]+)-->");
+        Assert.True(match.Success);
+        var state = System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(match.Groups[1].Value));
+        Assert.DoesNotContain("server-only-token", state);
+        Assert.DoesNotContain("owner-id", state);
+        Assert.DoesNotContain("Authorization", state);
+    }
+
     private static HttpJobFormModel ValidForm() => new()
     {
         Name = "example",
@@ -262,6 +312,7 @@ public sealed class BffIntegrationTests
             builder.Services.AddSingleton(new JobService.JobServiceClient(rpc));
             builder.Services.AddSingleton(new ExecutionService.ExecutionServiceClient(rpc));
             builder.Services.AddScoped<BackendJobClient>();
+            builder.Services.AddScoped<IJobPageClient, PrerenderJobPageClient>();
             builder.Services.AddScoped<BackendExecutionClient>();
             builder.Services.AddSingleton(new Jobdeck.Auth.V1.AuthService.AuthServiceClient(rpc));
             builder.Services.AddScoped<AuthApiClient>();
@@ -269,6 +320,7 @@ public sealed class BffIntegrationTests
             var app = builder.Build();
             app.UseRouting();
             app.UseGrpcWeb();
+            app.UsePrivateJobPages();
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseAntiforgery();

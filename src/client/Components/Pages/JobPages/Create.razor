@@ -1,8 +1,8 @@
 @page "/jobs/new"
-@rendermode @(new InteractiveWebAssemblyRenderMode(prerender: false))
+@rendermode InteractiveWebAssembly
 @using ui.Models
 @using ui.Client
-@inject JobApiClient JobApiClient
+@inject IJobPageClient PageClient
 @inject NavigationManager NavigationManager
 
 <PageTitle>New</PageTitle>
@@ -27,7 +27,7 @@
   {
     _errorMessage = null;
 
-    var result = await JobApiClient.CreateJobAsync(_model);
+    var result = await PageClient.CreateJobAsync(_model);
     if (!result.IsSuccess)
     {
         if (result.Error!.Code == ApiErrorCode.Unauthenticated)

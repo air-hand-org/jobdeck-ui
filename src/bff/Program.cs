@@ -76,6 +76,7 @@ builder.Services.AddGrpcClient<AuthService.AuthServiceClient>(options =>
 );
 builder.Services.AddGrpc();
 builder.Services.AddScoped<BackendJobClient>();
+builder.Services.AddScoped<IJobPageClient, PrerenderJobPageClient>();
 builder.Services.AddScoped<BackendExecutionClient>();
 builder.Services.AddScoped<AuthApiClient>();
 builder.Services.AddScoped<UICookieAuthenticationEvents>();
@@ -235,6 +236,7 @@ app.UseHttpsRedirection();
 
 app.UseRouting();
 app.UseGrpcWeb();
+app.UsePrivateJobPages();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseAntiforgery();
