@@ -4709,10 +4709,10 @@
   },
   {
     "id": "Quartz.Extensions.Hosting",
-    "version": "4.7.2",
+    "version": "4.7.3",
     "source": "restored-nupkg",
-    "packagePath": "quartz.extensions.hosting/4.7.2/quartz.extensions.hosting.4.7.2.nupkg",
-    "nupkgSha256": "3a0d37137c373b6e4197efaba654457dd6fb599a8b688c6767b7954660903321",
+    "packagePath": "quartz.extensions.hosting/4.7.3/quartz.extensions.hosting.4.7.3.nupkg",
+    "nupkgSha256": "63f5c2a57c48c5bffe9e5b27db9ce4b0eb630e84744f293c416918b3297ed57e",
     "nuspecPath": "Quartz.Extensions.Hosting.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4720,15 +4720,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/quartznet/quartznet",
-      "commit": "b3989f8373f675667a393401bfb9656c014879b3"
+      "commit": "f002ad0535fe809cf2c5402f2bc2899a28917daf"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "b3989f8373f675667a393401bfb9656c014879b3",
+      "nuspecCommit": "f002ad0535fe809cf2c5402f2bc2899a28917daf",
       "tag": null,
-      "resolvedSha": "b3989f8373f675667a393401bfb9656c014879b3",
+      "resolvedSha": "f002ad0535fe809cf2c5402f2bc2899a28917daf",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -4737,23 +4737,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "b3989f8373f675667a393401bfb9656c014879b3/license.txt",
-        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/license.txt",
-        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "path": "f002ad0535fe809cf2c5402f2bc2899a28917daf/license.txt",
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/f002ad0535fe809cf2c5402f2bc2899a28917daf/license.txt",
+        "revision": "f002ad0535fe809cf2c5402f2bc2899a28917daf",
         "sha256": "00e9a450180b721349dc5519f3ed9e98e4f1d38e5d212ca9f9fcb1ec1103b0bf",
         "bytes": 11341
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/quartznet/quartznet/git/trees/b3989f8373f675667a393401bfb9656c014879b3",
-        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "apiPath": "repos/quartznet/quartznet/git/trees/f002ad0535fe809cf2c5402f2bc2899a28917daf",
+        "revision": "f002ad0535fe809cf2c5402f2bc2899a28917daf",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/license.txt",
-        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/f002ad0535fe809cf2c5402f2bc2899a28917daf/license.txt",
+        "revision": "f002ad0535fe809cf2c5402f2bc2899a28917daf",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -4763,10 +4763,10 @@
   },
   {
     "id": "Quartz",
-    "version": "4.7.2",
+    "version": "4.7.3",
     "source": "restored-nupkg",
-    "packagePath": "quartz/4.7.2/quartz.4.7.2.nupkg",
-    "nupkgSha256": "39285d543a2b3d08808f76b7648883996f23e273bfc59e64f0bd45cfbd14a5c2",
+    "packagePath": "quartz/4.7.3/quartz.4.7.3.nupkg",
+    "nupkgSha256": "dcc586f375239fb6e3a11ade93e0e11a53655244d6a170db1173ba3130c37d46",
     "nuspecPath": "Quartz.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4774,15 +4774,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/quartznet/quartznet",
-      "commit": "b3989f8373f675667a393401bfb9656c014879b3"
+      "commit": "f002ad0535fe809cf2c5402f2bc2899a28917daf"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "b3989f8373f675667a393401bfb9656c014879b3",
+      "nuspecCommit": "f002ad0535fe809cf2c5402f2bc2899a28917daf",
       "tag": null,
-      "resolvedSha": "b3989f8373f675667a393401bfb9656c014879b3",
+      "resolvedSha": "f002ad0535fe809cf2c5402f2bc2899a28917daf",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -4791,23 +4791,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "b3989f8373f675667a393401bfb9656c014879b3/license.txt",
-        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/license.txt",
-        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "path": "f002ad0535fe809cf2c5402f2bc2899a28917daf/license.txt",
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/f002ad0535fe809cf2c5402f2bc2899a28917daf/license.txt",
+        "revision": "f002ad0535fe809cf2c5402f2bc2899a28917daf",
         "sha256": "00e9a450180b721349dc5519f3ed9e98e4f1d38e5d212ca9f9fcb1ec1103b0bf",
         "bytes": 11341
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/quartznet/quartznet/git/trees/b3989f8373f675667a393401bfb9656c014879b3",
-        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "apiPath": "repos/quartznet/quartznet/git/trees/f002ad0535fe809cf2c5402f2bc2899a28917daf",
+        "revision": "f002ad0535fe809cf2c5402f2bc2899a28917daf",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/license.txt",
-        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/f002ad0535fe809cf2c5402f2bc2899a28917daf/license.txt",
+        "revision": "f002ad0535fe809cf2c5402f2bc2899a28917daf",
         "httpStatus": 200,
         "status": "collected"
       }
