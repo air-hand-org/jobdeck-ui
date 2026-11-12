@@ -324,12 +324,12 @@
     "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
   },
   {
-    "id": "Grpc.Net.Client",
+    "id": "Grpc.Net.Client.Web",
     "version": "2.85.0",
     "source": "restored-nupkg",
-    "packagePath": "grpc.net.client/2.85.0/grpc.net.client.2.85.0.nupkg",
-    "nupkgSha256": "322d150cd394151d611464d2b8c6186c2fe2a875565ab6048cb18fb0d289a081",
-    "nuspecPath": "Grpc.Net.Client.nuspec",
+    "packagePath": "grpc.net.client.web/2.85.0/grpc.net.client.web.2.85.0.nupkg",
+    "nupkgSha256": "405af41ba8115efc7f43f48d1fe37a6da9459cb5bccfffdc4aad92567aa36808",
+    "nuspecPath": "Grpc.Net.Client.Web.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
     "licenseUrl": "https://licenses.nuget.org/Apache-2.0",
@@ -378,12 +378,12 @@
     "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
   },
   {
-    "id": "Grpc.Net.Client.Web",
+    "id": "Grpc.Net.Client",
     "version": "2.85.0",
     "source": "restored-nupkg",
-    "packagePath": "grpc.net.client.web/2.85.0/grpc.net.client.web.2.85.0.nupkg",
-    "nupkgSha256": "405af41ba8115efc7f43f48d1fe37a6da9459cb5bccfffdc4aad92567aa36808",
-    "nuspecPath": "Grpc.Net.Client.Web.nuspec",
+    "packagePath": "grpc.net.client/2.85.0/grpc.net.client.2.85.0.nupkg",
+    "nupkgSha256": "322d150cd394151d611464d2b8c6186c2fe2a875565ab6048cb18fb0d289a081",
+    "nuspecPath": "Grpc.Net.Client.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
     "licenseUrl": "https://licenses.nuget.org/Apache-2.0",
