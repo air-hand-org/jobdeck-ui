@@ -1310,10 +1310,10 @@
   },
   {
     "id": "Microsoft.EntityFrameworkCore.Abstractions",
-    "version": "10.0.14",
+    "version": "10.0.15",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.entityframeworkcore.abstractions/10.0.14/microsoft.entityframeworkcore.abstractions.10.0.14.nupkg",
-    "nupkgSha256": "30d8a3312b020a4b010d03df305bc454565b991254a19cb8975d15fbcd98b26a",
+    "packagePath": "microsoft.entityframeworkcore.abstractions/10.0.15/microsoft.entityframeworkcore.abstractions.10.0.15.nupkg",
+    "nupkgSha256": "69c0298bec2a031223696630ef224464d5872130023f229bf57e75e7d4224284",
     "nuspecPath": "Microsoft.EntityFrameworkCore.Abstractions.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -1321,15 +1321,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "0427b9abbead3fa64c6655eb4290c537397131fa"
+      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "tag": null,
-      "resolvedSha": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1338,36 +1338,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
         "bytes": 265586
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/0427b9abbead3fa64c6655eb4290c537397131fa",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -1377,10 +1377,10 @@
   },
   {
     "id": "Microsoft.EntityFrameworkCore.Analyzers",
-    "version": "10.0.14",
+    "version": "10.0.15",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.entityframeworkcore.analyzers/10.0.14/microsoft.entityframeworkcore.analyzers.10.0.14.nupkg",
-    "nupkgSha256": "84978f2cc4d108110b99980c6a260ad460bc9c9ce948338b1cb0eb248865b519",
+    "packagePath": "microsoft.entityframeworkcore.analyzers/10.0.15/microsoft.entityframeworkcore.analyzers.10.0.15.nupkg",
+    "nupkgSha256": "c07517561e90686407304ec881407a6a838354deb9ca44d879b528803abdea47",
     "nuspecPath": "Microsoft.EntityFrameworkCore.Analyzers.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -1388,15 +1388,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "0427b9abbead3fa64c6655eb4290c537397131fa"
+      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "tag": null,
-      "resolvedSha": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1405,36 +1405,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
         "bytes": 265586
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/0427b9abbead3fa64c6655eb4290c537397131fa",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -1444,10 +1444,10 @@
   },
   {
     "id": "Microsoft.EntityFrameworkCore.Design",
-    "version": "10.0.14",
+    "version": "10.0.15",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.entityframeworkcore.design/10.0.14/microsoft.entityframeworkcore.design.10.0.14.nupkg",
-    "nupkgSha256": "fcf1d301327f61abcb8794ab849de777b59272db5462c4d4e703956b689b3de6",
+    "packagePath": "microsoft.entityframeworkcore.design/10.0.15/microsoft.entityframeworkcore.design.10.0.15.nupkg",
+    "nupkgSha256": "cfad7d43c9ee099f8e519013686762286b2249d4543cfcaf524cc744e807d950",
     "nuspecPath": "Microsoft.EntityFrameworkCore.Design.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -1455,15 +1455,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "0427b9abbead3fa64c6655eb4290c537397131fa"
+      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "tag": null,
-      "resolvedSha": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1472,36 +1472,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
         "bytes": 265586
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/0427b9abbead3fa64c6655eb4290c537397131fa",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -1511,10 +1511,10 @@
   },
   {
     "id": "Microsoft.EntityFrameworkCore.Relational",
-    "version": "10.0.14",
+    "version": "10.0.15",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.entityframeworkcore.relational/10.0.14/microsoft.entityframeworkcore.relational.10.0.14.nupkg",
-    "nupkgSha256": "45ae7a498e8cec0349b52d3b343ef64f8ad0456804124209743f4ea30e1863bd",
+    "packagePath": "microsoft.entityframeworkcore.relational/10.0.15/microsoft.entityframeworkcore.relational.10.0.15.nupkg",
+    "nupkgSha256": "04f267c9fa04ffc95769abdfdc963c0dea061a9d47e87d84a8a96f1f0301e421",
     "nuspecPath": "Microsoft.EntityFrameworkCore.Relational.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -1522,15 +1522,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "0427b9abbead3fa64c6655eb4290c537397131fa"
+      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "tag": null,
-      "resolvedSha": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1539,36 +1539,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
         "bytes": 265586
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/0427b9abbead3fa64c6655eb4290c537397131fa",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -1578,10 +1578,10 @@
   },
   {
     "id": "Microsoft.EntityFrameworkCore",
-    "version": "10.0.14",
+    "version": "10.0.15",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.entityframeworkcore/10.0.14/microsoft.entityframeworkcore.10.0.14.nupkg",
-    "nupkgSha256": "2129fb09cedb17c1d49529e2051e5c5ac25ede7852e16bd2265be4d16a1566e5",
+    "packagePath": "microsoft.entityframeworkcore/10.0.15/microsoft.entityframeworkcore.10.0.15.nupkg",
+    "nupkgSha256": "b8290df4495eca015bcfed8a5c8fe0518df0484ceceac4c1e8a83962811ef8ae",
     "nuspecPath": "Microsoft.EntityFrameworkCore.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -1589,15 +1589,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "0427b9abbead3fa64c6655eb4290c537397131fa"
+      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "tag": null,
-      "resolvedSha": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1606,36 +1606,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
         "bytes": 265586
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/0427b9abbead3fa64c6655eb4290c537397131fa",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -1846,10 +1846,10 @@
   },
   {
     "id": "Microsoft.Extensions.DependencyModel",
-    "version": "10.0.14",
+    "version": "10.0.15",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.extensions.dependencymodel/10.0.14/microsoft.extensions.dependencymodel.10.0.14.nupkg",
-    "nupkgSha256": "d8edfdf820010f13c7dfe9e56f8fba78cbae6ec41a6e9ff2d5457f1226bde621",
+    "packagePath": "microsoft.extensions.dependencymodel/10.0.15/microsoft.extensions.dependencymodel.10.0.15.nupkg",
+    "nupkgSha256": "2df05d82ee2eee2a5caa6af1ad4c63e6e71722fd2b342ea698879e71fe318051",
     "nuspecPath": "Microsoft.Extensions.DependencyModel.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -1857,15 +1857,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "0427b9abbead3fa64c6655eb4290c537397131fa"
+      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "tag": null,
-      "resolvedSha": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1880,36 +1880,36 @@
     ],
     "sourceDocuments": [
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
         "bytes": 265586
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/0427b9abbead3fa64c6655eb4290c537397131fa",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       }
