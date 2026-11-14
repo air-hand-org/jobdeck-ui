@@ -4166,10 +4166,10 @@
   },
   {
     "id": "OpenTelemetry.Api.ProviderBuilderExtensions",
-    "version": "1.20.1",
+    "version": "1.21.0",
     "source": "restored-nupkg",
-    "packagePath": "opentelemetry.api.providerbuilderextensions/1.20.1/opentelemetry.api.providerbuilderextensions.1.20.1.nupkg",
-    "nupkgSha256": "ccd63762c4688c8e68ec459a4dc55b24b0564e0904b254e950df99282713faa5",
+    "packagePath": "opentelemetry.api.providerbuilderextensions/1.21.0/opentelemetry.api.providerbuilderextensions.1.21.0.nupkg",
+    "nupkgSha256": "86a1ec299c715543474f57b5bdfa908c710c1bbea2cc96c418ba2c3b120c4801",
     "nuspecPath": "OpenTelemetry.Api.ProviderBuilderExtensions.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4177,7 +4177,7 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/open-telemetry/opentelemetry-dotnet",
-      "commit": "0bfd4c350f670dbc819b39bd57fac4c3ad5ba238"
+      "commit": "51c6db11dadde6ed5019af4f42332860f1a5d8da"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
@@ -4202,10 +4202,10 @@
   },
   {
     "id": "OpenTelemetry.Api",
-    "version": "1.20.1",
+    "version": "1.21.0",
     "source": "restored-nupkg",
-    "packagePath": "opentelemetry.api/1.20.1/opentelemetry.api.1.20.1.nupkg",
-    "nupkgSha256": "0bb52964b123c2bdd943115c91ca9a2be0102464d6961f0141216c8c6fdca2ee",
+    "packagePath": "opentelemetry.api/1.21.0/opentelemetry.api.1.21.0.nupkg",
+    "nupkgSha256": "61499c30deafd7a4566dc1ec033637ff20ae4e1d1a7793dbb07bf35757f6cac1",
     "nuspecPath": "OpenTelemetry.Api.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4213,7 +4213,7 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/open-telemetry/opentelemetry-dotnet",
-      "commit": "0bfd4c350f670dbc819b39bd57fac4c3ad5ba238"
+      "commit": "51c6db11dadde6ed5019af4f42332860f1a5d8da"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
@@ -4238,10 +4238,10 @@
   },
   {
     "id": "OpenTelemetry.Exporter.OpenTelemetryProtocol",
-    "version": "1.20.1",
+    "version": "1.21.0",
     "source": "restored-nupkg",
-    "packagePath": "opentelemetry.exporter.opentelemetryprotocol/1.20.1/opentelemetry.exporter.opentelemetryprotocol.1.20.1.nupkg",
-    "nupkgSha256": "0507255950040afd08e4aa5c4fb5e85e5702dcb571ecd6627b4c67e0b3f0bd34",
+    "packagePath": "opentelemetry.exporter.opentelemetryprotocol/1.21.0/opentelemetry.exporter.opentelemetryprotocol.1.21.0.nupkg",
+    "nupkgSha256": "bacf3066ad75cd9358a0c7185b67bea6fe3d1b08f06575005b2b0be7f3becb65",
     "nuspecPath": "OpenTelemetry.Exporter.OpenTelemetryProtocol.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4249,7 +4249,7 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/open-telemetry/opentelemetry-dotnet",
-      "commit": "0bfd4c350f670dbc819b39bd57fac4c3ad5ba238"
+      "commit": "51c6db11dadde6ed5019af4f42332860f1a5d8da"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
@@ -4274,10 +4274,10 @@
   },
   {
     "id": "OpenTelemetry.Extensions.Hosting",
-    "version": "1.20.1",
+    "version": "1.21.0",
     "source": "restored-nupkg",
-    "packagePath": "opentelemetry.extensions.hosting/1.20.1/opentelemetry.extensions.hosting.1.20.1.nupkg",
-    "nupkgSha256": "cb656c21130f353d82a7b211890dd7c29d41c48ac512006e66ee77ba26b9aa16",
+    "packagePath": "opentelemetry.extensions.hosting/1.21.0/opentelemetry.extensions.hosting.1.21.0.nupkg",
+    "nupkgSha256": "f2458d952f058aba6bcecaba1a3b12feb42c7413e0ba899f34fcba43974698e0",
     "nuspecPath": "OpenTelemetry.Extensions.Hosting.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4285,7 +4285,7 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/open-telemetry/opentelemetry-dotnet",
-      "commit": "0bfd4c350f670dbc819b39bd57fac4c3ad5ba238"
+      "commit": "51c6db11dadde6ed5019af4f42332860f1a5d8da"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
@@ -4403,10 +4403,10 @@
   },
   {
     "id": "OpenTelemetry",
-    "version": "1.20.1",
+    "version": "1.21.0",
     "source": "restored-nupkg",
-    "packagePath": "opentelemetry/1.20.1/opentelemetry.1.20.1.nupkg",
-    "nupkgSha256": "ad27a8c7a882339c675cc1c89b68bee7c1bfa0092e26a05963ebad97b3c14a04",
+    "packagePath": "opentelemetry/1.21.0/opentelemetry.1.21.0.nupkg",
+    "nupkgSha256": "4d9f4d2ab0304dc3cbc43dd3385ea52a4eeab7631b1a7b015e957e9082ec50fb",
     "nuspecPath": "OpenTelemetry.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4414,7 +4414,7 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/open-telemetry/opentelemetry-dotnet",
-      "commit": "0bfd4c350f670dbc819b39bd57fac4c3ad5ba238"
+      "commit": "51c6db11dadde6ed5019af4f42332860f1a5d8da"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
@@ -5096,6 +5096,79 @@
     ],
     "sourceDocuments": [],
     "sourceAttempts": [],
+    "errors": [],
+    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
+  },
+  {
+    "id": "System.Diagnostics.DiagnosticSource",
+    "version": "11.0.0",
+    "source": "restored-nupkg",
+    "packagePath": "system.diagnostics.diagnosticsource/11.0.0/system.diagnostics.diagnosticsource.11.0.0.nupkg",
+    "nupkgSha256": "16e694e83a96da9e27e15038b10c0a37a87605433287cb464fc4d1f9e4597647",
+    "nuspecPath": "System.Diagnostics.DiagnosticSource.nuspec",
+    "licenseType": "expression",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f"
+    },
+    "status": "original-license-collected",
+    "declaredLicenseFileMissing": false,
+    "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
+    "sourceResolution": {
+      "nuspecCommit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+      "tag": null,
+      "resolvedSha": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+      "provenance": "nuspec-commit",
+      "fallbackReason": null,
+      "nuspecCommitMismatch": false,
+      "tagCandidates": []
+    },
+    "documents": [
+      {
+        "path": "THIRD-PARTY-NOTICES.TXT",
+        "sha256": "e3a241a6cf35167d82bf7e081de9641c59d10d2dbd8824409817bed31980d407",
+        "bytes": 93617
+      }
+    ],
+    "sourceDocuments": [
+      {
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
+        "bytes": 1115
+      },
+      {
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "sha256": "17e8fa75862e48d94aaa117cce990ff2c8bc034ed4514ed98e5650406189d15e",
+        "bytes": 794300
+      }
+    ],
+    "sourceAttempts": [
+      {
+        "apiPath": "repos/dotnet/dotnet/git/trees/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "httpStatus": 200,
+        "status": "root-listed"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "httpStatus": 200,
+        "status": "collected"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "httpStatus": 200,
+        "status": "collected"
+      }
+    ],
     "errors": [],
     "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
   }
