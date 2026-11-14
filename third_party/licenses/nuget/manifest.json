@@ -4817,10 +4817,10 @@
   },
   {
     "id": "StyleCop.Analyzers",
-    "version": "1.3.177-beta",
+    "version": "1.3.180",
     "source": "restored-nupkg",
-    "packagePath": "stylecop.analyzers/1.3.177-beta/stylecop.analyzers.1.3.177-beta.nupkg",
-    "nupkgSha256": "e2b2d1cc92c95bb35bcfce2a7f4b2289ae437992a696dd72c40572da6cec2a7a",
+    "packagePath": "stylecop.analyzers/1.3.180/stylecop.analyzers.1.3.180.nupkg",
+    "nupkgSha256": "f821b6ff75d41e8264b3879bc108b37a9e20d1c95a75b6a2dccbb0d6d7f88cea",
     "nuspecPath": "StyleCop.Analyzers.nuspec",
     "licenseType": "expression",
     "license": "MIT",
