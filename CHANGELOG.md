@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.5.2](https://github.com/air-hand-org/jobdeck-ui/compare/v1.5.1...v1.5.2) (2026-11-14)
+
+
+### Bug Fixes
+
+* **deps:** update .net ([#76](https://github.com/air-hand-org/jobdeck-ui/issues/76)) ([25c0904](https://github.com/air-hand-org/jobdeck-ui/commit/25c0904410b636aa31d28205a19c97657bdb39df))
+* **deps:** update dependency microsoft.entityframeworkcore.design to 10.0.15 ([#78](https://github.com/air-hand-org/jobdeck-ui/issues/78)) ([b3e593e](https://github.com/air-hand-org/jobdeck-ui/commit/b3e593e811f3c9db6e1d1db4bfafc522727499a6))
+* **deps:** update dependency stylecop.analyzers to 1.3.180 ([#79](https://github.com/air-hand-org/jobdeck-ui/issues/79)) ([758bf65](https://github.com/air-hand-org/jobdeck-ui/commit/758bf655492a7b42b0bc7264c9f6cd1604c016b7))
+* **deps:** update dependency xunit.v3 to 4.0.3 ([#73](https://github.com/air-hand-org/jobdeck-ui/issues/73)) ([752dae1](https://github.com/air-hand-org/jobdeck-ui/commit/752dae14a08401401ad034aacfb0690fe7f3cf48))
+* **deps:** update quartznet monorepo to 4.7.3 ([#75](https://github.com/air-hand-org/jobdeck-ui/issues/75)) ([e232cbb](https://github.com/air-hand-org/jobdeck-ui/commit/e232cbbb4748a90fd1f2646b59788c5f2c39b7f0))
+
 ## [1.5.1](https://github.com/air-hand-org/jobdeck-ui/compare/v1.5.0...v1.5.1) (2026-11-10)
 
 
