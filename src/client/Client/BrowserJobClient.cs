@@ -4,24 +4,13 @@ using Jobdeck.Job.V1;
 
 namespace ui.Client;
 
-public sealed class BrowserJobClient(HttpClient http, JobService.JobServiceClient jobs)
+public sealed class BrowserJobClient(JobService.JobServiceClient jobs)
 {
     public async Task<ApiResult<ListJobsResponse>> ListJobsAsync(CancellationToken cancellationToken = default)
     {
         try
         {
-            using var response = await http.GetAsync("bff/antiforgery", cancellationToken);
-            if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
-            {
-                return ApiResult<ListJobsResponse>.Failure(new(ApiErrorCode.Unauthenticated, "ログインの有効期限が切れました"));
-            }
-            response.EnsureSuccessStatusCode();
-            var csrf = await response.Content.ReadFromJsonAsync<CsrfToken>(cancellationToken);
-            if (string.IsNullOrWhiteSpace(csrf?.Token))
-            {
-                return Failure();
-            }
-            var result = await jobs.ListJobsAsync(new ListJobsRequest { PageSize = 100 }, new Metadata { { "x-csrf-token", csrf.Token } }, cancellationToken: cancellationToken);
+            var result = await jobs.ListJobsAsync(new ListJobsRequest { PageSize = 100 }, cancellationToken: cancellationToken);
             return ApiResult<ListJobsResponse>.Success(result);
         }
         catch (RpcException ex)
@@ -40,5 +29,4 @@ public sealed class BrowserJobClient(HttpClient http, JobService.JobServiceClien
     }
 
     private static ApiResult<ListJobsResponse> Failure() => ApiResult<ListJobsResponse>.Failure(new(ApiErrorCode.Internal, "通信に失敗しました。接続を確認して再読み込みしてください。"));
-    private sealed record CsrfToken(string Token);
 }

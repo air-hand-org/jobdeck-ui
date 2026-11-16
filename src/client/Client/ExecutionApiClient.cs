@@ -1,18 +1,72 @@
-using HttpMethod = System.Net.Http.HttpMethod;
+using Grpc.Core;
+using Jobdeck.Job.V1;
+
 using ui.Models;
 
 namespace ui.Client;
 
 public sealed record ListExecutionsResult(List<ExecutionView> Executions, string NextPageToken);
 
-public sealed class ExecutionApiClient(BffTransport transport)
+public sealed class ExecutionApiClient(ExecutionService.ExecutionServiceClient execs)
 {
-    public async Task<ApiResult> DoExecutionAsync(string jobId, CancellationToken cancellationToken = default)
+    public async Task<ApiResult<DoExecutionResponse>> DoExecutionAsync(string jobId, CancellationToken cancellationToken = default)
     {
-        var result = await transport.SendAsync(HttpMethod.Post, $"bff/jobs/{Uri.EscapeDataString(jobId)}/executions", cancellationToken: cancellationToken);
-        return result.IsSuccess ? ApiResult.Success() : ApiResult.Failure(result.Error!);
+        try
+        {
+            var result = await execs.DoExecutionAsync(
+                new DoExecutionRequest { JobId = jobId },
+                cancellationToken: cancellationToken
+            );
+            return ApiResult<DoExecutionResponse>.Success(result);
+        }
+        catch (RpcException ex)
+        {
+            return ex.StatusCode switch
+            {
+                StatusCode.Unauthenticated => ApiResult<DoExecutionResponse>.Failure(new(ApiErrorCode.Unauthenticated, "ログインの有効期限が切れました")),
+                StatusCode.PermissionDenied => ApiResult<DoExecutionResponse>.Failure(new(ApiErrorCode.PermissionDenied, "この操作を実行する権限が足りません。再読み込みしてください。")),
+                _ => Failure<DoExecutionResponse>(),
+            };
+        }
+        catch (Exception)
+        {
+            return Failure<DoExecutionResponse>();
+        }
     }
 
-    public Task<ApiResult<ListExecutionsResult>> ListExecutionsAsync(string jobId, int pageSize, string pageToken = "", CancellationToken cancellationToken = default) =>
-        transport.SendDataAsync<ListExecutionsResult>(HttpMethod.Get, $"bff/jobs/{Uri.EscapeDataString(jobId)}/executions?pageSize={pageSize}&pageToken={Uri.EscapeDataString(pageToken)}", cancellationToken: cancellationToken);
+    public async Task<ApiResult<ListExecutionsResult>> ListExecutionsAsync(string jobId, int pageSize, string pageToken = "", CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            var result = await execs.ListExecutionsAsync(
+                new ListExecutionsRequest { JobId = jobId, PageSize = pageSize, PageToken = pageToken },
+                cancellationToken: cancellationToken
+            );
+            return ApiResult<ListExecutionsResult>.Success(
+                new ListExecutionsResult([.. result.Executions.Select(e => new ExecutionView(
+                    e.Id
+                    , e.Attempt
+                    , e.Status.ToString()
+                    , e.CreatedAt.ToDateTime()
+                    , e.UpdatedAt.ToDateTime()
+                    , e.Result.ToString()
+                ))], result.NextPageToken)
+            );
+        }
+        catch (RpcException ex)
+        {
+            return ex.StatusCode switch
+            {
+                StatusCode.Unauthenticated => ApiResult<ListExecutionsResult>.Failure(new(ApiErrorCode.Unauthenticated, "ログインの有効期限が切れました")),
+                StatusCode.PermissionDenied => ApiResult<ListExecutionsResult>.Failure(new(ApiErrorCode.PermissionDenied, "この操作を実行する権限が足りません。再読み込みしてください。")),
+                _ => Failure<ListExecutionsResult>(),
+            };
+        }
+        catch (Exception)
+        {
+            return Failure<ListExecutionsResult>();
+        }
+    }
+
+    private static ApiResult<T> Failure<T>() => ApiResult<T>.Failure(new(ApiErrorCode.Internal, "再読み込みしてください"));
 }

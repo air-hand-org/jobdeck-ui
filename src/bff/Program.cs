@@ -21,6 +21,7 @@ using Microsoft.EntityFrameworkCore;
 using ui.Certificates;
 using Quartz;
 using Quartz.Diagnostics;
+using ui.Endpoints.Interceptors;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -74,7 +75,18 @@ builder.Services.AddGrpcClient<AuthService.AuthServiceClient>(options =>
       options.Address = new Uri(address);
   }
 );
-builder.Services.AddGrpc();
+builder.Services.AddGrpc()
+    .AddServiceOptions<BrowserJobService>(options =>
+    {
+        options.Interceptors.Add<AntiforgeryInterceptor>();
+    })
+;
+builder.Services.AddGrpc()
+    .AddServiceOptions<BrowserExecutionService>(options =>
+    {
+        options.Interceptors.Add<AntiforgeryInterceptor>();
+    })
+;
 builder.Services.AddScoped<BackendJobClient>();
 builder.Services.AddScoped<IJobPageClient, PrerenderJobPageClient>();
 builder.Services.AddScoped<BackendExecutionClient>();
@@ -258,9 +270,11 @@ app.MapHealthChecks(
 app.MapStaticAssets().ShortCircuit();
 app.MapRazorComponents<App>()
     .AddInteractiveWebAssemblyRenderMode()
-    .AddAdditionalAssemblies(typeof(JobApiClient).Assembly);
-app.MapBffEndpoints();
+    .AddAdditionalAssemblies(typeof(JobApiClient).Assembly)
+    ;
+app.MapGrpcService<BrowserAntiforgeryService>().EnableGrpcWeb().RequireAuthorization();
 app.MapGrpcService<BrowserJobService>().EnableGrpcWeb().RequireAuthorization();
+app.MapGrpcService<BrowserExecutionService>().EnableGrpcWeb().RequireAuthorization();
 app.MapGitHubAuthenticationEndpoints();
 
 app.Run();
