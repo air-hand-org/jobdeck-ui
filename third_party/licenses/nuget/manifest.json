@@ -522,17 +522,17 @@
   },
   {
     "id": "Jobdeck.Job.Contracts",
-    "version": "1.3.1",
+    "version": "1.3.2",
     "source": "restored-nupkg",
-    "packagePath": "jobdeck.job.contracts/1.3.1/jobdeck.job.contracts.1.3.1.nupkg",
-    "nupkgSha256": "bcc5524f41bf4e3a096bbc85dc44435a1e2a265f6deca8845c66975f9ed9944a",
+    "packagePath": "jobdeck.job.contracts/1.3.2/jobdeck.job.contracts.1.3.2.nupkg",
+    "nupkgSha256": "55a85f626fd6bc57e484951f7f8e53d9a7cedaf267b457faf5bcde0e34be4a33",
     "nuspecPath": "Jobdeck.Job.Contracts.nuspec",
     "licenseType": "expression",
     "license": "MIT AND Apache-2.0",
     "licenseUrl": "https://licenses.nuget.org/MIT%20AND%20Apache-2.0",
     "repository": {
       "type": "git",
-      "commit": "8c2f0dd965771d2888bea6d8f0b9fe2c5e0a6ea7"
+      "commit": "030b3d922a7dd225804ccdb0eaa945b278b0d458"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
