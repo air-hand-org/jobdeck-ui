@@ -93,12 +93,14 @@ builder.Services.AddGrpcClient<AuthService.AuthServiceClient>(options =>
 builder.Services.AddGrpc()
     .AddServiceOptions<BrowserJobService>(options =>
     {
+        options.Interceptors.Add<ErrorInterceptor>();
         options.Interceptors.Add<AntiforgeryInterceptor>();
     })
 ;
 builder.Services.AddGrpc()
     .AddServiceOptions<BrowserExecutionService>(options =>
     {
+        options.Interceptors.Add<ErrorInterceptor>();
         options.Interceptors.Add<AntiforgeryInterceptor>();
     })
 ;
