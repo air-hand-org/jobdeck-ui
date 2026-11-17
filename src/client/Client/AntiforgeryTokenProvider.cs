@@ -2,7 +2,7 @@ using Jobdeck.Bff.V1;
 
 namespace ui.Client;
 
-public sealed class AntiforgeryTokenProvider(BrowserAntiforgeryClient antiforgeryClient) : IAntiforgeryTokenProvider
+public sealed class AntiforgeryTokenProvider(AntiforgeryApiClient antiforgeryClient) : IAntiforgeryTokenProvider
 {
     private string cache_ = string.Empty;
 

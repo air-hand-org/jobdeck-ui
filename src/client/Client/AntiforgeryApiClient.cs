@@ -3,7 +3,7 @@ using Jobdeck.Bff.V1;
 
 namespace ui.Client;
 
-public sealed class BrowserAntiforgeryClient(AntiforgeryService.AntiforgeryServiceClient antiforgery)
+public sealed class AntiforgeryApiClient(AntiforgeryService.AntiforgeryServiceClient antiforgery)
 {
     public async Task<ApiResult<GetAntiforgeryTokenResponse>> GetTokenAsync(CancellationToken cancellationToken = default)
     {

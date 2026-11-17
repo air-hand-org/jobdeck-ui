@@ -1,3 +1,4 @@
+using Google.Protobuf;
 using Jobdeck.Job.V1;
 
 namespace ui.Models;
@@ -23,7 +24,7 @@ public sealed record ExecutionView(string Id, int Attempt, string Status, DateTi
         , execution.Status.ToString()
         , execution.CreatedAt.ToDateTime()
         , execution.UpdatedAt.ToDateTime()
-        , execution.Result.ToString()
+        , execution.Result is null ? "-" : JsonFormatter.Default.Format(execution.Result)
     )
     {}
 }

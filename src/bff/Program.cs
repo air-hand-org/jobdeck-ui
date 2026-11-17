@@ -102,10 +102,10 @@ builder.Services.AddGrpc()
         options.Interceptors.Add<AntiforgeryInterceptor>();
     })
 ;
-builder.Services.AddScoped<BackendJobClient>();
-builder.Services.AddScoped<IJobPageClient, PrerenderJobPageClient>();
-builder.Services.AddScoped<BackendExecutionClient>();
 builder.Services.AddScoped<AuthApiClient>();
+builder.Services.AddScoped<BackendJobClient>();
+builder.Services.AddScoped<BackendExecutionClient>();
+builder.Services.AddScoped<IJobPageClient, PrerenderJobPageClient>();
 builder.Services.AddScoped<UICookieAuthenticationEvents>();
 
 builder.Services.AddGrpcClient<Health.HealthClient>(

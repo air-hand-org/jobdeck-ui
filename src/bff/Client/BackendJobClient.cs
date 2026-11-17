@@ -1,148 +1,137 @@
 using System.Diagnostics;
 using Grpc.Core;
 using Jobdeck.Job.V1;
-using ui.Auth;
-using ui.Models;
 using ui.Telemetry;
 
 namespace ui.Client;
 
-public sealed record BackendListJobsResult(List<Job> Jobs, string NextPageToken);
-
 public sealed class BackendJobClient(JobService.JobServiceClient jobs, ILogger<BackendJobClient> logger)
 {
-    public async Task<ApiResult<Job>> CreateJobAsync(HttpJobFormModel model, CancellationToken cancellationToken = default)
+    public async Task<CreateJobResponse> CreateJobAsync(CreateJobRequest request, CancellationToken cancellationToken = default)
     {
         using var activity = UiTelemetry.Source.StartActivity("job.create", ActivityKind.Internal);
-        activity?.SetTag("jobdeck.job.name", model.Name);
+        activity?.SetTag("jobdeck.job.name", request.Name);
 
         try
         {
-            // FIXME: use AddCallCredentials
-            var response = await jobs.CreateJobAsync(
-                new CreateJobRequest
-                {
-                    Name = model.Name,
-                    Spec = model.ToJobSpec(),
-                },
+            return await jobs.CreateJobAsync(
+                request,
                 cancellationToken: cancellationToken
             );
-
-            return ApiResult<Job>.Success(response.Job);
         }
         catch (RpcException ex)
         {
             logger.LogWarning(ex, "Job API request failed");
             activity?.SetStatus(ActivityStatusCode.Error, ex.Status.Detail);
             activity?.AddException(ex);
-            return ApiResult<Job>.Failure(BackendErrors.FromRPCException(ex));
+            throw;
         }
     }
 
-    public async Task<ApiResult<Job>> UpdateJobAsync(string jobId, HttpJobFormModel model, CancellationToken cancellationToken = default)
+    public async Task<UpdateJobResponse> UpdateJobAsync(UpdateJobRequest request, CancellationToken cancellationToken = default)
     {
         using var activity = UiTelemetry.Source.StartActivity("job.update", ActivityKind.Internal);
-        activity?.SetTag("jobdeck.job.id", jobId);
-        activity?.SetTag("jobdeck.job.name", model.Name);
+        activity?.SetTag("jobdeck.job.id", request.JobId);
+        activity?.SetTag("jobdeck.job.name", request.Name);
 
         try
         {
-            var response = await jobs.UpdateJobAsync(
-                new UpdateJobRequest
-                {
-                    JobId = jobId,
-                    Name = model.Name,
-                    Spec = model.ToJobSpec(),
-                },
+            return await jobs.UpdateJobAsync(
+                request,
                 cancellationToken: cancellationToken
             );
-            return ApiResult<Job>.Success(response.Job);
         }
         catch (RpcException ex)
         {
             logger.LogWarning(ex, "Job API request failed");
             activity?.SetStatus(ActivityStatusCode.Error, ex.Status.Detail);
             activity?.AddException(ex);
-            return ApiResult<Job>.Failure(BackendErrors.FromRPCException(ex));
+            throw;
         }
     }
 
-    public async Task<ApiResult> DeleteJobAsync(string jobId, CancellationToken cancellationToken = default)
+    public async Task<SetJobEnabledResponse> SetJobEnabledAsync(SetJobEnabledRequest request, CancellationToken cancellationToken = default)
+    {
+        using var activity = UiTelemetry.Source.StartActivity("job.enabled", ActivityKind.Internal);
+        activity?.SetTag("jobdeck.job.id", request.JobId);
+        activity?.SetTag("jobdeck.job.enabled", request.Enabled);
+
+        try
+        {
+            return await jobs.SetJobEnabledAsync(
+                request,
+                cancellationToken: cancellationToken
+            );
+        }
+        catch (RpcException ex)
+        {
+            logger.LogWarning(ex, "Job API request failed");
+            activity?.SetStatus(ActivityStatusCode.Error, ex.Status.Detail);
+            activity?.AddException(ex);
+            throw;
+        }
+    }
+
+    public async Task<DeleteJobResponse> DeleteJobAsync(DeleteJobRequest request, CancellationToken cancellationToken = default)
     {
         using var activity = UiTelemetry.Source.StartActivity("job.delete", ActivityKind.Internal);
-        activity?.SetTag("jobdeck.job.id", jobId);
+        activity?.SetTag("jobdeck.job.id", request.JobId);
 
         try
         {
-            var response = await jobs.DeleteJobAsync(
-                new DeleteJobRequest
-                {
-                    JobId = jobId,
-                },
+            return await jobs.DeleteJobAsync(
+                request,
                 cancellationToken: cancellationToken
             );
-            return ApiResult.Success();
         }
         catch (RpcException ex)
         {
             logger.LogWarning(ex, "Job API request failed");
             activity?.SetStatus(ActivityStatusCode.Error, ex.Status.Detail);
             activity?.AddException(ex);
-            return ApiResult.Failure(BackendErrors.FromRPCException(ex));
+            throw;
         }
     }
 
-    public async Task<ApiResult<Job>> GetJobAsync(string jobId, CancellationToken cancellationToken = default)
+    public async Task<GetJobResponse> GetJobAsync(GetJobRequest request, CancellationToken cancellationToken = default)
     {
         using var activity = UiTelemetry.Source.StartActivity("job.get", ActivityKind.Internal);
-        activity?.SetTag("jobdeck.job.id", jobId);
+        activity?.SetTag("jobdeck.job.id", request.JobId);
 
         try
         {
-            var response = await jobs.GetJobAsync(
-                new GetJobRequest
-                {
-                    JobId = jobId,
-                },
+            return await jobs.GetJobAsync(
+                request,
                 cancellationToken: cancellationToken
             );
-            return ApiResult<Job>.Success(response.Job);
         }
         catch (RpcException ex)
         {
             logger.LogWarning(ex, "Job API request failed");
             activity?.SetStatus(ActivityStatusCode.Error, ex.Status.Detail);
             activity?.AddException(ex);
-            return ApiResult<Job>.Failure(BackendErrors.FromRPCException(ex));
+            throw;
         }
     }
 
-    public async Task<ApiResult<BackendListJobsResult>> ListJobsAsync(int pageSize, string pageToken = "", CancellationToken cancellationToken = default)
+    public async Task<ListJobsResponse> ListJobsAsync(ListJobsRequest request, CancellationToken cancellationToken = default)
     {
         using var activity = UiTelemetry.Source.StartActivity("job.list", ActivityKind.Internal);
-        activity?.SetTag("jobdeck.job.list_page_size", pageSize);
+        activity?.SetTag("jobdeck.job.list_page_size", request.PageSize);
 
         try
         {
-            var response = await jobs.ListJobsAsync(
-                new ListJobsRequest
-                {
-                    PageSize = pageSize,
-                    PageToken = pageToken,
-                },
+            return await jobs.ListJobsAsync(
+                request,
                 cancellationToken: cancellationToken
             );
-            return ApiResult<BackendListJobsResult>.Success(new BackendListJobsResult(
-              [.. response.Jobs],
-              response.NextPageToken
-            ));
         }
         catch (RpcException ex)
         {
             logger.LogWarning(ex, "Job API request failed");
             activity?.SetStatus(ActivityStatusCode.Error, ex.Status.Detail);
             activity?.AddException(ex);
-            return ApiResult<BackendListJobsResult>.Failure(BackendErrors.FromRPCException(ex));
+            throw;
         }
     }
 }

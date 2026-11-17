@@ -4,8 +4,10 @@ using Grpc.Net.Client.Web;
 using Jobdeck.Job.V1;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
-// FIXME
-builder.Services.AddScoped(_ => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+if (builder.HostEnvironment.IsProduction())
+{
+    builder.Logging.SetMinimumLevel(LogLevel.Warning);
+}
 builder.Services
     .AddGrpcClient<Jobdeck.Bff.V1.AntiforgeryService.AntiforgeryServiceClient>(options =>
     {
@@ -13,7 +15,7 @@ builder.Services
     })
     .ConfigurePrimaryHttpMessageHandler(() => new GrpcWebHandler(new HttpClientHandler()))
     ;
-builder.Services.AddScoped<BrowserAntiforgeryClient>();
+builder.Services.AddScoped<AntiforgeryApiClient>();
 builder.Services.AddScoped<IAntiforgeryTokenProvider, AntiforgeryTokenProvider>();
 builder.Services.AddGrpcClient<JobService.JobServiceClient>(options =>
     {
@@ -39,9 +41,7 @@ builder.Services.AddGrpcClient<ExecutionService.ExecutionServiceClient>(options 
         metadata.Add("x-csrf-token", token);
     })
     ;
-builder.Services.AddScoped<BrowserJobClient>();
 builder.Services.AddScoped<IJobPageClient, BrowserJobPageClient>();
-builder.Services.AddScoped<BffTransport>();
 builder.Services.AddScoped<JobApiClient>();
 builder.Services.AddScoped<ExecutionApiClient>();
 await builder.Build().RunAsync();

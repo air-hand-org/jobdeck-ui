@@ -49,7 +49,7 @@
     var result = restore ? InitialJobs : null;
     if (result is null)
     {
-        var response = await PageClient.ListJobsAsync();
+        var response = await PageClient.ListJobsAsync(100);
         result = response.IsSuccess
             ? ApiResult<List<JobListItem>>.Success(response.Value!.Jobs.Select(job => new JobListItem(job.Id, job.Name, job.Enabled)).ToList())
             : ApiResult<List<JobListItem>>.Failure(response.Error!);

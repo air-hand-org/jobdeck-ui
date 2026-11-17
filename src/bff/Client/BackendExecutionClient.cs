@@ -1,68 +1,51 @@
 using System.Diagnostics;
 using Grpc.Core;
 using Jobdeck.Job.V1;
-using ui.Auth;
 using ui.Telemetry;
 
 namespace ui.Client;
 
-public sealed record BackendListExecutionsResult(List<Execution> Executions, string NextPageToken);
-
 public sealed class BackendExecutionClient(ExecutionService.ExecutionServiceClient execs, ILogger<BackendExecutionClient> logger)
 {
-    public async Task<ApiResult> DoExecutionAsync(string jobId, CancellationToken cancellationToken = default)
+    public async Task<DoExecutionResponse> DoExecutionAsync(DoExecutionRequest request, CancellationToken cancellationToken = default)
     {
         using var activity = UiTelemetry.Source.StartActivity("execution.do", ActivityKind.Internal);
-        activity?.SetTag("jobdeck.execution.job_id", jobId);
+        activity?.SetTag("jobdeck.execution.job_id", request.JobId);
 
         try
         {
-            await execs.DoExecutionAsync(
-                new DoExecutionRequest
-                {
-                    JobId = jobId,
-                },
+            return await execs.DoExecutionAsync(
+                request,
                 cancellationToken: cancellationToken
             );
-
-            return ApiResult.Success();
         }
         catch (RpcException ex)
         {
             logger.LogWarning(ex, "Execution API request failed");
             activity?.SetStatus(ActivityStatusCode.Error, ex.Status.Detail);
             activity?.AddException(ex);
-            return ApiResult.Failure(BackendErrors.FromRPCException(ex));
+            throw;
         }
     }
 
-    public async Task<ApiResult<BackendListExecutionsResult>> ListExecutionsAsync(string jobId, int pageSize, string pageToken = "", CancellationToken cancellationToken = default)
+    public async Task<ListExecutionsResponse> ListExecutionsAsync(ListExecutionsRequest request, CancellationToken cancellationToken = default)
     {
         using var activity = UiTelemetry.Source.StartActivity("execution.list", ActivityKind.Internal);
-        activity?.SetTag("jobdeck.execution.job_id", jobId);
+        activity?.SetTag("jobdeck.execution.job_id", request.JobId);
 
         try
         {
-            var response = await execs.ListExecutionsAsync(
-                new ListExecutionsRequest
-                {
-                    JobId = jobId,
-                    PageSize = pageSize,
-                    PageToken = pageToken,
-                },
+            return await execs.ListExecutionsAsync(
+                request,
                 cancellationToken: cancellationToken
             );
-            return ApiResult<BackendListExecutionsResult>.Success(new BackendListExecutionsResult(
-              [.. response.Executions],
-              response.NextPageToken
-            ));
         }
         catch (RpcException ex)
         {
             logger.LogWarning(ex, "Execution API request failed");
             activity?.SetStatus(ActivityStatusCode.Error, ex.Status.Detail);
             activity?.AddException(ex);
-            return ApiResult<BackendListExecutionsResult>.Failure(BackendErrors.FromRPCException(ex));
+            throw;
         }
     }
 }

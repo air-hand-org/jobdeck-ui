@@ -6,7 +6,7 @@ namespace ui.Client;
 // Browser and request-scoped prerendering use the same page-facing operations.
 public interface IJobPageClient
 {
-    Task<ApiResult<ListJobsResponse>> ListJobsAsync(CancellationToken cancellationToken = default);
+    Task<ApiResult<ListJobsResult>> ListJobsAsync(int pageSize, string pageToken = "", CancellationToken cancellationToken = default);
     Task<ApiResult<JobView>> GetJobAsync(string jobId, CancellationToken cancellationToken = default);
     Task<ApiResult<ListExecutionsResult>> ListExecutionsAsync(string jobId, int pageSize, string pageToken = "", CancellationToken cancellationToken = default);
     Task<ApiResult<JobView>> CreateJobAsync(HttpJobFormModel model, CancellationToken cancellationToken = default);
@@ -15,9 +15,9 @@ public interface IJobPageClient
     Task<ApiResult> DoExecutionAsync(string jobId, CancellationToken cancellationToken = default);
 }
 
-public sealed class BrowserJobPageClient(BrowserJobClient list, JobApiClient jobs, ExecutionApiClient executions) : IJobPageClient
+public sealed class BrowserJobPageClient(JobApiClient jobs, ExecutionApiClient executions) : IJobPageClient
 {
-    public Task<ApiResult<ListJobsResponse>> ListJobsAsync(CancellationToken cancellationToken = default) => list.ListJobsAsync(cancellationToken);
+    public Task<ApiResult<ListJobsResult>> ListJobsAsync(int pageSize, string pageToken = "", CancellationToken cancellationToken = default) => jobs.ListJobsAsync(pageSize, pageToken, cancellationToken);
     public Task<ApiResult<JobView>> GetJobAsync(string jobId, CancellationToken cancellationToken = default) => jobs.GetJobAsync(jobId, cancellationToken);
     public async Task<ApiResult<ListExecutionsResult>> ListExecutionsAsync(string jobId, int pageSize, string pageToken = "", CancellationToken cancellationToken = default) => await executions.ListExecutionsAsync(jobId, pageSize, pageToken, cancellationToken);
     public Task<ApiResult<JobView>> CreateJobAsync(HttpJobFormModel model, CancellationToken cancellationToken = default) => jobs.CreateJobAsync(model, cancellationToken);

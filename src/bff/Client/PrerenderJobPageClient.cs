@@ -1,4 +1,5 @@
 using Google.Protobuf;
+using Grpc.Core;
 using Jobdeck.Job.V1;
 using ui.Models;
 
@@ -7,34 +8,62 @@ namespace ui.Client;
 // Scoped to the HTML request: no self-HTTP calls, browser credentials or UI session state.
 public sealed class PrerenderJobPageClient(BackendJobClient jobs, BackendExecutionClient executions) : IJobPageClient
 {
-    public async Task<ApiResult<ListJobsResponse>> ListJobsAsync(CancellationToken cancellationToken = default)
+    public async Task<ApiResult<ListJobsResult>> ListJobsAsync(int pageSize, string pageToken = "", CancellationToken cancellationToken = default)
     {
-        var result = await jobs.ListJobsAsync(100, cancellationToken: cancellationToken);
-        if (!result.IsSuccess)
+        try
         {
-            return ApiResult<ListJobsResponse>.Failure(result.Error!);
+            var result = await jobs.ListJobsAsync(
+                new ListJobsRequest { PageSize = pageSize, PageToken = pageToken },
+                cancellationToken: cancellationToken
+            );
+            return ApiResult<ListJobsResult>.Success(
+                new(
+                    [.. result.Jobs.Select(j => new JobView(j))]
+                    , result.NextPageToken
+                )
+            );
         }
-        var response = new ListJobsResponse { NextPageToken = result.Value!.NextPageToken };
-        response.Jobs.AddRange(result.Value.Jobs);
-        return ApiResult<ListJobsResponse>.Success(response);
+        catch (RpcException ex)
+        {
+            return ApiResult<ListJobsResult>.Failure(BackendErrors.FromRPCException(ex));
+        }
     }
 
     public async Task<ApiResult<JobView>> GetJobAsync(string jobId, CancellationToken cancellationToken = default)
     {
-        var result = await jobs.GetJobAsync(jobId, cancellationToken);
-        return result.IsSuccess
-            ? ApiResult<JobView>.Success(new(result.Value!.Id, result.Value.Name, result.Value.Enabled, JobMapping.FromProto(result.Value)))
-            : ApiResult<JobView>.Failure(result.Error!);
+        try
+        {
+            var result = await jobs.GetJobAsync(
+                new GetJobRequest { JobId = jobId },
+                cancellationToken
+            );
+            return ApiResult<JobView>.Success(new(result.Job));
+        }
+        catch (RpcException ex)
+        {
+            return ApiResult<JobView>.Failure(BackendErrors.FromRPCException(ex));
+        }
     }
 
     public async Task<ApiResult<ListExecutionsResult>> ListExecutionsAsync(string jobId, int pageSize, string pageToken = "", CancellationToken cancellationToken = default)
     {
-        var result = await executions.ListExecutionsAsync(jobId, pageSize, pageToken, cancellationToken);
-        return result.IsSuccess
-            ? ApiResult<ListExecutionsResult>.Success(new(result.Value!.Executions.Select(execution => new ExecutionView(
-                execution.Id, execution.Attempt, execution.Status.ToString(), execution.CreatedAt?.ToDateTime(), execution.UpdatedAt?.ToDateTime(),
-                execution.Result is null ? "-" : JsonFormatter.Default.Format(execution.Result))).ToList(), result.Value.NextPageToken))
-            : ApiResult<ListExecutionsResult>.Failure(result.Error!);
+        try
+        {
+            var result = await executions.ListExecutionsAsync(
+                new ListExecutionsRequest { JobId = jobId, PageSize = pageSize, PageToken = pageToken },
+                cancellationToken
+            );
+            return ApiResult<ListExecutionsResult>.Success(
+                new(
+                    [.. result.Executions.Select(e => new ExecutionView(e))]
+                    , result.NextPageToken
+                )
+            );
+        }
+        catch (RpcException ex)
+        {
+            return ApiResult<ListExecutionsResult>.Failure(BackendErrors.FromRPCException(ex));
+        }
     }
 
     // Prerendering is read-only. Interactive mutations always use the browser BFF.

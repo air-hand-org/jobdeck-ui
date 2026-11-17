@@ -62,5 +62,5 @@ public sealed class ExecutionApiClient(ExecutionService.ExecutionServiceClient e
         }
     }
 
-    private static ApiResult<T> Failure<T>() => ApiResult<T>.Failure(new(ApiErrorCode.Internal, "再読み込みしてください"));
+    private static ApiResult<T> Failure<T>() => ApiResult<T>.Failure(new(ApiErrorCode.Internal, "通信に失敗しました。再読み込みしてください"));
 }
