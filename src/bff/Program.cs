@@ -259,7 +259,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 // API status codes must reach clients unchanged, not render an HTML error page.
-app.UseWhen(context => !context.Request.Path.StartsWithSegments("/bff") && !context.Request.Path.StartsWithSegments("/jobdeck.job.v1.JobService"),
+app.UseWhen(context => !ui.Bff.Route.Path.IsGrpcRequest(context.Request.Path),
     branch => branch.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true));
 app.UseHttpsRedirection();
 
@@ -287,7 +287,7 @@ app.MapHealthChecks(
 app.MapStaticAssets().ShortCircuit();
 app.MapRazorComponents<App>()
     .AddInteractiveWebAssemblyRenderMode()
-    .AddAdditionalAssemblies(typeof(JobApiClient).Assembly)
+    .AddAdditionalAssemblies(typeof(ui.Components.Pages.JobPages.Index).Assembly)
     ;
 app.MapGrpcService<BrowserAntiforgeryService>().EnableGrpcWeb().RequireAuthorization();
 app.MapGrpcService<BrowserJobService>().EnableGrpcWeb().RequireAuthorization();
