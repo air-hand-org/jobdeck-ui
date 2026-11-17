@@ -13,7 +13,7 @@ public sealed record JobView(string Id, string Name, bool Enabled, HttpJobFormMo
         , job.Enabled
         , JobMapping.FromProto(job)
     )
-    {}
+    { }
 }
 
 public sealed record ExecutionView(string Id, int Attempt, string Status, DateTime? CreatedAt, DateTime? UpdatedAt, string Result)
@@ -26,5 +26,5 @@ public sealed record ExecutionView(string Id, int Attempt, string Status, DateTi
         , execution.UpdatedAt.ToDateTime()
         , execution.Result is null ? "-" : JsonFormatter.Default.Format(execution.Result)
     )
-    {}
+    { }
 }

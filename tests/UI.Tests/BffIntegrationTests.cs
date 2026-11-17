@@ -26,7 +26,7 @@ namespace UI.Tests;
 // backend clients and generated protobuf messages; only the remote RPC transport is substituted.
 public sealed class BffIntegrationTests
 {
-// FIXME
+    // FIXME
 #if false
     [Fact]
     public async Task AnonymousAndRevokedSessionsCannotReadOrMutate()
