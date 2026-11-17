@@ -8,7 +8,7 @@ namespace ui.Client;
 
 public sealed record BackendListExecutionsResult(List<Execution> Executions, string NextPageToken);
 
-public sealed class BackendExecutionClient(ExecutionService.ExecutionServiceClient execs, AccessTokenAccessor tokens, ILogger<BackendExecutionClient> logger)
+public sealed class BackendExecutionClient(ExecutionService.ExecutionServiceClient execs, ILogger<BackendExecutionClient> logger)
 {
     public async Task<ApiResult> DoExecutionAsync(string jobId, CancellationToken cancellationToken = default)
     {
@@ -17,21 +17,11 @@ public sealed class BackendExecutionClient(ExecutionService.ExecutionServiceClie
 
         try
         {
-            var token = await tokens.GetAsync(cancellationToken)
-                ?? throw new RpcException(new Status(StatusCode.Unauthenticated, "Authentication has expired."));
-
-            var headers = new Metadata
-            {
-                {
-                    "authorization", $"Bearer {token}"
-                }
-            };
             await execs.DoExecutionAsync(
                 new DoExecutionRequest
                 {
                     JobId = jobId,
                 },
-                headers,
                 cancellationToken: cancellationToken
             );
 
@@ -53,15 +43,6 @@ public sealed class BackendExecutionClient(ExecutionService.ExecutionServiceClie
 
         try
         {
-            var token = await tokens.GetAsync(cancellationToken)
-                ?? throw new RpcException(new Status(StatusCode.Unauthenticated, "Authentication has expired."));
-
-            var headers = new Metadata
-            {
-                {
-                    "authorization", $"Bearer {token}"
-                }
-            };
             var response = await execs.ListExecutionsAsync(
                 new ListExecutionsRequest
                 {
@@ -69,7 +50,6 @@ public sealed class BackendExecutionClient(ExecutionService.ExecutionServiceClie
                     PageSize = pageSize,
                     PageToken = pageToken,
                 },
-                headers,
                 cancellationToken: cancellationToken
             );
             return ApiResult<BackendListExecutionsResult>.Success(new BackendListExecutionsResult(

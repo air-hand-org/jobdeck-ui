@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.DataProtection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Jobdeck.Auth.V1;
 using Jobdeck.Job.V1;
+using Grpc.Core;
 using Grpc.Health.V1;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
@@ -58,17 +59,31 @@ builder.Services.AddOpenTelemetry()
   })
   ;
 builder.Services.AddGrpcClient<JobService.JobServiceClient>(options =>
-  {
-      var address = builder.Configuration["JOB_API_GRPC_ENDPOINT"] ?? throw new InvalidOperationException("JOB_API_GRPC_ENDPOINT is required");
-      options.Address = new Uri(address);
-  }
-);
+      {
+          var address = builder.Configuration["JOB_API_GRPC_ENDPOINT"] ?? throw new InvalidOperationException("JOB_API_GRPC_ENDPOINT is required");
+          options.Address = new Uri(address);
+      }
+    )
+    .AddCallCredentials(async (context, metadata, services) =>
+    {
+        var accessor = services.GetRequiredService<AccessTokenAccessor>();
+        var token = await accessor.GetAsync(context.CancellationToken) ?? throw new RpcException(new Grpc.Core.Status(Grpc.Core.StatusCode.Unauthenticated, "Authentication has expired."));
+        metadata.Add("authorization", $"Bearer {token}");
+    })
+    ;
 builder.Services.AddGrpcClient<ExecutionService.ExecutionServiceClient>(options =>
-  {
-      var address = builder.Configuration["JOB_API_GRPC_ENDPOINT"] ?? throw new InvalidOperationException("JOB_API_GRPC_ENDPOINT is required");
-      options.Address = new Uri(address);
-  }
-);
+      {
+          var address = builder.Configuration["JOB_API_GRPC_ENDPOINT"] ?? throw new InvalidOperationException("JOB_API_GRPC_ENDPOINT is required");
+          options.Address = new Uri(address);
+      }
+    )
+    .AddCallCredentials(async (context, metadata, services) =>
+    {
+        var accessor = services.GetRequiredService<AccessTokenAccessor>();
+        var token = await accessor.GetAsync(context.CancellationToken) ?? throw new RpcException(new Grpc.Core.Status(Grpc.Core.StatusCode.Unauthenticated, "Authentication has expired."));
+        metadata.Add("authorization", $"Bearer {token}");
+    })
+    ;
 builder.Services.AddGrpcClient<AuthService.AuthServiceClient>(options =>
   {
       var address = builder.Configuration["AUTH_GRPC_ENDPOINT"] ?? throw new InvalidOperationException("AUTH_GRPC_ENDPOINT is required");

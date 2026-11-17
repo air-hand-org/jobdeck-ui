@@ -27,6 +27,18 @@ builder.Services.AddGrpcClient<JobService.JobServiceClient>(options =>
         metadata.Add("x-csrf-token", token);
     })
     ;
+builder.Services.AddGrpcClient<ExecutionService.ExecutionServiceClient>(options =>
+    {
+        options.Address = new Uri(builder.HostEnvironment.BaseAddress);
+    })
+    .ConfigurePrimaryHttpMessageHandler(() => new GrpcWebHandler(new HttpClientHandler()))
+    .AddCallCredentials(async (context, metadata, services) =>
+    {
+        var provider = services.GetRequiredService<IAntiforgeryTokenProvider>();
+        var token = await provider.GetTokenAsync(context.CancellationToken);
+        metadata.Add("x-csrf-token", token);
+    })
+    ;
 builder.Services.AddScoped<BrowserJobClient>();
 builder.Services.AddScoped<IJobPageClient, BrowserJobPageClient>();
 builder.Services.AddScoped<BffTransport>();

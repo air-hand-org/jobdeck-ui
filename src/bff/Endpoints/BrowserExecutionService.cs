@@ -1,31 +1,53 @@
+using System.Diagnostics;
 using Grpc.Core;
 using Jobdeck.Job.V1;
-using ui.Client;
+using ui.Telemetry;
 
 namespace ui.Endpoints;
 
-// Only ListJobs is implemented in this trial. Other generated RPCs remain UNIMPLEMENTED.
-public sealed class BrowserExecutionService(BackendJobClient jobs) : JobService.JobServiceBase
+// FIXME
+public sealed class BrowserExecutionService(ExecutionService.ExecutionServiceClient client, ILogger<BrowserExecutionService> logger) : ExecutionService.ExecutionServiceBase
 {
-    public override async Task<ListJobsResponse> ListJobs(ListJobsRequest request, ServerCallContext context)
+    public override async Task<DoExecutionResponse> DoExecution(DoExecutionRequest request, ServerCallContext context)
     {
-        if (request.PageSize is < 1 or > 100)
+        using var activity = UiTelemetry.Source.StartActivity("execution.do", ActivityKind.Internal);
+        activity?.SetTag("jobdeck.execution.job_id", request.JobId);
+
+        try
         {
-            throw new RpcException(new Status(StatusCode.InvalidArgument, "Page size must be between 1 and 100."));
+            return await client.DoExecutionAsync(
+                request,
+                cancellationToken: context.CancellationToken
+            );
         }
-        var result = await jobs.ListJobsAsync(request.PageSize, request.PageToken, context.CancellationToken);
-        if (!result.IsSuccess)
+        catch (RpcException ex)
         {
-            var code = result.Error!.Code switch
-            {
-                ApiErrorCode.Unauthenticated => StatusCode.Unauthenticated,
-                ApiErrorCode.PermissionDenied => StatusCode.PermissionDenied,
-                _ => StatusCode.Unavailable,
-            };
-            throw new RpcException(new Status(code, result.Error.Message));
+            logger.LogWarning(ex, "Execution API request failed");
+            activity?.SetStatus(ActivityStatusCode.Error, ex.Status.Detail);
+            activity?.AddException(ex);
+            throw;
         }
-        var response = new ListJobsResponse { NextPageToken = result.Value!.NextPageToken };
-        response.Jobs.AddRange(result.Value.Jobs);
-        return response;
+    }
+
+
+    public override async Task<ListExecutionsResponse> ListExecutions(ListExecutionsRequest request, ServerCallContext context)
+    {
+        using var activity = UiTelemetry.Source.StartActivity("execution.list", ActivityKind.Internal);
+        activity?.SetTag("jobdeck.execution.job_id", request.JobId);
+
+        try
+        {
+            return await client.ListExecutionsAsync(
+                request,
+                cancellationToken: context.CancellationToken
+            );
+        }
+        catch (RpcException ex)
+        {
+            logger.LogWarning(ex, "Execution API request failed");
+            activity?.SetStatus(ActivityStatusCode.Error, ex.Status.Detail);
+            activity?.AddException(ex);
+            throw;
+        }
     }
 }

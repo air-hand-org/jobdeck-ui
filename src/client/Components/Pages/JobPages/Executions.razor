@@ -178,6 +178,11 @@
         }
         return;
     }
-
+    await InvokeAsync(async() =>
+    {
+        await LoadExecutionsAsync();
+        // Re-rendering request to blazor
+        StateHasChanged();
+    });
   }
 }

@@ -43,14 +43,8 @@ public sealed class ExecutionApiClient(ExecutionService.ExecutionServiceClient e
                 cancellationToken: cancellationToken
             );
             return ApiResult<ListExecutionsResult>.Success(
-                new ListExecutionsResult([.. result.Executions.Select(e => new ExecutionView(
-                    e.Id
-                    , e.Attempt
-                    , e.Status.ToString()
-                    , e.CreatedAt.ToDateTime()
-                    , e.UpdatedAt.ToDateTime()
-                    , e.Result.ToString()
-                ))], result.NextPageToken)
+                new ListExecutionsResult([.. result.Executions.Select(e => new ExecutionView(e))]
+                , result.NextPageToken)
             );
         }
         catch (RpcException ex)

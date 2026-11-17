@@ -9,7 +9,7 @@ namespace ui.Client;
 
 public sealed record BackendListJobsResult(List<Job> Jobs, string NextPageToken);
 
-public sealed class BackendJobClient(JobService.JobServiceClient jobs, AccessTokenAccessor tokens, ILogger<BackendJobClient> logger)
+public sealed class BackendJobClient(JobService.JobServiceClient jobs, ILogger<BackendJobClient> logger)
 {
     public async Task<ApiResult<Job>> CreateJobAsync(HttpJobFormModel model, CancellationToken cancellationToken = default)
     {
@@ -18,22 +18,13 @@ public sealed class BackendJobClient(JobService.JobServiceClient jobs, AccessTok
 
         try
         {
-            var token = await tokens.GetAsync(cancellationToken)
-                ?? throw new RpcException(new Status(StatusCode.Unauthenticated, "Authentication has expired."));
-
-            var headers = new Metadata
-            {
-                {
-                    "authorization", $"Bearer {token}"
-                }
-            };
+            // FIXME: use AddCallCredentials
             var response = await jobs.CreateJobAsync(
                 new CreateJobRequest
                 {
                     Name = model.Name,
                     Spec = model.ToJobSpec(),
                 },
-                headers,
                 cancellationToken: cancellationToken
             );
 
@@ -56,15 +47,6 @@ public sealed class BackendJobClient(JobService.JobServiceClient jobs, AccessTok
 
         try
         {
-            var token = await tokens.GetAsync(cancellationToken)
-                ?? throw new RpcException(new Status(StatusCode.Unauthenticated, "Authentication has expired."));
-
-            var headers = new Metadata
-            {
-                {
-                    "authorization", $"Bearer {token}"
-                }
-            };
             var response = await jobs.UpdateJobAsync(
                 new UpdateJobRequest
                 {
@@ -72,7 +54,6 @@ public sealed class BackendJobClient(JobService.JobServiceClient jobs, AccessTok
                     Name = model.Name,
                     Spec = model.ToJobSpec(),
                 },
-                headers,
                 cancellationToken: cancellationToken
             );
             return ApiResult<Job>.Success(response.Job);
@@ -93,21 +74,11 @@ public sealed class BackendJobClient(JobService.JobServiceClient jobs, AccessTok
 
         try
         {
-            var token = await tokens.GetAsync(cancellationToken)
-                ?? throw new RpcException(new Status(StatusCode.Unauthenticated, "Authentication has expired."));
-
-            var headers = new Metadata
-            {
-                {
-                    "authorization", $"Bearer {token}"
-                }
-            };
             var response = await jobs.DeleteJobAsync(
                 new DeleteJobRequest
                 {
                     JobId = jobId,
                 },
-                headers,
                 cancellationToken: cancellationToken
             );
             return ApiResult.Success();
@@ -128,21 +99,11 @@ public sealed class BackendJobClient(JobService.JobServiceClient jobs, AccessTok
 
         try
         {
-            var token = await tokens.GetAsync(cancellationToken)
-                ?? throw new RpcException(new Status(StatusCode.Unauthenticated, "Authentication has expired."));
-
-            var headers = new Metadata
-            {
-                {
-                    "authorization", $"Bearer {token}"
-                }
-            };
             var response = await jobs.GetJobAsync(
                 new GetJobRequest
                 {
                     JobId = jobId,
                 },
-                headers,
                 cancellationToken: cancellationToken
             );
             return ApiResult<Job>.Success(response.Job);
@@ -163,22 +124,12 @@ public sealed class BackendJobClient(JobService.JobServiceClient jobs, AccessTok
 
         try
         {
-            var token = await tokens.GetAsync(cancellationToken)
-                ?? throw new RpcException(new Status(StatusCode.Unauthenticated, "Authentication has expired."));
-
-            var headers = new Metadata
-            {
-                {
-                    "authorization", $"Bearer {token}"
-                }
-            };
             var response = await jobs.ListJobsAsync(
                 new ListJobsRequest
                 {
                     PageSize = pageSize,
                     PageToken = pageToken,
                 },
-                headers,
                 cancellationToken: cancellationToken
             );
             return ApiResult<BackendListJobsResult>.Success(new BackendListJobsResult(

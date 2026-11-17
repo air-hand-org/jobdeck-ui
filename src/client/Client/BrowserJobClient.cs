@@ -1,4 +1,3 @@
-using System.Net.Http.Json;
 using Grpc.Core;
 using Jobdeck.Job.V1;
 
@@ -19,14 +18,14 @@ public sealed class BrowserJobClient(JobService.JobServiceClient jobs)
             {
                 StatusCode.Unauthenticated => ApiResult<ListJobsResponse>.Failure(new(ApiErrorCode.Unauthenticated, "ログインの有効期限が切れました")),
                 StatusCode.PermissionDenied => ApiResult<ListJobsResponse>.Failure(new(ApiErrorCode.PermissionDenied, "この操作を実行する権限が足りません。再読み込みしてください。")),
-                _ => Failure(),
+                _ => Failure<ListJobsResponse>(),
             };
         }
-        catch (Exception ex) when (ex is HttpRequestException or System.Text.Json.JsonException or OperationCanceledException)
+        catch (Exception)
         {
-            return Failure();
+            return Failure<ListJobsResponse>();
         }
     }
 
-    private static ApiResult<ListJobsResponse> Failure() => ApiResult<ListJobsResponse>.Failure(new(ApiErrorCode.Internal, "通信に失敗しました。接続を確認して再読み込みしてください。"));
+    private static ApiResult<T> Failure<T>() => ApiResult<T>.Failure(new(ApiErrorCode.Internal, "通信に失敗しました。接続を確認して再読み込みしてください。"));
 }
