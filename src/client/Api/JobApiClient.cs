@@ -1,9 +1,9 @@
 using Grpc.Core;
 using Jobdeck.Job.V1;
 
-using ui.Models;
+using ui.Client.Models;
 
-namespace ui.Client;
+namespace ui.Client.Api;
 
 public sealed record ListJobsResult(IReadOnlyList<JobView> Jobs, string NextPageToken);
 

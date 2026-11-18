@@ -1,4 +1,4 @@
-namespace ui.Client;
+namespace ui.Client.Antiforgery;
 
 public interface IAntiforgeryTokenProvider
 {

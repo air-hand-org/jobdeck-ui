@@ -1,7 +1,8 @@
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using ui.Client;
 using Grpc.Net.Client.Web;
 using Jobdeck.Job.V1;
+using ui.Client.Antiforgery;
+using ui.Client.Api;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 if (builder.HostEnvironment.IsProduction())

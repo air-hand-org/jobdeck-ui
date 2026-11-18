@@ -1,7 +1,7 @@
 using Jobdeck.Job.V1;
-using ui.Models;
+using ui.Client.Models;
 
-namespace ui.Client;
+namespace ui.Client.Api;
 
 // Browser and request-scoped prerendering use the same page-facing operations.
 public interface IJobPageClient

@@ -1,5 +1,4 @@
-
-namespace ui.Client;
+namespace ui.Client.Api;
 
 public enum ApiErrorCode
 {

@@ -1,11 +1,12 @@
 using Jobdeck.Bff.V1;
 
-namespace ui.Client;
+namespace ui.Client.Antiforgery;
 
-public sealed class AntiforgeryTokenProvider(AntiforgeryApiClient antiforgeryClient) : IAntiforgeryTokenProvider
+public sealed class AntiforgeryTokenProvider(Api.AntiforgeryApiClient antiforgeryClient) : IAntiforgeryTokenProvider
 {
     private string cache_ = string.Empty;
 
+    // FIXME use SemaphoreSlim
     public async Task<string> GetTokenAsync(CancellationToken cancellationToken = default)
     {
         if (string.IsNullOrEmpty(cache_))

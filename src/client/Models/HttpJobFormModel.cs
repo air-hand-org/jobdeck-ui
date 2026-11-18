@@ -1,9 +1,6 @@
 using System.ComponentModel.DataAnnotations;
-using ui.Validation;
 
-using JobdeckHttpMethod = ui.Models.JobHttpMethod;
-
-namespace ui.Models;
+namespace ui.Client.Models;
 
 public sealed class HttpJobFormModel : IValidatableObject
 {
@@ -15,8 +12,8 @@ public sealed class HttpJobFormModel : IValidatableObject
     [Url]
     public string? Url { get; set; }
 
-    [NotUnspecifiedEnum(ErrorMessage = "HTTP method is required.")]
-    public JobdeckHttpMethod Method { get; set; } = JobdeckHttpMethod.Unspecified;
+    [Validation.NotUnspecifiedEnum(ErrorMessage = "HTTP method is required.")]
+    public JobHttpMethod Method { get; set; } = JobHttpMethod.Unspecified;
 
     [Required]
     public List<int> ExpectedStatusCodes { get; set; } = [200];

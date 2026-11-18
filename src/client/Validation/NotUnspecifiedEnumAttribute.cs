@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace ui.Validation;
+namespace ui.Client.Validation;
 
 [AttributeUsage(AttributeTargets.Property)]
 public sealed class NotUnspecifiedEnumAttribute : ValidationAttribute

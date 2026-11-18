@@ -1,7 +1,7 @@
 using Google.Protobuf;
 using Jobdeck.Job.V1;
 
-namespace ui.Models;
+namespace ui.Client.Models;
 
 // Data-only browser contracts. No backend RPC clients or owner credentials.
 public enum JobHttpMethod { Unspecified, Get, Head, Post, Put, Patch, Delete }

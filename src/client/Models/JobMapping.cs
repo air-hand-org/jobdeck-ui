@@ -2,7 +2,7 @@ using Google.Protobuf.WellKnownTypes;
 using Jobdeck.Job.V1;
 using JStatusCodes = Jobdeck.Job.V1.StatusCodes;
 
-namespace ui.Models;
+namespace ui.Client.Models;
 
 public static class JobMapping
 {

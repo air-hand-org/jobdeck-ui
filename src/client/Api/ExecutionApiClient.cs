@@ -1,11 +1,9 @@
 using Grpc.Core;
 using Jobdeck.Job.V1;
 
-using ui.Models;
+namespace ui.Client.Api;
 
-namespace ui.Client;
-
-public sealed record ListExecutionsResult(List<ExecutionView> Executions, string NextPageToken);
+public sealed record ListExecutionsResult(List<Models.ExecutionView> Executions, string NextPageToken);
 
 public sealed class ExecutionApiClient(ExecutionService.ExecutionServiceClient execs)
 {
@@ -43,7 +41,7 @@ public sealed class ExecutionApiClient(ExecutionService.ExecutionServiceClient e
                 cancellationToken: cancellationToken
             );
             return ApiResult<ListExecutionsResult>.Success(
-                new ListExecutionsResult([.. result.Executions.Select(e => new ExecutionView(e))]
+                new ListExecutionsResult([.. result.Executions.Select(e => new Models.ExecutionView(e))]
                 , result.NextPageToken)
             );
         }

@@ -1,7 +1,7 @@
 using Grpc.Core;
 using Jobdeck.Bff.V1;
 
-namespace ui.Client;
+namespace ui.Client.Api;
 
 public sealed class AntiforgeryApiClient(AntiforgeryService.AntiforgeryServiceClient antiforgery)
 {
