@@ -5,7 +5,7 @@ on:
 
 permissions: {}
 
-# Keep only the newest test run for a branch or pull request.
+# Keep only the newest test and license run for a branch or pull request.
 concurrency:
   group: test-${{ github.ref }}
   cancel-in-progress: true
@@ -15,7 +15,7 @@ jobs:
     permissions:
       contents: read
       packages: read
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
     env:
       ARTIFACT_ELIGIBLE: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && (github.event.pull_request.user.login == 'renovate[bot]' || (github.event.pull_request.user.login == 'air-hand-release-app[bot]' && startsWith(github.event.pull_request.head.ref, 'renovate-jobdeck/'))) }}
       NuGetPackageSourceCredentials_github: "Username=${{ github.actor }};Password=${{ secrets.GITHUB_TOKEN }}"
@@ -42,8 +42,30 @@ jobs:
         run: |
           dotnet publish src/bff/ui.csproj --no-restore --configuration Release --output "$RUNNER_TEMP/ui-publish"
           bash scripts/check-browser-assets.sh "$RUNNER_TEMP/ui-publish"
-      - name: test NuGet source resolution (.NET only)
-        run: dotnet run --project tools/NuGetDocuments.Tests
+      - name: check clean
+        run: make check-clean
+
+  licenses:
+    permissions:
+      contents: read
+      packages: read
+    runs-on: ubuntu-slim
+    env:
+      ARTIFACT_ELIGIBLE: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && (github.event.pull_request.user.login == 'renovate[bot]' || (github.event.pull_request.user.login == 'air-hand-release-app[bot]' && startsWith(github.event.pull_request.head.ref, 'renovate-jobdeck/'))) }}
+      NuGetPackageSourceCredentials_github: "Username=${{ github.actor }};Password=${{ secrets.GITHUB_TOKEN }}"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          ref: ${{ case(env.ARTIFACT_ELIGIBLE == 'true', github.event.pull_request.head.sha, github.sha) }}
+      - uses: air-hand-org/jobdeck-actions/actions/setup-tools@56b5a3e5540b1a1d42a0dbd3ae45b48910f42e83 # v1.7.3
+      - name: Restore Nuget cache
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.nuget/packages
+          key: nuget-${{ runner.os }}-${{ hashFiles('**/*.csproj') }}
+          restore-keys: |
+            nuget-${{ runner.os }}-
       - name: generate NuGet licenses
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
