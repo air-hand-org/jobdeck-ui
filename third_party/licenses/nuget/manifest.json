@@ -629,6 +629,36 @@
     "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
   },
   {
+    "id": "Jobdeck.Bff.Contracts",
+    "version": "1.0.0",
+    "source": "restored-nupkg",
+    "packagePath": "jobdeck.bff.contracts/1.0.0/jobdeck.bff.contracts.1.0.0.nupkg",
+    "nupkgSha256": "fca9b66fcc7e38a4f12651bf04033f7f164194648d4981fd0764db97956769bf",
+    "nuspecPath": "Jobdeck.Bff.Contracts.nuspec",
+    "licenseType": "expression",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "repository": {
+      "type": "git",
+      "commit": "783e859a91be9a76662d35e34c438166a3359687"
+    },
+    "status": "original-license-collected",
+    "declaredLicenseFileMissing": false,
+    "sourceRetrieval": "not-needed-package-license-present",
+    "sourceResolution": null,
+    "documents": [
+      {
+        "path": "LICENSE",
+        "sha256": "4e359831eae751b87e7e78110a8797d479e930f7fb6e4e204750dbdf19cbfc67",
+        "bytes": 1065
+      }
+    ],
+    "sourceDocuments": [],
+    "sourceAttempts": [],
+    "errors": [],
+    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
+  },
+  {
     "id": "Jobdeck.Job.Contracts",
     "version": "1.3.2",
     "source": "restored-nupkg",

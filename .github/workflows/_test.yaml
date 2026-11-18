@@ -34,6 +34,8 @@ jobs:
             nuget-${{ runner.os }}-
       - name: build
         run: make build
+      - name: lint
+        run: make lint
       - name: test
         run: make test
       - name: verify published browser boundary
@@ -64,7 +66,5 @@ jobs:
           repository: ${{ github.event.repository.name }}
           app-client-id: ${{ vars.GH_APP_RELEASE_CLIENT_ID }}
           app-private-key: ${{ secrets.GH_APP_RELEASE_PRIVATE_KEY }}
-      - name: lint
-        run: make lint
       - name: check clean
         run: make check-clean
