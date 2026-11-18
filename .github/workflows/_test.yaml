@@ -34,6 +34,8 @@ jobs:
             nuget-${{ runner.os }}-
       - name: build
         run: make build
+      - name: test
+        run: make test
       - name: verify published browser boundary
         run: |
           dotnet publish src/bff/ui.csproj --no-restore --configuration Release --output "$RUNNER_TEMP/ui-publish"
@@ -66,5 +68,3 @@ jobs:
         run: make lint
       - name: check clean
         run: make check-clean
-      - name: test
-        run: make test
