@@ -18,10 +18,10 @@ public sealed class AntiforgeryTokenProviderTests
         {
             OnGetAntiforgeryToken = async (_, context) =>
             {
-                Interlocked.Increment(ref calls);
+                var call = Interlocked.Increment(ref calls);
                 entered.SetResult();
                 await release.Task.WaitAsync(TimeSpan.FromSeconds(10), context.CancellationToken);
-                return new GetAntiforgeryTokenResponse { RequestToken = "shared-token" };
+                return new GetAntiforgeryTokenResponse { RequestToken = $"shared-token-{call}" };
             }
         }, new TestJobService(), new TestExecutionService(), TestContext.Current.CancellationToken);
         var provider = scope.Services.GetRequiredService<IAntiforgeryTokenProvider>();
@@ -30,8 +30,8 @@ public sealed class AntiforgeryTokenProviderTests
         var second = provider.GetTokenAsync(TestContext.Current.CancellationToken);
         Assert.False(second.IsCompleted);
         release.SetResult();
-        Assert.All(await Task.WhenAll(first, second), token => Assert.Equal("shared-token", token));
-        Assert.Equal("shared-token", await provider.GetTokenAsync(TestContext.Current.CancellationToken));
+        Assert.All(await Task.WhenAll(first, second), token => Assert.Equal("shared-token-1", token));
+        Assert.Equal("shared-token-1", await provider.GetTokenAsync(TestContext.Current.CancellationToken));
         Assert.Equal(1, calls);
     }
 

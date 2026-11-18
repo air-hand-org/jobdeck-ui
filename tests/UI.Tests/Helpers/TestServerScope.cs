@@ -35,6 +35,7 @@ public sealed class TestServerScope : IAsyncDisposable
         var builder = WebApplication.CreateBuilder();
         builder.WebHost.UseTestServer();
         var grpc = builder.Services.AddGrpc();
+        // Enable the real interceptor for the empty-token rejection test; other tests inspect synthetic tokens.
         if (validateAntiforgery)
         {
             builder.Services.AddAntiforgery(options => options.HeaderName = "X-CSRF-TOKEN");
