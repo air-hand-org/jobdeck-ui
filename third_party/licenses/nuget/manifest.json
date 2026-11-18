@@ -2126,10 +2126,10 @@
   },
   {
     "id": "Microsoft.Extensions.Http.Polly",
-    "version": "10.0.14",
+    "version": "10.0.15",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.extensions.http.polly/10.0.14/microsoft.extensions.http.polly.10.0.14.nupkg",
-    "nupkgSha256": "4b49ca9e53df2fbe101f1ad44f42314b200c88b7b2966130c14bf911f531ed2e",
+    "packagePath": "microsoft.extensions.http.polly/10.0.15/microsoft.extensions.http.polly.10.0.15.nupkg",
+    "nupkgSha256": "67e1be199a9caccd12af94fdac53c0c09177c2df8482eb8e7105ce43cfcb0a7d",
     "nuspecPath": "Microsoft.Extensions.Http.Polly.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -2137,15 +2137,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "0427b9abbead3fa64c6655eb4290c537397131fa"
+      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "tag": null,
-      "resolvedSha": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -2160,36 +2160,36 @@
     ],
     "sourceDocuments": [
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
         "bytes": 265586
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/0427b9abbead3fa64c6655eb4290c537397131fa",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3032,10 +3032,10 @@
   },
   {
     "id": "OpenIddict.Abstractions",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.abstractions/7.8.0/openiddict.abstractions.7.8.0.nupkg",
-    "nupkgSha256": "5b5e72e9ae7002e5a9b43c7ae8fe80c8014714b7e72b4795a42ebab8c482d7d9",
+    "packagePath": "openiddict.abstractions/7.9.0/openiddict.abstractions.7.9.0.nupkg",
+    "nupkgSha256": "d25d57a7987ce36b4b9a619e89590ae6c172c47a3c4bf0f4c089b2417c175fc1",
     "nuspecPath": "OpenIddict.Abstractions.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3043,15 +3043,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3060,23 +3060,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3086,10 +3086,10 @@
   },
   {
     "id": "OpenIddict.AspNetCore",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.aspnetcore/7.8.0/openiddict.aspnetcore.7.8.0.nupkg",
-    "nupkgSha256": "e6e1c265a459fc75880691c7003fcdb290dbc5dacee36e83d9327bd0939047cd",
+    "packagePath": "openiddict.aspnetcore/7.9.0/openiddict.aspnetcore.7.9.0.nupkg",
+    "nupkgSha256": "1001dce4a17f4f8fa344233ac2800c9d310c6b4933a5af234f6a3796cafd9125",
     "nuspecPath": "OpenIddict.AspNetCore.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3097,15 +3097,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3114,23 +3114,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3140,10 +3140,10 @@
   },
   {
     "id": "OpenIddict.Client.AspNetCore",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.client.aspnetcore/7.8.0/openiddict.client.aspnetcore.7.8.0.nupkg",
-    "nupkgSha256": "c15ac125c62aa2e30875f5f20a7ba4f744695396d727772297fef7199603904d",
+    "packagePath": "openiddict.client.aspnetcore/7.9.0/openiddict.client.aspnetcore.7.9.0.nupkg",
+    "nupkgSha256": "8a81eb066e6c9c2af5e10b01f5f9627d500d3d971ac45769a072c176bf2ef6da",
     "nuspecPath": "OpenIddict.Client.AspNetCore.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3151,15 +3151,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3168,23 +3168,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3194,10 +3194,10 @@
   },
   {
     "id": "OpenIddict.Client.DataProtection",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.client.dataprotection/7.8.0/openiddict.client.dataprotection.7.8.0.nupkg",
-    "nupkgSha256": "116e049d91c7db2e55f7623da4503452d3da255a669b7ceb8591bb9c91b1e621",
+    "packagePath": "openiddict.client.dataprotection/7.9.0/openiddict.client.dataprotection.7.9.0.nupkg",
+    "nupkgSha256": "22816ca1cfcd9e392dcc2d8e7590fbde872f0087c10c77b7ec0440c37b69bdf9",
     "nuspecPath": "OpenIddict.Client.DataProtection.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3205,15 +3205,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3222,23 +3222,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3248,10 +3248,10 @@
   },
   {
     "id": "OpenIddict.Client.SystemIntegration",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.client.systemintegration/7.8.0/openiddict.client.systemintegration.7.8.0.nupkg",
-    "nupkgSha256": "663e8ae59ab412ffe9c5bb85b49203e8eead3c9ece89b70d162d7645058b7513",
+    "packagePath": "openiddict.client.systemintegration/7.9.0/openiddict.client.systemintegration.7.9.0.nupkg",
+    "nupkgSha256": "62f6879c2a70ffffe0b8553d3acc650bacc6884c87039365b6e4170c41d0b96c",
     "nuspecPath": "OpenIddict.Client.SystemIntegration.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3259,15 +3259,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3276,23 +3276,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3302,10 +3302,10 @@
   },
   {
     "id": "OpenIddict.Client.SystemNetHttp",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.client.systemnethttp/7.8.0/openiddict.client.systemnethttp.7.8.0.nupkg",
-    "nupkgSha256": "01b0542ce3b2d83d8de4df6953588950064d5393b3136d15cf4bd486e8eb9b6c",
+    "packagePath": "openiddict.client.systemnethttp/7.9.0/openiddict.client.systemnethttp.7.9.0.nupkg",
+    "nupkgSha256": "5968de2edc8eb095df9a8d1b71b65c22ca17a613ec204a255b30f7950daf2fbb",
     "nuspecPath": "OpenIddict.Client.SystemNetHttp.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3313,15 +3313,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3330,23 +3330,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3356,10 +3356,10 @@
   },
   {
     "id": "OpenIddict.Client.WebIntegration",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.client.webintegration/7.8.0/openiddict.client.webintegration.7.8.0.nupkg",
-    "nupkgSha256": "6648db42e189c035f71bd088644a9543ba3834758dd98e2231bc5714fd4805a3",
+    "packagePath": "openiddict.client.webintegration/7.9.0/openiddict.client.webintegration.7.9.0.nupkg",
+    "nupkgSha256": "f24e66aa7881d77b4540a7e14b53054e34434dcc370fbc9d740db7f10b2854dd",
     "nuspecPath": "OpenIddict.Client.WebIntegration.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3367,15 +3367,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3384,23 +3384,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3410,10 +3410,10 @@
   },
   {
     "id": "OpenIddict.Client",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.client/7.8.0/openiddict.client.7.8.0.nupkg",
-    "nupkgSha256": "a611c1917ae079cf09e3c3d2739b2a3f36b4404fd2e3b6b768c7cfdefbd5ac9f",
+    "packagePath": "openiddict.client/7.9.0/openiddict.client.7.9.0.nupkg",
+    "nupkgSha256": "bbe676118da84cad10ee1cbfc09a3d49cf275d1007357e6c6bc8b6f813bd307a",
     "nuspecPath": "OpenIddict.Client.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3421,15 +3421,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3438,23 +3438,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3464,10 +3464,10 @@
   },
   {
     "id": "OpenIddict.Core",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.core/7.8.0/openiddict.core.7.8.0.nupkg",
-    "nupkgSha256": "b27ce4ae1b7138869681b6c8eec8fb273b7fde0693d3902900426ee81beb1701",
+    "packagePath": "openiddict.core/7.9.0/openiddict.core.7.9.0.nupkg",
+    "nupkgSha256": "388f914540a2629ddddf547c04b685c38872f29f2e248b397573b1b2df590568",
     "nuspecPath": "OpenIddict.Core.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3475,15 +3475,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3492,23 +3492,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3518,10 +3518,10 @@
   },
   {
     "id": "OpenIddict.EntityFrameworkCore.Models",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.entityframeworkcore.models/7.8.0/openiddict.entityframeworkcore.models.7.8.0.nupkg",
-    "nupkgSha256": "9620533e13cde9835bdecfeacd1d573b7ca25502eb0d7717e621efaa424b3535",
+    "packagePath": "openiddict.entityframeworkcore.models/7.9.0/openiddict.entityframeworkcore.models.7.9.0.nupkg",
+    "nupkgSha256": "81cb636ee1a99673945a491b459b0b833fff86137906b81112c92d3130e3c025",
     "nuspecPath": "OpenIddict.EntityFrameworkCore.Models.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3529,15 +3529,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3546,23 +3546,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3572,10 +3572,10 @@
   },
   {
     "id": "OpenIddict.EntityFrameworkCore",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.entityframeworkcore/7.8.0/openiddict.entityframeworkcore.7.8.0.nupkg",
-    "nupkgSha256": "f40fb819091a77dd1fc049b92e40476341c09294b7e4c7a1d88e48764cfea201",
+    "packagePath": "openiddict.entityframeworkcore/7.9.0/openiddict.entityframeworkcore.7.9.0.nupkg",
+    "nupkgSha256": "2d12927960d4d0e518d602a629f35e51f0bd73ef9eca044e927d0bfe52a18897",
     "nuspecPath": "OpenIddict.EntityFrameworkCore.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3583,15 +3583,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3600,23 +3600,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3626,10 +3626,10 @@
   },
   {
     "id": "OpenIddict.Quartz",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.quartz/7.8.0/openiddict.quartz.7.8.0.nupkg",
-    "nupkgSha256": "35eccfed8f3c4069c3daa8e0006dda953fe51ce5823cee969931cc1d237d4396",
+    "packagePath": "openiddict.quartz/7.9.0/openiddict.quartz.7.9.0.nupkg",
+    "nupkgSha256": "02e784a591cc7611d9189478b1adb7a2afd35432f0a91836f9e28b6db517cb84",
     "nuspecPath": "OpenIddict.Quartz.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3637,15 +3637,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3654,23 +3654,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3680,10 +3680,10 @@
   },
   {
     "id": "OpenIddict.Server.AspNetCore",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.server.aspnetcore/7.8.0/openiddict.server.aspnetcore.7.8.0.nupkg",
-    "nupkgSha256": "97524a4df55bda9d1c465bd4226b1bed6d61490f7de370ff7980d8946df4f54f",
+    "packagePath": "openiddict.server.aspnetcore/7.9.0/openiddict.server.aspnetcore.7.9.0.nupkg",
+    "nupkgSha256": "9dfdee9194f9a2c8e3467851d597e26b3bf38a3c17d199369eaa0000cd5e2b63",
     "nuspecPath": "OpenIddict.Server.AspNetCore.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3691,15 +3691,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3708,23 +3708,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3734,10 +3734,10 @@
   },
   {
     "id": "OpenIddict.Server.DataProtection",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.server.dataprotection/7.8.0/openiddict.server.dataprotection.7.8.0.nupkg",
-    "nupkgSha256": "214fcd2f15c4a9c3ed6d392bc062eba73b6d82a3a877418dea6f368a0b69a65c",
+    "packagePath": "openiddict.server.dataprotection/7.9.0/openiddict.server.dataprotection.7.9.0.nupkg",
+    "nupkgSha256": "1510a8db59729dd1583e9df4fd5565e5e3219c60c2219eaf3f0c4b7028bad7dc",
     "nuspecPath": "OpenIddict.Server.DataProtection.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3745,15 +3745,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3762,23 +3762,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3788,10 +3788,10 @@
   },
   {
     "id": "OpenIddict.Server",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.server/7.8.0/openiddict.server.7.8.0.nupkg",
-    "nupkgSha256": "8b8736919dd82a024a38bfc450feedc04734b26f11a2bafe7cecce2deb9c9317",
+    "packagePath": "openiddict.server/7.9.0/openiddict.server.7.9.0.nupkg",
+    "nupkgSha256": "288647dea4530a377f73cd0b878dfc2e3b28654a4b626369af1bdd2412a90988",
     "nuspecPath": "OpenIddict.Server.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3799,15 +3799,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3816,23 +3816,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3842,10 +3842,10 @@
   },
   {
     "id": "OpenIddict.Validation.AspNetCore",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.validation.aspnetcore/7.8.0/openiddict.validation.aspnetcore.7.8.0.nupkg",
-    "nupkgSha256": "7e6334863ab198eda0ff60a3f99daed5104d02983750bd19c9cf682b883844fd",
+    "packagePath": "openiddict.validation.aspnetcore/7.9.0/openiddict.validation.aspnetcore.7.9.0.nupkg",
+    "nupkgSha256": "676cfdfb5c0ccfe60bd874af2518102c970344210d796ce7d0118d4e40b232d0",
     "nuspecPath": "OpenIddict.Validation.AspNetCore.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3853,15 +3853,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3870,23 +3870,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3896,10 +3896,10 @@
   },
   {
     "id": "OpenIddict.Validation.DataProtection",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.validation.dataprotection/7.8.0/openiddict.validation.dataprotection.7.8.0.nupkg",
-    "nupkgSha256": "20815976978d4f7bbd5b8ac02a4f8beeef352eea9ed363f79f1daab0229a3b5c",
+    "packagePath": "openiddict.validation.dataprotection/7.9.0/openiddict.validation.dataprotection.7.9.0.nupkg",
+    "nupkgSha256": "169eba07048409d464b06fbb1937da34563b9ddd8bc7f365218f537fbc8602f0",
     "nuspecPath": "OpenIddict.Validation.DataProtection.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3907,15 +3907,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3924,23 +3924,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3950,10 +3950,10 @@
   },
   {
     "id": "OpenIddict.Validation.ServerIntegration",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.validation.serverintegration/7.8.0/openiddict.validation.serverintegration.7.8.0.nupkg",
-    "nupkgSha256": "e7989c153361e046c1ca9f9ee3bbbfadaeca11b4d43f0b777c499c3fec640c9c",
+    "packagePath": "openiddict.validation.serverintegration/7.9.0/openiddict.validation.serverintegration.7.9.0.nupkg",
+    "nupkgSha256": "8bc13e557f75f6f6e26a0b9fd0b37c6a3e48f55b9bd55d46b3e57bdf1b02e91f",
     "nuspecPath": "OpenIddict.Validation.ServerIntegration.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3961,15 +3961,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3978,23 +3978,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -4004,10 +4004,10 @@
   },
   {
     "id": "OpenIddict.Validation.SystemNetHttp",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.validation.systemnethttp/7.8.0/openiddict.validation.systemnethttp.7.8.0.nupkg",
-    "nupkgSha256": "b8575887fab8bba960dc700b5fec83db81f4935ad219956aee3f906e4e20ad45",
+    "packagePath": "openiddict.validation.systemnethttp/7.9.0/openiddict.validation.systemnethttp.7.9.0.nupkg",
+    "nupkgSha256": "dd4894f65277fb715d861ed5b6efdbd122924ac5bf622853fb8d2463db223090",
     "nuspecPath": "OpenIddict.Validation.SystemNetHttp.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4015,15 +4015,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -4032,23 +4032,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -4058,10 +4058,10 @@
   },
   {
     "id": "OpenIddict.Validation",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.validation/7.8.0/openiddict.validation.7.8.0.nupkg",
-    "nupkgSha256": "ba15224151afd7c2755a431f38605beede8e78cf2def3c0373cf04a36efef053",
+    "packagePath": "openiddict.validation/7.9.0/openiddict.validation.7.9.0.nupkg",
+    "nupkgSha256": "d1334aadbfa3facc4b0c9d166f83e9d6621c468e601242328fb107220ba8888d",
     "nuspecPath": "OpenIddict.Validation.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4069,15 +4069,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -4086,23 +4086,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -4112,10 +4112,10 @@
   },
   {
     "id": "OpenIddict",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict/7.8.0/openiddict.7.8.0.nupkg",
-    "nupkgSha256": "fc92d68a9ee6f50f2928b2f5b8930d622a132aa56cad4e5fd338cc87a2b0c4b6",
+    "packagePath": "openiddict/7.9.0/openiddict.7.9.0.nupkg",
+    "nupkgSha256": "7f93d7a814d71e0fc2cd84968b33811f89676a0145bc648ffacba09a4a93edfa",
     "nuspecPath": "OpenIddict.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4123,15 +4123,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -4140,23 +4140,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
