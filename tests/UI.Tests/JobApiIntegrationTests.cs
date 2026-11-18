@@ -10,7 +10,7 @@ namespace UI.Tests;
 public sealed class JobApiIntegrationTests
 {
     [Fact]
-    public async Task MutationsSendAntiforgeryTokenAndAreNotRetried()
+    public async Task SendAntiforgeryTokenAndAreNotRetried()
     {
         var writes = 0;
 

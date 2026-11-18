@@ -48,6 +48,8 @@ public sealed class TestServerScope : IAsyncDisposable
             app.UseGrpcWeb();
 
             app.MapGrpcService<TestAntiforgeryService>().EnableGrpcWeb();
+            app.MapGrpcService<TestJobService>().EnableGrpcWeb();
+            app.MapGrpcService<TestExecutionService>().EnableGrpcWeb();
 
             await app.StartAsync(cancellationToken);
 
