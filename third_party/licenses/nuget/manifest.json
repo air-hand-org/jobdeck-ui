@@ -630,17 +630,17 @@
   },
   {
     "id": "Jobdeck.Job.Contracts",
-    "version": "1.3.1",
+    "version": "1.3.2",
     "source": "restored-nupkg",
-    "packagePath": "jobdeck.job.contracts/1.3.1/jobdeck.job.contracts.1.3.1.nupkg",
-    "nupkgSha256": "bcc5524f41bf4e3a096bbc85dc44435a1e2a265f6deca8845c66975f9ed9944a",
+    "packagePath": "jobdeck.job.contracts/1.3.2/jobdeck.job.contracts.1.3.2.nupkg",
+    "nupkgSha256": "55a85f626fd6bc57e484951f7f8e53d9a7cedaf267b457faf5bcde0e34be4a33",
     "nuspecPath": "Jobdeck.Job.Contracts.nuspec",
     "licenseType": "expression",
     "license": "MIT AND Apache-2.0",
     "licenseUrl": "https://licenses.nuget.org/MIT%20AND%20Apache-2.0",
     "repository": {
       "type": "git",
-      "commit": "8c2f0dd965771d2888bea6d8f0b9fe2c5e0a6ea7"
+      "commit": "030b3d922a7dd225804ccdb0eaa945b278b0d458"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
@@ -665,10 +665,10 @@
   },
   {
     "id": "Microsoft.AspNetCore.App.Internal.Assets",
-    "version": "10.0.14",
+    "version": "10.0.15",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.aspnetcore.app.internal.assets/10.0.14/microsoft.aspnetcore.app.internal.assets.10.0.14.nupkg",
-    "nupkgSha256": "422031c229b31e1892d0eb56711d587c2c5155c50645ed8f9dbee536ec3ed4bc",
+    "packagePath": "microsoft.aspnetcore.app.internal.assets/10.0.15/microsoft.aspnetcore.app.internal.assets.10.0.15.nupkg",
+    "nupkgSha256": "683f0e4bf6d992fdeb09f7e846d92280a520c26aa2044cbd348a0fe112ccd072",
     "nuspecPath": "Microsoft.AspNetCore.App.Internal.Assets.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -676,15 +676,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "0427b9abbead3fa64c6655eb4290c537397131fa"
+      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "tag": null,
-      "resolvedSha": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -699,36 +699,36 @@
     ],
     "sourceDocuments": [
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
         "bytes": 265586
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/0427b9abbead3fa64c6655eb4290c537397131fa",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -738,10 +738,10 @@
   },
   {
     "id": "Microsoft.AspNetCore.Components.QuickGrid",
-    "version": "10.0.14",
+    "version": "10.0.15",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.aspnetcore.components.quickgrid/10.0.14/microsoft.aspnetcore.components.quickgrid.10.0.14.nupkg",
-    "nupkgSha256": "de974c51adea79539cc64c10ec5c0ba26de89c1cff2647cd2a0af20971d5f52e",
+    "packagePath": "microsoft.aspnetcore.components.quickgrid/10.0.15/microsoft.aspnetcore.components.quickgrid.10.0.15.nupkg",
+    "nupkgSha256": "a4647219b768c62999df8777a1e95f2bd9cb0a0f7ca4620365b25ea2f292e499",
     "nuspecPath": "Microsoft.AspNetCore.Components.QuickGrid.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -749,15 +749,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "0427b9abbead3fa64c6655eb4290c537397131fa"
+      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "tag": null,
-      "resolvedSha": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -772,36 +772,36 @@
     ],
     "sourceDocuments": [
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
         "bytes": 265586
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/0427b9abbead3fa64c6655eb4290c537397131fa",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -957,10 +957,10 @@
   },
   {
     "id": "Microsoft.AspNetCore.DataProtection.EntityFrameworkCore",
-    "version": "10.0.14",
+    "version": "10.0.15",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.aspnetcore.dataprotection.entityframeworkcore/10.0.14/microsoft.aspnetcore.dataprotection.entityframeworkcore.10.0.14.nupkg",
-    "nupkgSha256": "1b09a9f8617ed6ad87ca2f1dc1951b7a3225542fdc561827d098829fff7d5af6",
+    "packagePath": "microsoft.aspnetcore.dataprotection.entityframeworkcore/10.0.15/microsoft.aspnetcore.dataprotection.entityframeworkcore.10.0.15.nupkg",
+    "nupkgSha256": "4b756e1534cd24d6dbed352fef80a80e36d89a6f0340ae2d171c45c1b9dfa82b",
     "nuspecPath": "Microsoft.AspNetCore.DataProtection.EntityFrameworkCore.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -968,15 +968,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "0427b9abbead3fa64c6655eb4290c537397131fa"
+      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "tag": null,
-      "resolvedSha": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -991,36 +991,36 @@
     ],
     "sourceDocuments": [
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
         "bytes": 265586
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/0427b9abbead3fa64c6655eb4290c537397131fa",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -1564,10 +1564,10 @@
   },
   {
     "id": "Microsoft.EntityFrameworkCore.Abstractions",
-    "version": "10.0.14",
+    "version": "10.0.15",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.entityframeworkcore.abstractions/10.0.14/microsoft.entityframeworkcore.abstractions.10.0.14.nupkg",
-    "nupkgSha256": "30d8a3312b020a4b010d03df305bc454565b991254a19cb8975d15fbcd98b26a",
+    "packagePath": "microsoft.entityframeworkcore.abstractions/10.0.15/microsoft.entityframeworkcore.abstractions.10.0.15.nupkg",
+    "nupkgSha256": "69c0298bec2a031223696630ef224464d5872130023f229bf57e75e7d4224284",
     "nuspecPath": "Microsoft.EntityFrameworkCore.Abstractions.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -1575,15 +1575,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "0427b9abbead3fa64c6655eb4290c537397131fa"
+      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "tag": null,
-      "resolvedSha": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1592,36 +1592,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
         "bytes": 265586
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/0427b9abbead3fa64c6655eb4290c537397131fa",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -1631,10 +1631,10 @@
   },
   {
     "id": "Microsoft.EntityFrameworkCore.Analyzers",
-    "version": "10.0.14",
+    "version": "10.0.15",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.entityframeworkcore.analyzers/10.0.14/microsoft.entityframeworkcore.analyzers.10.0.14.nupkg",
-    "nupkgSha256": "84978f2cc4d108110b99980c6a260ad460bc9c9ce948338b1cb0eb248865b519",
+    "packagePath": "microsoft.entityframeworkcore.analyzers/10.0.15/microsoft.entityframeworkcore.analyzers.10.0.15.nupkg",
+    "nupkgSha256": "c07517561e90686407304ec881407a6a838354deb9ca44d879b528803abdea47",
     "nuspecPath": "Microsoft.EntityFrameworkCore.Analyzers.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -1642,15 +1642,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "0427b9abbead3fa64c6655eb4290c537397131fa"
+      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "tag": null,
-      "resolvedSha": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1659,36 +1659,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
         "bytes": 265586
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/0427b9abbead3fa64c6655eb4290c537397131fa",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -1698,10 +1698,10 @@
   },
   {
     "id": "Microsoft.EntityFrameworkCore.Design",
-    "version": "10.0.14",
+    "version": "10.0.15",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.entityframeworkcore.design/10.0.14/microsoft.entityframeworkcore.design.10.0.14.nupkg",
-    "nupkgSha256": "fcf1d301327f61abcb8794ab849de777b59272db5462c4d4e703956b689b3de6",
+    "packagePath": "microsoft.entityframeworkcore.design/10.0.15/microsoft.entityframeworkcore.design.10.0.15.nupkg",
+    "nupkgSha256": "cfad7d43c9ee099f8e519013686762286b2249d4543cfcaf524cc744e807d950",
     "nuspecPath": "Microsoft.EntityFrameworkCore.Design.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -1709,15 +1709,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "0427b9abbead3fa64c6655eb4290c537397131fa"
+      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "tag": null,
-      "resolvedSha": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1726,36 +1726,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
         "bytes": 265586
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/0427b9abbead3fa64c6655eb4290c537397131fa",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -1765,10 +1765,10 @@
   },
   {
     "id": "Microsoft.EntityFrameworkCore.Relational",
-    "version": "10.0.14",
+    "version": "10.0.15",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.entityframeworkcore.relational/10.0.14/microsoft.entityframeworkcore.relational.10.0.14.nupkg",
-    "nupkgSha256": "45ae7a498e8cec0349b52d3b343ef64f8ad0456804124209743f4ea30e1863bd",
+    "packagePath": "microsoft.entityframeworkcore.relational/10.0.15/microsoft.entityframeworkcore.relational.10.0.15.nupkg",
+    "nupkgSha256": "04f267c9fa04ffc95769abdfdc963c0dea061a9d47e87d84a8a96f1f0301e421",
     "nuspecPath": "Microsoft.EntityFrameworkCore.Relational.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -1776,15 +1776,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "0427b9abbead3fa64c6655eb4290c537397131fa"
+      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "tag": null,
-      "resolvedSha": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1793,36 +1793,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
         "bytes": 265586
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/0427b9abbead3fa64c6655eb4290c537397131fa",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -1832,10 +1832,10 @@
   },
   {
     "id": "Microsoft.EntityFrameworkCore",
-    "version": "10.0.14",
+    "version": "10.0.15",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.entityframeworkcore/10.0.14/microsoft.entityframeworkcore.10.0.14.nupkg",
-    "nupkgSha256": "2129fb09cedb17c1d49529e2051e5c5ac25ede7852e16bd2265be4d16a1566e5",
+    "packagePath": "microsoft.entityframeworkcore/10.0.15/microsoft.entityframeworkcore.10.0.15.nupkg",
+    "nupkgSha256": "b8290df4495eca015bcfed8a5c8fe0518df0484ceceac4c1e8a83962811ef8ae",
     "nuspecPath": "Microsoft.EntityFrameworkCore.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -1843,15 +1843,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "0427b9abbead3fa64c6655eb4290c537397131fa"
+      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "tag": null,
-      "resolvedSha": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1860,36 +1860,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
         "bytes": 265586
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/0427b9abbead3fa64c6655eb4290c537397131fa",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -2100,10 +2100,10 @@
   },
   {
     "id": "Microsoft.Extensions.DependencyModel",
-    "version": "10.0.14",
+    "version": "10.0.15",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.extensions.dependencymodel/10.0.14/microsoft.extensions.dependencymodel.10.0.14.nupkg",
-    "nupkgSha256": "d8edfdf820010f13c7dfe9e56f8fba78cbae6ec41a6e9ff2d5457f1226bde621",
+    "packagePath": "microsoft.extensions.dependencymodel/10.0.15/microsoft.extensions.dependencymodel.10.0.15.nupkg",
+    "nupkgSha256": "2df05d82ee2eee2a5caa6af1ad4c63e6e71722fd2b342ea698879e71fe318051",
     "nuspecPath": "Microsoft.Extensions.DependencyModel.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -2111,15 +2111,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "0427b9abbead3fa64c6655eb4290c537397131fa"
+      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "tag": null,
-      "resolvedSha": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -2134,36 +2134,36 @@
     ],
     "sourceDocuments": [
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
         "bytes": 265586
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/0427b9abbead3fa64c6655eb4290c537397131fa",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -2240,10 +2240,10 @@
   },
   {
     "id": "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore",
-    "version": "10.0.14",
+    "version": "10.0.15",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.extensions.diagnostics.healthchecks.entityframeworkcore/10.0.14/microsoft.extensions.diagnostics.healthchecks.entityframeworkcore.10.0.14.nupkg",
-    "nupkgSha256": "b2c7c0ad2da7535bc45668449e12637f39d991e2739d9d48c7cedb991c12a7a9",
+    "packagePath": "microsoft.extensions.diagnostics.healthchecks.entityframeworkcore/10.0.15/microsoft.extensions.diagnostics.healthchecks.entityframeworkcore.10.0.15.nupkg",
+    "nupkgSha256": "6796e95f97137d633f7ac4ba2dc0902da3d0976aaef190cfd6e1d3a7e7e719ea",
     "nuspecPath": "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -2251,15 +2251,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "0427b9abbead3fa64c6655eb4290c537397131fa"
+      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "tag": null,
-      "resolvedSha": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -2274,36 +2274,36 @@
     ],
     "sourceDocuments": [
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
         "bytes": 265586
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/0427b9abbead3fa64c6655eb4290c537397131fa",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -2380,10 +2380,10 @@
   },
   {
     "id": "Microsoft.Extensions.Http.Polly",
-    "version": "10.0.14",
+    "version": "10.0.15",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.extensions.http.polly/10.0.14/microsoft.extensions.http.polly.10.0.14.nupkg",
-    "nupkgSha256": "4b49ca9e53df2fbe101f1ad44f42314b200c88b7b2966130c14bf911f531ed2e",
+    "packagePath": "microsoft.extensions.http.polly/10.0.15/microsoft.extensions.http.polly.10.0.15.nupkg",
+    "nupkgSha256": "67e1be199a9caccd12af94fdac53c0c09177c2df8482eb8e7105ce43cfcb0a7d",
     "nuspecPath": "Microsoft.Extensions.Http.Polly.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -2391,15 +2391,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "0427b9abbead3fa64c6655eb4290c537397131fa"
+      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "tag": null,
-      "resolvedSha": "0427b9abbead3fa64c6655eb4290c537397131fa",
+      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -2414,36 +2414,36 @@
     ],
     "sourceDocuments": [
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
         "bytes": 265586
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/0427b9abbead3fa64c6655eb4290c537397131fa",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/LICENSE.TXT",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/0427b9abbead3fa64c6655eb4290c537397131fa/THIRD-PARTY-NOTICES.txt",
-        "revision": "0427b9abbead3fa64c6655eb4290c537397131fa",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
+        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3359,10 +3359,10 @@
   },
   {
     "id": "OpenIddict.Abstractions",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.abstractions/7.8.0/openiddict.abstractions.7.8.0.nupkg",
-    "nupkgSha256": "5b5e72e9ae7002e5a9b43c7ae8fe80c8014714b7e72b4795a42ebab8c482d7d9",
+    "packagePath": "openiddict.abstractions/7.9.0/openiddict.abstractions.7.9.0.nupkg",
+    "nupkgSha256": "d25d57a7987ce36b4b9a619e89590ae6c172c47a3c4bf0f4c089b2417c175fc1",
     "nuspecPath": "OpenIddict.Abstractions.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3370,15 +3370,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3387,23 +3387,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3413,10 +3413,10 @@
   },
   {
     "id": "OpenIddict.AspNetCore",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.aspnetcore/7.8.0/openiddict.aspnetcore.7.8.0.nupkg",
-    "nupkgSha256": "e6e1c265a459fc75880691c7003fcdb290dbc5dacee36e83d9327bd0939047cd",
+    "packagePath": "openiddict.aspnetcore/7.9.0/openiddict.aspnetcore.7.9.0.nupkg",
+    "nupkgSha256": "1001dce4a17f4f8fa344233ac2800c9d310c6b4933a5af234f6a3796cafd9125",
     "nuspecPath": "OpenIddict.AspNetCore.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3424,15 +3424,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3441,23 +3441,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3467,10 +3467,10 @@
   },
   {
     "id": "OpenIddict.Client.AspNetCore",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.client.aspnetcore/7.8.0/openiddict.client.aspnetcore.7.8.0.nupkg",
-    "nupkgSha256": "c15ac125c62aa2e30875f5f20a7ba4f744695396d727772297fef7199603904d",
+    "packagePath": "openiddict.client.aspnetcore/7.9.0/openiddict.client.aspnetcore.7.9.0.nupkg",
+    "nupkgSha256": "8a81eb066e6c9c2af5e10b01f5f9627d500d3d971ac45769a072c176bf2ef6da",
     "nuspecPath": "OpenIddict.Client.AspNetCore.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3478,15 +3478,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3495,23 +3495,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3521,10 +3521,10 @@
   },
   {
     "id": "OpenIddict.Client.DataProtection",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.client.dataprotection/7.8.0/openiddict.client.dataprotection.7.8.0.nupkg",
-    "nupkgSha256": "116e049d91c7db2e55f7623da4503452d3da255a669b7ceb8591bb9c91b1e621",
+    "packagePath": "openiddict.client.dataprotection/7.9.0/openiddict.client.dataprotection.7.9.0.nupkg",
+    "nupkgSha256": "22816ca1cfcd9e392dcc2d8e7590fbde872f0087c10c77b7ec0440c37b69bdf9",
     "nuspecPath": "OpenIddict.Client.DataProtection.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3532,15 +3532,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3549,23 +3549,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3575,10 +3575,10 @@
   },
   {
     "id": "OpenIddict.Client.SystemIntegration",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.client.systemintegration/7.8.0/openiddict.client.systemintegration.7.8.0.nupkg",
-    "nupkgSha256": "663e8ae59ab412ffe9c5bb85b49203e8eead3c9ece89b70d162d7645058b7513",
+    "packagePath": "openiddict.client.systemintegration/7.9.0/openiddict.client.systemintegration.7.9.0.nupkg",
+    "nupkgSha256": "62f6879c2a70ffffe0b8553d3acc650bacc6884c87039365b6e4170c41d0b96c",
     "nuspecPath": "OpenIddict.Client.SystemIntegration.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3586,15 +3586,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3603,23 +3603,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3629,10 +3629,10 @@
   },
   {
     "id": "OpenIddict.Client.SystemNetHttp",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.client.systemnethttp/7.8.0/openiddict.client.systemnethttp.7.8.0.nupkg",
-    "nupkgSha256": "01b0542ce3b2d83d8de4df6953588950064d5393b3136d15cf4bd486e8eb9b6c",
+    "packagePath": "openiddict.client.systemnethttp/7.9.0/openiddict.client.systemnethttp.7.9.0.nupkg",
+    "nupkgSha256": "5968de2edc8eb095df9a8d1b71b65c22ca17a613ec204a255b30f7950daf2fbb",
     "nuspecPath": "OpenIddict.Client.SystemNetHttp.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3640,15 +3640,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3657,23 +3657,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3683,10 +3683,10 @@
   },
   {
     "id": "OpenIddict.Client.WebIntegration",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.client.webintegration/7.8.0/openiddict.client.webintegration.7.8.0.nupkg",
-    "nupkgSha256": "6648db42e189c035f71bd088644a9543ba3834758dd98e2231bc5714fd4805a3",
+    "packagePath": "openiddict.client.webintegration/7.9.0/openiddict.client.webintegration.7.9.0.nupkg",
+    "nupkgSha256": "f24e66aa7881d77b4540a7e14b53054e34434dcc370fbc9d740db7f10b2854dd",
     "nuspecPath": "OpenIddict.Client.WebIntegration.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3694,15 +3694,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3711,23 +3711,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3737,10 +3737,10 @@
   },
   {
     "id": "OpenIddict.Client",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.client/7.8.0/openiddict.client.7.8.0.nupkg",
-    "nupkgSha256": "a611c1917ae079cf09e3c3d2739b2a3f36b4404fd2e3b6b768c7cfdefbd5ac9f",
+    "packagePath": "openiddict.client/7.9.0/openiddict.client.7.9.0.nupkg",
+    "nupkgSha256": "bbe676118da84cad10ee1cbfc09a3d49cf275d1007357e6c6bc8b6f813bd307a",
     "nuspecPath": "OpenIddict.Client.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3748,15 +3748,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3765,23 +3765,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3791,10 +3791,10 @@
   },
   {
     "id": "OpenIddict.Core",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.core/7.8.0/openiddict.core.7.8.0.nupkg",
-    "nupkgSha256": "b27ce4ae1b7138869681b6c8eec8fb273b7fde0693d3902900426ee81beb1701",
+    "packagePath": "openiddict.core/7.9.0/openiddict.core.7.9.0.nupkg",
+    "nupkgSha256": "388f914540a2629ddddf547c04b685c38872f29f2e248b397573b1b2df590568",
     "nuspecPath": "OpenIddict.Core.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3802,15 +3802,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3819,23 +3819,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3845,10 +3845,10 @@
   },
   {
     "id": "OpenIddict.EntityFrameworkCore.Models",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.entityframeworkcore.models/7.8.0/openiddict.entityframeworkcore.models.7.8.0.nupkg",
-    "nupkgSha256": "9620533e13cde9835bdecfeacd1d573b7ca25502eb0d7717e621efaa424b3535",
+    "packagePath": "openiddict.entityframeworkcore.models/7.9.0/openiddict.entityframeworkcore.models.7.9.0.nupkg",
+    "nupkgSha256": "81cb636ee1a99673945a491b459b0b833fff86137906b81112c92d3130e3c025",
     "nuspecPath": "OpenIddict.EntityFrameworkCore.Models.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3856,15 +3856,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3873,23 +3873,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3899,10 +3899,10 @@
   },
   {
     "id": "OpenIddict.EntityFrameworkCore",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.entityframeworkcore/7.8.0/openiddict.entityframeworkcore.7.8.0.nupkg",
-    "nupkgSha256": "f40fb819091a77dd1fc049b92e40476341c09294b7e4c7a1d88e48764cfea201",
+    "packagePath": "openiddict.entityframeworkcore/7.9.0/openiddict.entityframeworkcore.7.9.0.nupkg",
+    "nupkgSha256": "2d12927960d4d0e518d602a629f35e51f0bd73ef9eca044e927d0bfe52a18897",
     "nuspecPath": "OpenIddict.EntityFrameworkCore.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3910,15 +3910,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3927,23 +3927,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3953,10 +3953,10 @@
   },
   {
     "id": "OpenIddict.Quartz",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.quartz/7.8.0/openiddict.quartz.7.8.0.nupkg",
-    "nupkgSha256": "35eccfed8f3c4069c3daa8e0006dda953fe51ce5823cee969931cc1d237d4396",
+    "packagePath": "openiddict.quartz/7.9.0/openiddict.quartz.7.9.0.nupkg",
+    "nupkgSha256": "02e784a591cc7611d9189478b1adb7a2afd35432f0a91836f9e28b6db517cb84",
     "nuspecPath": "OpenIddict.Quartz.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -3964,15 +3964,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3981,23 +3981,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -4007,10 +4007,10 @@
   },
   {
     "id": "OpenIddict.Server.AspNetCore",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.server.aspnetcore/7.8.0/openiddict.server.aspnetcore.7.8.0.nupkg",
-    "nupkgSha256": "97524a4df55bda9d1c465bd4226b1bed6d61490f7de370ff7980d8946df4f54f",
+    "packagePath": "openiddict.server.aspnetcore/7.9.0/openiddict.server.aspnetcore.7.9.0.nupkg",
+    "nupkgSha256": "9dfdee9194f9a2c8e3467851d597e26b3bf38a3c17d199369eaa0000cd5e2b63",
     "nuspecPath": "OpenIddict.Server.AspNetCore.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4018,15 +4018,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -4035,23 +4035,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -4061,10 +4061,10 @@
   },
   {
     "id": "OpenIddict.Server.DataProtection",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.server.dataprotection/7.8.0/openiddict.server.dataprotection.7.8.0.nupkg",
-    "nupkgSha256": "214fcd2f15c4a9c3ed6d392bc062eba73b6d82a3a877418dea6f368a0b69a65c",
+    "packagePath": "openiddict.server.dataprotection/7.9.0/openiddict.server.dataprotection.7.9.0.nupkg",
+    "nupkgSha256": "1510a8db59729dd1583e9df4fd5565e5e3219c60c2219eaf3f0c4b7028bad7dc",
     "nuspecPath": "OpenIddict.Server.DataProtection.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4072,15 +4072,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -4089,23 +4089,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -4115,10 +4115,10 @@
   },
   {
     "id": "OpenIddict.Server",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.server/7.8.0/openiddict.server.7.8.0.nupkg",
-    "nupkgSha256": "8b8736919dd82a024a38bfc450feedc04734b26f11a2bafe7cecce2deb9c9317",
+    "packagePath": "openiddict.server/7.9.0/openiddict.server.7.9.0.nupkg",
+    "nupkgSha256": "288647dea4530a377f73cd0b878dfc2e3b28654a4b626369af1bdd2412a90988",
     "nuspecPath": "OpenIddict.Server.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4126,15 +4126,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -4143,23 +4143,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -4169,10 +4169,10 @@
   },
   {
     "id": "OpenIddict.Validation.AspNetCore",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.validation.aspnetcore/7.8.0/openiddict.validation.aspnetcore.7.8.0.nupkg",
-    "nupkgSha256": "7e6334863ab198eda0ff60a3f99daed5104d02983750bd19c9cf682b883844fd",
+    "packagePath": "openiddict.validation.aspnetcore/7.9.0/openiddict.validation.aspnetcore.7.9.0.nupkg",
+    "nupkgSha256": "676cfdfb5c0ccfe60bd874af2518102c970344210d796ce7d0118d4e40b232d0",
     "nuspecPath": "OpenIddict.Validation.AspNetCore.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4180,15 +4180,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -4197,23 +4197,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -4223,10 +4223,10 @@
   },
   {
     "id": "OpenIddict.Validation.DataProtection",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.validation.dataprotection/7.8.0/openiddict.validation.dataprotection.7.8.0.nupkg",
-    "nupkgSha256": "20815976978d4f7bbd5b8ac02a4f8beeef352eea9ed363f79f1daab0229a3b5c",
+    "packagePath": "openiddict.validation.dataprotection/7.9.0/openiddict.validation.dataprotection.7.9.0.nupkg",
+    "nupkgSha256": "169eba07048409d464b06fbb1937da34563b9ddd8bc7f365218f537fbc8602f0",
     "nuspecPath": "OpenIddict.Validation.DataProtection.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4234,15 +4234,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -4251,23 +4251,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -4277,10 +4277,10 @@
   },
   {
     "id": "OpenIddict.Validation.ServerIntegration",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.validation.serverintegration/7.8.0/openiddict.validation.serverintegration.7.8.0.nupkg",
-    "nupkgSha256": "e7989c153361e046c1ca9f9ee3bbbfadaeca11b4d43f0b777c499c3fec640c9c",
+    "packagePath": "openiddict.validation.serverintegration/7.9.0/openiddict.validation.serverintegration.7.9.0.nupkg",
+    "nupkgSha256": "8bc13e557f75f6f6e26a0b9fd0b37c6a3e48f55b9bd55d46b3e57bdf1b02e91f",
     "nuspecPath": "OpenIddict.Validation.ServerIntegration.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4288,15 +4288,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -4305,23 +4305,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -4331,10 +4331,10 @@
   },
   {
     "id": "OpenIddict.Validation.SystemNetHttp",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.validation.systemnethttp/7.8.0/openiddict.validation.systemnethttp.7.8.0.nupkg",
-    "nupkgSha256": "b8575887fab8bba960dc700b5fec83db81f4935ad219956aee3f906e4e20ad45",
+    "packagePath": "openiddict.validation.systemnethttp/7.9.0/openiddict.validation.systemnethttp.7.9.0.nupkg",
+    "nupkgSha256": "dd4894f65277fb715d861ed5b6efdbd122924ac5bf622853fb8d2463db223090",
     "nuspecPath": "OpenIddict.Validation.SystemNetHttp.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4342,15 +4342,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -4359,23 +4359,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -4385,10 +4385,10 @@
   },
   {
     "id": "OpenIddict.Validation",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict.validation/7.8.0/openiddict.validation.7.8.0.nupkg",
-    "nupkgSha256": "ba15224151afd7c2755a431f38605beede8e78cf2def3c0373cf04a36efef053",
+    "packagePath": "openiddict.validation/7.9.0/openiddict.validation.7.9.0.nupkg",
+    "nupkgSha256": "d1334aadbfa3facc4b0c9d166f83e9d6621c468e601242328fb107220ba8888d",
     "nuspecPath": "OpenIddict.Validation.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4396,15 +4396,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -4413,23 +4413,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -4439,10 +4439,10 @@
   },
   {
     "id": "OpenIddict",
-    "version": "7.8.0",
+    "version": "7.9.0",
     "source": "restored-nupkg",
-    "packagePath": "openiddict/7.8.0/openiddict.7.8.0.nupkg",
-    "nupkgSha256": "fc92d68a9ee6f50f2928b2f5b8930d622a132aa56cad4e5fd338cc87a2b0c4b6",
+    "packagePath": "openiddict/7.9.0/openiddict.7.9.0.nupkg",
+    "nupkgSha256": "7f93d7a814d71e0fc2cd84968b33811f89676a0145bc648ffacba09a4a93edfa",
     "nuspecPath": "OpenIddict.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4450,15 +4450,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/openiddict/openiddict-core.git",
-      "commit": "697f09d6d775f479e858c18a7aaf8f25920d117d"
+      "commit": "31893c74ca8d216a380de954171a3795f955dc96"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "nuspecCommit": "31893c74ca8d216a380de954171a3795f955dc96",
       "tag": null,
-      "resolvedSha": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+      "resolvedSha": "31893c74ca8d216a380de954171a3795f955dc96",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -4467,23 +4467,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "path": "31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
         "bytes": 11358
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/openiddict/openiddict-core/git/trees/697f09d6d775f479e858c18a7aaf8f25920d117d",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "apiPath": "repos/openiddict/openiddict-core/git/trees/31893c74ca8d216a380de954171a3795f955dc96",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/697f09d6d775f479e858c18a7aaf8f25920d117d/LICENSE.md",
-        "revision": "697f09d6d775f479e858c18a7aaf8f25920d117d",
+        "url": "https://raw.githubusercontent.com/openiddict/openiddict-core/31893c74ca8d216a380de954171a3795f955dc96/LICENSE.md",
+        "revision": "31893c74ca8d216a380de954171a3795f955dc96",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -4493,10 +4493,10 @@
   },
   {
     "id": "OpenTelemetry.Api.ProviderBuilderExtensions",
-    "version": "1.20.1",
+    "version": "1.21.0",
     "source": "restored-nupkg",
-    "packagePath": "opentelemetry.api.providerbuilderextensions/1.20.1/opentelemetry.api.providerbuilderextensions.1.20.1.nupkg",
-    "nupkgSha256": "ccd63762c4688c8e68ec459a4dc55b24b0564e0904b254e950df99282713faa5",
+    "packagePath": "opentelemetry.api.providerbuilderextensions/1.21.0/opentelemetry.api.providerbuilderextensions.1.21.0.nupkg",
+    "nupkgSha256": "86a1ec299c715543474f57b5bdfa908c710c1bbea2cc96c418ba2c3b120c4801",
     "nuspecPath": "OpenTelemetry.Api.ProviderBuilderExtensions.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4504,7 +4504,7 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/open-telemetry/opentelemetry-dotnet",
-      "commit": "0bfd4c350f670dbc819b39bd57fac4c3ad5ba238"
+      "commit": "51c6db11dadde6ed5019af4f42332860f1a5d8da"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
@@ -4529,10 +4529,10 @@
   },
   {
     "id": "OpenTelemetry.Api",
-    "version": "1.20.1",
+    "version": "1.21.0",
     "source": "restored-nupkg",
-    "packagePath": "opentelemetry.api/1.20.1/opentelemetry.api.1.20.1.nupkg",
-    "nupkgSha256": "0bb52964b123c2bdd943115c91ca9a2be0102464d6961f0141216c8c6fdca2ee",
+    "packagePath": "opentelemetry.api/1.21.0/opentelemetry.api.1.21.0.nupkg",
+    "nupkgSha256": "61499c30deafd7a4566dc1ec033637ff20ae4e1d1a7793dbb07bf35757f6cac1",
     "nuspecPath": "OpenTelemetry.Api.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4540,7 +4540,7 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/open-telemetry/opentelemetry-dotnet",
-      "commit": "0bfd4c350f670dbc819b39bd57fac4c3ad5ba238"
+      "commit": "51c6db11dadde6ed5019af4f42332860f1a5d8da"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
@@ -4565,10 +4565,10 @@
   },
   {
     "id": "OpenTelemetry.Exporter.OpenTelemetryProtocol",
-    "version": "1.20.1",
+    "version": "1.21.0",
     "source": "restored-nupkg",
-    "packagePath": "opentelemetry.exporter.opentelemetryprotocol/1.20.1/opentelemetry.exporter.opentelemetryprotocol.1.20.1.nupkg",
-    "nupkgSha256": "0507255950040afd08e4aa5c4fb5e85e5702dcb571ecd6627b4c67e0b3f0bd34",
+    "packagePath": "opentelemetry.exporter.opentelemetryprotocol/1.21.0/opentelemetry.exporter.opentelemetryprotocol.1.21.0.nupkg",
+    "nupkgSha256": "bacf3066ad75cd9358a0c7185b67bea6fe3d1b08f06575005b2b0be7f3becb65",
     "nuspecPath": "OpenTelemetry.Exporter.OpenTelemetryProtocol.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4576,7 +4576,7 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/open-telemetry/opentelemetry-dotnet",
-      "commit": "0bfd4c350f670dbc819b39bd57fac4c3ad5ba238"
+      "commit": "51c6db11dadde6ed5019af4f42332860f1a5d8da"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
@@ -4601,10 +4601,10 @@
   },
   {
     "id": "OpenTelemetry.Extensions.Hosting",
-    "version": "1.20.1",
+    "version": "1.21.0",
     "source": "restored-nupkg",
-    "packagePath": "opentelemetry.extensions.hosting/1.20.1/opentelemetry.extensions.hosting.1.20.1.nupkg",
-    "nupkgSha256": "cb656c21130f353d82a7b211890dd7c29d41c48ac512006e66ee77ba26b9aa16",
+    "packagePath": "opentelemetry.extensions.hosting/1.21.0/opentelemetry.extensions.hosting.1.21.0.nupkg",
+    "nupkgSha256": "f2458d952f058aba6bcecaba1a3b12feb42c7413e0ba899f34fcba43974698e0",
     "nuspecPath": "OpenTelemetry.Extensions.Hosting.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4612,7 +4612,7 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/open-telemetry/opentelemetry-dotnet",
-      "commit": "0bfd4c350f670dbc819b39bd57fac4c3ad5ba238"
+      "commit": "51c6db11dadde6ed5019af4f42332860f1a5d8da"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
@@ -4637,10 +4637,10 @@
   },
   {
     "id": "OpenTelemetry.Instrumentation.AspNetCore",
-    "version": "1.20.2",
+    "version": "1.21.0",
     "source": "restored-nupkg",
-    "packagePath": "opentelemetry.instrumentation.aspnetcore/1.20.2/opentelemetry.instrumentation.aspnetcore.1.20.2.nupkg",
-    "nupkgSha256": "8adcb16003aa0796ac77f4f7e6234bb3421af4a3ae7b7024cce3d8044235586c",
+    "packagePath": "opentelemetry.instrumentation.aspnetcore/1.21.0/opentelemetry.instrumentation.aspnetcore.1.21.0.nupkg",
+    "nupkgSha256": "fc6172987afe382ccc4413273d1f228466fb8634b15d3bd24826a83191f5a31c",
     "nuspecPath": "OpenTelemetry.Instrumentation.AspNetCore.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4648,7 +4648,7 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/open-telemetry/opentelemetry-dotnet-contrib",
-      "commit": "33f99d92283b1d49eee8f84f183d635d2d73ebc2"
+      "commit": "2b12c9bf9d97572dc8e351ded2d4fe2ded5d2bd3"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
@@ -4730,10 +4730,10 @@
   },
   {
     "id": "OpenTelemetry",
-    "version": "1.20.1",
+    "version": "1.21.0",
     "source": "restored-nupkg",
-    "packagePath": "opentelemetry/1.20.1/opentelemetry.1.20.1.nupkg",
-    "nupkgSha256": "ad27a8c7a882339c675cc1c89b68bee7c1bfa0092e26a05963ebad97b3c14a04",
+    "packagePath": "opentelemetry/1.21.0/opentelemetry.1.21.0.nupkg",
+    "nupkgSha256": "4d9f4d2ab0304dc3cbc43dd3385ea52a4eeab7631b1a7b015e957e9082ec50fb",
     "nuspecPath": "OpenTelemetry.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -4741,7 +4741,7 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/open-telemetry/opentelemetry-dotnet",
-      "commit": "0bfd4c350f670dbc819b39bd57fac4c3ad5ba238"
+      "commit": "51c6db11dadde6ed5019af4f42332860f1a5d8da"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
@@ -5036,10 +5036,10 @@
   },
   {
     "id": "Quartz.Extensions.Hosting",
-    "version": "4.7.2",
+    "version": "4.7.3",
     "source": "restored-nupkg",
-    "packagePath": "quartz.extensions.hosting/4.7.2/quartz.extensions.hosting.4.7.2.nupkg",
-    "nupkgSha256": "3a0d37137c373b6e4197efaba654457dd6fb599a8b688c6767b7954660903321",
+    "packagePath": "quartz.extensions.hosting/4.7.3/quartz.extensions.hosting.4.7.3.nupkg",
+    "nupkgSha256": "63f5c2a57c48c5bffe9e5b27db9ce4b0eb630e84744f293c416918b3297ed57e",
     "nuspecPath": "Quartz.Extensions.Hosting.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -5047,15 +5047,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/quartznet/quartznet",
-      "commit": "b3989f8373f675667a393401bfb9656c014879b3"
+      "commit": "f002ad0535fe809cf2c5402f2bc2899a28917daf"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "b3989f8373f675667a393401bfb9656c014879b3",
+      "nuspecCommit": "f002ad0535fe809cf2c5402f2bc2899a28917daf",
       "tag": null,
-      "resolvedSha": "b3989f8373f675667a393401bfb9656c014879b3",
+      "resolvedSha": "f002ad0535fe809cf2c5402f2bc2899a28917daf",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -5064,23 +5064,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "b3989f8373f675667a393401bfb9656c014879b3/license.txt",
-        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/license.txt",
-        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "path": "f002ad0535fe809cf2c5402f2bc2899a28917daf/license.txt",
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/f002ad0535fe809cf2c5402f2bc2899a28917daf/license.txt",
+        "revision": "f002ad0535fe809cf2c5402f2bc2899a28917daf",
         "sha256": "00e9a450180b721349dc5519f3ed9e98e4f1d38e5d212ca9f9fcb1ec1103b0bf",
         "bytes": 11341
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/quartznet/quartznet/git/trees/b3989f8373f675667a393401bfb9656c014879b3",
-        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "apiPath": "repos/quartznet/quartznet/git/trees/f002ad0535fe809cf2c5402f2bc2899a28917daf",
+        "revision": "f002ad0535fe809cf2c5402f2bc2899a28917daf",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/license.txt",
-        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/f002ad0535fe809cf2c5402f2bc2899a28917daf/license.txt",
+        "revision": "f002ad0535fe809cf2c5402f2bc2899a28917daf",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -5090,10 +5090,10 @@
   },
   {
     "id": "Quartz",
-    "version": "4.7.2",
+    "version": "4.7.3",
     "source": "restored-nupkg",
-    "packagePath": "quartz/4.7.2/quartz.4.7.2.nupkg",
-    "nupkgSha256": "39285d543a2b3d08808f76b7648883996f23e273bfc59e64f0bd45cfbd14a5c2",
+    "packagePath": "quartz/4.7.3/quartz.4.7.3.nupkg",
+    "nupkgSha256": "dcc586f375239fb6e3a11ade93e0e11a53655244d6a170db1173ba3130c37d46",
     "nuspecPath": "Quartz.nuspec",
     "licenseType": "expression",
     "license": "Apache-2.0",
@@ -5101,15 +5101,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/quartznet/quartznet",
-      "commit": "b3989f8373f675667a393401bfb9656c014879b3"
+      "commit": "f002ad0535fe809cf2c5402f2bc2899a28917daf"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "b3989f8373f675667a393401bfb9656c014879b3",
+      "nuspecCommit": "f002ad0535fe809cf2c5402f2bc2899a28917daf",
       "tag": null,
-      "resolvedSha": "b3989f8373f675667a393401bfb9656c014879b3",
+      "resolvedSha": "f002ad0535fe809cf2c5402f2bc2899a28917daf",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -5118,23 +5118,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "b3989f8373f675667a393401bfb9656c014879b3/license.txt",
-        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/license.txt",
-        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "path": "f002ad0535fe809cf2c5402f2bc2899a28917daf/license.txt",
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/f002ad0535fe809cf2c5402f2bc2899a28917daf/license.txt",
+        "revision": "f002ad0535fe809cf2c5402f2bc2899a28917daf",
         "sha256": "00e9a450180b721349dc5519f3ed9e98e4f1d38e5d212ca9f9fcb1ec1103b0bf",
         "bytes": 11341
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/quartznet/quartznet/git/trees/b3989f8373f675667a393401bfb9656c014879b3",
-        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "apiPath": "repos/quartznet/quartznet/git/trees/f002ad0535fe809cf2c5402f2bc2899a28917daf",
+        "revision": "f002ad0535fe809cf2c5402f2bc2899a28917daf",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/quartznet/quartznet/b3989f8373f675667a393401bfb9656c014879b3/license.txt",
-        "revision": "b3989f8373f675667a393401bfb9656c014879b3",
+        "url": "https://raw.githubusercontent.com/quartznet/quartznet/f002ad0535fe809cf2c5402f2bc2899a28917daf/license.txt",
+        "revision": "f002ad0535fe809cf2c5402f2bc2899a28917daf",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -5144,10 +5144,10 @@
   },
   {
     "id": "StyleCop.Analyzers",
-    "version": "1.3.177-beta",
+    "version": "1.3.180",
     "source": "restored-nupkg",
-    "packagePath": "stylecop.analyzers/1.3.177-beta/stylecop.analyzers.1.3.177-beta.nupkg",
-    "nupkgSha256": "e2b2d1cc92c95bb35bcfce2a7f4b2289ae437992a696dd72c40572da6cec2a7a",
+    "packagePath": "stylecop.analyzers/1.3.180/stylecop.analyzers.1.3.180.nupkg",
+    "nupkgSha256": "f821b6ff75d41e8264b3879bc108b37a9e20d1c95a75b6a2dccbb0d6d7f88cea",
     "nuspecPath": "StyleCop.Analyzers.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -5423,6 +5423,79 @@
     ],
     "sourceDocuments": [],
     "sourceAttempts": [],
+    "errors": [],
+    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
+  },
+  {
+    "id": "System.Diagnostics.DiagnosticSource",
+    "version": "11.0.0",
+    "source": "restored-nupkg",
+    "packagePath": "system.diagnostics.diagnosticsource/11.0.0/system.diagnostics.diagnosticsource.11.0.0.nupkg",
+    "nupkgSha256": "16e694e83a96da9e27e15038b10c0a37a87605433287cb464fc4d1f9e4597647",
+    "nuspecPath": "System.Diagnostics.DiagnosticSource.nuspec",
+    "licenseType": "expression",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f"
+    },
+    "status": "original-license-collected",
+    "declaredLicenseFileMissing": false,
+    "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
+    "sourceResolution": {
+      "nuspecCommit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+      "tag": null,
+      "resolvedSha": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+      "provenance": "nuspec-commit",
+      "fallbackReason": null,
+      "nuspecCommitMismatch": false,
+      "tagCandidates": []
+    },
+    "documents": [
+      {
+        "path": "THIRD-PARTY-NOTICES.TXT",
+        "sha256": "e3a241a6cf35167d82bf7e081de9641c59d10d2dbd8824409817bed31980d407",
+        "bytes": 93617
+      }
+    ],
+    "sourceDocuments": [
+      {
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
+        "bytes": 1115
+      },
+      {
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "sha256": "17e8fa75862e48d94aaa117cce990ff2c8bc034ed4514ed98e5650406189d15e",
+        "bytes": 794300
+      }
+    ],
+    "sourceAttempts": [
+      {
+        "apiPath": "repos/dotnet/dotnet/git/trees/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "httpStatus": 200,
+        "status": "root-listed"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "httpStatus": 200,
+        "status": "collected"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "httpStatus": 200,
+        "status": "collected"
+      }
+    ],
     "errors": [],
     "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
   }

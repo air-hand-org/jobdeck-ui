@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "github>aquaproj/aqua-renovate-config#2.14.0",
+    "github>aquaproj/aqua-renovate-config#2.15.0",
     "helpers:pinGitHubActionDigestsToSemver",
     "config:recommended",
     ":semanticCommits"
@@ -61,6 +61,18 @@
         "mcr.microsoft.com/dotnet/runtime-deps"
       ],
       "semanticCommitType": "fix"
+    },
+    {
+      "description": "Allow .NET container updates when MCR provides no release timestamp",
+      "matchManagers": ["dockerfile"],
+      "matchDatasources": ["docker"],
+      "matchPackageNames": [
+        "mcr.microsoft.com/dotnet/sdk",
+        "mcr.microsoft.com/dotnet/aspnet",
+        "mcr.microsoft.com/dotnet/runtime",
+        "mcr.microsoft.com/dotnet/runtime-deps"
+      ],
+      "minimumReleaseAgeBehaviour": "timestamp-optional"
     },
     {
       "description": "Consume internally controlled contract packages without an additional delay",
