@@ -37,7 +37,7 @@ public sealed class JobApiTests
                     return new AsyncUnaryCall<ListJobsResponse>(
                         Task.FromException<ListJobsResponse>(ex),
                         Task.FromResult(new Metadata()),
-                        () => Status.DefaultSuccess,
+                        () => ex.Status,
                         () => Metadata.Empty,
                         () => { }
                     );
@@ -59,20 +59,50 @@ public sealed class JobApiTests
         }
     }
 
-#if false
     [Fact]
     public async Task NetworkFailureIsRecoverableAndTheNextReadSucceeds()
     {
         var calls = 0;
-        var transport = new BffTransport(new HttpClient(new Handler(_ => ++calls == 1
-            ? throw new HttpRequestException("offline")
-            : new HttpResponseMessage(HttpStatusCode.OK) { Content = JsonContent.Create(ApiResult<string>.Success("{}")) }))
-        { BaseAddress = new Uri("https://localhost") });
-        Assert.Equal(ApiErrorCode.Internal, (await transport.SendAsync(HttpMethod.Get, "bff/jobs", cancellationToken: TestContext.Current.CancellationToken)).Error!.Code);
-        Assert.True((await transport.SendAsync(HttpMethod.Get, "bff/jobs", cancellationToken: TestContext.Current.CancellationToken)).IsSuccess);
-        Assert.Equal(2, calls);
+        var fake = new FakeJobServiceClient
+        {
+            OnListJobs = (request, ct) =>
+            {
+                calls++;
+                // throw by async
+                if (calls == 1)
+                {
+                    var ex = new RpcException(new Status(StatusCode.Internal, ""));
+                    return new AsyncUnaryCall<ListJobsResponse>(
+                        Task.FromException<ListJobsResponse>(ex),
+                        Task.FromResult(new Metadata()),
+                        () => ex.Status,
+                        () => Metadata.Empty,
+                        () => { }
+                    );
+                }
+                return new AsyncUnaryCall<ListJobsResponse>(
+                    Task.FromResult(new ListJobsResponse()),
+                    Task.FromResult(new Metadata()),
+                    () => Status.DefaultSuccess,
+                    () => Metadata.Empty,
+                    () => { }
+                );
+            }
+        };
+        var client = new JobApiClient(fake);
+        {
+            var result = await client.ListJobsAsync(100, cancellationToken: TestContext.Current.CancellationToken);
+            Assert.Equal(ApiErrorCode.Internal, result.Error!.Code);
+            Assert.Equal(1, calls);
+        }
+        {
+            var result = await client.ListJobsAsync(100, cancellationToken: TestContext.Current.CancellationToken);
+            Assert.True(result.IsSuccess);
+            Assert.Equal(2, calls);
+        }
     }
 
+#if false
     [Fact]
     public async Task MutationsSendAntiforgeryTokenAndAreNotRetried()
     {
