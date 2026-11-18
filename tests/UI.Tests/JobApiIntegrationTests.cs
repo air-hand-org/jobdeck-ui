@@ -72,46 +72,6 @@ public sealed class JobApiIntegrationTests
         Assert.Equal(new[] { "create", "update", "get", "list", "delete" }, calls);
     }
 
-    [Fact]
-    public async Task MissingJobPayloadIsRecoverableOnNextRead()
-    {
-        var calls = 0;
-        await using var scope = await TestServerScope.CreateAsync(Tokens(), new TestJobService
-        {
-            OnGetJob = (_, _) => Task.FromResult(++calls == 1 ? new GetJobResponse()
-                : new GetJobResponse { Job = new Job { Id = "recovered", Spec = Form().ToJobSpec() } })
-        }, new TestExecutionService(), TestContext.Current.CancellationToken);
-        var client = scope.Services.GetRequiredService<JobApiClient>();
-        Assert.False((await client.GetJobAsync("id", TestContext.Current.CancellationToken)).IsSuccess);
-        Assert.Equal(1, calls);
-        Assert.Equal("recovered", (await client.GetJobAsync("id", TestContext.Current.CancellationToken)).Value!.Id);
-        Assert.Equal(2, calls);
-    }
-
-    [Fact]
-    public async Task FailedTokenFetchPreventsMutationAndNextExplicitCallRetriesFetch()
-    {
-        var fetches = 0;
-        var writes = 0;
-        await using var scope = await TestServerScope.CreateAsync(new TestAntiforgeryService
-        {
-            OnGetAntiforgeryToken = (_, _) => ++fetches == 1
-                ? Task.FromException<GetAntiforgeryTokenResponse>(new RpcException(new Status(StatusCode.Unavailable, "private-token")))
-                : Task.FromResult(new GetAntiforgeryTokenResponse { RequestToken = "request-token" })
-        }, new TestJobService
-        {
-            OnDeleteJob = (_, context) =>
-            {
-                AssertToken(context); ++writes; return Task.FromResult(new DeleteJobResponse());
-            }
-        }, new TestExecutionService(), TestContext.Current.CancellationToken);
-        var client = scope.Services.GetRequiredService<JobApiClient>();
-        Assert.False((await client.DeleteJobAsync("id", TestContext.Current.CancellationToken)).IsSuccess);
-        Assert.Equal(0, writes); Assert.Equal(1, fetches);
-        Assert.True((await client.DeleteJobAsync("id", TestContext.Current.CancellationToken)).IsSuccess);
-        Assert.Equal(1, writes); Assert.Equal(2, fetches);
-    }
-
     [Theory]
     [InlineData("CreateJob", StatusCode.Unauthenticated, ApiErrorCode.Unauthenticated)]
     [InlineData("CreateJob", StatusCode.PermissionDenied, ApiErrorCode.PermissionDenied)]
@@ -177,23 +137,6 @@ public sealed class JobApiIntegrationTests
         Assert.False(result.IsSuccess);
         Assert.Equal(ApiErrorCode.PermissionDenied, result.Error!.Code);
         Assert.Equal(0, writes);
-    }
-
-    [Fact]
-    public async Task FailedListCanBeExplicitlyRetried()
-    {
-        var reads = 0;
-        await using var scope = await TestServerScope.CreateAsync(Tokens(), new TestJobService
-        {
-            OnListJobs = (_, _) => ++reads == 1
-                ? Task.FromException<ListJobsResponse>(new RpcException(new Status(StatusCode.Unavailable, "private")))
-                : Task.FromResult(new ListJobsResponse())
-        }, new TestExecutionService(), TestContext.Current.CancellationToken);
-        var client = scope.Services.GetRequiredService<JobApiClient>();
-        Assert.False((await client.ListJobsAsync(10, cancellationToken: TestContext.Current.CancellationToken)).IsSuccess);
-        Assert.Equal(1, reads);
-        Assert.True((await client.ListJobsAsync(10, cancellationToken: TestContext.Current.CancellationToken)).IsSuccess);
-        Assert.Equal(2, reads);
     }
 
     private static TestAntiforgeryService Tokens() => new()

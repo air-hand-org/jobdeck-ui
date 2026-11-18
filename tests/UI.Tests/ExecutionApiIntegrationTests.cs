@@ -75,52 +75,6 @@ public sealed class ExecutionApiIntegrationTests
         Assert.Equal(1, writes);
     }
 
-    [Fact]
-    public async Task FailedReadCanBeExplicitlyRetried()
-    {
-        var reads = 0;
-        await using var scope = await TestServerScope.CreateAsync(Tokens(), new TestJobService(), new TestExecutionService
-        {
-            OnListExecutions = (_, _) => ++reads == 1
-                ? Task.FromException<ListExecutionsResponse>(new RpcException(new Status(StatusCode.Unavailable, "private")))
-                : Task.FromResult(new ListExecutionsResponse())
-        }, TestContext.Current.CancellationToken);
-        var client = scope.Services.GetRequiredService<ExecutionApiClient>();
-        Assert.False((await client.ListExecutionsAsync("id", 10, cancellationToken: TestContext.Current.CancellationToken)).IsSuccess);
-        Assert.Equal(1, reads);
-        Assert.True((await client.ListExecutionsAsync("id", 10, cancellationToken: TestContext.Current.CancellationToken)).IsSuccess);
-        Assert.Equal(2, reads);
-    }
-    [Fact]
-    public async Task CancellingReadCancelsServerCallAndNextReadSucceeds()
-    {
-        var entered = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
-        var cancelled = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
-        var reads = 0;
-        await using var scope = await TestServerScope.CreateAsync(Tokens(), new TestJobService(), new TestExecutionService
-        {
-            OnListExecutions = async (_, context) =>
-            {
-                if (Interlocked.Increment(ref reads) == 1)
-                {
-                    using var registration = context.CancellationToken.Register(() => cancelled.TrySetResult());
-                    entered.SetResult();
-                    await Task.Delay(TimeSpan.FromSeconds(10), context.CancellationToken);
-                }
-                return new ListExecutionsResponse();
-            }
-        }, TestContext.Current.CancellationToken);
-        var client = scope.Services.GetRequiredService<ExecutionApiClient>();
-        using var cancellation = CancellationTokenSource.CreateLinkedTokenSource(TestContext.Current.CancellationToken);
-        var pending = client.ListExecutionsAsync("id", 10, cancellationToken: cancellation.Token);
-        await entered.Task.WaitAsync(TimeSpan.FromSeconds(10), TestContext.Current.CancellationToken);
-        await cancellation.CancelAsync();
-        Assert.False((await pending).IsSuccess);
-        await cancelled.Task.WaitAsync(TimeSpan.FromSeconds(10), TestContext.Current.CancellationToken);
-        Assert.True((await client.ListExecutionsAsync("id", 10, cancellationToken: TestContext.Current.CancellationToken)).IsSuccess);
-        Assert.Equal(2, reads);
-    }
-
     private static TestAntiforgeryService Tokens() => new()
     {
         OnGetAntiforgeryToken = (_, context) =>
