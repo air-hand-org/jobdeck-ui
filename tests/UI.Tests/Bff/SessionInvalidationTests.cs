@@ -1,4 +1,5 @@
 using System.Net;
+using System.Net.Http.Headers;
 using System.Security.Claims;
 using Grpc.Core;
 using Grpc.Net.Client;
@@ -11,6 +12,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using ui.Bff.Auth;
 using ui.Bff.Client;
 using ui.Bff.Endpoints;
@@ -50,6 +52,9 @@ public sealed class SessionInvalidationTests
         var issued = await antiforgery.GetAntiforgeryTokenAsync(new GetAntiforgeryTokenRequest(), headers,
             cancellationToken: cancellationToken);
         Assert.False(string.IsNullOrEmpty(issued.RequestToken));
+        Assert.True(transport.CacheControl?.NoCache);
+        Assert.True(transport.CacheControl?.NoStore);
+        Assert.Contains("no-cache", transport.Pragma);
         var csrfCookie = Assert.Single(transport.Cookies).Split(';', 2)[0];
         headers = new Metadata
         {
@@ -81,6 +86,13 @@ public sealed class SessionInvalidationTests
         // A successful call proves the same cookie, CSRF token and route work before revocation.
         await InvokeAsync();
         Assert.Equal(HttpStatusCode.OK, transport.StatusCode);
+        if (endpoint == "antiforgery")
+        {
+            Assert.True(transport.CacheControl?.NoCache);
+            Assert.True(transport.CacheControl?.NoStore);
+            Assert.Contains("no-cache", transport.Pragma);
+        }
+        Assert.DoesNotContain(app.Services.GetRequiredService<AntiforgeryWarnings>().Events, id => id == 8);
         Assert.Equal(endpoint == "antiforgery" ? 0 : 1, backend.Calls);
         var businessCalls = app.Services.GetRequiredService<BusinessCounter>().Calls;
         Assert.Equal(2, businessCalls);
@@ -103,6 +115,9 @@ public sealed class SessionInvalidationTests
         // Only the remote backend transport is substituted; no synthetic auth failures.
         var builder = WebApplication.CreateBuilder();
         builder.WebHost.UseTestServer();
+        var warnings = new AntiforgeryWarnings();
+        builder.Logging.AddProvider(warnings);
+        builder.Services.AddSingleton(warnings);
         builder.Services.AddMemoryCache();
         builder.Services.AddSingleton(TimeProvider.System);
         builder.Services.AddSingleton<IUISessionStore, MemoryUISessionStore>();
@@ -165,14 +180,40 @@ public sealed class SessionInvalidationTests
         public HttpStatusCode StatusCode { get; private set; }
         public Uri? Location { get; private set; }
         public string[] Cookies { get; private set; } = [];
+        public CacheControlHeaderValue? CacheControl { get; private set; }
+        public string[] Pragma { get; private set; } = [];
 
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             var response = await base.SendAsync(request, cancellationToken);
             StatusCode = response.StatusCode;
             Location = response.Headers.Location;
+            CacheControl = response.Headers.CacheControl;
+            Pragma = response.Headers.Pragma.Select(value => value.Name).ToArray();
             Cookies = response.Headers.TryGetValues("Set-Cookie", out var cookies) ? cookies.ToArray() : [];
             return response;
+        }
+    }
+
+    private sealed class AntiforgeryWarnings : ILoggerProvider, ILogger
+    {
+        public System.Collections.Concurrent.ConcurrentQueue<int> Events { get; } = new();
+
+        public ILogger CreateLogger(string categoryName) =>
+            categoryName == "Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery"
+                ? this
+                : Microsoft.Extensions.Logging.Abstractions.NullLogger.Instance;
+
+        public bool IsEnabled(LogLevel logLevel) => logLevel >= LogLevel.Warning;
+        public IDisposable? BeginScope<TState>(TState state) where TState : notnull => null;
+        public void Dispose() { }
+        public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception? exception,
+            Func<TState, Exception?, string> formatter)
+        {
+            if (IsEnabled(logLevel))
+            {
+                Events.Enqueue(eventId.Id);
+            }
         }
     }
 

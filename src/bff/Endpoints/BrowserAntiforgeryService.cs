@@ -9,8 +9,6 @@ public sealed class BrowserAntiforgeryService(IAntiforgery antiforgery) : Antifo
     public override async Task<GetAntiforgeryTokenResponse> GetAntiforgeryToken(GetAntiforgeryTokenRequest request, ServerCallContext context)
     {
         var httpContext = context.GetHttpContext();
-        // FIXME no cache
-        httpContext.Response.Headers.CacheControl = "no-store";
 
         var tokenset = antiforgery.GetAndStoreTokens(httpContext);
 

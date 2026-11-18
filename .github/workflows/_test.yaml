@@ -17,13 +17,11 @@ jobs:
       packages: read
     runs-on: ubuntu-latest
     env:
-      ARTIFACT_ELIGIBLE: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && (github.event.pull_request.user.login == 'renovate[bot]' || (github.event.pull_request.user.login == 'air-hand-release-app[bot]' && startsWith(github.event.pull_request.head.ref, 'renovate-jobdeck/'))) }}
       NuGetPackageSourceCredentials_github: "Username=${{ github.actor }};Password=${{ secrets.GITHUB_TOKEN }}"
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-          ref: ${{ case(env.ARTIFACT_ELIGIBLE == 'true', github.event.pull_request.head.sha, github.sha) }}
       - uses: air-hand-org/jobdeck-actions/actions/setup-tools@56b5a3e5540b1a1d42a0dbd3ae45b48910f42e83 # v1.7.3
       - name: Restore Nuget cache
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
