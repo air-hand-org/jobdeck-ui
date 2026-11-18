@@ -30,7 +30,14 @@ public sealed class JobApiTests
             OnListJobs = (request, ct) =>
             {
                 calls++;
-                throw new RpcException(new Status(StatusCode.Unauthenticated, ""));
+                return new AsyncUnaryCall<ListJobsResponse>(
+                    Task.FromException<ListJobsResponse>(new RpcException(new Status(StatusCode.Unauthenticated, ""))),
+                    Task.FromResult(new Metadata()),
+                    () => Status.DefaultSuccess,
+                    () => Metadata.Empty,
+                    () => { }
+                );
+                ;
             }
         };
         var client = new JobApiClient(fake);
