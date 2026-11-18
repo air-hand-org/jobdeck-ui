@@ -1,59 +1,99 @@
 using Grpc.Core;
 using Jobdeck.Bff.V1;
+using Microsoft.Extensions.DependencyInjection;
 using ui.Client.Antiforgery;
+using UI.Tests.Helpers;
 
 namespace UI.Tests;
 
 public sealed class AntiforgeryTokenProviderTests
 {
-    private sealed class FakeAntiforgeryClient(
-        Func<GetAntiforgeryTokenRequest, CancellationToken, AsyncUnaryCall<GetAntiforgeryTokenResponse>> handler
-    ) : AntiforgeryService.AntiforgeryServiceClient
+    [Fact]
+    public async Task ConcurrentCallsShareFetchAndCache()
     {
-        public override AsyncUnaryCall<GetAntiforgeryTokenResponse> GetAntiforgeryTokenAsync(
-            GetAntiforgeryTokenRequest request,
-            Metadata? metadata = null,
-            DateTime? deadline = null,
-            CancellationToken cancellationToken = default
-        ) => handler(request, cancellationToken);
+        var calls = 0;
+        var entered = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
+        var release = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
+        await using var scope = await TestServerScope.CreateAsync(new TestAntiforgeryService
+        {
+            OnGetAntiforgeryToken = async (_, context) =>
+            {
+                Interlocked.Increment(ref calls);
+                entered.SetResult();
+                await release.Task.WaitAsync(TimeSpan.FromSeconds(10), context.CancellationToken);
+                return new GetAntiforgeryTokenResponse { RequestToken = "shared-token" };
+            }
+        }, new TestJobService(), new TestExecutionService(), TestContext.Current.CancellationToken);
+        var provider = scope.Services.GetRequiredService<IAntiforgeryTokenProvider>();
+        var first = provider.GetTokenAsync(TestContext.Current.CancellationToken);
+        await entered.Task.WaitAsync(TimeSpan.FromSeconds(10), TestContext.Current.CancellationToken);
+        var second = provider.GetTokenAsync(TestContext.Current.CancellationToken);
+        Assert.False(second.IsCompleted);
+        release.SetResult();
+        Assert.All(await Task.WhenAll(first, second), token => Assert.Equal("shared-token", token));
+        Assert.Equal("shared-token", await provider.GetTokenAsync(TestContext.Current.CancellationToken));
+        Assert.Equal(1, calls);
     }
 
     [Fact]
-    public async Task UseCacheWhenGetAntiforgeryTokenConcurrently()
+    public async Task CancellingWaitingCallDoesNotCancelActiveFetch()
     {
-        // FIXME: 速度に問題なければTestServerScopeに書き換える
-        var fetchCount = 0;
+        var calls = 0;
+        var entered = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
         var release = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
-        async Task<GetAntiforgeryTokenResponse> FetchAsync(CancellationToken ct)
+        await using var scope = await TestServerScope.CreateAsync(new TestAntiforgeryService
         {
-            var number = Interlocked.Increment(ref fetchCount);
-            await release.Task.WaitAsync(ct);
-            return new GetAntiforgeryTokenResponse{
-                RequestToken = $"this is test {number}"
-            };
-        };
-        var fake = new FakeAntiforgeryClient((request, ct) =>
+            OnGetAntiforgeryToken = async (_, context) =>
             {
-                return new AsyncUnaryCall<GetAntiforgeryTokenResponse>(
-                    FetchAsync(ct),
-                    Task.FromResult(new Metadata()),
-                    () => Status.DefaultSuccess,
-                    () => Metadata.Empty,
-                    () => { }
-                );
-            });
-        var provider = new AntiforgeryTokenProvider(fake);
-
+                Interlocked.Increment(ref calls);
+                entered.SetResult();
+                await release.Task.WaitAsync(TimeSpan.FromSeconds(10), context.CancellationToken);
+                return new GetAntiforgeryTokenResponse { RequestToken = "active-token" };
+            }
+        }, new TestJobService(), new TestExecutionService(), TestContext.Current.CancellationToken);
+        var provider = scope.Services.GetRequiredService<IAntiforgeryTokenProvider>();
         var first = provider.GetTokenAsync(TestContext.Current.CancellationToken);
-        var second = provider.GetTokenAsync(TestContext.Current.CancellationToken);
-
-        Assert.Equal(1, fetchCount);
-
+        await entered.Task.WaitAsync(TimeSpan.FromSeconds(10), TestContext.Current.CancellationToken);
+        using var cancellation = CancellationTokenSource.CreateLinkedTokenSource(TestContext.Current.CancellationToken);
+        var waiting = provider.GetTokenAsync(cancellation.Token);
+        await cancellation.CancelAsync();
+        await Assert.ThrowsAnyAsync<OperationCanceledException>(() => waiting);
+        Assert.False(first.IsCompleted);
         release.SetResult();
+        Assert.Equal("active-token", await first);
+        Assert.Equal("active-token", await provider.GetTokenAsync(TestContext.Current.CancellationToken));
+        Assert.Equal(1, calls);
+    }
 
-        var tokens = await Task.WhenAll(first, second);
-
-        Assert.All(tokens, t => Assert.Equal("this is test 1", t));
-        Assert.Equal(1, fetchCount);
+    [Theory]
+    [InlineData(false)]
+    [InlineData(true)]
+    public async Task FailedOrEmptyFetchCanBeRetried(bool empty)
+    {
+        var calls = 0;
+        await using var scope = await TestServerScope.CreateAsync(new TestAntiforgeryService
+        {
+            OnGetAntiforgeryToken = (_, _) =>
+            {
+                if (Interlocked.Increment(ref calls) == 1)
+                {
+                    return empty ? Task.FromResult(new GetAntiforgeryTokenResponse())
+                        : Task.FromException<GetAntiforgeryTokenResponse>(new RpcException(new Status(StatusCode.Unavailable, "unavailable")));
+                }
+                return Task.FromResult(new GetAntiforgeryTokenResponse { RequestToken = "retry-token" });
+            }
+        }, new TestJobService(), new TestExecutionService(), TestContext.Current.CancellationToken);
+        var provider = scope.Services.GetRequiredService<IAntiforgeryTokenProvider>();
+        if (empty)
+        {
+            Assert.Equal("", await provider.GetTokenAsync(TestContext.Current.CancellationToken));
+        }
+        else
+        {
+            await Assert.ThrowsAsync<RpcException>(() => provider.GetTokenAsync(TestContext.Current.CancellationToken));
+        }
+        Assert.Equal("retry-token", await provider.GetTokenAsync(TestContext.Current.CancellationToken));
+        Assert.Equal("retry-token", await provider.GetTokenAsync(TestContext.Current.CancellationToken));
+        Assert.Equal(2, calls);
     }
 }

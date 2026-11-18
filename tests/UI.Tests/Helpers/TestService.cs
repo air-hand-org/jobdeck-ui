@@ -20,6 +20,21 @@ public sealed class TestAntiforgeryService : AntiforgeryService.AntiforgeryServi
 
 public sealed class TestJobService : JobService.JobServiceBase
 {
+    public Func<CreateJobRequest, ServerCallContext, Task<CreateJobResponse>>? OnCreateJob { get; init; }
+
+    public override Task<CreateJobResponse> CreateJob(CreateJobRequest request, ServerCallContext context)
+        => OnCreateJob is { } handler ? handler(request, context) : throw new NotImplementedException("CreateJob is not implemented");
+
+    public Func<UpdateJobRequest, ServerCallContext, Task<UpdateJobResponse>>? OnUpdateJob { get; init; }
+
+    public override Task<UpdateJobResponse> UpdateJob(UpdateJobRequest request, ServerCallContext context)
+        => OnUpdateJob is { } handler ? handler(request, context) : throw new NotImplementedException("UpdateJob is not implemented");
+
+    public Func<DeleteJobRequest, ServerCallContext, Task<DeleteJobResponse>>? OnDeleteJob { get; init; }
+
+    public override Task<DeleteJobResponse> DeleteJob(DeleteJobRequest request, ServerCallContext context)
+        => OnDeleteJob is { } handler ? handler(request, context) : throw new NotImplementedException("DeleteJob is not implemented");
+
     public Func<GetJobRequest, ServerCallContext, Task<GetJobResponse>>? OnGetJob { get; init; }
     public Func<ListJobsRequest, ServerCallContext, Task<ListJobsResponse>>? OnListJobs { get; init; }
 
@@ -42,6 +57,11 @@ public sealed class TestJobService : JobService.JobServiceBase
 
 public sealed class TestExecutionService : ExecutionService.ExecutionServiceBase
 {
+    public Func<DoExecutionRequest, ServerCallContext, Task<DoExecutionResponse>>? OnDoExecution { get; init; }
+
+    public override Task<DoExecutionResponse> DoExecution(DoExecutionRequest request, ServerCallContext context)
+        => OnDoExecution is { } handler ? handler(request, context) : throw new NotImplementedException("DoExecution is not implemented");
+
     public Func<GetExecutionRequest, ServerCallContext, Task<GetExecutionResponse>>? OnGetExecution { get; init; }
     public Func<ListExecutionsRequest, ServerCallContext, Task<ListExecutionsResponse>>? OnListExecutions { get; init; }
 

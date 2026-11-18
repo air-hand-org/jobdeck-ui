@@ -28,12 +28,18 @@ public sealed class TestServerScope : IAsyncDisposable
         TestAntiforgeryService antiforgery,
         TestJobService job,
         TestExecutionService execution,
-        CancellationToken cancellationToken = default
+        CancellationToken cancellationToken = default,
+        bool validateAntiforgery = false
     )
     {
         var builder = WebApplication.CreateBuilder();
         builder.WebHost.UseTestServer();
-        builder.Services.AddGrpc();
+        var grpc = builder.Services.AddGrpc();
+        if (validateAntiforgery)
+        {
+            builder.Services.AddAntiforgery(options => options.HeaderName = "X-CSRF-TOKEN");
+            grpc.AddServiceOptions<TestJobService>(options => options.Interceptors.Add<ui.Bff.Endpoints.Interceptors.AntiforgeryInterceptor>());
+        }
         builder.Services.AddSingleton(antiforgery);
         builder.Services.AddSingleton(job);
         builder.Services.AddSingleton(execution);
