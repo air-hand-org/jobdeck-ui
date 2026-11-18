@@ -24,16 +24,19 @@ public sealed class JobApiTests
     [Fact]
     public async Task UnauthorizedIsAnExpiryError()
     {
+        var calls = 0;
         var fake = new FakeJobServiceClient
         {
             OnListJobs = (request, ct) =>
             {
+                calls++;
                 throw new RpcException(new Status(StatusCode.Unauthenticated, ""));
             }
         };
         var client = new JobApiClient(fake);
         var result = await client.ListJobsAsync(100, cancellationToken: TestContext.Current.CancellationToken);
         Assert.Equal(ApiErrorCode.Unauthenticated, result.Error!.Code);
+        Assert.Equal(1, calls);
     }
 
 #if false
