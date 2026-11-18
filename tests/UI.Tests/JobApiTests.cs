@@ -30,20 +30,33 @@ public sealed class JobApiTests
             OnListJobs = (request, ct) =>
             {
                 calls++;
-                return new AsyncUnaryCall<ListJobsResponse>(
-                    Task.FromException<ListJobsResponse>(new RpcException(new Status(StatusCode.Unauthenticated, ""))),
-                    Task.FromResult(new Metadata()),
-                    () => Status.DefaultSuccess,
-                    () => Metadata.Empty,
-                    () => { }
-                );
-                ;
+                var ex = new RpcException(new Status(StatusCode.Unauthenticated, ""));
+                // throw by async
+                if (calls == 1)
+                {
+                    return new AsyncUnaryCall<ListJobsResponse>(
+                        Task.FromException<ListJobsResponse>(ex),
+                        Task.FromResult(new Metadata()),
+                        () => Status.DefaultSuccess,
+                        () => Metadata.Empty,
+                        () => { }
+                    );
+                }
+                // throw directly
+                throw ex;
             }
         };
         var client = new JobApiClient(fake);
-        var result = await client.ListJobsAsync(100, cancellationToken: TestContext.Current.CancellationToken);
-        Assert.Equal(ApiErrorCode.Unauthenticated, result.Error!.Code);
-        Assert.Equal(1, calls);
+        {
+            var result = await client.ListJobsAsync(100, cancellationToken: TestContext.Current.CancellationToken);
+            Assert.Equal(ApiErrorCode.Unauthenticated, result.Error!.Code);
+            Assert.Equal(1, calls);
+        }
+        {
+            var result = await client.ListJobsAsync(100, cancellationToken: TestContext.Current.CancellationToken);
+            Assert.Equal(ApiErrorCode.Unauthenticated, result.Error!.Code);
+            Assert.Equal(2, calls);
+        }
     }
 
 #if false
