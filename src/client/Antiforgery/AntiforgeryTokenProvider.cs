@@ -1,6 +1,8 @@
+using Jobdeck.Bff.V1;
+
 namespace ui.Client.Antiforgery;
 
-public sealed class AntiforgeryTokenProvider(Api.AntiforgeryApiClient antiforgeryClient) : IAntiforgeryTokenProvider
+public sealed class AntiforgeryTokenProvider(AntiforgeryService.AntiforgeryServiceClient client) : IAntiforgeryTokenProvider
 {
     private readonly SemaphoreSlim semaphore_ = new(1, 1);
     private string cache_ = string.Empty;
@@ -12,8 +14,11 @@ public sealed class AntiforgeryTokenProvider(Api.AntiforgeryApiClient antiforger
         {
             if (string.IsNullOrEmpty(cache_))
             {
-                var result = await antiforgeryClient.GetTokenAsync(cancellationToken);
-                cache_ = result.IsSuccess ? result.Value!.RequestToken : string.Empty;
+                var result = await client.GetAntiforgeryTokenAsync(
+                    new GetAntiforgeryTokenRequest(),
+                    cancellationToken: cancellationToken
+                );
+                cache_ = result.RequestToken;
             }
             return cache_;
         }

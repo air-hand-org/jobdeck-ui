@@ -14,9 +14,9 @@ cs-build: cs-restore
 		&& dotnet ef migrations bundle --project src/bff/ui.csproj --self-contained -r linux-x64 --force --output src/bff/bin/migrator
 
 .PHONY: cs-test
-cs-test: cs-build
+cs-test:
 	@cd $(CS_MK_DIR)../ && \
-	    dotnet test --solution $(CS_SLN) --no-build --no-restore
+	    dotnet test --solution $(CS_SLN) --no-restore
 
 .PHONY: cs-lint
 cs-lint:

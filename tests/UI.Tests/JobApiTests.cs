@@ -1,20 +1,42 @@
-using System.Net;
-using System.Net.Http.Json;
-using ui.Client;
+using Grpc.Core;
+using Jobdeck.Job.V1;
+using ui.Client.Api;
 
 namespace UI.Tests;
 
-public sealed class BffTransportTests
+public sealed class JobApiTests
 {
-#if false
-    [Fact]
-    public async Task UnauthorizedIsAnExpiryErrorNotAnHtmlParseFailure()
+    private sealed class FakeJobServiceClient : JobService.JobServiceClient
     {
-        var transport = new BffTransport(new HttpClient(new Handler(_ => new HttpResponseMessage(HttpStatusCode.Unauthorized))) { BaseAddress = new Uri("https://localhost") });
-        var result = await transport.SendAsync(HttpMethod.Get, "bff/jobs", cancellationToken: TestContext.Current.CancellationToken);
+        public Func<GetJobRequest, CancellationToken, AsyncUnaryCall<GetJobResponse>>? OnGetJob { get; init; }
+        public override AsyncUnaryCall<GetJobResponse> GetJobAsync(GetJobRequest request, Metadata? metadata = null, DateTime? deadline = null, CancellationToken ct = default)
+        {
+            return OnGetJob is { } handler ? handler(request, ct) : throw new NotImplementedException($"{nameof(OnGetJob)} not implemented yet");
+        }
+
+        public Func<ListJobsRequest, CancellationToken, AsyncUnaryCall<ListJobsResponse>>? OnListJobs { get; init; }
+        public override AsyncUnaryCall<ListJobsResponse> ListJobsAsync(ListJobsRequest request, Metadata? metadata = null, DateTime? deadline = null, CancellationToken ct = default)
+        {
+            return OnListJobs is { } handler ? handler(request, ct) : throw new NotImplementedException($"{nameof(OnListJobs)} not implemented yet");
+        }
+    }
+
+    [Fact]
+    public async Task UnauthorizedIsAnExpiryError()
+    {
+        var fake = new FakeJobServiceClient
+        {
+            OnListJobs = (request, ct) =>
+            {
+                throw new RpcException(new Status(StatusCode.Unauthenticated, ""));
+            }
+        };
+        var client = new JobApiClient(fake);
+        var result = await client.ListJobsAsync(100, cancellationToken: TestContext.Current.CancellationToken);
         Assert.Equal(ApiErrorCode.Unauthenticated, result.Error!.Code);
     }
 
+#if false
     [Fact]
     public async Task NetworkFailureIsRecoverableAndTheNextReadSucceeds()
     {

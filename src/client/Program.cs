@@ -16,7 +16,6 @@ builder.Services
     })
     .ConfigurePrimaryHttpMessageHandler(() => new GrpcWebHandler(new HttpClientHandler()))
     ;
-builder.Services.AddScoped<AntiforgeryApiClient>();
 builder.Services.AddScoped<IAntiforgeryTokenProvider, AntiforgeryTokenProvider>();
 builder.Services.AddGrpcClient<JobService.JobServiceClient>(options =>
     {
