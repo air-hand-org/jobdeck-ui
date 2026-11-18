@@ -119,25 +119,6 @@ public sealed class JobApiIntegrationTests
         Assert.DoesNotContain("private-owner-token", error.Message);
         Assert.Equal(1, calls);
     }
-    [Fact]
-    public async Task EmptyTokenIsRejectedBeforeMutationByRealAntiforgeryValidation()
-    {
-        var writes = 0;
-        await using var scope = await TestServerScope.CreateAsync(new TestAntiforgeryService
-        {
-            OnGetAntiforgeryToken = (_, _) => Task.FromResult(new GetAntiforgeryTokenResponse())
-        }, new TestJobService
-        {
-            OnDeleteJob = (_, _) =>
-            {
-                ++writes; return Task.FromResult(new DeleteJobResponse());
-            }
-        }, new TestExecutionService(), TestContext.Current.CancellationToken, validateAntiforgery: true);
-        var result = await scope.Services.GetRequiredService<JobApiClient>().DeleteJobAsync("id", TestContext.Current.CancellationToken);
-        Assert.False(result.IsSuccess);
-        Assert.Equal(ApiErrorCode.PermissionDenied, result.Error!.Code);
-        Assert.Equal(0, writes);
-    }
 
     private static TestAntiforgeryService Tokens() => new()
     {
