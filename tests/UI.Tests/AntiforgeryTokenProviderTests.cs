@@ -21,6 +21,7 @@ public sealed class AntiforgeryTokenProviderTests
     [Fact]
     public async Task UseCacheWhenGetAntiforgeryTokenConcurrently()
     {
+        // FIXME: 速度に問題なければTestServerScopeに書き換える
         var fetchCount = 0;
         var release = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
         async Task<GetAntiforgeryTokenResponse> FetchAsync(CancellationToken ct)
