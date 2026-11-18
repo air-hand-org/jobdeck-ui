@@ -1,0 +1,298 @@
+using System.Diagnostics;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using Microsoft.AspNetCore.DataProtection;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
+using Jobdeck.Auth.V1;
+using Jobdeck.Job.V1;
+using Grpc.Core;
+using Grpc.Health.V1;
+using OpenTelemetry.Metrics;
+using OpenTelemetry.Resources;
+using OpenTelemetry.Trace;
+using Microsoft.EntityFrameworkCore;
+using Quartz;
+using Quartz.Diagnostics;
+using ui.Client.Api;
+using ui.Bff.Auth;
+using ui.Bff.Certificates;
+using ui.Bff.Components;
+using ui.Bff.Client;
+using ui.Bff.DB;
+using ui.Bff.Endpoints;
+using ui.Bff.Endpoints.Interceptors;
+using ui.Bff.Profile;
+using ui.Bff.Session;
+using ui.Bff.Telemetry;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddSingleton<TimeProvider>(TimeProvider.System);
+builder.Services.AddRazorComponents()
+  .AddInteractiveWebAssemblyComponents()
+  ;
+builder.Services.AddOpenTelemetry()
+  .ConfigureResource(resource => resource.AddService("jobdeck-ui"))
+  .WithTracing(tracing =>
+  {
+      tracing
+        .AddAspNetCoreInstrumentation()
+        .AddGrpcClientInstrumentation()
+        .AddEntityFrameworkCoreInstrumentation()
+        .AddSource(QuartzInstrumentation.ActivitySourceName)
+        .AddSource(UiTelemetry.ActivitySourceName)
+        ;
+
+      if (!string.IsNullOrWhiteSpace(builder.Configuration["OTEL_EXPORTER_OTLP_ENDPOINT"]))
+      {
+          tracing.AddOtlpExporter();
+      }
+  })
+  .WithMetrics(metrics =>
+  {
+      metrics.AddMeter(QuartzInstrumentation.MeterName);
+
+      if (!string.IsNullOrWhiteSpace(builder.Configuration["OTEL_EXPORTER_OTLP_ENDPOINT"]))
+      {
+          metrics.AddOtlpExporter();
+      }
+  })
+  ;
+builder.Services.AddGrpcClient<JobService.JobServiceClient>(options =>
+      {
+          var address = builder.Configuration["JOB_API_GRPC_ENDPOINT"] ?? throw new InvalidOperationException("JOB_API_GRPC_ENDPOINT is required");
+          options.Address = new Uri(address);
+      }
+    )
+    .AddCallCredentials(async (context, metadata, services) =>
+    {
+        var accessor = services.GetRequiredService<AccessTokenAccessor>();
+        var token = await accessor.GetAsync(context.CancellationToken) ?? throw new RpcException(new Grpc.Core.Status(Grpc.Core.StatusCode.Unauthenticated, "Authentication has expired."));
+        metadata.Add("authorization", $"Bearer {token}");
+    })
+    ;
+builder.Services.AddGrpcClient<ExecutionService.ExecutionServiceClient>(options =>
+      {
+          var address = builder.Configuration["JOB_API_GRPC_ENDPOINT"] ?? throw new InvalidOperationException("JOB_API_GRPC_ENDPOINT is required");
+          options.Address = new Uri(address);
+      }
+    )
+    .AddCallCredentials(async (context, metadata, services) =>
+    {
+        var accessor = services.GetRequiredService<AccessTokenAccessor>();
+        var token = await accessor.GetAsync(context.CancellationToken) ?? throw new RpcException(new Grpc.Core.Status(Grpc.Core.StatusCode.Unauthenticated, "Authentication has expired."));
+        metadata.Add("authorization", $"Bearer {token}");
+    })
+    ;
+builder.Services.AddGrpcClient<AuthService.AuthServiceClient>(options =>
+  {
+      var address = builder.Configuration["AUTH_GRPC_ENDPOINT"] ?? throw new InvalidOperationException("AUTH_GRPC_ENDPOINT is required");
+      options.Address = new Uri(address);
+  }
+);
+builder.Services.AddGrpc()
+    .AddServiceOptions<BrowserJobService>(options =>
+    {
+        options.Interceptors.Add<ErrorInterceptor>();
+        options.Interceptors.Add<AntiforgeryInterceptor>();
+    })
+;
+builder.Services.AddGrpc()
+    .AddServiceOptions<BrowserExecutionService>(options =>
+    {
+        options.Interceptors.Add<ErrorInterceptor>();
+        options.Interceptors.Add<AntiforgeryInterceptor>();
+    })
+;
+builder.Services.AddScoped<AuthApiClient>();
+builder.Services.AddScoped<BackendJobClient>();
+builder.Services.AddScoped<BackendExecutionClient>();
+builder.Services.AddScoped<IJobPageClient, PrerenderJobPageClient>();
+builder.Services.AddScoped<UICookieAuthenticationEvents>();
+
+builder.Services.AddGrpcClient<Health.HealthClient>(
+    "job-api-health",
+    options =>
+    {
+        var address = builder.Configuration["JOB_API_GRPC_ENDPOINT"] ?? throw new InvalidOperationException("JOB_API_GRPC_ENDPOINT is required");
+        options.Address = new Uri(address);
+    }
+);
+builder.Services.AddGrpcClient<Health.HealthClient>(
+    "auth-health",
+    options =>
+    {
+        var address = builder.Configuration["AUTH_GRPC_ENDPOINT"] ?? throw new InvalidOperationException("AUTH_GRPC_ENDPOINT is required");
+        options.Address = new Uri(address);
+    }
+);
+
+builder.Services.AddPooledDbContextFactory<ApplicationDbContext>(options =>
+{
+    options.UseNpgsql(PostgresConfiguration.GetConnectionString(builder.Configuration));
+
+    options.UseOpenIddict();
+});
+
+builder.Services.AddHealthChecks()
+    .AddTypeActivatedCheck<HealthCheckClient>(
+        "job-api",
+        failureStatus: HealthStatus.Unhealthy,
+        tags: ["ready"],
+        args: ["job-api-health"]
+    )
+    .AddTypeActivatedCheck<HealthCheckClient>(
+        "auth",
+        failureStatus: HealthStatus.Unhealthy,
+        tags: ["ready"],
+        args: ["auth-health"]
+    )
+    .AddDbContextCheck<ApplicationDbContext>(
+        "db",
+        failureStatus: HealthStatus.Unhealthy,
+        tags: ["ready"]
+    )
+    ;
+
+builder.Services.AddDataProtection()
+    .SetApplicationName("jobdeck-ui")
+    .PersistKeysToDbContext<ApplicationDbContext>()
+    .ProtectKeysWithCertificate(
+        CertLoader.LoadFromBase64Env(builder.Configuration, "CERT_DATAPROTECTION_BASE64")
+    )
+    ;
+
+builder.Services.AddQuartz(options =>
+{
+    options.UseInMemoryStore();
+    options.AddDeclaredJobs();
+});
+builder.Services.AddQuartzHostedService(options =>
+{
+    options.WaitForJobsToComplete = true;
+});
+
+builder.Services.AddOpenIddict()
+    .AddCore(options =>
+    {
+        options.UseEntityFrameworkCore()
+            .UseDbContext<ApplicationDbContext>();
+        options.UseQuartz();
+    })
+    .AddClient(options =>
+    {
+        options.AddEncryptionCertificate(
+            CertLoader.LoadFromBase64Env(builder.Configuration, "CERT_OPENID_ENCRYPTION_BASE64")
+        ).AddSigningCertificate(
+            CertLoader.LoadFromBase64Env(builder.Configuration, "CERT_OPENID_SIGNING_BASE64")
+        );
+
+        options.AllowAuthorizationCodeFlow();
+
+        options.UseAspNetCore()
+            .EnableRedirectionEndpointPassthrough()
+            .EnablePostLogoutRedirectionEndpointPassthrough()
+            ;
+
+        options.UseSystemNetHttp();
+
+        options.UseWebProviders()
+            .AddGitHub(options =>
+            {
+                var clientID = builder.Configuration["GITHUB_OAUTH_CLIENT_ID"] ?? throw new InvalidOperationException("GITHUB_OAUTH_CLIENT_ID is required");
+                var clientSecret = builder.Configuration["GITHUB_OAUTH_CLIENT_SECRET"] ?? throw new InvalidOperationException("GITHUB_OAUTH_CLIENT_SECRET is required");
+                options.SetClientId(clientID)
+                    .SetClientSecret(clientSecret)
+                    .SetRedirectUri("account/github/callback/login")
+                    ;
+            })
+        ;
+    })
+    ;
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+        {
+            options.EventsType = typeof(UICookieAuthenticationEvents);
+            options.LoginPath = "/account/login";
+            options.LogoutPath = "/account/logout";
+            options.Cookie.HttpOnly = true;
+            options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
+            options.Cookie.SameSite = SameSiteMode.Lax;
+            options.SlidingExpiration = false;
+        }
+    );
+builder.Services.AddAuthorization();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddAntiforgery(options => options.HeaderName = "X-CSRF-TOKEN");
+builder.Services.AddCascadingAuthenticationState();
+
+builder.Services.AddScoped<IUISessionStore, PostgresUISessionStore>();
+builder.Services.AddScoped<AccessTokenAccessor>();
+builder.Services.AddScoped<UIAuthenticationService>();
+builder.Services.AddScoped<UIUserProfileService>();
+
+if (builder.Configuration.GetValue<bool>("MIGRATOR_EXECUTE"))
+{
+    using var migrator = Process.Start(new ProcessStartInfo
+    {
+        FileName = "/app/migrator",
+        WorkingDirectory = "/app",
+        UseShellExecute = false,
+    }) ?? throw new InvalidOperationException("Failed to start migrator.");
+
+    await migrator.WaitForExitAsync();
+
+    if (migrator.ExitCode != 0)
+    {
+        throw new InvalidOperationException($"Migrator failed with exit code {migrator.ExitCode}");
+    }
+}
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error", createScopeForErrors: true);
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+// API status codes must reach clients unchanged, not render an HTML error page.
+app.UseWhen(context => !ui.Bff.Request.RequestPath.IsGrpcRequest(context.Request.Path),
+    branch => branch.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true));
+app.UseHttpsRedirection();
+
+app.UseRouting();
+app.UseGrpcWeb();
+app.UsePrivateJobPages();
+app.UseAuthentication();
+app.UseAuthorization();
+app.UseAntiforgery();
+
+app.MapHealthChecks(
+    "/health/live",
+    new HealthCheckOptions
+    {
+        Predicate = _ => false,
+    }
+);
+app.MapHealthChecks(
+    "/health/ready",
+    new HealthCheckOptions
+    {
+        Predicate = check => check.Tags.Contains("ready"),
+    }
+);
+app.MapStaticAssets().ShortCircuit();
+app.MapRazorComponents<App>()
+    .AddInteractiveWebAssemblyRenderMode()
+    .AddAdditionalAssemblies(typeof(ui.Client.Components.Pages.JobPages.Index).Assembly)
+    ;
+app.MapGrpcService<BrowserAntiforgeryService>().EnableGrpcWeb().RequireAuthorization();
+app.MapGrpcService<BrowserJobService>().EnableGrpcWeb().RequireAuthorization();
+app.MapGrpcService<BrowserExecutionService>().EnableGrpcWeb().RequireAuthorization();
+app.MapGitHubAuthenticationEndpoints();
+
+app.Run();

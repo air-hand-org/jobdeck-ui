@@ -1,5 +1,14 @@
 # jobdeck-ui
 
+## Application structure
+
+- `src/client/ui.Client.csproj`: Blazor WebAssembly pages, forms and browser gRPC-Web clients.
+- `src/bff/ui.csproj`: ASP.NET Core host for prerendering, WASM assets, account pages and browser-facing gRPC-Web services on the same origin and port.
+
+Authentication sessions, backend access tokens and certificates remain server-side.
+Job pages prerender initial data and run interactively in the browser without a
+SignalR circuit. Browser RPCs use session cookies and antiforgery tokens.
+
 ## Migrations
 
 Manage database migrations with `dotnet ef migrations`. To execute migrations,

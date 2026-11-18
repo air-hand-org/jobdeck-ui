@@ -43,7 +43,7 @@ migrate
 expected_tables=$(printf '%s\n' DataProtectionKeys OpenIddictApplications OpenIddictAuthorizations OpenIddictScopes OpenIddictTokens Profiles Sessions __EFMigrationsHistory)
 check_equal "$(sql "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' ORDER BY table_name")" "$expected_tables" 'expected application tables and EF history'
 expected_migrations=$(
-  for file in src/Migrations/*.cs; do
+  for file in src/bff/Migrations/*.cs; do
     case "$file" in *.Designer.cs|*ModelSnapshot.cs) continue ;; esac
     file=${file##*/}
     printf '%s\n' "${file%.cs}"
