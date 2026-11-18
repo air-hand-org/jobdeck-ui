@@ -1,5 +1,5 @@
 using Grpc.Core;
-using ui.Client;
+using ui.Bff.Client;
 
 namespace UI.Tests;
 

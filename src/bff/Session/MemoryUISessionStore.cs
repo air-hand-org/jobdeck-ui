@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Caching.Memory;
 
-namespace ui.Session;
+namespace ui.Bff.Session;
 
 public sealed class MemoryUISessionStore(
     IMemoryCache cache

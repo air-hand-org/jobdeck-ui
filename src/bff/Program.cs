@@ -1,10 +1,4 @@
 using System.Diagnostics;
-using ui.Auth;
-using ui.Components;
-using ui.Client;
-using ui.Profile;
-using ui.Session;
-using ui.Telemetry;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.DataProtection;
@@ -16,13 +10,20 @@ using Grpc.Health.V1;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
-using ui.Endpoints;
-using ui.DB;
 using Microsoft.EntityFrameworkCore;
-using ui.Certificates;
 using Quartz;
 using Quartz.Diagnostics;
-using ui.Endpoints.Interceptors;
+using ui.Client.Api;
+using ui.Bff.Auth;
+using ui.Bff.Certificates;
+using ui.Bff.Components;
+using ui.Bff.Client;
+using ui.Bff.DB;
+using ui.Bff.Endpoints;
+using ui.Bff.Endpoints.Interceptors;
+using ui.Bff.Profile;
+using ui.Bff.Session;
+using ui.Bff.Telemetry;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -259,7 +260,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 // API status codes must reach clients unchanged, not render an HTML error page.
-app.UseWhen(context => !ui.Bff.Route.Path.IsGrpcRequest(context.Request.Path),
+app.UseWhen(context => !ui.Bff.Request.RequestPath.IsGrpcRequest(context.Request.Path),
     branch => branch.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true));
 app.UseHttpsRedirection();
 
@@ -287,7 +288,7 @@ app.MapHealthChecks(
 app.MapStaticAssets().ShortCircuit();
 app.MapRazorComponents<App>()
     .AddInteractiveWebAssemblyRenderMode()
-    .AddAdditionalAssemblies(typeof(ui.Components.Pages.JobPages.Index).Assembly)
+    .AddAdditionalAssemblies(typeof(ui.Client.Components.Pages.JobPages.Index).Assembly)
     ;
 app.MapGrpcService<BrowserAntiforgeryService>().EnableGrpcWeb().RequireAuthorization();
 app.MapGrpcService<BrowserJobService>().EnableGrpcWeb().RequireAuthorization();

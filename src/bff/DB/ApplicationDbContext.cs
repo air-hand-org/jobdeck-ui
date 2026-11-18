@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.DataProtection.EntityFrameworkCore;
 
-namespace ui.DB;
+namespace ui.Bff.DB;
 
 public sealed class ApplicationDbContext(
     DbContextOptions<ApplicationDbContext> options

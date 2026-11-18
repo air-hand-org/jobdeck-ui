@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace ui.Migrations
+namespace ui.Bff.Migrations
 {
     /// <inheritdoc />
     public partial class AddExpiresAtIndex : Migration

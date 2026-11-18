@@ -1,9 +1,9 @@
 using System.Diagnostics;
 using Grpc.Core;
 using Jobdeck.Job.V1;
-using ui.Telemetry;
+using ui.Bff.Telemetry;
 
-namespace ui.Client;
+namespace ui.Bff.Client;
 
 public sealed class BackendJobClient(JobService.JobServiceClient jobs, ILogger<BackendJobClient> logger)
 {

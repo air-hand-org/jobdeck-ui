@@ -1,18 +1,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.DataProtection;
-using ui.Session;
 
-namespace ui.DB;
+namespace ui.Bff.DB;
 
 public sealed class PostgresUISessionStore(
     IDbContextFactory<ApplicationDbContext> dbFactory
     , TimeProvider timeProvider
     , IDataProtectionProvider provider
-) : IUISessionStore
+) : Session.IUISessionStore
 {
     private readonly IDataProtector protector = provider.CreateProtector("jobdeck-ui.Session.AccessToken.v1");
 
-    public async Task<UISession?> GetSessionAsync(Guid sessionId, CancellationToken cancellationToken = default)
+    public async Task<Session.UISession?> GetSessionAsync(Guid sessionId, CancellationToken cancellationToken = default)
     {
         await using var db = await dbFactory.CreateDbContextAsync(cancellationToken);
         var session = await db.Sessions
@@ -33,7 +32,7 @@ public sealed class PostgresUISessionStore(
         ;
     }
 
-    public async Task SetSessionAsync(UISession session, CancellationToken cancellationToken = default)
+    public async Task SetSessionAsync(Session.UISession session, CancellationToken cancellationToken = default)
     {
         await using var db = await dbFactory.CreateDbContextAsync(cancellationToken);
         using var tx = await db.Database.BeginTransactionAsync(cancellationToken);

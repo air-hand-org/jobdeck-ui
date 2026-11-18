@@ -1,15 +1,14 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using ui.Client;
-using ui.Models;
-using ui.Session;
 
-namespace ui.Auth;
+using ui.Client.Api;
 
-public sealed class UIAuthenticationService(AuthApiClient authApi, IUISessionStore sessions)
+namespace ui.Bff.Auth;
+
+public sealed class UIAuthenticationService(Client.AuthApiClient authApi, Session.IUISessionStore sessions)
 {
-    public async Task<ApiResult> LoginAsync(LoginFormModel model, HttpContext httpContext, CancellationToken cancellationToken)
+    public async Task<ApiResult> LoginAsync(Models.LoginFormModel model, HttpContext httpContext, CancellationToken cancellationToken)
     {
         var result = await authApi.AuthenticateLocalClientAsync(model, cancellationToken);
         if (!result.IsSuccess || result.Value is null)
@@ -33,11 +32,11 @@ public sealed class UIAuthenticationService(AuthApiClient authApi, IUISessionSto
 
     private async Task<ApiResult> SignInAsync(Jobdeck.Auth.V1.Token token, string name, HttpContext httpContext, CancellationToken cancellationToken)
     {
-        var session = new UISession(
+        var session = new Session.UISession(
           Guid.NewGuid(),
           token.AccessToken,
           DateTimeOffset.UtcNow.AddSeconds(token.ExpiresInSeconds),
-          new UIUserProfile(name)
+          new Session.UIUserProfile(name)
         );
         await sessions.SetSessionAsync(session, cancellationToken);
 

@@ -1,3 +1,3 @@
-namespace ui.Models;
+namespace ui.Bff.Models;
 
 public sealed class LogoutFormModel { }

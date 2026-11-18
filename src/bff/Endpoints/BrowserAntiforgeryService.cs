@@ -2,8 +2,7 @@ using Grpc.Core;
 using Jobdeck.Bff.V1;
 using Microsoft.AspNetCore.Antiforgery;
 
-// TODO: fix namespace to ui.bff
-namespace ui.Endpoints;
+namespace ui.Bff.Endpoints;
 
 public sealed class BrowserAntiforgeryService(IAntiforgery antiforgery) : AntiforgeryService.AntiforgeryServiceBase
 {

@@ -1,16 +1,16 @@
 using System.Diagnostics;
 using Grpc.Core;
 using Jobdeck.Auth.V1;
-using ui.Models;
-using ui.Telemetry;
+using ui.Client.Api;
+using ui.Bff.Telemetry;
 
-namespace ui.Client;
+namespace ui.Bff.Client;
 
 public sealed class AuthApiClient(AuthService.AuthServiceClient auth, ILogger<AuthApiClient> logger)
 {
-    public async Task<ApiResult<Token>> AuthenticateLocalClientAsync(LoginFormModel model, CancellationToken cancellationToken = default)
+    public async Task<ApiResult<Token>> AuthenticateLocalClientAsync(Models.LoginFormModel model, CancellationToken cancellationToken = default)
     {
-        using var activity = UiTelemetry.Source.StartActivity("auth.login", ActivityKind.Internal);
+        using var activity = Telemetry.UiTelemetry.Source.StartActivity("auth.login", ActivityKind.Internal);
 
         try
         {

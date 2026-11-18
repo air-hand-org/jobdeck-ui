@@ -1,12 +1,10 @@
 using System.Security.Claims;
 
-using ui.Session;
-
-namespace ui.Auth;
+namespace ui.Bff.Auth;
 
 public sealed class AccessTokenAccessor(
     IHttpContextAccessor context
-    , IUISessionStore sessions
+    , Session.IUISessionStore sessions
 )
 {
     public async Task<string?> GetAsync(CancellationToken cancellationToken = default)

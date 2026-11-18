@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace ui.Models;
+namespace ui.Bff.Models;
 
 public sealed class LoginFormModel
 {

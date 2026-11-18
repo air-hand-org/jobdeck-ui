@@ -1,14 +1,13 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore.Components.Authorization;
-using ui.Session;
 
-namespace ui.Profile;
+namespace ui.Bff.Profile;
 
 public sealed class UIUserProfileService(
     AuthenticationStateProvider provider
-    , IUISessionStore sessions)
+    , Session.IUISessionStore sessions)
 {
-    public async Task<UIUserProfile?> GetProfileAsync(CancellationToken cancellationToken = default)
+    public async Task<Session.UIUserProfile?> GetProfileAsync(CancellationToken cancellationToken = default)
     {
         var state = await provider.GetAuthenticationStateAsync();
         var sid = state.User.FindFirstValue("sid");

@@ -4,7 +4,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Quartz;
 
-namespace ui.DB;
+namespace ui.Bff.DB;
 
 [QuartzJob(Name = nameof(ExpiredSessionCleaner), Group = "maintenance", Description = "removes expired sessions")]
 [CronTrigger("0 */5 * * * ?")]

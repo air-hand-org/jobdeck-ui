@@ -1,8 +1,7 @@
 using Grpc.Core;
 using Grpc.Core.Interceptors;
-using ui.Client;
 
-namespace ui.Endpoints.Interceptors;
+namespace ui.Bff.Endpoints.Interceptors;
 
 public sealed class ErrorInterceptor : Interceptor
 {
@@ -18,7 +17,7 @@ public sealed class ErrorInterceptor : Interceptor
         }
         catch (RpcException ex)
         {
-            var error = BackendErrors.FromRPCException(ex);
+            var error = Client.BackendErrors.FromRPCException(ex);
             throw new RpcException(new Status(ex.StatusCode, error.Message));
         }
     }

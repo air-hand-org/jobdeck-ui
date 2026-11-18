@@ -1,4 +1,4 @@
-namespace ui.Session;
+namespace ui.Bff.Session;
 
 public sealed record UIUserProfile(string Name);
 

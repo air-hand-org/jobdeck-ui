@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using ui.Session;
 
-namespace ui.DB;
+namespace ui.Bff.DB;
 
 [PrimaryKey(nameof(SessionId))]
 public sealed record PostgresUIUserProfile(
@@ -9,8 +8,8 @@ public sealed record PostgresUIUserProfile(
     , string Name
 )
 {
-    public UIUserProfile ToDomain() => new(Name);
-    public static PostgresUIUserProfile FromDomain(Guid sessionId, UIUserProfile profile) => new(sessionId, profile.Name);
+    public Session.UIUserProfile ToDomain() => new(Name);
+    public static PostgresUIUserProfile FromDomain(Guid sessionId, Session.UIUserProfile profile) => new(sessionId, profile.Name);
 }
 
 [PrimaryKey(nameof(SessionId))]
@@ -24,7 +23,7 @@ public sealed record PostgresUISession(
     // Property for EFCore
     public PostgresUIUserProfile Profile { get; set; } = null!;
 
-    public UISession ToDomain() =>
+    public Session.UISession ToDomain() =>
         new(
             SessionId: SessionId,
             AccessToken: AccessToken,
@@ -32,7 +31,7 @@ public sealed record PostgresUISession(
             Profile: Profile.ToDomain()
         );
 
-    public static PostgresUISession FromDomain(UISession session) =>
+    public static PostgresUISession FromDomain(Session.UISession session) =>
         new(
             SessionId: session.SessionId,
             AccessToken: session.AccessToken,

@@ -13,11 +13,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using ui.Auth;
-using ui.Client;
-using ui.Endpoints;
-using ui.Models;
-using ui.Session;
+using ui.Bff.Auth;
+using ui.Bff.Client;
+using ui.Bff.Endpoints;
+using ui.Bff.Models;
+using ui.Bff.Session;
 using HttpMethod = System.Net.Http.HttpMethod;
 
 namespace UI.Tests;

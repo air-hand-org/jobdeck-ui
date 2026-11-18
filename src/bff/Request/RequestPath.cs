@@ -1,6 +1,6 @@
-namespace ui.Bff.Route;
+namespace ui.Bff.Request;
 
-public sealed class Path
+public static class RequestPath
 {
     public static bool IsGrpcRequest(PathString path)
     {

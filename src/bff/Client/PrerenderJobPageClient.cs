@@ -1,9 +1,10 @@
 using Google.Protobuf;
 using Grpc.Core;
 using Jobdeck.Job.V1;
-using ui.Models;
+using ui.Client.Api;
+using ui.Client.Models;
 
-namespace ui.Client;
+namespace ui.Bff.Client;
 
 // Scoped to the HTML request: no self-HTTP calls, browser credentials or UI session state.
 public sealed class PrerenderJobPageClient(BackendJobClient jobs, BackendExecutionClient executions) : IJobPageClient

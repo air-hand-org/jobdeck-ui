@@ -3,7 +3,7 @@ using Grpc.Core;
 using Grpc.Net.ClientFactory;
 using Grpc.Health.V1;
 
-namespace ui.Client;
+namespace ui.Bff.Client;
 
 public sealed class HealthCheckClient(GrpcClientFactory clientFactory, string serviceName) : IHealthCheck
 {

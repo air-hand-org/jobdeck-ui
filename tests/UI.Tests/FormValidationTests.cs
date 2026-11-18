@@ -1,5 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-using ui.Models;
+using ui.Client.Models;
 
 namespace UI.Tests;
 

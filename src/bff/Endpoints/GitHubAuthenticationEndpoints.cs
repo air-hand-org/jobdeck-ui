@@ -2,9 +2,8 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using OpenIddict.Client.AspNetCore;
 using OpenIddict.Client.WebIntegration;
-using ui.Auth;
 
-namespace ui.Endpoints;
+namespace ui.Bff.Endpoints;
 
 public static class GitHubAuthenticationEndpoints
 {
@@ -35,7 +34,7 @@ public static class GitHubAuthenticationEndpoints
 
     public static async Task<IResult> HandleLoginCallbackAsync(
         HttpContext context,
-        UIAuthenticationService auth
+        Auth.UIAuthenticationService auth
     )
     {
         var result = await context.AuthenticateAsync(OpenIddictClientAspNetCoreDefaults.AuthenticationScheme);

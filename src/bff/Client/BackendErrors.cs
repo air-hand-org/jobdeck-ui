@@ -1,6 +1,7 @@
 using Grpc.Core;
+using ui.Client.Api;
 
-namespace ui.Client;
+namespace ui.Bff.Client;
 
 public static class BackendErrors
 {

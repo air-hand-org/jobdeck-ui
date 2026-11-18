@@ -1,10 +1,9 @@
 using Grpc.Core;
 using Jobdeck.Job.V1;
-using ui.Client;
 
-namespace ui.Endpoints;
+namespace ui.Bff.Endpoints;
 
-public sealed class BrowserJobService(BackendJobClient client) : JobService.JobServiceBase
+public sealed class BrowserJobService(Client.BackendJobClient client) : JobService.JobServiceBase
 {
     public override async Task<ListJobsResponse> ListJobs(ListJobsRequest request, ServerCallContext context) => await client.ListJobsAsync(request, context.CancellationToken);
     public override async Task<GetJobResponse> GetJob(GetJobRequest request, ServerCallContext context) => await client.GetJobAsync(request, context.CancellationToken);

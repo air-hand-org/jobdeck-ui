@@ -1,6 +1,6 @@
 using Npgsql;
 
-namespace ui.DB;
+namespace ui.Bff.DB;
 
 public sealed class PostgresConfiguration
 {

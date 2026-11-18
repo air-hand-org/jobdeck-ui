@@ -1,15 +1,14 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using ui.Session;
 
-namespace ui.Auth;
+namespace ui.Bff.Auth;
 
-public sealed class UICookieAuthenticationEvents(IUISessionStore sessions) : CookieAuthenticationEvents
+public sealed class UICookieAuthenticationEvents(Session.IUISessionStore sessions) : CookieAuthenticationEvents
 {
     public override Task RedirectToLogin(RedirectContext<CookieAuthenticationOptions> context)
     {
-        if (ui.Bff.Route.Path.IsGrpcRequest(context.Request.Path))
+        if (Request.RequestPath.IsGrpcRequest(context.Request.Path))
         {
             context.Response.StatusCode = 401;
         }
@@ -22,7 +21,7 @@ public sealed class UICookieAuthenticationEvents(IUISessionStore sessions) : Coo
 
     public override Task RedirectToAccessDenied(RedirectContext<CookieAuthenticationOptions> context)
     {
-        if (ui.Bff.Route.Path.IsGrpcRequest(context.Request.Path))
+        if (Request.RequestPath.IsGrpcRequest(context.Request.Path))
         {
             context.Response.StatusCode = 403;
         }

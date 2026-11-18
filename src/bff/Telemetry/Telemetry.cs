@@ -1,6 +1,6 @@
 using System.Diagnostics;
 
-namespace ui.Telemetry;
+namespace ui.Bff.Telemetry;
 
 public static class UiTelemetry
 {

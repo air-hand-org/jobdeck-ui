@@ -2,7 +2,7 @@ using Grpc.Core;
 using Grpc.Core.Interceptors;
 using Microsoft.AspNetCore.Antiforgery;
 
-namespace ui.Endpoints.Interceptors;
+namespace ui.Bff.Endpoints.Interceptors;
 
 public sealed class AntiforgeryInterceptor(IAntiforgery antiforgery) : Interceptor
 {

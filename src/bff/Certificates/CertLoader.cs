@@ -1,6 +1,6 @@
 using System.Security.Cryptography.X509Certificates;
 
-namespace ui.Certificates;
+namespace ui.Bff.Certificates;
 
 public sealed class CertLoader
 {
