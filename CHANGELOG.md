@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.1](https://github.com/air-hand-org/jobdeck-ui/compare/v1.6.0...v1.6.1) (2026-11-19)
+
+
+### Bug Fixes
+
+* **ui:** prerender をジョブ一覧のみに限定 ([#96](https://github.com/air-hand-org/jobdeck-ui/issues/96)) ([fe1cc49](https://github.com/air-hand-org/jobdeck-ui/commit/fe1cc490729ca96981736e788efd281d77b03849))
+
 ## [1.6.0](https://github.com/air-hand-org/jobdeck-ui/compare/v1.5.1...v1.6.0) (2026-11-19)
 
 
