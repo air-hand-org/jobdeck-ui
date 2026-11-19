@@ -1,5 +1,31 @@
 # Changelog
 
+## [1.6.0](https://github.com/air-hand-org/jobdeck-ui/compare/v1.5.1...v1.6.0) (2026-11-19)
+
+
+### Features
+
+* move job pages to WebAssembly behind the UI BFF ([#71](https://github.com/air-hand-org/jobdeck-ui/issues/71)) ([e3934ab](https://github.com/air-hand-org/jobdeck-ui/commit/e3934abb4b6b48a196b2e3ae4f861b946d91e33c))
+
+
+### Bug Fixes
+
+* **ci:** make test the sole shared NuGet cache writer ([#94](https://github.com/air-hand-org/jobdeck-ui/issues/94)) ([8dd6ac4](https://github.com/air-hand-org/jobdeck-ui/commit/8dd6ac400db6af967de135f3653f153b0bbcc109))
+* **deps:** unblock Renovate .NET runtime image updates ([#89](https://github.com/air-hand-org/jobdeck-ui/issues/89)) ([3ff0e1d](https://github.com/air-hand-org/jobdeck-ui/commit/3ff0e1d91be6528c4aaea0954d40a0f4e6a29fc9))
+* **deps:** update .net ([#76](https://github.com/air-hand-org/jobdeck-ui/issues/76)) ([25c0904](https://github.com/air-hand-org/jobdeck-ui/commit/25c0904410b636aa31d28205a19c97657bdb39df))
+* **deps:** update .net to v10.0.15 ([#90](https://github.com/air-hand-org/jobdeck-ui/issues/90)) ([eb6da5d](https://github.com/air-hand-org/jobdeck-ui/commit/eb6da5daa80fbe296a22d1dab26e31c5a82d0734))
+* **deps:** update dependency jobdeck.auth.contracts to 1.6.2 ([#84](https://github.com/air-hand-org/jobdeck-ui/issues/84)) ([2aaa17e](https://github.com/air-hand-org/jobdeck-ui/commit/2aaa17e2d73fd96feba268c0bc83d292fa73ab7b))
+* **deps:** update dependency jobdeck.job.contracts to 1.3.2 ([#85](https://github.com/air-hand-org/jobdeck-ui/issues/85)) ([393bbf2](https://github.com/air-hand-org/jobdeck-ui/commit/393bbf246d456708092e7550d94936da4fa0d0a0))
+* **deps:** update dependency jobdeck.job.contracts to 1.3.2 ([#92](https://github.com/air-hand-org/jobdeck-ui/issues/92)) ([e6d9c8a](https://github.com/air-hand-org/jobdeck-ui/commit/e6d9c8a2de4caabc2a66cca173e6350909300f7a))
+* **deps:** update dependency microsoft.entityframeworkcore.design to 10.0.15 ([#78](https://github.com/air-hand-org/jobdeck-ui/issues/78)) ([b3e593e](https://github.com/air-hand-org/jobdeck-ui/commit/b3e593e811f3c9db6e1d1db4bfafc522727499a6))
+* **deps:** update dependency opentelemetry.instrumentation.aspnetcore to 1.21.0 ([#82](https://github.com/air-hand-org/jobdeck-ui/issues/82)) ([6d363f7](https://github.com/air-hand-org/jobdeck-ui/commit/6d363f75f748237feea0701411deef6160d7049c))
+* **deps:** update dependency stylecop.analyzers to 1.3.180 ([#79](https://github.com/air-hand-org/jobdeck-ui/issues/79)) ([758bf65](https://github.com/air-hand-org/jobdeck-ui/commit/758bf655492a7b42b0bc7264c9f6cd1604c016b7))
+* **deps:** update dependency xunit.v3 to 4.0.3 ([#73](https://github.com/air-hand-org/jobdeck-ui/issues/73)) ([752dae1](https://github.com/air-hand-org/jobdeck-ui/commit/752dae14a08401401ad034aacfb0690fe7f3cf48))
+* **deps:** update dependency xunit.v3 to 4.0.3 ([#93](https://github.com/air-hand-org/jobdeck-ui/issues/93)) ([0a87720](https://github.com/air-hand-org/jobdeck-ui/commit/0a87720298619cd625c1ab146a33bfdf20d7c4fe))
+* **deps:** update openiddict monorepo to 7.9.0 ([#88](https://github.com/air-hand-org/jobdeck-ui/issues/88)) ([4a243b2](https://github.com/air-hand-org/jobdeck-ui/commit/4a243b283c65d8516c279b03c6f511225c6aa6fe))
+* **deps:** update opentelemetry-dotnet monorepo to 1.21.0 ([#81](https://github.com/air-hand-org/jobdeck-ui/issues/81)) ([29dfd52](https://github.com/air-hand-org/jobdeck-ui/commit/29dfd52647b334d8b17e03cefc3a9239f9c2e451))
+* **deps:** update quartznet monorepo to 4.7.3 ([#75](https://github.com/air-hand-org/jobdeck-ui/issues/75)) ([e232cbb](https://github.com/air-hand-org/jobdeck-ui/commit/e232cbbb4748a90fd1f2646b59788c5f2c39b7f0))
+
 ## [1.5.1](https://github.com/air-hand-org/jobdeck-ui/compare/v1.5.0...v1.5.1) (2026-11-10)
 
 
