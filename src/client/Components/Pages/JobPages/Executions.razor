@@ -1,5 +1,5 @@
 @page "/jobs/{JobId}/executions"
-@rendermode InteractiveWebAssembly
+@rendermode @(new InteractiveWebAssemblyRenderMode(prerender: false))
 @using Microsoft.AspNetCore.Components.QuickGrid
 @using ui.Client.Models
 @using ui.Client.Api
@@ -40,12 +40,6 @@
   [Parameter]
   public string JobId {get; set;} = "";
 
-  [PersistentState]
-  public ApiResult<JobView>? InitialJob { get; set; }
-
-  [PersistentState]
-  public ApiResult<ListExecutionsResult>? InitialExecutions { get; set; }
-
   private JobView? _job;
   private List<ExecutionView> _execs = [];
   private string? _errorMessage;
@@ -58,7 +52,7 @@
 
   protected override async Task OnInitializedAsync()
   {
-    var result = InitialJob ??= await PageClient.GetJobAsync(JobId, _cts.Token);
+    var result = await PageClient.GetJobAsync(JobId, _cts.Token);
     if (!result.IsSuccess)
     {
         if (result.Error!.Code == ApiErrorCode.Unauthenticated)
@@ -71,7 +65,7 @@
     }
 
     _job = result.Value!;
-    await LoadExecutionsAsync(restore: true);
+    await LoadExecutionsAsync();
   }
 
   protected override void OnAfterRender(bool firstRender)
@@ -123,12 +117,11 @@
     _cts.Dispose();
   }
 
-  private async Task LoadExecutionsAsync(bool restore = false)
+  private async Task LoadExecutionsAsync()
   {
     _errorMessage = null;
 
-    var result = (restore ? InitialExecutions : null) ?? await PageClient.ListExecutionsAsync(jobId: JobId, pageSize: 100, cancellationToken: _cts.Token);
-    InitialExecutions = result;
+    var result = await PageClient.ListExecutionsAsync(jobId: JobId, pageSize: 100, cancellationToken: _cts.Token);
     if (!result.IsSuccess)
     {
         if (result.Error!.Code == ApiErrorCode.Unauthenticated)

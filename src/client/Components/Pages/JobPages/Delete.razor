@@ -1,5 +1,5 @@
 @page "/jobs/{JobId}/delete"
-@rendermode InteractiveWebAssembly
+@rendermode @(new InteractiveWebAssemblyRenderMode(prerender: false))
 @using ui.Client.Models
 @using ui.Client.Api
 @inject IJobPageClient PageClient
@@ -48,9 +48,6 @@ else
     [Parameter]
     public string JobId {get; set;} = "";
 
-    [PersistentState]
-    public ApiResult<JobView>? InitialJob { get; set; }
-
     private JobView? _job;
     private bool _isInteractive;
     private bool _submitted;
@@ -59,7 +56,7 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        var result = InitialJob ??= await PageClient.GetJobAsync(JobId);
+        var result = await PageClient.GetJobAsync(JobId);
         if (!result.IsSuccess)
         {
             if (result.Error!.Code == ApiErrorCode.Unauthenticated)
