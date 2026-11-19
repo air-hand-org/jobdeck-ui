@@ -1,5 +1,5 @@
 @page "/jobs/{JobId}/edit"
-@rendermode InteractiveWebAssembly
+@rendermode @(new InteractiveWebAssemblyRenderMode(prerender: false))
 @using ui.Client.Models
 @using ui.Client.Api
 @inject IJobPageClient PageClient
@@ -28,22 +28,18 @@ else if (_errorMessage is not null)
   [Parameter]
   public string JobId {get; set;} = "";
 
-  [PersistentState]
-  public ApiResult<JobView>? InitialJob { get; set; }
-
   private HttpJobFormModel _model = new();
   private string? _errorMessage;
 
   private bool _loaded;
 
-  protected override Task OnInitializedAsync() => LoadJobAsync(restore: true);
+  protected override Task OnInitializedAsync() => LoadJobAsync();
 
-  private async Task LoadJobAsync(bool restore = false)
+  private async Task LoadJobAsync()
   {
     _errorMessage = null;
 
-    var result = (restore ? InitialJob : null) ?? await PageClient.GetJobAsync(JobId);
-    InitialJob = result;
+    var result = await PageClient.GetJobAsync(JobId);
     if (!result.IsSuccess)
     {
         if (result.Error!.Code == ApiErrorCode.Unauthenticated)

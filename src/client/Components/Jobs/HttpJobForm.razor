@@ -142,7 +142,14 @@
       return;
     }
     _submitted = true;
-    await OnValidSubmit.InvokeAsync();
+    try
+    {
+      await OnValidSubmit.InvokeAsync();
+    }
+    finally
+    {
+      _submitted = false;
+    }
   }
 
   private static string DisplayHttpMethod(JobdeckHttpMethod method)
