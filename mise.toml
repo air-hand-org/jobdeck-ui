@@ -1,5 +1,5 @@
 [tools]
-dotnet = "10.0.404"
+dotnet = "11.0.100"
 
 watchexec = "2.8.0"
 
