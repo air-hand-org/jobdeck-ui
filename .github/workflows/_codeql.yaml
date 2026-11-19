@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - uses: air-hand-org/jobdeck-actions/actions/setup-tools@56b5a3e5540b1a1d42a0dbd3ae45b48910f42e83 # v1.7.3
+      - uses: air-hand-org/jobdeck-actions/actions/setup-tools@5d5ae954d815d44bd28dbebd4c920773aed02c8d # v1.7.4
         if: matrix.language == 'csharp'
         env:
           MISE_NO_ENV: '1'
