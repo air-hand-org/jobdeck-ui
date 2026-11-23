@@ -34,7 +34,7 @@ COPY third_party/licenses/nuget/ /usr/share/licenses/jobdeck-ui/third_party/nuge
 USER $APP_UID
 ENTRYPOINT ["/app/migrator"]
 
-FROM mcr.microsoft.com/dotnet/aspnet:10.0.15 AS ui
+FROM mcr.microsoft.com/dotnet/aspnet:11.0.0 AS ui
 WORKDIR /app
 COPY --from=build /app/publish .
 # MEMO: exec migrator when ui starts
