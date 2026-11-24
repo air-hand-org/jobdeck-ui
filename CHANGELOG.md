@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.6.2](https://github.com/air-hand-org/jobdeck-ui/compare/v1.6.1...v1.6.2) (2026-11-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency npgsql.entityframeworkcore.postgresql to 10.0.4 ([#105](https://github.com/air-hand-org/jobdeck-ui/issues/105)) ([75ba1af](https://github.com/air-hand-org/jobdeck-ui/commit/75ba1af2b7ce570f4592954636aacc87ea6a8e3d))
+* **deps:** update dotnet monorepo to v11 ([#77](https://github.com/air-hand-org/jobdeck-ui/issues/77)) ([4bfa8cf](https://github.com/air-hand-org/jobdeck-ui/commit/4bfa8cfc5deabfe508f7851976b2190113e24fae))
+* **deps:** update quartznet monorepo to 4.8.0 ([#109](https://github.com/air-hand-org/jobdeck-ui/issues/109)) ([1936de2](https://github.com/air-hand-org/jobdeck-ui/commit/1936de24678ff05d647fd600abea82904ef305eb))
+
 ## [1.6.1](https://github.com/air-hand-org/jobdeck-ui/compare/v1.6.0...v1.6.1) (2026-11-19)
 
 
