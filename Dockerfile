@@ -1,6 +1,5 @@
 # syntax=docker/dockerfile:1
 
-#FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 FROM ghcr.io/jdx/mise:2026.10.15-debian AS build
 
 WORKDIR /src
@@ -26,7 +25,7 @@ RUN --mount=type=secret,id=github_packages_token \
     NuGetPackageSourceCredentials_github="Username=air-hand-org;Password=$(cat /run/secrets/github_packages_token)" \
     dotnet ef migrations bundle --project src/bff/ui.csproj --configuration Release --self-contained -r linux-x64 --output /app/migrator
 
-FROM mcr.microsoft.com/dotnet/runtime-deps:10.0.15-noble-chiseled-extra AS migrator
+FROM mcr.microsoft.com/dotnet/runtime-deps:11.0.0-resolute-chiseled-extra AS migrator
 WORKDIR /app
 COPY --from=build /app/migrator .
 COPY LICENSE /usr/share/licenses/jobdeck-ui/LICENSE
