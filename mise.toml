@@ -1,9 +1,9 @@
 [tools]
-dotnet = "10.0.404"
+dotnet = "11.0.100"
 
 watchexec = "2.8.0"
 
-"dotnet:dotnet-ef" = "10.0.15"
+"dotnet:dotnet-ef" = "11.0.0"
 
 [env]
 # set GITHUB_PACKAGES_TOKEN that has read:packages classic token in .env.local

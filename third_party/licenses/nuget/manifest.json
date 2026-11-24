@@ -541,10 +541,10 @@
   },
   {
     "id": "Humanizer.Core",
-    "version": "2.14.1",
+    "version": "3.0.10",
     "source": "restored-nupkg",
-    "packagePath": "humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg",
-    "nupkgSha256": "117be88dd74fbbef492a0386f4d4908144df5aad51a4e630eda7710cf28327aa",
+    "packagePath": "humanizer.core/3.0.10/humanizer.core.3.0.10.nupkg",
+    "nupkgSha256": "99f95210d8c3a1fd40bfd33d44b18441c97857891e55f1f7a88c72feec49e851",
     "nuspecPath": "Humanizer.Core.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -552,15 +552,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/Humanizr/Humanizer",
-      "commit": "3ebc38de585fc641a04b0e78ed69468453b0f8a1"
+      "commit": "90f0cb1d7427635f38b46350bb1dc5fca2164f2d"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "3ebc38de585fc641a04b0e78ed69468453b0f8a1",
+      "nuspecCommit": "90f0cb1d7427635f38b46350bb1dc5fca2164f2d",
       "tag": null,
-      "resolvedSha": "3ebc38de585fc641a04b0e78ed69468453b0f8a1",
+      "resolvedSha": "90f0cb1d7427635f38b46350bb1dc5fca2164f2d",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -569,23 +569,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "3ebc38de585fc641a04b0e78ed69468453b0f8a1/LICENSE",
-        "url": "https://raw.githubusercontent.com/Humanizr/Humanizer/3ebc38de585fc641a04b0e78ed69468453b0f8a1/LICENSE",
-        "revision": "3ebc38de585fc641a04b0e78ed69468453b0f8a1",
+        "path": "90f0cb1d7427635f38b46350bb1dc5fca2164f2d/license.txt",
+        "url": "https://raw.githubusercontent.com/Humanizr/Humanizer/90f0cb1d7427635f38b46350bb1dc5fca2164f2d/license.txt",
+        "revision": "90f0cb1d7427635f38b46350bb1dc5fca2164f2d",
         "sha256": "e24ec7f2eea5c5f4b3e2c08308109ba99b49b4b56ea7ff0e0a178f2bdd4bbce8",
         "bytes": 1565
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/Humanizr/Humanizer/git/trees/3ebc38de585fc641a04b0e78ed69468453b0f8a1",
-        "revision": "3ebc38de585fc641a04b0e78ed69468453b0f8a1",
+        "apiPath": "repos/Humanizr/Humanizer/git/trees/90f0cb1d7427635f38b46350bb1dc5fca2164f2d",
+        "revision": "90f0cb1d7427635f38b46350bb1dc5fca2164f2d",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/Humanizr/Humanizer/3ebc38de585fc641a04b0e78ed69468453b0f8a1/LICENSE",
-        "revision": "3ebc38de585fc641a04b0e78ed69468453b0f8a1",
+        "url": "https://raw.githubusercontent.com/Humanizr/Humanizer/90f0cb1d7427635f38b46350bb1dc5fca2164f2d/license.txt",
+        "revision": "90f0cb1d7427635f38b46350bb1dc5fca2164f2d",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -695,10 +695,10 @@
   },
   {
     "id": "Microsoft.AspNetCore.App.Internal.Assets",
-    "version": "10.0.15",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.aspnetcore.app.internal.assets/10.0.15/microsoft.aspnetcore.app.internal.assets.10.0.15.nupkg",
-    "nupkgSha256": "683f0e4bf6d992fdeb09f7e846d92280a520c26aa2044cbd348a0fe112ccd072",
+    "packagePath": "microsoft.aspnetcore.app.internal.assets/11.0.0/microsoft.aspnetcore.app.internal.assets.11.0.0.nupkg",
+    "nupkgSha256": "1a918b5f5ed0122736b51f2357453f7d4b6ccaa75e8a7a8711a2919466c3e237",
     "nuspecPath": "Microsoft.AspNetCore.App.Internal.Assets.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -706,15 +706,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
+      "commit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "nuspecCommit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "tag": null,
-      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "resolvedSha": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -723,42 +723,42 @@
     "documents": [
       {
         "path": "THIRD-PARTY-NOTICES.TXT",
-        "sha256": "307d014f65d8482314f1400ddeae7a0cbabb96c2207bcc77f6233cc10588e5d9",
-        "bytes": 56748
+        "sha256": "c7448ed684305802981ef06c3eb142eeac58a48ffc98e8789a010b75fa07f123",
+        "bytes": 58140
       }
     ],
     "sourceDocuments": [
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
-        "bytes": 265586
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "sha256": "17e8fa75862e48d94aaa117cce990ff2c8bc034ed4514ed98e5650406189d15e",
+        "bytes": 794300
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "apiPath": "repos/dotnet/dotnet/git/trees/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -768,10 +768,10 @@
   },
   {
     "id": "Microsoft.AspNetCore.Components.QuickGrid",
-    "version": "10.0.15",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.aspnetcore.components.quickgrid/10.0.15/microsoft.aspnetcore.components.quickgrid.10.0.15.nupkg",
-    "nupkgSha256": "a4647219b768c62999df8777a1e95f2bd9cb0a0f7ca4620365b25ea2f292e499",
+    "packagePath": "microsoft.aspnetcore.components.quickgrid/11.0.0/microsoft.aspnetcore.components.quickgrid.11.0.0.nupkg",
+    "nupkgSha256": "84d3f5b10b8de0e0358ccca632d6cd27a8266261a36179def8881a5317f3096d",
     "nuspecPath": "Microsoft.AspNetCore.Components.QuickGrid.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -779,15 +779,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
+      "commit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "nuspecCommit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "tag": null,
-      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "resolvedSha": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -802,36 +802,36 @@
     ],
     "sourceDocuments": [
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
-        "bytes": 265586
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "sha256": "17e8fa75862e48d94aaa117cce990ff2c8bc034ed4514ed98e5650406189d15e",
+        "bytes": 794300
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "apiPath": "repos/dotnet/dotnet/git/trees/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -841,10 +841,10 @@
   },
   {
     "id": "Microsoft.AspNetCore.Components.WebAssembly.Server",
-    "version": "10.0.15",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.aspnetcore.components.webassembly.server/10.0.15/microsoft.aspnetcore.components.webassembly.server.10.0.15.nupkg",
-    "nupkgSha256": "af07f6a37226c9206c91ee43013aa8e3fea4c7087b40c904a530d4b9fcadf8df",
+    "packagePath": "microsoft.aspnetcore.components.webassembly.server/11.0.0/microsoft.aspnetcore.components.webassembly.server.11.0.0.nupkg",
+    "nupkgSha256": "45c3cbe0ed6ebc52b097deac85a28007b674be7f98ada14d9abdaa9d8ddb9120",
     "nuspecPath": "Microsoft.AspNetCore.Components.WebAssembly.Server.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -852,15 +852,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
+      "commit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "nuspecCommit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "tag": null,
-      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "resolvedSha": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -875,36 +875,36 @@
     ],
     "sourceDocuments": [
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
-        "bytes": 265586
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "sha256": "17e8fa75862e48d94aaa117cce990ff2c8bc034ed4514ed98e5650406189d15e",
+        "bytes": 794300
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "apiPath": "repos/dotnet/dotnet/git/trees/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -914,10 +914,10 @@
   },
   {
     "id": "Microsoft.AspNetCore.Components.WebAssembly",
-    "version": "10.0.15",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.aspnetcore.components.webassembly/10.0.15/microsoft.aspnetcore.components.webassembly.10.0.15.nupkg",
-    "nupkgSha256": "b7a68ad4c19d7bb5980d902e959df0983f1652a79d8d6243881eaf389ebad725",
+    "packagePath": "microsoft.aspnetcore.components.webassembly/11.0.0/microsoft.aspnetcore.components.webassembly.11.0.0.nupkg",
+    "nupkgSha256": "0c89cdc754a3646a235ea542d7f4f2a93f15860bffb017c7336fd6f4f585dcb5",
     "nuspecPath": "Microsoft.AspNetCore.Components.WebAssembly.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -925,15 +925,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
+      "commit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "nuspecCommit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "tag": null,
-      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "resolvedSha": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -948,36 +948,36 @@
     ],
     "sourceDocuments": [
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
-        "bytes": 265586
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "sha256": "17e8fa75862e48d94aaa117cce990ff2c8bc034ed4514ed98e5650406189d15e",
+        "bytes": 794300
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "apiPath": "repos/dotnet/dotnet/git/trees/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -987,10 +987,10 @@
   },
   {
     "id": "Microsoft.AspNetCore.DataProtection.EntityFrameworkCore",
-    "version": "10.0.15",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.aspnetcore.dataprotection.entityframeworkcore/10.0.15/microsoft.aspnetcore.dataprotection.entityframeworkcore.10.0.15.nupkg",
-    "nupkgSha256": "4b756e1534cd24d6dbed352fef80a80e36d89a6f0340ae2d171c45c1b9dfa82b",
+    "packagePath": "microsoft.aspnetcore.dataprotection.entityframeworkcore/11.0.0/microsoft.aspnetcore.dataprotection.entityframeworkcore.11.0.0.nupkg",
+    "nupkgSha256": "96cbdcc50dc09d0dbcc09d4290764bfd23804cd7e22327135bc6cc8144db2e11",
     "nuspecPath": "Microsoft.AspNetCore.DataProtection.EntityFrameworkCore.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -998,15 +998,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
+      "commit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "nuspecCommit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "tag": null,
-      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "resolvedSha": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1015,42 +1015,42 @@
     "documents": [
       {
         "path": "THIRD-PARTY-NOTICES.TXT",
-        "sha256": "307d014f65d8482314f1400ddeae7a0cbabb96c2207bcc77f6233cc10588e5d9",
-        "bytes": 56748
+        "sha256": "c7448ed684305802981ef06c3eb142eeac58a48ffc98e8789a010b75fa07f123",
+        "bytes": 58140
       }
     ],
     "sourceDocuments": [
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
-        "bytes": 265586
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "sha256": "17e8fa75862e48d94aaa117cce990ff2c8bc034ed4514ed98e5650406189d15e",
+        "bytes": 794300
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "apiPath": "repos/dotnet/dotnet/git/trees/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -1133,10 +1133,10 @@
   },
   {
     "id": "Microsoft.Build.Framework",
-    "version": "18.0.2",
+    "version": "18.9.6",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.build.framework/18.0.2/microsoft.build.framework.18.0.2.nupkg",
-    "nupkgSha256": "7cedf5280743b36274454603d68bfd501dee72c6c02da9fb2b461d596fb283b0",
+    "packagePath": "microsoft.build.framework/18.9.6/microsoft.build.framework.18.9.6.nupkg",
+    "nupkgSha256": "49f23ba1b973485f868136eda394061bb89d427c1af912a0fffa0c96072e609d",
     "nuspecPath": "Microsoft.Build.Framework.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -1144,15 +1144,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/msbuild",
-      "commit": "995a3dce41788caebf2b8ca6602a7431f08bfd06"
+      "commit": "b0e826c1f29e30dfe49535b4194f960cafbc3510"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "995a3dce41788caebf2b8ca6602a7431f08bfd06",
+      "nuspecCommit": "b0e826c1f29e30dfe49535b4194f960cafbc3510",
       "tag": null,
-      "resolvedSha": "995a3dce41788caebf2b8ca6602a7431f08bfd06",
+      "resolvedSha": "b0e826c1f29e30dfe49535b4194f960cafbc3510",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1161,23 +1161,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "995a3dce41788caebf2b8ca6602a7431f08bfd06/LICENSE",
-        "url": "https://raw.githubusercontent.com/dotnet/msbuild/995a3dce41788caebf2b8ca6602a7431f08bfd06/LICENSE",
-        "revision": "995a3dce41788caebf2b8ca6602a7431f08bfd06",
+        "path": "b0e826c1f29e30dfe49535b4194f960cafbc3510/LICENSE",
+        "url": "https://raw.githubusercontent.com/dotnet/msbuild/b0e826c1f29e30dfe49535b4194f960cafbc3510/LICENSE",
+        "revision": "b0e826c1f29e30dfe49535b4194f960cafbc3510",
         "sha256": "9aebac42398b50e652a84a7b92d70e85cd1a9c8746558a743dc6cec11b8d7d3e",
         "bytes": 1117
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/msbuild/git/trees/995a3dce41788caebf2b8ca6602a7431f08bfd06",
-        "revision": "995a3dce41788caebf2b8ca6602a7431f08bfd06",
+        "apiPath": "repos/dotnet/msbuild/git/trees/b0e826c1f29e30dfe49535b4194f960cafbc3510",
+        "revision": "b0e826c1f29e30dfe49535b4194f960cafbc3510",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/msbuild/995a3dce41788caebf2b8ca6602a7431f08bfd06/LICENSE",
-        "revision": "995a3dce41788caebf2b8ca6602a7431f08bfd06",
+        "url": "https://raw.githubusercontent.com/dotnet/msbuild/b0e826c1f29e30dfe49535b4194f960cafbc3510/LICENSE",
+        "revision": "b0e826c1f29e30dfe49535b4194f960cafbc3510",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -1187,26 +1187,26 @@
   },
   {
     "id": "Microsoft.CodeAnalysis.Analyzers",
-    "version": "3.11.0",
+    "version": "5.9.0-1.26328.17",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.codeanalysis.analyzers/3.11.0/microsoft.codeanalysis.analyzers.3.11.0.nupkg",
-    "nupkgSha256": "850da5e84e8f3b89bb8be66c7c5944c7ef7752c2cfa38218df00e4346d75fd2c",
+    "packagePath": "microsoft.codeanalysis.analyzers/5.9.0-1.26328.17/microsoft.codeanalysis.analyzers.5.9.0-1.26328.17.nupkg",
+    "nupkgSha256": "a7ef4c9b2cf403bf54e4b52eb8fb89e946a286894f148ecbe7515d81c7b0f612",
     "nuspecPath": "Microsoft.CodeAnalysis.Analyzers.nuspec",
     "licenseType": "expression",
     "license": "MIT",
     "licenseUrl": "https://licenses.nuget.org/MIT",
     "repository": {
       "type": "git",
-      "url": "https://github.com/dotnet/roslyn-analyzers",
-      "commit": "f2384e61845314d0e8ad74cc0fe67d1bd4e9f102"
+      "url": "https://github.com/dotnet/roslyn",
+      "commit": "411469b8cd5e1ac891644ef6e3bf5cc8fa7943cc"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "f2384e61845314d0e8ad74cc0fe67d1bd4e9f102",
+      "nuspecCommit": "411469b8cd5e1ac891644ef6e3bf5cc8fa7943cc",
       "tag": null,
-      "resolvedSha": "f2384e61845314d0e8ad74cc0fe67d1bd4e9f102",
+      "resolvedSha": "411469b8cd5e1ac891644ef6e3bf5cc8fa7943cc",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1215,36 +1215,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "f2384e61845314d0e8ad74cc0fe67d1bd4e9f102/License.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/roslyn-analyzers/f2384e61845314d0e8ad74cc0fe67d1bd4e9f102/License.txt",
-        "revision": "f2384e61845314d0e8ad74cc0fe67d1bd4e9f102",
+        "path": "411469b8cd5e1ac891644ef6e3bf5cc8fa7943cc/License.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/roslyn/411469b8cd5e1ac891644ef6e3bf5cc8fa7943cc/License.txt",
+        "revision": "411469b8cd5e1ac891644ef6e3bf5cc8fa7943cc",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "f2384e61845314d0e8ad74cc0fe67d1bd4e9f102/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/roslyn-analyzers/f2384e61845314d0e8ad74cc0fe67d1bd4e9f102/THIRD-PARTY-NOTICES.txt",
-        "revision": "f2384e61845314d0e8ad74cc0fe67d1bd4e9f102",
-        "sha256": "2d7cac2519ca0ac590c9740cbd03f5fd921a6e4f3b4fd6ced3bc1e90a6684161",
-        "bytes": 3585
+        "path": "411469b8cd5e1ac891644ef6e3bf5cc8fa7943cc/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/roslyn/411469b8cd5e1ac891644ef6e3bf5cc8fa7943cc/THIRD-PARTY-NOTICES.txt",
+        "revision": "411469b8cd5e1ac891644ef6e3bf5cc8fa7943cc",
+        "sha256": "9879407362c623ca2af5d0460a556d25a2fa1afbaa6530707963fc7166102d4d",
+        "bytes": 524150
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/roslyn-analyzers/git/trees/f2384e61845314d0e8ad74cc0fe67d1bd4e9f102",
-        "revision": "f2384e61845314d0e8ad74cc0fe67d1bd4e9f102",
+        "apiPath": "repos/dotnet/roslyn/git/trees/411469b8cd5e1ac891644ef6e3bf5cc8fa7943cc",
+        "revision": "411469b8cd5e1ac891644ef6e3bf5cc8fa7943cc",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/roslyn-analyzers/f2384e61845314d0e8ad74cc0fe67d1bd4e9f102/License.txt",
-        "revision": "f2384e61845314d0e8ad74cc0fe67d1bd4e9f102",
+        "url": "https://raw.githubusercontent.com/dotnet/roslyn/411469b8cd5e1ac891644ef6e3bf5cc8fa7943cc/License.txt",
+        "revision": "411469b8cd5e1ac891644ef6e3bf5cc8fa7943cc",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/roslyn-analyzers/f2384e61845314d0e8ad74cc0fe67d1bd4e9f102/THIRD-PARTY-NOTICES.txt",
-        "revision": "f2384e61845314d0e8ad74cc0fe67d1bd4e9f102",
+        "url": "https://raw.githubusercontent.com/dotnet/roslyn/411469b8cd5e1ac891644ef6e3bf5cc8fa7943cc/THIRD-PARTY-NOTICES.txt",
+        "revision": "411469b8cd5e1ac891644ef6e3bf5cc8fa7943cc",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -1254,10 +1254,10 @@
   },
   {
     "id": "Microsoft.CodeAnalysis.Common",
-    "version": "5.0.0",
+    "version": "5.9.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.codeanalysis.common/5.0.0/microsoft.codeanalysis.common.5.0.0.nupkg",
-    "nupkgSha256": "83800bbc148dc8712649bd65e5316d596ef31248919a1a8bc785d666ef6caf65",
+    "packagePath": "microsoft.codeanalysis.common/5.9.0/microsoft.codeanalysis.common.5.9.0.nupkg",
+    "nupkgSha256": "77efd4715c24c8cd6b36f9b92980a2f5a86e4a7b53648d4f1ca3b79a3933a429",
     "nuspecPath": "Microsoft.CodeAnalysis.Common.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -1265,16 +1265,16 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/roslyn",
-      "branch": "release/dev18.0",
-      "commit": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09"
+      "branch": "release/insiders",
+      "commit": "35d9211b841e7613c1d2f8f5af6d628ace696c4c"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+      "nuspecCommit": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
       "tag": null,
-      "resolvedSha": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+      "resolvedSha": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1283,36 +1283,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/License.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/roslyn/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/License.txt",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+        "path": "35d9211b841e7613c1d2f8f5af6d628ace696c4c/License.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/roslyn/35d9211b841e7613c1d2f8f5af6d628ace696c4c/License.txt",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/roslyn/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/THIRD-PARTY-NOTICES.txt",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
-        "sha256": "aa10edcdc488e201fdca979306ba0617de4c68c58dfa5916b25e588f5369fb82",
-        "bytes": 9732
+        "path": "35d9211b841e7613c1d2f8f5af6d628ace696c4c/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/roslyn/35d9211b841e7613c1d2f8f5af6d628ace696c4c/THIRD-PARTY-NOTICES.txt",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
+        "sha256": "9879407362c623ca2af5d0460a556d25a2fa1afbaa6530707963fc7166102d4d",
+        "bytes": 524150
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/roslyn/git/trees/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+        "apiPath": "repos/dotnet/roslyn/git/trees/35d9211b841e7613c1d2f8f5af6d628ace696c4c",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/roslyn/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/License.txt",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+        "url": "https://raw.githubusercontent.com/dotnet/roslyn/35d9211b841e7613c1d2f8f5af6d628ace696c4c/License.txt",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/roslyn/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/THIRD-PARTY-NOTICES.txt",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+        "url": "https://raw.githubusercontent.com/dotnet/roslyn/35d9211b841e7613c1d2f8f5af6d628ace696c4c/THIRD-PARTY-NOTICES.txt",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -1322,10 +1322,10 @@
   },
   {
     "id": "Microsoft.CodeAnalysis.CSharp.Workspaces",
-    "version": "5.0.0",
+    "version": "5.9.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.codeanalysis.csharp.workspaces/5.0.0/microsoft.codeanalysis.csharp.workspaces.5.0.0.nupkg",
-    "nupkgSha256": "c9655c2edfdfd82a2e39f172f7aea094676d485cbe45c82b53575df54b652ff4",
+    "packagePath": "microsoft.codeanalysis.csharp.workspaces/5.9.0/microsoft.codeanalysis.csharp.workspaces.5.9.0.nupkg",
+    "nupkgSha256": "f568b37cdd24377194ff20e517968dae87f9adc0308f5924a63bc59a2fc86daf",
     "nuspecPath": "Microsoft.CodeAnalysis.CSharp.Workspaces.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -1333,16 +1333,16 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/roslyn",
-      "branch": "release/dev18.0",
-      "commit": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09"
+      "branch": "release/insiders",
+      "commit": "35d9211b841e7613c1d2f8f5af6d628ace696c4c"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+      "nuspecCommit": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
       "tag": null,
-      "resolvedSha": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+      "resolvedSha": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1351,36 +1351,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/License.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/roslyn/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/License.txt",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+        "path": "35d9211b841e7613c1d2f8f5af6d628ace696c4c/License.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/roslyn/35d9211b841e7613c1d2f8f5af6d628ace696c4c/License.txt",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/roslyn/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/THIRD-PARTY-NOTICES.txt",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
-        "sha256": "aa10edcdc488e201fdca979306ba0617de4c68c58dfa5916b25e588f5369fb82",
-        "bytes": 9732
+        "path": "35d9211b841e7613c1d2f8f5af6d628ace696c4c/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/roslyn/35d9211b841e7613c1d2f8f5af6d628ace696c4c/THIRD-PARTY-NOTICES.txt",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
+        "sha256": "9879407362c623ca2af5d0460a556d25a2fa1afbaa6530707963fc7166102d4d",
+        "bytes": 524150
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/roslyn/git/trees/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+        "apiPath": "repos/dotnet/roslyn/git/trees/35d9211b841e7613c1d2f8f5af6d628ace696c4c",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/roslyn/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/License.txt",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+        "url": "https://raw.githubusercontent.com/dotnet/roslyn/35d9211b841e7613c1d2f8f5af6d628ace696c4c/License.txt",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/roslyn/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/THIRD-PARTY-NOTICES.txt",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+        "url": "https://raw.githubusercontent.com/dotnet/roslyn/35d9211b841e7613c1d2f8f5af6d628ace696c4c/THIRD-PARTY-NOTICES.txt",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -1390,10 +1390,10 @@
   },
   {
     "id": "Microsoft.CodeAnalysis.CSharp",
-    "version": "5.0.0",
+    "version": "5.9.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.codeanalysis.csharp/5.0.0/microsoft.codeanalysis.csharp.5.0.0.nupkg",
-    "nupkgSha256": "72d042910185a47ff14f9ad1137c626eef58c4f0f5d3c46e0b86b8676e64a06f",
+    "packagePath": "microsoft.codeanalysis.csharp/5.9.0/microsoft.codeanalysis.csharp.5.9.0.nupkg",
+    "nupkgSha256": "7602c3dbaa122268f3b26c6cc0dd02eb9224dea9442ed27af5c3fe56d643993f",
     "nuspecPath": "Microsoft.CodeAnalysis.CSharp.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -1401,16 +1401,16 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/roslyn",
-      "branch": "release/dev18.0",
-      "commit": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09"
+      "branch": "release/insiders",
+      "commit": "35d9211b841e7613c1d2f8f5af6d628ace696c4c"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+      "nuspecCommit": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
       "tag": null,
-      "resolvedSha": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+      "resolvedSha": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1419,36 +1419,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/License.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/roslyn/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/License.txt",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+        "path": "35d9211b841e7613c1d2f8f5af6d628ace696c4c/License.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/roslyn/35d9211b841e7613c1d2f8f5af6d628ace696c4c/License.txt",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/roslyn/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/THIRD-PARTY-NOTICES.txt",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
-        "sha256": "aa10edcdc488e201fdca979306ba0617de4c68c58dfa5916b25e588f5369fb82",
-        "bytes": 9732
+        "path": "35d9211b841e7613c1d2f8f5af6d628ace696c4c/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/roslyn/35d9211b841e7613c1d2f8f5af6d628ace696c4c/THIRD-PARTY-NOTICES.txt",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
+        "sha256": "9879407362c623ca2af5d0460a556d25a2fa1afbaa6530707963fc7166102d4d",
+        "bytes": 524150
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/roslyn/git/trees/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+        "apiPath": "repos/dotnet/roslyn/git/trees/35d9211b841e7613c1d2f8f5af6d628ace696c4c",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/roslyn/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/License.txt",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+        "url": "https://raw.githubusercontent.com/dotnet/roslyn/35d9211b841e7613c1d2f8f5af6d628ace696c4c/License.txt",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/roslyn/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/THIRD-PARTY-NOTICES.txt",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+        "url": "https://raw.githubusercontent.com/dotnet/roslyn/35d9211b841e7613c1d2f8f5af6d628ace696c4c/THIRD-PARTY-NOTICES.txt",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -1458,10 +1458,10 @@
   },
   {
     "id": "Microsoft.CodeAnalysis.Workspaces.Common",
-    "version": "5.0.0",
+    "version": "5.9.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.codeanalysis.workspaces.common/5.0.0/microsoft.codeanalysis.workspaces.common.5.0.0.nupkg",
-    "nupkgSha256": "062af97b5804860410eaea509952901c028b45f7a702eeb40c0ccdba936766c4",
+    "packagePath": "microsoft.codeanalysis.workspaces.common/5.9.0/microsoft.codeanalysis.workspaces.common.5.9.0.nupkg",
+    "nupkgSha256": "f87f124f57d177b34ca3168e12bf1781050048cfde84ea0e9e3207dfc1d5921e",
     "nuspecPath": "Microsoft.CodeAnalysis.Workspaces.Common.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -1469,16 +1469,16 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/roslyn",
-      "branch": "release/dev18.0",
-      "commit": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09"
+      "branch": "release/insiders",
+      "commit": "35d9211b841e7613c1d2f8f5af6d628ace696c4c"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+      "nuspecCommit": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
       "tag": null,
-      "resolvedSha": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+      "resolvedSha": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1487,36 +1487,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/License.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/roslyn/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/License.txt",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+        "path": "35d9211b841e7613c1d2f8f5af6d628ace696c4c/License.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/roslyn/35d9211b841e7613c1d2f8f5af6d628ace696c4c/License.txt",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/roslyn/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/THIRD-PARTY-NOTICES.txt",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
-        "sha256": "aa10edcdc488e201fdca979306ba0617de4c68c58dfa5916b25e588f5369fb82",
-        "bytes": 9732
+        "path": "35d9211b841e7613c1d2f8f5af6d628ace696c4c/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/roslyn/35d9211b841e7613c1d2f8f5af6d628ace696c4c/THIRD-PARTY-NOTICES.txt",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
+        "sha256": "9879407362c623ca2af5d0460a556d25a2fa1afbaa6530707963fc7166102d4d",
+        "bytes": 524150
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/roslyn/git/trees/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+        "apiPath": "repos/dotnet/roslyn/git/trees/35d9211b841e7613c1d2f8f5af6d628ace696c4c",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/roslyn/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/License.txt",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+        "url": "https://raw.githubusercontent.com/dotnet/roslyn/35d9211b841e7613c1d2f8f5af6d628ace696c4c/License.txt",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/roslyn/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/THIRD-PARTY-NOTICES.txt",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+        "url": "https://raw.githubusercontent.com/dotnet/roslyn/35d9211b841e7613c1d2f8f5af6d628ace696c4c/THIRD-PARTY-NOTICES.txt",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -1526,10 +1526,10 @@
   },
   {
     "id": "Microsoft.CodeAnalysis.Workspaces.MSBuild",
-    "version": "5.0.0",
+    "version": "5.9.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.codeanalysis.workspaces.msbuild/5.0.0/microsoft.codeanalysis.workspaces.msbuild.5.0.0.nupkg",
-    "nupkgSha256": "fb9f3e8aa4dac93884d290daa20d54f268da0c0f1b34d0cb03c823090659b9da",
+    "packagePath": "microsoft.codeanalysis.workspaces.msbuild/5.9.0/microsoft.codeanalysis.workspaces.msbuild.5.9.0.nupkg",
+    "nupkgSha256": "2f8cb42826f48e33dc0e18c1aea4ccd7ef0c9a20844bfdda3665a762c449ef11",
     "nuspecPath": "Microsoft.CodeAnalysis.Workspaces.MSBuild.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -1537,16 +1537,16 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/roslyn",
-      "branch": "release/dev18.0",
-      "commit": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09"
+      "branch": "release/insiders",
+      "commit": "35d9211b841e7613c1d2f8f5af6d628ace696c4c"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+      "nuspecCommit": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
       "tag": null,
-      "resolvedSha": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+      "resolvedSha": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1555,36 +1555,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/License.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/roslyn/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/License.txt",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+        "path": "35d9211b841e7613c1d2f8f5af6d628ace696c4c/License.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/roslyn/35d9211b841e7613c1d2f8f5af6d628ace696c4c/License.txt",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/roslyn/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/THIRD-PARTY-NOTICES.txt",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
-        "sha256": "aa10edcdc488e201fdca979306ba0617de4c68c58dfa5916b25e588f5369fb82",
-        "bytes": 9732
+        "path": "35d9211b841e7613c1d2f8f5af6d628ace696c4c/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/roslyn/35d9211b841e7613c1d2f8f5af6d628ace696c4c/THIRD-PARTY-NOTICES.txt",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
+        "sha256": "9879407362c623ca2af5d0460a556d25a2fa1afbaa6530707963fc7166102d4d",
+        "bytes": 524150
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/roslyn/git/trees/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+        "apiPath": "repos/dotnet/roslyn/git/trees/35d9211b841e7613c1d2f8f5af6d628ace696c4c",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/roslyn/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/License.txt",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+        "url": "https://raw.githubusercontent.com/dotnet/roslyn/35d9211b841e7613c1d2f8f5af6d628ace696c4c/License.txt",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/roslyn/6c4a46a31302167b425d5e0a31ea83c9a9aa1d09/THIRD-PARTY-NOTICES.txt",
-        "revision": "6c4a46a31302167b425d5e0a31ea83c9a9aa1d09",
+        "url": "https://raw.githubusercontent.com/dotnet/roslyn/35d9211b841e7613c1d2f8f5af6d628ace696c4c/THIRD-PARTY-NOTICES.txt",
+        "revision": "35d9211b841e7613c1d2f8f5af6d628ace696c4c",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -1594,10 +1594,10 @@
   },
   {
     "id": "Microsoft.EntityFrameworkCore.Abstractions",
-    "version": "10.0.15",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.entityframeworkcore.abstractions/10.0.15/microsoft.entityframeworkcore.abstractions.10.0.15.nupkg",
-    "nupkgSha256": "69c0298bec2a031223696630ef224464d5872130023f229bf57e75e7d4224284",
+    "packagePath": "microsoft.entityframeworkcore.abstractions/11.0.0/microsoft.entityframeworkcore.abstractions.11.0.0.nupkg",
+    "nupkgSha256": "7954db2f5bc74d78b2c222c26c9bdbe7351db911e0886e48160d984e113d438c",
     "nuspecPath": "Microsoft.EntityFrameworkCore.Abstractions.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -1605,15 +1605,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
+      "commit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "nuspecCommit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "tag": null,
-      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "resolvedSha": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1622,36 +1622,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
-        "bytes": 265586
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "sha256": "17e8fa75862e48d94aaa117cce990ff2c8bc034ed4514ed98e5650406189d15e",
+        "bytes": 794300
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "apiPath": "repos/dotnet/dotnet/git/trees/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -1661,10 +1661,10 @@
   },
   {
     "id": "Microsoft.EntityFrameworkCore.Analyzers",
-    "version": "10.0.15",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.entityframeworkcore.analyzers/10.0.15/microsoft.entityframeworkcore.analyzers.10.0.15.nupkg",
-    "nupkgSha256": "c07517561e90686407304ec881407a6a838354deb9ca44d879b528803abdea47",
+    "packagePath": "microsoft.entityframeworkcore.analyzers/11.0.0/microsoft.entityframeworkcore.analyzers.11.0.0.nupkg",
+    "nupkgSha256": "6f82ddaa517e11688f4f1ca1ee10f54bf57d1e44ffdded8f8325db9e2469b3cd",
     "nuspecPath": "Microsoft.EntityFrameworkCore.Analyzers.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -1672,15 +1672,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
+      "commit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "nuspecCommit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "tag": null,
-      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "resolvedSha": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1689,36 +1689,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
-        "bytes": 265586
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "sha256": "17e8fa75862e48d94aaa117cce990ff2c8bc034ed4514ed98e5650406189d15e",
+        "bytes": 794300
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "apiPath": "repos/dotnet/dotnet/git/trees/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -1728,10 +1728,10 @@
   },
   {
     "id": "Microsoft.EntityFrameworkCore.Design",
-    "version": "10.0.15",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.entityframeworkcore.design/10.0.15/microsoft.entityframeworkcore.design.10.0.15.nupkg",
-    "nupkgSha256": "cfad7d43c9ee099f8e519013686762286b2249d4543cfcaf524cc744e807d950",
+    "packagePath": "microsoft.entityframeworkcore.design/11.0.0/microsoft.entityframeworkcore.design.11.0.0.nupkg",
+    "nupkgSha256": "43db9c6053ebae6187d5a8b30f3c4811521e62ee4da67bcf4574c7f611cff560",
     "nuspecPath": "Microsoft.EntityFrameworkCore.Design.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -1739,15 +1739,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
+      "commit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "nuspecCommit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "tag": null,
-      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "resolvedSha": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1756,36 +1756,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
-        "bytes": 265586
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "sha256": "17e8fa75862e48d94aaa117cce990ff2c8bc034ed4514ed98e5650406189d15e",
+        "bytes": 794300
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "apiPath": "repos/dotnet/dotnet/git/trees/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -1795,10 +1795,10 @@
   },
   {
     "id": "Microsoft.EntityFrameworkCore.Relational",
-    "version": "10.0.15",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.entityframeworkcore.relational/10.0.15/microsoft.entityframeworkcore.relational.10.0.15.nupkg",
-    "nupkgSha256": "04f267c9fa04ffc95769abdfdc963c0dea061a9d47e87d84a8a96f1f0301e421",
+    "packagePath": "microsoft.entityframeworkcore.relational/11.0.0/microsoft.entityframeworkcore.relational.11.0.0.nupkg",
+    "nupkgSha256": "2739bb5fdfc608aec69d6aa4e9bbf665e9d675517940efddab4815fb3197a0a7",
     "nuspecPath": "Microsoft.EntityFrameworkCore.Relational.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -1806,15 +1806,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
+      "commit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "nuspecCommit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "tag": null,
-      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "resolvedSha": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1823,36 +1823,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
-        "bytes": 265586
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "sha256": "17e8fa75862e48d94aaa117cce990ff2c8bc034ed4514ed98e5650406189d15e",
+        "bytes": 794300
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "apiPath": "repos/dotnet/dotnet/git/trees/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -1862,10 +1862,10 @@
   },
   {
     "id": "Microsoft.EntityFrameworkCore",
-    "version": "10.0.15",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.entityframeworkcore/10.0.15/microsoft.entityframeworkcore.10.0.15.nupkg",
-    "nupkgSha256": "b8290df4495eca015bcfed8a5c8fe0518df0484ceceac4c1e8a83962811ef8ae",
+    "packagePath": "microsoft.entityframeworkcore/11.0.0/microsoft.entityframeworkcore.11.0.0.nupkg",
+    "nupkgSha256": "d181d90eeac20b353b8d29b1fab7f68b36280bf8b6a8bcdc4b5c8583a4299e96",
     "nuspecPath": "Microsoft.EntityFrameworkCore.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -1873,15 +1873,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
+      "commit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "nuspecCommit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "tag": null,
-      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "resolvedSha": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1890,36 +1890,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
-        "bytes": 265586
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "sha256": "17e8fa75862e48d94aaa117cce990ff2c8bc034ed4514ed98e5650406189d15e",
+        "bytes": 794300
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "apiPath": "repos/dotnet/dotnet/git/trees/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -1929,10 +1929,10 @@
   },
   {
     "id": "Microsoft.Extensions.AmbientMetadata.Application",
-    "version": "10.11.0",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.extensions.ambientmetadata.application/10.11.0/microsoft.extensions.ambientmetadata.application.10.11.0.nupkg",
-    "nupkgSha256": "9417cab8f5f7fb4ea3115736c602893d5de78238d5365b67a5efaaa91eab312a",
+    "packagePath": "microsoft.extensions.ambientmetadata.application/11.0.0/microsoft.extensions.ambientmetadata.application.11.0.0.nupkg",
+    "nupkgSha256": "d88fd279704800f4a57a79f412e697fe39862b0ebfe493ae4cadc43e2bbfb7cd",
     "nuspecPath": "Microsoft.Extensions.AmbientMetadata.Application.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -1940,15 +1940,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/extensions",
-      "commit": "25f07afa51034e37b334210642d7dc5f191c142d"
+      "commit": "c60d72e7973a90cd4e4300d9153e97b93315e4b7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "25f07afa51034e37b334210642d7dc5f191c142d",
+      "nuspecCommit": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
       "tag": null,
-      "resolvedSha": "25f07afa51034e37b334210642d7dc5f191c142d",
+      "resolvedSha": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -1957,36 +1957,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "path": "c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "sha256": "47f0ad8ba753eae5de6178291cd8f38bbb42d2368b177f8e11714ad17c701275",
         "bytes": 1121
       },
       {
-        "path": "25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "path": "c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "sha256": "07f3e74329ed32ac9229a75ae994b98b30aadb1d9947eee926eed3d3fc4cf0c6",
         "bytes": 354
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/extensions/git/trees/25f07afa51034e37b334210642d7dc5f191c142d",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "apiPath": "repos/dotnet/extensions/git/trees/c60d72e7973a90cd4e4300d9153e97b93315e4b7",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -1996,10 +1996,10 @@
   },
   {
     "id": "Microsoft.Extensions.Compliance.Abstractions",
-    "version": "10.11.0",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.extensions.compliance.abstractions/10.11.0/microsoft.extensions.compliance.abstractions.10.11.0.nupkg",
-    "nupkgSha256": "8e86bf3f1546b596cd031b8d088c4093fa229765b510d893ed92243ef265e153",
+    "packagePath": "microsoft.extensions.compliance.abstractions/11.0.0/microsoft.extensions.compliance.abstractions.11.0.0.nupkg",
+    "nupkgSha256": "9cb3e48893ef149a1f83277208f285ce3efd6cb871c4671977063b7373a0981a",
     "nuspecPath": "Microsoft.Extensions.Compliance.Abstractions.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -2007,15 +2007,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/extensions",
-      "commit": "25f07afa51034e37b334210642d7dc5f191c142d"
+      "commit": "c60d72e7973a90cd4e4300d9153e97b93315e4b7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "25f07afa51034e37b334210642d7dc5f191c142d",
+      "nuspecCommit": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
       "tag": null,
-      "resolvedSha": "25f07afa51034e37b334210642d7dc5f191c142d",
+      "resolvedSha": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -2024,36 +2024,103 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "path": "c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "sha256": "47f0ad8ba753eae5de6178291cd8f38bbb42d2368b177f8e11714ad17c701275",
         "bytes": 1121
       },
       {
-        "path": "25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "path": "c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "sha256": "07f3e74329ed32ac9229a75ae994b98b30aadb1d9947eee926eed3d3fc4cf0c6",
         "bytes": 354
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/extensions/git/trees/25f07afa51034e37b334210642d7dc5f191c142d",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "apiPath": "repos/dotnet/extensions/git/trees/c60d72e7973a90cd4e4300d9153e97b93315e4b7",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
+        "httpStatus": 200,
+        "status": "collected"
+      }
+    ],
+    "errors": [],
+    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
+  },
+  {
+    "id": "Microsoft.Extensions.Compliance.Redaction",
+    "version": "11.0.0",
+    "source": "restored-nupkg",
+    "packagePath": "microsoft.extensions.compliance.redaction/11.0.0/microsoft.extensions.compliance.redaction.11.0.0.nupkg",
+    "nupkgSha256": "fc9c1e15edf15743a3bb9cfd62bbe83e8127f15188823d1efc32a000030a91b9",
+    "nuspecPath": "Microsoft.Extensions.Compliance.Redaction.nuspec",
+    "licenseType": "expression",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/extensions",
+      "commit": "c60d72e7973a90cd4e4300d9153e97b93315e4b7"
+    },
+    "status": "original-license-collected",
+    "declaredLicenseFileMissing": false,
+    "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
+    "sourceResolution": {
+      "nuspecCommit": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
+      "tag": null,
+      "resolvedSha": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
+      "provenance": "nuspec-commit",
+      "fallbackReason": null,
+      "nuspecCommitMismatch": false,
+      "tagCandidates": []
+    },
+    "documents": [],
+    "sourceDocuments": [
+      {
+        "path": "c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
+        "sha256": "47f0ad8ba753eae5de6178291cd8f38bbb42d2368b177f8e11714ad17c701275",
+        "bytes": 1121
+      },
+      {
+        "path": "c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
+        "sha256": "07f3e74329ed32ac9229a75ae994b98b30aadb1d9947eee926eed3d3fc4cf0c6",
+        "bytes": 354
+      }
+    ],
+    "sourceAttempts": [
+      {
+        "apiPath": "repos/dotnet/extensions/git/trees/c60d72e7973a90cd4e4300d9153e97b93315e4b7",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
+        "httpStatus": 200,
+        "status": "root-listed"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
+        "httpStatus": 200,
+        "status": "collected"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -2063,10 +2130,10 @@
   },
   {
     "id": "Microsoft.Extensions.DependencyInjection.AutoActivation",
-    "version": "10.11.0",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.extensions.dependencyinjection.autoactivation/10.11.0/microsoft.extensions.dependencyinjection.autoactivation.10.11.0.nupkg",
-    "nupkgSha256": "ebe8052f8c4b023fabe6fba5eb4c4c74b6d1b93191facbb1a74d39ba4f949f66",
+    "packagePath": "microsoft.extensions.dependencyinjection.autoactivation/11.0.0/microsoft.extensions.dependencyinjection.autoactivation.11.0.0.nupkg",
+    "nupkgSha256": "2985fe6f63d3ba2b9c5da5e9bac389a00b19f60de8824e120cbcd9633c67db93",
     "nuspecPath": "Microsoft.Extensions.DependencyInjection.AutoActivation.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -2074,15 +2141,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/extensions",
-      "commit": "25f07afa51034e37b334210642d7dc5f191c142d"
+      "commit": "c60d72e7973a90cd4e4300d9153e97b93315e4b7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "25f07afa51034e37b334210642d7dc5f191c142d",
+      "nuspecCommit": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
       "tag": null,
-      "resolvedSha": "25f07afa51034e37b334210642d7dc5f191c142d",
+      "resolvedSha": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -2091,36 +2158,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "path": "c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "sha256": "47f0ad8ba753eae5de6178291cd8f38bbb42d2368b177f8e11714ad17c701275",
         "bytes": 1121
       },
       {
-        "path": "25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "path": "c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "sha256": "07f3e74329ed32ac9229a75ae994b98b30aadb1d9947eee926eed3d3fc4cf0c6",
         "bytes": 354
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/extensions/git/trees/25f07afa51034e37b334210642d7dc5f191c142d",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "apiPath": "repos/dotnet/extensions/git/trees/c60d72e7973a90cd4e4300d9153e97b93315e4b7",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -2130,10 +2197,10 @@
   },
   {
     "id": "Microsoft.Extensions.DependencyModel",
-    "version": "10.0.15",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.extensions.dependencymodel/10.0.15/microsoft.extensions.dependencymodel.10.0.15.nupkg",
-    "nupkgSha256": "2df05d82ee2eee2a5caa6af1ad4c63e6e71722fd2b342ea698879e71fe318051",
+    "packagePath": "microsoft.extensions.dependencymodel/11.0.0/microsoft.extensions.dependencymodel.11.0.0.nupkg",
+    "nupkgSha256": "bd60d31c126b3cf33cf47b391ddbaf4b2dd8e41c493e92efbc90ef5976874643",
     "nuspecPath": "Microsoft.Extensions.DependencyModel.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -2141,15 +2208,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
+      "commit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "nuspecCommit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "tag": null,
-      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "resolvedSha": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -2158,42 +2225,42 @@
     "documents": [
       {
         "path": "THIRD-PARTY-NOTICES.TXT",
-        "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21",
-        "bytes": 78041
+        "sha256": "e3a241a6cf35167d82bf7e081de9641c59d10d2dbd8824409817bed31980d407",
+        "bytes": 93617
       }
     ],
     "sourceDocuments": [
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
-        "bytes": 265586
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "sha256": "17e8fa75862e48d94aaa117cce990ff2c8bc034ed4514ed98e5650406189d15e",
+        "bytes": 794300
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "apiPath": "repos/dotnet/dotnet/git/trees/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -2203,10 +2270,10 @@
   },
   {
     "id": "Microsoft.Extensions.Diagnostics.ExceptionSummarization",
-    "version": "10.11.0",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.extensions.diagnostics.exceptionsummarization/10.11.0/microsoft.extensions.diagnostics.exceptionsummarization.10.11.0.nupkg",
-    "nupkgSha256": "3882e2710c00174e554c53fa66837a46d4de710dc5ec10d709e71663df104b50",
+    "packagePath": "microsoft.extensions.diagnostics.exceptionsummarization/11.0.0/microsoft.extensions.diagnostics.exceptionsummarization.11.0.0.nupkg",
+    "nupkgSha256": "759e86d27c44e86a0169e73694e596494f9ff4ca927c8bd25b5ea89858798268",
     "nuspecPath": "Microsoft.Extensions.Diagnostics.ExceptionSummarization.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -2214,15 +2281,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/extensions",
-      "commit": "25f07afa51034e37b334210642d7dc5f191c142d"
+      "commit": "c60d72e7973a90cd4e4300d9153e97b93315e4b7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "25f07afa51034e37b334210642d7dc5f191c142d",
+      "nuspecCommit": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
       "tag": null,
-      "resolvedSha": "25f07afa51034e37b334210642d7dc5f191c142d",
+      "resolvedSha": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -2231,36 +2298,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "path": "c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "sha256": "47f0ad8ba753eae5de6178291cd8f38bbb42d2368b177f8e11714ad17c701275",
         "bytes": 1121
       },
       {
-        "path": "25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "path": "c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "sha256": "07f3e74329ed32ac9229a75ae994b98b30aadb1d9947eee926eed3d3fc4cf0c6",
         "bytes": 354
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/extensions/git/trees/25f07afa51034e37b334210642d7dc5f191c142d",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "apiPath": "repos/dotnet/extensions/git/trees/c60d72e7973a90cd4e4300d9153e97b93315e4b7",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -2270,10 +2337,10 @@
   },
   {
     "id": "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore",
-    "version": "10.0.15",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.extensions.diagnostics.healthchecks.entityframeworkcore/10.0.15/microsoft.extensions.diagnostics.healthchecks.entityframeworkcore.10.0.15.nupkg",
-    "nupkgSha256": "6796e95f97137d633f7ac4ba2dc0902da3d0976aaef190cfd6e1d3a7e7e719ea",
+    "packagePath": "microsoft.extensions.diagnostics.healthchecks.entityframeworkcore/11.0.0/microsoft.extensions.diagnostics.healthchecks.entityframeworkcore.11.0.0.nupkg",
+    "nupkgSha256": "8fc5123c97bc6ae1925ce5c1fee573b11ce407d08faeb0b0fe7f2140ee15cd1f",
     "nuspecPath": "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -2281,15 +2348,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
+      "commit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "nuspecCommit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "tag": null,
-      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "resolvedSha": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -2298,42 +2365,42 @@
     "documents": [
       {
         "path": "THIRD-PARTY-NOTICES.TXT",
-        "sha256": "307d014f65d8482314f1400ddeae7a0cbabb96c2207bcc77f6233cc10588e5d9",
-        "bytes": 56748
+        "sha256": "c7448ed684305802981ef06c3eb142eeac58a48ffc98e8789a010b75fa07f123",
+        "bytes": 58140
       }
     ],
     "sourceDocuments": [
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
-        "bytes": 265586
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "sha256": "17e8fa75862e48d94aaa117cce990ff2c8bc034ed4514ed98e5650406189d15e",
+        "bytes": 794300
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "apiPath": "repos/dotnet/dotnet/git/trees/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -2343,10 +2410,10 @@
   },
   {
     "id": "Microsoft.Extensions.Http.Diagnostics",
-    "version": "10.11.0",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.extensions.http.diagnostics/10.11.0/microsoft.extensions.http.diagnostics.10.11.0.nupkg",
-    "nupkgSha256": "458382134ab388f31947d6efa4df42b97fb14511836f0df533e801e91749ee97",
+    "packagePath": "microsoft.extensions.http.diagnostics/11.0.0/microsoft.extensions.http.diagnostics.11.0.0.nupkg",
+    "nupkgSha256": "b0511dc6def05c6fe9c33acb4b7eb90bf3b60151a9a22f0ab9c1df424f616b76",
     "nuspecPath": "Microsoft.Extensions.Http.Diagnostics.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -2354,15 +2421,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/extensions",
-      "commit": "25f07afa51034e37b334210642d7dc5f191c142d"
+      "commit": "c60d72e7973a90cd4e4300d9153e97b93315e4b7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "25f07afa51034e37b334210642d7dc5f191c142d",
+      "nuspecCommit": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
       "tag": null,
-      "resolvedSha": "25f07afa51034e37b334210642d7dc5f191c142d",
+      "resolvedSha": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -2371,36 +2438,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "path": "c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "sha256": "47f0ad8ba753eae5de6178291cd8f38bbb42d2368b177f8e11714ad17c701275",
         "bytes": 1121
       },
       {
-        "path": "25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "path": "c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "sha256": "07f3e74329ed32ac9229a75ae994b98b30aadb1d9947eee926eed3d3fc4cf0c6",
         "bytes": 354
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/extensions/git/trees/25f07afa51034e37b334210642d7dc5f191c142d",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "apiPath": "repos/dotnet/extensions/git/trees/c60d72e7973a90cd4e4300d9153e97b93315e4b7",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -2410,10 +2477,10 @@
   },
   {
     "id": "Microsoft.Extensions.Http.Polly",
-    "version": "10.0.15",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.extensions.http.polly/10.0.15/microsoft.extensions.http.polly.10.0.15.nupkg",
-    "nupkgSha256": "67e1be199a9caccd12af94fdac53c0c09177c2df8482eb8e7105ce43cfcb0a7d",
+    "packagePath": "microsoft.extensions.http.polly/11.0.0/microsoft.extensions.http.polly.11.0.0.nupkg",
+    "nupkgSha256": "835dc55c02e1488bc9064ca4caccaf1cfa8d01a95424a5db64757a1f4c8aba6e",
     "nuspecPath": "Microsoft.Extensions.Http.Polly.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -2421,15 +2488,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
+      "commit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "nuspecCommit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "tag": null,
-      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "resolvedSha": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -2438,42 +2505,42 @@
     "documents": [
       {
         "path": "THIRD-PARTY-NOTICES.TXT",
-        "sha256": "307d014f65d8482314f1400ddeae7a0cbabb96c2207bcc77f6233cc10588e5d9",
-        "bytes": 56748
+        "sha256": "c7448ed684305802981ef06c3eb142eeac58a48ffc98e8789a010b75fa07f123",
+        "bytes": 58140
       }
     ],
     "sourceDocuments": [
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
-        "bytes": 265586
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "sha256": "17e8fa75862e48d94aaa117cce990ff2c8bc034ed4514ed98e5650406189d15e",
+        "bytes": 794300
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "apiPath": "repos/dotnet/dotnet/git/trees/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -2483,10 +2550,10 @@
   },
   {
     "id": "Microsoft.Extensions.Http.Resilience",
-    "version": "10.11.0",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.extensions.http.resilience/10.11.0/microsoft.extensions.http.resilience.10.11.0.nupkg",
-    "nupkgSha256": "77f9380161735a57a753928fa185a914647ef9eb856f1a89c9524edac50c9f9f",
+    "packagePath": "microsoft.extensions.http.resilience/11.0.0/microsoft.extensions.http.resilience.11.0.0.nupkg",
+    "nupkgSha256": "2509051fd3d4705125dbb11f711dd92334efa587b8033b83865eeeda655fb3bc",
     "nuspecPath": "Microsoft.Extensions.Http.Resilience.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -2494,15 +2561,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/extensions",
-      "commit": "25f07afa51034e37b334210642d7dc5f191c142d"
+      "commit": "c60d72e7973a90cd4e4300d9153e97b93315e4b7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "25f07afa51034e37b334210642d7dc5f191c142d",
+      "nuspecCommit": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
       "tag": null,
-      "resolvedSha": "25f07afa51034e37b334210642d7dc5f191c142d",
+      "resolvedSha": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -2511,36 +2578,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "path": "c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "sha256": "47f0ad8ba753eae5de6178291cd8f38bbb42d2368b177f8e11714ad17c701275",
         "bytes": 1121
       },
       {
-        "path": "25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "path": "c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "sha256": "07f3e74329ed32ac9229a75ae994b98b30aadb1d9947eee926eed3d3fc4cf0c6",
         "bytes": 354
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/extensions/git/trees/25f07afa51034e37b334210642d7dc5f191c142d",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "apiPath": "repos/dotnet/extensions/git/trees/c60d72e7973a90cd4e4300d9153e97b93315e4b7",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -2550,10 +2617,10 @@
   },
   {
     "id": "Microsoft.Extensions.Resilience",
-    "version": "10.11.0",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.extensions.resilience/10.11.0/microsoft.extensions.resilience.10.11.0.nupkg",
-    "nupkgSha256": "9ee23f936de1497e6716c7054ebf3e036ffc2259f1d6c807dab75fd4cedba113",
+    "packagePath": "microsoft.extensions.resilience/11.0.0/microsoft.extensions.resilience.11.0.0.nupkg",
+    "nupkgSha256": "1c2f72d54df45e7c0059f28e455abf254e82e545acb335947fc0915230643fa9",
     "nuspecPath": "Microsoft.Extensions.Resilience.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -2561,15 +2628,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/extensions",
-      "commit": "25f07afa51034e37b334210642d7dc5f191c142d"
+      "commit": "c60d72e7973a90cd4e4300d9153e97b93315e4b7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "25f07afa51034e37b334210642d7dc5f191c142d",
+      "nuspecCommit": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
       "tag": null,
-      "resolvedSha": "25f07afa51034e37b334210642d7dc5f191c142d",
+      "resolvedSha": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -2578,36 +2645,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "path": "c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "sha256": "47f0ad8ba753eae5de6178291cd8f38bbb42d2368b177f8e11714ad17c701275",
         "bytes": 1121
       },
       {
-        "path": "25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "path": "c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "sha256": "07f3e74329ed32ac9229a75ae994b98b30aadb1d9947eee926eed3d3fc4cf0c6",
         "bytes": 354
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/extensions/git/trees/25f07afa51034e37b334210642d7dc5f191c142d",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "apiPath": "repos/dotnet/extensions/git/trees/c60d72e7973a90cd4e4300d9153e97b93315e4b7",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -2617,10 +2684,10 @@
   },
   {
     "id": "Microsoft.Extensions.Telemetry.Abstractions",
-    "version": "10.11.0",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.extensions.telemetry.abstractions/10.11.0/microsoft.extensions.telemetry.abstractions.10.11.0.nupkg",
-    "nupkgSha256": "c3b0f2bc9f66936e4e7ffc8c6f6b2ac99a7b95d635652ff172b30474efa6a841",
+    "packagePath": "microsoft.extensions.telemetry.abstractions/11.0.0/microsoft.extensions.telemetry.abstractions.11.0.0.nupkg",
+    "nupkgSha256": "cfef6d1fa30109db9fbd4796215e67102958a7733f1d32a89119be2a77881cf1",
     "nuspecPath": "Microsoft.Extensions.Telemetry.Abstractions.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -2628,15 +2695,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/extensions",
-      "commit": "25f07afa51034e37b334210642d7dc5f191c142d"
+      "commit": "c60d72e7973a90cd4e4300d9153e97b93315e4b7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "25f07afa51034e37b334210642d7dc5f191c142d",
+      "nuspecCommit": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
       "tag": null,
-      "resolvedSha": "25f07afa51034e37b334210642d7dc5f191c142d",
+      "resolvedSha": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -2645,36 +2712,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "path": "c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "sha256": "47f0ad8ba753eae5de6178291cd8f38bbb42d2368b177f8e11714ad17c701275",
         "bytes": 1121
       },
       {
-        "path": "25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "path": "c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "sha256": "07f3e74329ed32ac9229a75ae994b98b30aadb1d9947eee926eed3d3fc4cf0c6",
         "bytes": 354
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/extensions/git/trees/25f07afa51034e37b334210642d7dc5f191c142d",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "apiPath": "repos/dotnet/extensions/git/trees/c60d72e7973a90cd4e4300d9153e97b93315e4b7",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -2684,10 +2751,10 @@
   },
   {
     "id": "Microsoft.Extensions.Telemetry",
-    "version": "10.11.0",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.extensions.telemetry/10.11.0/microsoft.extensions.telemetry.10.11.0.nupkg",
-    "nupkgSha256": "1c32dea6d5401235b055c74c2651ee7130f858af67dfcbcdc4cea5e07bccfe82",
+    "packagePath": "microsoft.extensions.telemetry/11.0.0/microsoft.extensions.telemetry.11.0.0.nupkg",
+    "nupkgSha256": "2239ae40680c2a84109bc1e30ef574ca02b44897f6704dadc3ab1009b77008fa",
     "nuspecPath": "Microsoft.Extensions.Telemetry.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -2695,15 +2762,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/extensions",
-      "commit": "25f07afa51034e37b334210642d7dc5f191c142d"
+      "commit": "c60d72e7973a90cd4e4300d9153e97b93315e4b7"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "25f07afa51034e37b334210642d7dc5f191c142d",
+      "nuspecCommit": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
       "tag": null,
-      "resolvedSha": "25f07afa51034e37b334210642d7dc5f191c142d",
+      "resolvedSha": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -2712,36 +2779,36 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "path": "c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "sha256": "47f0ad8ba753eae5de6178291cd8f38bbb42d2368b177f8e11714ad17c701275",
         "bytes": 1121
       },
       {
-        "path": "25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "path": "c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "sha256": "07f3e74329ed32ac9229a75ae994b98b30aadb1d9947eee926eed3d3fc4cf0c6",
         "bytes": 354
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/extensions/git/trees/25f07afa51034e37b334210642d7dc5f191c142d",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "apiPath": "repos/dotnet/extensions/git/trees/c60d72e7973a90cd4e4300d9153e97b93315e4b7",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/LICENSE",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/LICENSE",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/extensions/25f07afa51034e37b334210642d7dc5f191c142d/THIRD-PARTY-NOTICES.TXT",
-        "revision": "25f07afa51034e37b334210642d7dc5f191c142d",
+        "url": "https://raw.githubusercontent.com/dotnet/extensions/c60d72e7973a90cd4e4300d9153e97b93315e4b7/THIRD-PARTY-NOTICES.TXT",
+        "revision": "c60d72e7973a90cd4e4300d9153e97b93315e4b7",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3086,10 +3153,10 @@
   },
   {
     "id": "Microsoft.JSInterop.WebAssembly",
-    "version": "10.0.15",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "microsoft.jsinterop.webassembly/10.0.15/microsoft.jsinterop.webassembly.10.0.15.nupkg",
-    "nupkgSha256": "33a1630f77d4dcc0b64f54fa173bd7b0300c60ad86fbb1f8bc2e34d75d761f61",
+    "packagePath": "microsoft.jsinterop.webassembly/11.0.0/microsoft.jsinterop.webassembly.11.0.0.nupkg",
+    "nupkgSha256": "b40c91d10c152d151e77ea8f9004cb2b818e0713d5a1dd4973dc7cfff95b99d6",
     "nuspecPath": "Microsoft.JSInterop.WebAssembly.nuspec",
     "licenseType": "expression",
     "license": "MIT",
@@ -3097,15 +3164,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
+      "commit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "nuspecCommit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "tag": null,
-      "resolvedSha": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+      "resolvedSha": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3120,36 +3187,90 @@
     ],
     "sourceDocuments": [
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "sha256": "5a90be9000b5c2f928dead74be4e86952420d1160fa38f6f2d34526eeee49ff6",
-        "bytes": 265586
+        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "sha256": "17e8fa75862e48d94aaa117cce990ff2c8bc034ed4514ed98e5650406189d15e",
+        "bytes": 794300
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "apiPath": "repos/dotnet/dotnet/git/trees/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/LICENSE.TXT",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/8e0f8ed2312954727f8919d7d1c2f78b483b4ee7/THIRD-PARTY-NOTICES.txt",
-        "revision": "8e0f8ed2312954727f8919d7d1c2f78b483b4ee7",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
+        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "httpStatus": 200,
+        "status": "collected"
+      }
+    ],
+    "errors": [],
+    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
+  },
+  {
+    "id": "Microsoft.NET.StringTools",
+    "version": "18.9.6",
+    "source": "restored-nupkg",
+    "packagePath": "microsoft.net.stringtools/18.9.6/microsoft.net.stringtools.18.9.6.nupkg",
+    "nupkgSha256": "47f748612d2333230b24336786f6cacf72a798568d9ac0e2130fcc21495379fe",
+    "nuspecPath": "Microsoft.NET.StringTools.nuspec",
+    "licenseType": "expression",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/msbuild",
+      "commit": "b0e826c1f29e30dfe49535b4194f960cafbc3510"
+    },
+    "status": "original-license-collected",
+    "declaredLicenseFileMissing": false,
+    "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
+    "sourceResolution": {
+      "nuspecCommit": "b0e826c1f29e30dfe49535b4194f960cafbc3510",
+      "tag": null,
+      "resolvedSha": "b0e826c1f29e30dfe49535b4194f960cafbc3510",
+      "provenance": "nuspec-commit",
+      "fallbackReason": null,
+      "nuspecCommitMismatch": false,
+      "tagCandidates": []
+    },
+    "documents": [],
+    "sourceDocuments": [
+      {
+        "path": "b0e826c1f29e30dfe49535b4194f960cafbc3510/LICENSE",
+        "url": "https://raw.githubusercontent.com/dotnet/msbuild/b0e826c1f29e30dfe49535b4194f960cafbc3510/LICENSE",
+        "revision": "b0e826c1f29e30dfe49535b4194f960cafbc3510",
+        "sha256": "9aebac42398b50e652a84a7b92d70e85cd1a9c8746558a743dc6cec11b8d7d3e",
+        "bytes": 1117
+      }
+    ],
+    "sourceAttempts": [
+      {
+        "apiPath": "repos/dotnet/msbuild/git/trees/b0e826c1f29e30dfe49535b4194f960cafbc3510",
+        "revision": "b0e826c1f29e30dfe49535b4194f960cafbc3510",
+        "httpStatus": 200,
+        "status": "root-listed"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/dotnet/msbuild/b0e826c1f29e30dfe49535b4194f960cafbc3510/LICENSE",
+        "revision": "b0e826c1f29e30dfe49535b4194f960cafbc3510",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3249,42 +3370,11 @@
     "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
   },
   {
-    "id": "Newtonsoft.Json",
-    "version": "13.0.4",
-    "source": "restored-nupkg",
-    "packagePath": "newtonsoft.json/13.0.4/newtonsoft.json.13.0.4.nupkg",
-    "nupkgSha256": "f09081d457405baf35a973fa0c50d6bf272ed683f2568c5a620a49da952f6529",
-    "nuspecPath": "Newtonsoft.Json.nuspec",
-    "licenseType": "expression",
-    "license": "MIT",
-    "licenseUrl": "https://licenses.nuget.org/MIT",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/JamesNK/Newtonsoft.Json",
-      "commit": "4e13299d4b0ec96bd4df9954ef646bd2d1b5bf2a"
-    },
-    "status": "original-license-collected",
-    "declaredLicenseFileMissing": false,
-    "sourceRetrieval": "not-needed-package-license-present",
-    "sourceResolution": null,
-    "documents": [
-      {
-        "path": "LICENSE.md",
-        "sha256": "b98a397897ff55f76cddc380041507a95a896b2946e0188703bf0496793d6516",
-        "bytes": 1104
-      }
-    ],
-    "sourceDocuments": [],
-    "sourceAttempts": [],
-    "errors": [],
-    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
-  },
-  {
     "id": "Npgsql.EntityFrameworkCore.PostgreSQL",
-    "version": "10.0.4",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "npgsql.entityframeworkcore.postgresql/10.0.4/npgsql.entityframeworkcore.postgresql.10.0.4.nupkg",
-    "nupkgSha256": "8d45277d3cd71b09013f37e203fc56973675b35f29c3a5570017e7d0ef7d36a6",
+    "packagePath": "npgsql.entityframeworkcore.postgresql/11.0.0/npgsql.entityframeworkcore.postgresql.11.0.0.nupkg",
+    "nupkgSha256": "4f9f1345d254ccc9638527d26a89400ddb955b319e2cb2f098530bd971cf3c17",
     "nuspecPath": "Npgsql.EntityFrameworkCore.PostgreSQL.nuspec",
     "licenseType": "expression",
     "license": "PostgreSQL",
@@ -3292,15 +3382,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/npgsql/efcore.pg",
-      "commit": "fe1109ecf52646ed6fc718a9a233353ef2e7baf9"
+      "commit": "fd3674f72e848a597fe2c0273cfffb925572190c"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "fe1109ecf52646ed6fc718a9a233353ef2e7baf9",
+      "nuspecCommit": "fd3674f72e848a597fe2c0273cfffb925572190c",
       "tag": null,
-      "resolvedSha": "fe1109ecf52646ed6fc718a9a233353ef2e7baf9",
+      "resolvedSha": "fd3674f72e848a597fe2c0273cfffb925572190c",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3309,23 +3399,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "fe1109ecf52646ed6fc718a9a233353ef2e7baf9/LICENSE",
-        "url": "https://raw.githubusercontent.com/npgsql/efcore.pg/fe1109ecf52646ed6fc718a9a233353ef2e7baf9/LICENSE",
-        "revision": "fe1109ecf52646ed6fc718a9a233353ef2e7baf9",
+        "path": "fd3674f72e848a597fe2c0273cfffb925572190c/LICENSE",
+        "url": "https://raw.githubusercontent.com/npgsql/efcore.pg/fd3674f72e848a597fe2c0273cfffb925572190c/LICENSE",
+        "revision": "fd3674f72e848a597fe2c0273cfffb925572190c",
         "sha256": "bc2fdab8551ca4022196dbbd3dc582ca65211209196a3459b1bab60cb71a9979",
         "bytes": 903
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/npgsql/efcore.pg/git/trees/fe1109ecf52646ed6fc718a9a233353ef2e7baf9",
-        "revision": "fe1109ecf52646ed6fc718a9a233353ef2e7baf9",
+        "apiPath": "repos/npgsql/efcore.pg/git/trees/fd3674f72e848a597fe2c0273cfffb925572190c",
+        "revision": "fd3674f72e848a597fe2c0273cfffb925572190c",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/npgsql/efcore.pg/fe1109ecf52646ed6fc718a9a233353ef2e7baf9/LICENSE",
-        "revision": "fe1109ecf52646ed6fc718a9a233353ef2e7baf9",
+        "url": "https://raw.githubusercontent.com/npgsql/efcore.pg/fd3674f72e848a597fe2c0273cfffb925572190c/LICENSE",
+        "revision": "fd3674f72e848a597fe2c0273cfffb925572190c",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -3335,10 +3425,10 @@
   },
   {
     "id": "Npgsql",
-    "version": "10.0.4",
+    "version": "11.0.0",
     "source": "restored-nupkg",
-    "packagePath": "npgsql/10.0.4/npgsql.10.0.4.nupkg",
-    "nupkgSha256": "3ef2134a36d7a99a3b2d8944d876f9c19c68c02ac7ac5ce5f482790d2f3250b5",
+    "packagePath": "npgsql/11.0.0/npgsql.11.0.0.nupkg",
+    "nupkgSha256": "0ecfa25a72605168fcf46731888da64af776a4c9259abdb6b4cf34cee5fc4f34",
     "nuspecPath": "Npgsql.nuspec",
     "licenseType": "expression",
     "license": "PostgreSQL",
@@ -3346,15 +3436,15 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/npgsql/npgsql",
-      "commit": "a445c040bf90b22e8921c4a079549c6ce154c9e3"
+      "commit": "4d174200ed48e3e3ab16419dbf84dd655da59de6"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "a445c040bf90b22e8921c4a079549c6ce154c9e3",
+      "nuspecCommit": "4d174200ed48e3e3ab16419dbf84dd655da59de6",
       "tag": null,
-      "resolvedSha": "a445c040bf90b22e8921c4a079549c6ce154c9e3",
+      "resolvedSha": "4d174200ed48e3e3ab16419dbf84dd655da59de6",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -3363,23 +3453,23 @@
     "documents": [],
     "sourceDocuments": [
       {
-        "path": "a445c040bf90b22e8921c4a079549c6ce154c9e3/LICENSE",
-        "url": "https://raw.githubusercontent.com/npgsql/npgsql/a445c040bf90b22e8921c4a079549c6ce154c9e3/LICENSE",
-        "revision": "a445c040bf90b22e8921c4a079549c6ce154c9e3",
-        "sha256": "2e1d9cc6ed4eb7fe6fa82091846c06b4f58571a2c3b54777db6baeca10dd2d74",
+        "path": "4d174200ed48e3e3ab16419dbf84dd655da59de6/LICENSE",
+        "url": "https://raw.githubusercontent.com/npgsql/npgsql/4d174200ed48e3e3ab16419dbf84dd655da59de6/LICENSE",
+        "revision": "4d174200ed48e3e3ab16419dbf84dd655da59de6",
+        "sha256": "3c0c71ba8971ad9a06b1b0f9626fca6d9ca3def83ace0c88b15981eb976728fc",
         "bytes": 903
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/npgsql/npgsql/git/trees/a445c040bf90b22e8921c4a079549c6ce154c9e3",
-        "revision": "a445c040bf90b22e8921c4a079549c6ce154c9e3",
+        "apiPath": "repos/npgsql/npgsql/git/trees/4d174200ed48e3e3ab16419dbf84dd655da59de6",
+        "revision": "4d174200ed48e3e3ab16419dbf84dd655da59de6",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/npgsql/npgsql/a445c040bf90b22e8921c4a079549c6ce154c9e3/LICENSE",
-        "revision": "a445c040bf90b22e8921c4a079549c6ce154c9e3",
+        "url": "https://raw.githubusercontent.com/npgsql/npgsql/4d174200ed48e3e3ab16419dbf84dd655da59de6/LICENSE",
+        "revision": "4d174200ed48e3e3ab16419dbf84dd655da59de6",
         "httpStatus": 200,
         "status": "collected"
       }
@@ -5242,242 +5332,26 @@
   },
   {
     "id": "System.Composition.AttributedModel",
-    "version": "9.0.0",
+    "version": "10.0.1",
     "source": "restored-nupkg",
-    "packagePath": "system.composition.attributedmodel/9.0.0/system.composition.attributedmodel.9.0.0.nupkg",
-    "nupkgSha256": "6bbcbb1face3fa499892594d1c0e34d83a157d8f486aa0b73a8cacf15ce5db83",
+    "packagePath": "system.composition.attributedmodel/10.0.1/system.composition.attributedmodel.10.0.1.nupkg",
+    "nupkgSha256": "ee3c020b3ec08e6a63dba24f94cc54ed86f0831b881ee3ef861c1617637285dc",
     "nuspecPath": "System.Composition.AttributedModel.nuspec",
     "licenseType": "expression",
     "license": "MIT",
     "licenseUrl": "https://licenses.nuget.org/MIT",
     "repository": {
       "type": "git",
-      "url": "https://github.com/dotnet/runtime",
-      "commit": "9d5a6a9aa463d6d10b0b0ba6d5982cc82f363dc3"
-    },
-    "status": "original-license-collected",
-    "declaredLicenseFileMissing": false,
-    "sourceRetrieval": "not-needed-package-license-present",
-    "sourceResolution": null,
-    "documents": [
-      {
-        "path": "LICENSE.TXT",
-        "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b",
-        "bytes": 1139
-      },
-      {
-        "path": "THIRD-PARTY-NOTICES.TXT",
-        "sha256": "40686c6447a7d5b5d3693068e4571b5f483d7ed335aeee773ef662440de4c5d5",
-        "bytes": 75640
-      }
-    ],
-    "sourceDocuments": [],
-    "sourceAttempts": [],
-    "errors": [],
-    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
-  },
-  {
-    "id": "System.Composition.Convention",
-    "version": "9.0.0",
-    "source": "restored-nupkg",
-    "packagePath": "system.composition.convention/9.0.0/system.composition.convention.9.0.0.nupkg",
-    "nupkgSha256": "b70e2f13925143ad2e6d36416f1a0c3e1b63390082dd7a031541fb3473bba3c5",
-    "nuspecPath": "System.Composition.Convention.nuspec",
-    "licenseType": "expression",
-    "license": "MIT",
-    "licenseUrl": "https://licenses.nuget.org/MIT",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/dotnet/runtime",
-      "commit": "9d5a6a9aa463d6d10b0b0ba6d5982cc82f363dc3"
-    },
-    "status": "original-license-collected",
-    "declaredLicenseFileMissing": false,
-    "sourceRetrieval": "not-needed-package-license-present",
-    "sourceResolution": null,
-    "documents": [
-      {
-        "path": "LICENSE.TXT",
-        "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b",
-        "bytes": 1139
-      },
-      {
-        "path": "THIRD-PARTY-NOTICES.TXT",
-        "sha256": "40686c6447a7d5b5d3693068e4571b5f483d7ed335aeee773ef662440de4c5d5",
-        "bytes": 75640
-      }
-    ],
-    "sourceDocuments": [],
-    "sourceAttempts": [],
-    "errors": [],
-    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
-  },
-  {
-    "id": "System.Composition.Hosting",
-    "version": "9.0.0",
-    "source": "restored-nupkg",
-    "packagePath": "system.composition.hosting/9.0.0/system.composition.hosting.9.0.0.nupkg",
-    "nupkgSha256": "a0ec54f833c411f302b8d2e05bac12919a74258e6062de381493675adfbdebbb",
-    "nuspecPath": "System.Composition.Hosting.nuspec",
-    "licenseType": "expression",
-    "license": "MIT",
-    "licenseUrl": "https://licenses.nuget.org/MIT",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/dotnet/runtime",
-      "commit": "9d5a6a9aa463d6d10b0b0ba6d5982cc82f363dc3"
-    },
-    "status": "original-license-collected",
-    "declaredLicenseFileMissing": false,
-    "sourceRetrieval": "not-needed-package-license-present",
-    "sourceResolution": null,
-    "documents": [
-      {
-        "path": "LICENSE.TXT",
-        "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b",
-        "bytes": 1139
-      },
-      {
-        "path": "THIRD-PARTY-NOTICES.TXT",
-        "sha256": "40686c6447a7d5b5d3693068e4571b5f483d7ed335aeee773ef662440de4c5d5",
-        "bytes": 75640
-      }
-    ],
-    "sourceDocuments": [],
-    "sourceAttempts": [],
-    "errors": [],
-    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
-  },
-  {
-    "id": "System.Composition.Runtime",
-    "version": "9.0.0",
-    "source": "restored-nupkg",
-    "packagePath": "system.composition.runtime/9.0.0/system.composition.runtime.9.0.0.nupkg",
-    "nupkgSha256": "03221ef9d8b54eac1405b489fec27c43cb73b274cdf9505d270e0af31673e37b",
-    "nuspecPath": "System.Composition.Runtime.nuspec",
-    "licenseType": "expression",
-    "license": "MIT",
-    "licenseUrl": "https://licenses.nuget.org/MIT",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/dotnet/runtime",
-      "commit": "9d5a6a9aa463d6d10b0b0ba6d5982cc82f363dc3"
-    },
-    "status": "original-license-collected",
-    "declaredLicenseFileMissing": false,
-    "sourceRetrieval": "not-needed-package-license-present",
-    "sourceResolution": null,
-    "documents": [
-      {
-        "path": "LICENSE.TXT",
-        "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b",
-        "bytes": 1139
-      },
-      {
-        "path": "THIRD-PARTY-NOTICES.TXT",
-        "sha256": "40686c6447a7d5b5d3693068e4571b5f483d7ed335aeee773ef662440de4c5d5",
-        "bytes": 75640
-      }
-    ],
-    "sourceDocuments": [],
-    "sourceAttempts": [],
-    "errors": [],
-    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
-  },
-  {
-    "id": "System.Composition.TypedParts",
-    "version": "9.0.0",
-    "source": "restored-nupkg",
-    "packagePath": "system.composition.typedparts/9.0.0/system.composition.typedparts.9.0.0.nupkg",
-    "nupkgSha256": "1797e94d4b3746bef23ff372233afe5e7e4d7535d7a7caeb8c19c5f540415288",
-    "nuspecPath": "System.Composition.TypedParts.nuspec",
-    "licenseType": "expression",
-    "license": "MIT",
-    "licenseUrl": "https://licenses.nuget.org/MIT",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/dotnet/runtime",
-      "commit": "9d5a6a9aa463d6d10b0b0ba6d5982cc82f363dc3"
-    },
-    "status": "original-license-collected",
-    "declaredLicenseFileMissing": false,
-    "sourceRetrieval": "not-needed-package-license-present",
-    "sourceResolution": null,
-    "documents": [
-      {
-        "path": "LICENSE.TXT",
-        "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b",
-        "bytes": 1139
-      },
-      {
-        "path": "THIRD-PARTY-NOTICES.TXT",
-        "sha256": "40686c6447a7d5b5d3693068e4571b5f483d7ed335aeee773ef662440de4c5d5",
-        "bytes": 75640
-      }
-    ],
-    "sourceDocuments": [],
-    "sourceAttempts": [],
-    "errors": [],
-    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
-  },
-  {
-    "id": "System.Composition",
-    "version": "9.0.0",
-    "source": "restored-nupkg",
-    "packagePath": "system.composition/9.0.0/system.composition.9.0.0.nupkg",
-    "nupkgSha256": "15e84e910daed69f26434ff09f7719fb6e078e14cb75c93c55961603509c81b3",
-    "nuspecPath": "System.Composition.nuspec",
-    "licenseType": "expression",
-    "license": "MIT",
-    "licenseUrl": "https://licenses.nuget.org/MIT",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/dotnet/runtime",
-      "commit": "9d5a6a9aa463d6d10b0b0ba6d5982cc82f363dc3"
-    },
-    "status": "original-license-collected",
-    "declaredLicenseFileMissing": false,
-    "sourceRetrieval": "not-needed-package-license-present",
-    "sourceResolution": null,
-    "documents": [
-      {
-        "path": "LICENSE.TXT",
-        "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b",
-        "bytes": 1139
-      },
-      {
-        "path": "THIRD-PARTY-NOTICES.TXT",
-        "sha256": "40686c6447a7d5b5d3693068e4571b5f483d7ed335aeee773ef662440de4c5d5",
-        "bytes": 75640
-      }
-    ],
-    "sourceDocuments": [],
-    "sourceAttempts": [],
-    "errors": [],
-    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
-  },
-  {
-    "id": "System.Diagnostics.DiagnosticSource",
-    "version": "11.0.0",
-    "source": "restored-nupkg",
-    "packagePath": "system.diagnostics.diagnosticsource/11.0.0/system.diagnostics.diagnosticsource.11.0.0.nupkg",
-    "nupkgSha256": "16e694e83a96da9e27e15038b10c0a37a87605433287cb464fc4d1f9e4597647",
-    "nuspecPath": "System.Diagnostics.DiagnosticSource.nuspec",
-    "licenseType": "expression",
-    "license": "MIT",
-    "licenseUrl": "https://licenses.nuget.org/MIT",
-    "repository": {
-      "type": "git",
       "url": "https://github.com/dotnet/dotnet",
-      "commit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f"
+      "commit": "fad253f51b461736dfd3cd9c15977bb7493becef"
     },
     "status": "original-license-collected",
     "declaredLicenseFileMissing": false,
     "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
     "sourceResolution": {
-      "nuspecCommit": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+      "nuspecCommit": "fad253f51b461736dfd3cd9c15977bb7493becef",
       "tag": null,
-      "resolvedSha": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+      "resolvedSha": "fad253f51b461736dfd3cd9c15977bb7493becef",
       "provenance": "nuspec-commit",
       "fallbackReason": null,
       "nuspecCommitMismatch": false,
@@ -5486,42 +5360,407 @@
     "documents": [
       {
         "path": "THIRD-PARTY-NOTICES.TXT",
-        "sha256": "e3a241a6cf35167d82bf7e081de9641c59d10d2dbd8824409817bed31980d407",
-        "bytes": 93617
+        "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21",
+        "bytes": 78041
       }
     ],
     "sourceDocuments": [
       {
-        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
-        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "path": "fad253f51b461736dfd3cd9c15977bb7493becef/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/fad253f51b461736dfd3cd9c15977bb7493becef/LICENSE.TXT",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
         "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
         "bytes": 1115
       },
       {
-        "path": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
-        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
-        "sha256": "17e8fa75862e48d94aaa117cce990ff2c8bc034ed4514ed98e5650406189d15e",
-        "bytes": 794300
+        "path": "fad253f51b461736dfd3cd9c15977bb7493becef/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/fad253f51b461736dfd3cd9c15977bb7493becef/THIRD-PARTY-NOTICES.txt",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "sha256": "4bef6a7e7b359869d751c9ff70274a80a0f626927afa5a0681583c1b1861267b",
+        "bytes": 265585
       }
     ],
     "sourceAttempts": [
       {
-        "apiPath": "repos/dotnet/dotnet/git/trees/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
-        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "apiPath": "repos/dotnet/dotnet/git/trees/fad253f51b461736dfd3cd9c15977bb7493becef",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
         "httpStatus": 200,
         "status": "root-listed"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/LICENSE.TXT",
-        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/fad253f51b461736dfd3cd9c15977bb7493becef/LICENSE.TXT",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
         "httpStatus": 200,
         "status": "collected"
       },
       {
-        "url": "https://raw.githubusercontent.com/dotnet/dotnet/297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f/THIRD-PARTY-NOTICES.txt",
-        "revision": "297acf930fb0f5c07fd4e51d78e521b4ad2e5d1f",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/fad253f51b461736dfd3cd9c15977bb7493becef/THIRD-PARTY-NOTICES.txt",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "httpStatus": 200,
+        "status": "collected"
+      }
+    ],
+    "errors": [],
+    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
+  },
+  {
+    "id": "System.Composition.Convention",
+    "version": "10.0.1",
+    "source": "restored-nupkg",
+    "packagePath": "system.composition.convention/10.0.1/system.composition.convention.10.0.1.nupkg",
+    "nupkgSha256": "796ad9d05bce9e185acb14f5f77aa3532d9fd1cc217f4d6325ace981f55bdc59",
+    "nuspecPath": "System.Composition.Convention.nuspec",
+    "licenseType": "expression",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "fad253f51b461736dfd3cd9c15977bb7493becef"
+    },
+    "status": "original-license-collected",
+    "declaredLicenseFileMissing": false,
+    "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
+    "sourceResolution": {
+      "nuspecCommit": "fad253f51b461736dfd3cd9c15977bb7493becef",
+      "tag": null,
+      "resolvedSha": "fad253f51b461736dfd3cd9c15977bb7493becef",
+      "provenance": "nuspec-commit",
+      "fallbackReason": null,
+      "nuspecCommitMismatch": false,
+      "tagCandidates": []
+    },
+    "documents": [
+      {
+        "path": "THIRD-PARTY-NOTICES.TXT",
+        "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21",
+        "bytes": 78041
+      }
+    ],
+    "sourceDocuments": [
+      {
+        "path": "fad253f51b461736dfd3cd9c15977bb7493becef/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/fad253f51b461736dfd3cd9c15977bb7493becef/LICENSE.TXT",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
+        "bytes": 1115
+      },
+      {
+        "path": "fad253f51b461736dfd3cd9c15977bb7493becef/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/fad253f51b461736dfd3cd9c15977bb7493becef/THIRD-PARTY-NOTICES.txt",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "sha256": "4bef6a7e7b359869d751c9ff70274a80a0f626927afa5a0681583c1b1861267b",
+        "bytes": 265585
+      }
+    ],
+    "sourceAttempts": [
+      {
+        "apiPath": "repos/dotnet/dotnet/git/trees/fad253f51b461736dfd3cd9c15977bb7493becef",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "httpStatus": 200,
+        "status": "root-listed"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/fad253f51b461736dfd3cd9c15977bb7493becef/LICENSE.TXT",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "httpStatus": 200,
+        "status": "collected"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/fad253f51b461736dfd3cd9c15977bb7493becef/THIRD-PARTY-NOTICES.txt",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "httpStatus": 200,
+        "status": "collected"
+      }
+    ],
+    "errors": [],
+    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
+  },
+  {
+    "id": "System.Composition.Hosting",
+    "version": "10.0.1",
+    "source": "restored-nupkg",
+    "packagePath": "system.composition.hosting/10.0.1/system.composition.hosting.10.0.1.nupkg",
+    "nupkgSha256": "a651dd8c34bbbc261a3fb51ab27c7527d6ab3fd7730c5525f443de9588f47f44",
+    "nuspecPath": "System.Composition.Hosting.nuspec",
+    "licenseType": "expression",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "fad253f51b461736dfd3cd9c15977bb7493becef"
+    },
+    "status": "original-license-collected",
+    "declaredLicenseFileMissing": false,
+    "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
+    "sourceResolution": {
+      "nuspecCommit": "fad253f51b461736dfd3cd9c15977bb7493becef",
+      "tag": null,
+      "resolvedSha": "fad253f51b461736dfd3cd9c15977bb7493becef",
+      "provenance": "nuspec-commit",
+      "fallbackReason": null,
+      "nuspecCommitMismatch": false,
+      "tagCandidates": []
+    },
+    "documents": [
+      {
+        "path": "THIRD-PARTY-NOTICES.TXT",
+        "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21",
+        "bytes": 78041
+      }
+    ],
+    "sourceDocuments": [
+      {
+        "path": "fad253f51b461736dfd3cd9c15977bb7493becef/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/fad253f51b461736dfd3cd9c15977bb7493becef/LICENSE.TXT",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
+        "bytes": 1115
+      },
+      {
+        "path": "fad253f51b461736dfd3cd9c15977bb7493becef/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/fad253f51b461736dfd3cd9c15977bb7493becef/THIRD-PARTY-NOTICES.txt",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "sha256": "4bef6a7e7b359869d751c9ff70274a80a0f626927afa5a0681583c1b1861267b",
+        "bytes": 265585
+      }
+    ],
+    "sourceAttempts": [
+      {
+        "apiPath": "repos/dotnet/dotnet/git/trees/fad253f51b461736dfd3cd9c15977bb7493becef",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "httpStatus": 200,
+        "status": "root-listed"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/fad253f51b461736dfd3cd9c15977bb7493becef/LICENSE.TXT",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "httpStatus": 200,
+        "status": "collected"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/fad253f51b461736dfd3cd9c15977bb7493becef/THIRD-PARTY-NOTICES.txt",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "httpStatus": 200,
+        "status": "collected"
+      }
+    ],
+    "errors": [],
+    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
+  },
+  {
+    "id": "System.Composition.Runtime",
+    "version": "10.0.1",
+    "source": "restored-nupkg",
+    "packagePath": "system.composition.runtime/10.0.1/system.composition.runtime.10.0.1.nupkg",
+    "nupkgSha256": "98e41dc2e491f4092b6ef82ad148ebfae0cdfaf16335b3a2d6e70e52ca6f1215",
+    "nuspecPath": "System.Composition.Runtime.nuspec",
+    "licenseType": "expression",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "fad253f51b461736dfd3cd9c15977bb7493becef"
+    },
+    "status": "original-license-collected",
+    "declaredLicenseFileMissing": false,
+    "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
+    "sourceResolution": {
+      "nuspecCommit": "fad253f51b461736dfd3cd9c15977bb7493becef",
+      "tag": null,
+      "resolvedSha": "fad253f51b461736dfd3cd9c15977bb7493becef",
+      "provenance": "nuspec-commit",
+      "fallbackReason": null,
+      "nuspecCommitMismatch": false,
+      "tagCandidates": []
+    },
+    "documents": [
+      {
+        "path": "THIRD-PARTY-NOTICES.TXT",
+        "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21",
+        "bytes": 78041
+      }
+    ],
+    "sourceDocuments": [
+      {
+        "path": "fad253f51b461736dfd3cd9c15977bb7493becef/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/fad253f51b461736dfd3cd9c15977bb7493becef/LICENSE.TXT",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
+        "bytes": 1115
+      },
+      {
+        "path": "fad253f51b461736dfd3cd9c15977bb7493becef/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/fad253f51b461736dfd3cd9c15977bb7493becef/THIRD-PARTY-NOTICES.txt",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "sha256": "4bef6a7e7b359869d751c9ff70274a80a0f626927afa5a0681583c1b1861267b",
+        "bytes": 265585
+      }
+    ],
+    "sourceAttempts": [
+      {
+        "apiPath": "repos/dotnet/dotnet/git/trees/fad253f51b461736dfd3cd9c15977bb7493becef",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "httpStatus": 200,
+        "status": "root-listed"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/fad253f51b461736dfd3cd9c15977bb7493becef/LICENSE.TXT",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "httpStatus": 200,
+        "status": "collected"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/fad253f51b461736dfd3cd9c15977bb7493becef/THIRD-PARTY-NOTICES.txt",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "httpStatus": 200,
+        "status": "collected"
+      }
+    ],
+    "errors": [],
+    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
+  },
+  {
+    "id": "System.Composition.TypedParts",
+    "version": "10.0.1",
+    "source": "restored-nupkg",
+    "packagePath": "system.composition.typedparts/10.0.1/system.composition.typedparts.10.0.1.nupkg",
+    "nupkgSha256": "e6305cff9da6d8c431479f8091ab931068736b8b0d5ebf409f520f40d92f7df0",
+    "nuspecPath": "System.Composition.TypedParts.nuspec",
+    "licenseType": "expression",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "fad253f51b461736dfd3cd9c15977bb7493becef"
+    },
+    "status": "original-license-collected",
+    "declaredLicenseFileMissing": false,
+    "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
+    "sourceResolution": {
+      "nuspecCommit": "fad253f51b461736dfd3cd9c15977bb7493becef",
+      "tag": null,
+      "resolvedSha": "fad253f51b461736dfd3cd9c15977bb7493becef",
+      "provenance": "nuspec-commit",
+      "fallbackReason": null,
+      "nuspecCommitMismatch": false,
+      "tagCandidates": []
+    },
+    "documents": [
+      {
+        "path": "THIRD-PARTY-NOTICES.TXT",
+        "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21",
+        "bytes": 78041
+      }
+    ],
+    "sourceDocuments": [
+      {
+        "path": "fad253f51b461736dfd3cd9c15977bb7493becef/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/fad253f51b461736dfd3cd9c15977bb7493becef/LICENSE.TXT",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
+        "bytes": 1115
+      },
+      {
+        "path": "fad253f51b461736dfd3cd9c15977bb7493becef/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/fad253f51b461736dfd3cd9c15977bb7493becef/THIRD-PARTY-NOTICES.txt",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "sha256": "4bef6a7e7b359869d751c9ff70274a80a0f626927afa5a0681583c1b1861267b",
+        "bytes": 265585
+      }
+    ],
+    "sourceAttempts": [
+      {
+        "apiPath": "repos/dotnet/dotnet/git/trees/fad253f51b461736dfd3cd9c15977bb7493becef",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "httpStatus": 200,
+        "status": "root-listed"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/fad253f51b461736dfd3cd9c15977bb7493becef/LICENSE.TXT",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "httpStatus": 200,
+        "status": "collected"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/fad253f51b461736dfd3cd9c15977bb7493becef/THIRD-PARTY-NOTICES.txt",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "httpStatus": 200,
+        "status": "collected"
+      }
+    ],
+    "errors": [],
+    "attributionScope": "Bundled documents first; fallback checks standard repository-root names only. A collected LICENSE does not establish complete attribution. Packaged licenses may omit source NOTICE files; those are not probed when a package license is present."
+  },
+  {
+    "id": "System.Composition",
+    "version": "10.0.1",
+    "source": "restored-nupkg",
+    "packagePath": "system.composition/10.0.1/system.composition.10.0.1.nupkg",
+    "nupkgSha256": "b7a87385d8c997c5c1200af2f5ab8e644cbc8e42b2d6a0d19ab6713be22c9974",
+    "nuspecPath": "System.Composition.nuspec",
+    "licenseType": "expression",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "fad253f51b461736dfd3cd9c15977bb7493becef"
+    },
+    "status": "original-license-collected",
+    "declaredLicenseFileMissing": false,
+    "sourceRetrieval": "nuspec-commit-then-exact-version-tags",
+    "sourceResolution": {
+      "nuspecCommit": "fad253f51b461736dfd3cd9c15977bb7493becef",
+      "tag": null,
+      "resolvedSha": "fad253f51b461736dfd3cd9c15977bb7493becef",
+      "provenance": "nuspec-commit",
+      "fallbackReason": null,
+      "nuspecCommitMismatch": false,
+      "tagCandidates": []
+    },
+    "documents": [
+      {
+        "path": "THIRD-PARTY-NOTICES.TXT",
+        "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21",
+        "bytes": 78041
+      }
+    ],
+    "sourceDocuments": [
+      {
+        "path": "fad253f51b461736dfd3cd9c15977bb7493becef/LICENSE.TXT",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/fad253f51b461736dfd3cd9c15977bb7493becef/LICENSE.TXT",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "sha256": "ae48df11a335dc1a615f4f938b69cba73bcf4485c4f97af49b38efb0f216353b",
+        "bytes": 1115
+      },
+      {
+        "path": "fad253f51b461736dfd3cd9c15977bb7493becef/THIRD-PARTY-NOTICES.txt",
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/fad253f51b461736dfd3cd9c15977bb7493becef/THIRD-PARTY-NOTICES.txt",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "sha256": "4bef6a7e7b359869d751c9ff70274a80a0f626927afa5a0681583c1b1861267b",
+        "bytes": 265585
+      }
+    ],
+    "sourceAttempts": [
+      {
+        "apiPath": "repos/dotnet/dotnet/git/trees/fad253f51b461736dfd3cd9c15977bb7493becef",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "httpStatus": 200,
+        "status": "root-listed"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/fad253f51b461736dfd3cd9c15977bb7493becef/LICENSE.TXT",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
+        "httpStatus": 200,
+        "status": "collected"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/dotnet/dotnet/fad253f51b461736dfd3cd9c15977bb7493becef/THIRD-PARTY-NOTICES.txt",
+        "revision": "fad253f51b461736dfd3cd9c15977bb7493becef",
         "httpStatus": 200,
         "status": "collected"
       }

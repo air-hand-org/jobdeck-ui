@@ -21,7 +21,6 @@ using ui.Bff.Client;
 using ui.Bff.DB;
 using ui.Bff.Endpoints;
 using ui.Bff.Endpoints.Interceptors;
-using ui.Bff.Profile;
 using ui.Bff.Session;
 using ui.Bff.Telemetry;
 
@@ -231,7 +230,6 @@ builder.Services.AddCascadingAuthenticationState();
 builder.Services.AddScoped<IUISessionStore, PostgresUISessionStore>();
 builder.Services.AddScoped<AccessTokenAccessor>();
 builder.Services.AddScoped<UIAuthenticationService>();
-builder.Services.AddScoped<UIUserProfileService>();
 
 if (builder.Configuration.GetValue<bool>("MIGRATOR_EXECUTE"))
 {
