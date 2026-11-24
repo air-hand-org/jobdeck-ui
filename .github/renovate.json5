@@ -173,7 +173,7 @@
         "nuget"
       ],
       "matchPackageNames": [
-        "/^Microsoft\\.(?:AspNetCore|NETCore|Extensions)\\./",
+        "/^Microsoft\\.(?:AspNetCore|NETCore|Extensions|EntityFrameworkCore)\\./",
         "/^Npgsql\\.EntityFrameworkCore\\.PostgreSQL/"
       ],
       "description": "Coordinate compatible .NET SDK, runtime image and framework package updates",
