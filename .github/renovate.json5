@@ -141,10 +141,6 @@
       "description": "Coordinate compatible .NET SDK, runtime image and framework package updates",
       "groupName": ".NET",
       "groupSlug": "dotnet",
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
       "semanticCommitType": "fix",
       "semanticCommitScope": "deps"
     },
@@ -161,10 +157,6 @@
       "description": "Coordinate compatible .NET SDK, runtime image and framework package updates",
       "groupName": ".NET",
       "groupSlug": "dotnet",
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
       "semanticCommitType": "fix",
       "semanticCommitScope": "deps"
     },
@@ -179,10 +171,6 @@
       "description": "Coordinate compatible .NET SDK, runtime image and framework package updates",
       "groupName": ".NET",
       "groupSlug": "dotnet",
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
       "semanticCommitType": "fix",
       "semanticCommitScope": "deps"
     }
