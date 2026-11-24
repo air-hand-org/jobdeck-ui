@@ -2,7 +2,7 @@
 	<PropertyGroup>
 		<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
 		<NoWarn>$(NoWarn);SA0001</NoWarn>
-		<TargerFramework>net11.0</TargerFramework>
+		<TargetFramework>net11.0</TargetFramework>
 	</PropertyGroup>
 
 	<ItemGroup>
