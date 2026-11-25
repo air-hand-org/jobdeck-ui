@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.3](https://github.com/air-hand-org/jobdeck-ui/compare/v1.6.2...v1.6.3) (2026-11-25)
+
+
+### Bug Fixes
+
+* **deps:** update quartznet monorepo to 4.8.1 ([#112](https://github.com/air-hand-org/jobdeck-ui/issues/112)) ([19b61ba](https://github.com/air-hand-org/jobdeck-ui/commit/19b61bab05f333ecdad3635979e0892fac984ebd))
+
 ## [1.6.2](https://github.com/air-hand-org/jobdeck-ui/compare/v1.6.1...v1.6.2) (2026-11-24)
 
 
